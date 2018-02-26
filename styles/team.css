@@ -1,5 +1,6 @@
 .team-member {
   display: flex;
+  align-items: center;
 }
 .team-member__portrait {
   flex: 0 0 50%;
@@ -7,5 +8,13 @@
 }
 .team-member__about {
   flex: 0 0 50%;
-  padding: 3em;
+  padding: 0 3rem;
+}
+.team-member__name {
+  margin-top: 0;
+}
+.team-member__title {
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
 }
