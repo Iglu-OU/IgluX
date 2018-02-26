@@ -1,0 +1,23 @@
+.jumbotron {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 3em);
+  background: var(--color-primary);
+  color: #fff;
+}
+.jumbotron h1 {
+  text-transform: uppercase;
+}
+.jumbotron__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 24em;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  .jumbotron__content {
+    font-size: 1.5rem;
+  }
+}

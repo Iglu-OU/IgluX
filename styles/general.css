@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+html {
+  font-size: var(--font-size);
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--color);
+}
+.muted,
+.muted a {
+  color: var(--color--muted);
+}
