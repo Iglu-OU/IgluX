@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let elem = document.querySelector('.iceberg__iceberg');
+  let elem = document.querySelector('.work-flow__iceberg');
   let animation = elem.animate({
     transform: [
       'translate(-50%, -50%)',
