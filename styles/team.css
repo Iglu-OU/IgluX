@@ -14,7 +14,7 @@
   margin-top: 0;
 }
 .team-member__title {
-  color: #888;
+  color: var(--color-primary);
   font-weight: 600;
   text-transform: uppercase;
 }
