@@ -7,23 +7,10 @@
   background-size: cover;
 }
 
-@keyframes float {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    transform: translate(-50%, -52.5%);
-  }
-  100% {
-    transform: translate(-50%, -50%);
-  }
-}
-
 .jumbotron__iceberg {
   position: absolute;
   top: 50%;
   left: 50%;
-  animation: float 8s ease-in-out infinite;
   max-width: 100vw;
   width: 100%;
   height: calc(100vh - 10em);
