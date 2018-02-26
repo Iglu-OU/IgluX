@@ -1,0 +1,16 @@
+.footer {
+  background: var(--color-primary);
+  color: #fff;
+}
+.footer a {
+  display: block;
+  padding: 1em 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+.footer ul {
+  display: flex;
+}
+.footer li:first-child {
+  flex: 1 1 auto;
+}
