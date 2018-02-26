@@ -1,0 +1,8 @@
+.section {
+}
+.section__header {
+  text-align: center;
+}
+.section__heading {
+  text-transform: uppercase;
+}

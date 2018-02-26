@@ -1,0 +1,55 @@
+/* 
+    <nav class="navigation-scrollable">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Manuals</a></li>
+            <li><a href="#">Shortcuts</a></li>
+        </ul>
+    </nav>
+*/
+.navigation-scrollable {
+  height: 3em;
+}
+.navigation-scrollable__inner {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--navigationBgColor);
+  color: #fff;
+  z-index: 1000;
+  white-space: nowrap;
+}
+.navigation-scrollable a {
+  color: #fff;
+}
+.navigation-scrollable ul {
+  display: flex;
+  margin: 0;
+  padding: 0 1rem;
+  list-style: none;
+}
+.navigation-scrollable a {
+  display: block;
+  padding: 0.75em 1em;
+  background-color: var(--navigationBgColor);
+  color: #fff;
+  text-decoration: none;
+}
+.navigation-scrollable a:focus,
+.navigation-scrollable a:hover {
+  background-color: var(--navigationBgColorHover);
+  color: #fff;
+}
+.navigation-scrollable a:active,
+.navigation-scrollable a.is-active {
+  background-color: var(--navigationBgColorActive);
+  color: #fff;
+}

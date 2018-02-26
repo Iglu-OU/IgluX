@@ -1,7 +1,7 @@
 .jumbotron {
   position: relative;
   width: 100vw;
-  height: calc(100vh - 3em);
+  height: calc(100vh - 10em);
   background: var(--color-primary);
   color: #fff;
 }
