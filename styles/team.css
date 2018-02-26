@@ -18,3 +18,12 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+.team-member__links a {
+  display: inline-block;
+  margin-right: 1em;
+  font-weight: 600;
+  text-decoration: none;
+}
+.team-member__links a:last-child {
+  margin-right: 0;
+}
