@@ -17,3 +17,6 @@ body {
 .muted a {
   color: var(--color--muted);
 }
+.mt-0 {
+  margin-top: 0;
+}
