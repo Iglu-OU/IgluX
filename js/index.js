@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let elem = document.querySelector('.jumbotron__iceberg');
+  let elem = document.querySelector('.iceberg__iceberg');
   let animation = elem.animate({
     transform: [
       'translate(-50%, -50%)',

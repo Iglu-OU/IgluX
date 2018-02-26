@@ -1,4 +1,4 @@
-.jumbotron {
+.iceberg {
   display: flex;
   position: relative;
   width: 100vw;
@@ -8,7 +8,7 @@
   color: #fff;
 }
 
-.jumbotron__eskimo {
+.iceberg__eskimo {
   max-width: 100vw;
   z-index: 1;
   margin-top: auto;
@@ -21,7 +21,7 @@
   height: 1080px;
 }
 
-.jumbotron__sky {
+.iceberg__sky {
   max-width: 100vw;
   margin-top: auto;
   background: url(../assets/iceberg-sky-clouds.svg) top;
@@ -33,7 +33,7 @@
   height: 1080px;
 }
 
-.jumbotron__iceberg {
+.iceberg__iceberg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,7 +45,7 @@
   background-size: cover;
 }
 
-.jumbotron__waves {
+.iceberg__waves {
   width: 100vw;
   z-index: 1;
   height: 1080px;
@@ -54,25 +54,26 @@
   background-size: cover;
 }
 
-.jumbotron__content {
+.iceberg__content {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50px;
   color: #4fbbe7;
   z-index: 100;
+  transform: translateY(-50%);
 }
-.jumbotron__content h1 {
+.iceberg__content h1 {
   text-transform: uppercase;
   font-size: 3em;
   font-weight: 700;
 }
-.jumbotron__content dt {
+.iceberg__content dt {
   font-size: 1.5em;
   font-weight: 400;
   line-height: 1.2;
   text-transform: uppercase;
 }
-.jumbotron__content dd {
+.iceberg__content dd {
   margin: 0;
   font-size: 1.125em;
 }
