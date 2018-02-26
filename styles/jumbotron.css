@@ -8,9 +8,21 @@
   color: #fff;
 }
 
-.jumbotron__sky {
+.jumbotron__eskimo {
   max-width: 100vw;
   z-index: 1;
+  margin-top: auto;
+  background: url(../assets/iceberg-jetpack-eskimo.svg) top;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 10em);
+}
+
+.jumbotron__sky {
+  max-width: 100vw;
   margin-top: auto;
   background: url(../assets/iceberg-sky-clouds.svg) top;
   background-size: cover;
