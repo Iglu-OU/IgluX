@@ -4,7 +4,6 @@
   top: 0;
   left: 0;
   right: 0;
-  background: var(--color-primary);
   color: #fff;
   font-size: 1em;
   z-index: 1000;
@@ -52,7 +51,6 @@
   margin: 0;
   padding: 0;
   color: #fff;
-  background: var(--color-primary);
   list-style: none;
 }
 .app-header__navigation a {
