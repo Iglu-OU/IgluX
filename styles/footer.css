@@ -8,13 +8,14 @@
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  padding: 0.25em;
 }
 .footer li {
   justify-content: space-between;
 }
 .footer a {
   display: block;
-  padding: 1em 1rem;
+  padding: 0.75em 1rem;
   color: #fff;
   text-decoration: none;
 }
