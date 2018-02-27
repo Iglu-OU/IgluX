@@ -59,7 +59,7 @@
   position: absolute;
   bottom: 0;
   width: 100vw;
-  height: 686px;
+  height: 64%;
   background: url(../assets/iceberg-single-wave.svg) center;
   background-size: cover;
 }
