@@ -5,7 +5,7 @@
   height: 1080px;
   background: var(--color-primary) url(../assets/iceberg-sky.svg) center;
   background-size: cover;
-  color: #fff;
+  color: #ffffff;
 }
 
 .work-flow__eskimo {
@@ -66,32 +66,53 @@
 
 .work-flow__content {
   position: absolute;
-  bottom: 50px;
+  top: 50%;
   left: 35%;
   color: #4fbbe7;
   z-index: 100;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .work-flow__content h1 {
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 2.5vw;
   font-weight: 700;
-  margin-bottom: 5rem;
+}
+@media (max-width: 1023px) {
+  .work-flow__content h1 {
+    font-size: 30px;
+  }
 }
 
 .work-flow__content dl {
-  margin: 0;
+  margin: 4.2vw 0 0;
+}
+@media (max-width: 1023px) {
+  .work-flow__content dl {
+    margin-top: 50px;
+  }
 }
 
 .work-flow__content dt {
-  font-size: 1.5em;
+  margin: 2.5vw 0 0;
+  font-size: 1.25vw;
   font-weight: 400;
   line-height: 1.2;
   text-transform: uppercase;
 }
+@media (max-width: 1023px) {
+  .work-flow__content dt {
+    margin: 30px 0 0;
+    font-size: 16px;
+  }
+}
 
 .work-flow__content dd {
-  margin: 0 0 3rem;
-  font-size: 1.125em;
+  margin: 0;
+  font-size: 0.94vw;
+}
+@media (max-width: 1023px) {
+  .work-flow__content dd {
+    font-size: 12px;
+  }
 }
