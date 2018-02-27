@@ -1,0 +1,5 @@
+.journey {
+  height: 1080px;
+  background: #2096D4 url(../assets/journey.svg) center;
+  background-size: cover;
+}

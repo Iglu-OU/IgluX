@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   iceberg.animate({
     transform: [
       'translate(-50%, -50%)',
-      'translate(-50%, -52.5%)',
+      'translate(-50%, -51.5%)',
       'translate(-50%, -50%)'
     ],
     easing: 'ease-in-out',
