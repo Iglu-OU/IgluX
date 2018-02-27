@@ -77,17 +77,18 @@
   display: none;
 }
 .app-header__toggler {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  width: 3em;
-  height: 3em;
+  width: 3.25em;
+  height: 3.25em;
   margin: 0;
+  padding: 0.5em;
   background: var(--color-primary);
   z-index: 1000;
 }
 .app-header__toggler span {
-  display: none;
+  font: 0/0 a;
 }
 @media (max-width: 767px) {
   .app-header {
