@@ -28,13 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let wave = document.querySelector('.work-flow__wave-top');
   wave.animate({
     transform: [
-      'translate(0, 0)',
       'translate(-100%, 0)',
-      'translate(0, 0)'
+      'translate(100%, 0)',
     ],
-    easing: 'linear',
+    easing: 'ease-in-out',
   }, {
-    duration: 8000,
+    duration: 12000,
     iterations: Infinity
   });
 
