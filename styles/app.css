@@ -35,17 +35,19 @@
 }
 @media (min-width: 768px) {
   .app-header {
-    position: absolute;
     display: flex;
     padding: 1.5em 2em;
   }
   .app-header__logo {
     flex: 1 1 100%;
   }
+  .app-header__toggler {
+    display: none;
+  }
 }
 @media (min-width: 1024px) {
   .app-header {
-    font-size: 1.57vw;
+    font-size: 1.25vw;
   }
 }
 .app-header__navigation {
