@@ -1,3 +1,4 @@
+/*
 .team-member {
   display: flex;
   align-items: center;
@@ -26,4 +27,25 @@
 }
 .team-member__links a:last-child {
   margin-right: 0;
+}
+*/
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team li {
+  width: 25%;
+}
+.team-member {
+  margin: 1rem;
+  width: calc(100% - 2rem);
+}
+.team-member__portrait {
+}
+.team-member__about {
+}
+.team-member__name {
+}
+.team-member__title {
 }
