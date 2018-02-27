@@ -13,6 +13,7 @@
   text-decoration: none;
 }
 .app-header svg {
+  text-transform: uppercase;
   fill: #fff;
 }
 .app-header__logo {
@@ -38,7 +39,7 @@
     display: flex;
     padding: 1.5em 2em;
   }
-  .app-header > *:first-child {
+  .app-header__logo {
     flex: 1 1 100%;
   }
 }
@@ -60,9 +61,40 @@
   font-size: 1em;
   font-weight: 600;
   text-decoration: none;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .app-header__navigation {
     display: flex;
+  }
+}
+
+/* Toggler */
+
+.app-header__toggle-checkbox {
+  display: none;
+}
+.app-header__toggler {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 3em;
+  height: 3em;
+  margin: 0;
+  background: var(--color-primary);
+  z-index: 1000;
+}
+.app-header__toggler span {
+  display: none;
+}
+@media (max-width: 767px) {
+  .app-header {
+    background: var(--color-primary);
+  }
+  .app-header__navigation {
+    display: none;
+  }
+  #app-header__toggler:checked ~ .app-header__navigation {
+    display: block;
   }
 }
