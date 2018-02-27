@@ -15,30 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
   let eskimo = document.querySelector('.work-flow__eskimo');
   eskimo.animate({
     transform: [
-      'translate(0, -2%)',
       'translate(0, 0)',
-      'translate(0, -2%)'
+      'translate(0, 2%)',
+      'translate(0, 0)'
     ],
     easing: 'ease-in-out',
   }, {
-    duration: 16000,
-    iterations: Infinity
-  });
-
-  /*
-  let wave = document.querySelector('.work-flow__waves');
-  wave.animate({
-    transform: [
-      'scale(1, 1)',
-      'scale(2, 1)',
-      'scale(1, 1)'
-    ],
-    easing: 'linear',
-  },{
     duration: 8000,
     iterations: Infinity
   });
-  */
+
+  let wave = document.querySelector('.work-flow__wave-top');
+  wave.animate({
+    transform: [
+      'translate(0, 0)',
+      'translate(-100%, 0)',
+      'translate(0, 0)'
+    ],
+    easing: 'linear',
+  }, {
+    duration: 8000,
+    iterations: Infinity
+  });
 
   let star = document.querySelector('.jumbotron__star');
   star.animate({
