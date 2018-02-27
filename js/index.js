@@ -12,6 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
     iterations: Infinity
   });
 
+  let eskimo = document.querySelector('.work-flow__eskimo');
+  eskimo.animate({
+    transform: [
+      'translate(0, -2%)',
+      'translate(0, 0)',
+      'translate(0, -2%)'
+    ],
+    easing: 'ease-in-out',
+  }, {
+    duration: 16000,
+    iterations: Infinity
+  });
+
   /*
   let wave = document.querySelector('.work-flow__waves');
   wave.animate({
