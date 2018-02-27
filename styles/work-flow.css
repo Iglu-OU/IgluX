@@ -54,6 +54,16 @@
   background-size: cover;
 }
 
+.work-flow__wave-top {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 686px;
+  background: url(../assets/iceberg-single-wave.svg) center;
+  background-size: cover;
+}
+
 .work-flow__content {
   position: absolute;
   bottom: 50px;

@@ -25,20 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
     iterations: Infinity
   });
 
-  /*
-  let wave = document.querySelector('.work-flow__waves');
+  let wave = document.querySelector('.work-flow__wave-top');
   wave.animate({
     transform: [
-      'scale(1, 1)',
-      'scale(2, 1)',
-      'scale(1, 1)'
+      'translate(0, 0)',
+      'translate(-100%, 0)',
+      'translate(0, 0)'
     ],
     easing: 'linear',
-  },{
+  }, {
     duration: 8000,
     iterations: Infinity
   });
-  */
 
   let star = document.querySelector('.jumbotron__star');
   star.animate({
