@@ -34,6 +34,15 @@
   width: 100%;
 }
 
+.jumbotron__background {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  margin-top: auto;
+  background: url(../assets/star-background.svg) center;
+  background-size: cover;
+}
+
 /* @media (min-width: 768px) {
   .jumbotron__content {
     font-size: 1.5rem;
