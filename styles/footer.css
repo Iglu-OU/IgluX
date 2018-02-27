@@ -1,16 +1,21 @@
 .footer {
+  display: flex;
+  justify-content: space-around;
   background: var(--color-primary);
   color: #fff;
 }
-.footer a {
-  display: block;
-  padding: 1em 1rem;
-  color: #fff;
-  text-decoration: none;
-}
 .footer ul {
   display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 0.25em;
 }
-.footer li:first-child {
-  flex: 1 1 auto;
+.footer li {
+  justify-content: space-between;
+}
+.footer a {
+  display: block;
+  padding: 0.75em 1rem;
+  color: #fff;
+  text-decoration: none;
 }

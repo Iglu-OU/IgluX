@@ -23,3 +23,14 @@ body {
 a {
   color: var(--color-primary);
 }
+.ico {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #fff;
+  vertical-align: top;
+}
+.ico--sm {
+  width: 1em;
+  height: 1em;
+  margin: 0.25em;
+}
