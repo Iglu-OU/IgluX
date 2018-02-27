@@ -6,28 +6,34 @@
   width: 100vw;
   height: 100vh;
   min-height: 50vw;
-  background: var(--color-primary);
+  background: var(--color-primary) linear-gradient(rgba(0, 39, 53, 0), rgba(0, 39, 53, 0.3));
   color: #fff;
 }
+
 .jumbotron h1 {
   font-size: 3.75vw;
   font-weight: 200;
 }
+
 .jumbotron h1 strong {
   font-weight: 600;
 }
+
 .jumbotron p {
   max-width: 48vw;
   margin: 5vw auto 0;
   font-size: 2.5vw;
 }
+
 .jumbotron p strong {
   font-weight: 600;
 }
+
 .jumbotron__content {
   position: absolute;
   width: 100%;
 }
+
 /* @media (min-width: 768px) {
   .jumbotron__content {
     font-size: 1.5rem;
