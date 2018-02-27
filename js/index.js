@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   let iceberg = document.querySelector('.work-flow__iceberg');
-  let floating = iceberg.animate({
+  iceberg.animate({
     transform: [
       'translate(-50%, -50%)',
       'translate(-50%, -52.5%)',
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /*
   let wave = document.querySelector('.work-flow__waves');
-  let continuous = wave.animate({
+  wave.animate({
     transform: [
       'scale(1, 1)',
       'scale(2, 1)',
@@ -26,4 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     iterations: Infinity
   });
   */
+
+  let star = document.querySelector('.jumbotron__star');
+  star.animate({
+    transform: [
+      'scale(1, 1)',
+      'scale(0, 0)',
+      'scale(1, 1)'
+    ],
+    easing: 'linear',
+  }, {
+    duration: 4000,
+    iterations: Infinity
+  });
 }, false);

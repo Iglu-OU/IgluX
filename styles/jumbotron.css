@@ -6,7 +6,7 @@
   width: 100vw;
   height: 100vh;
   min-height: 50vw;
-  background: var(--color-primary) linear-gradient(rgba(0, 39, 53, 0), rgba(0, 39, 53, 0.3));
+  background: var(--color-primary) linear-gradient(rgba(0, 39, 53, 0), rgba(0, 39, 53, 0.7));
   color: #fff;
 }
 
@@ -37,10 +37,19 @@
 .jumbotron__background {
   z-index: 1;
   width: 100vw;
-  height: 100vh;
+  height: 30vh;
   margin-top: auto;
-  background: url(../assets/star-background.svg) center;
+  background: url(../assets/star-background.svg) top;
   background-size: cover;
+}
+
+.jumbotron__star {
+  position: absolute;
+  right: 25%;
+  bottom: 10%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: url(../assets/star.svg) center;
 }
 
 /* @media (min-width: 768px) {
