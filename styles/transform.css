@@ -50,7 +50,7 @@
     border-bottom: 1px solid #2096D4;
 }
 .transform-head--alt {
-    background: #002735;
-    border-bottom: 1px solid #2096D4;
+    background: #2096D4;
+    border-bottom: 1px solid #fff;
     transform: translateY(-1em);
   }
