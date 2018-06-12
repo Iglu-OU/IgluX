@@ -3,6 +3,7 @@
   position: relative;
   width: 100vw;
   height: 1080px;
+  overflow: hidden;
   color: #ffffff;
   background: url(../assets/iceberg-sky.svg) center;
   background-size: cover;
