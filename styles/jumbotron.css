@@ -43,10 +43,19 @@
   background-size: cover;
 }
 
-.jumbotron__star {
+.jumbotron__star-one {
   position: absolute;
   right: 25%;
   bottom: 10%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(../assets/star.svg) center;
+}
+
+.jumbotron__star-two {
+  position: absolute;
+  left: 25%;
+  bottom: 15%;
   width: 0.75rem;
   height: 0.75rem;
   background: url(../assets/star.svg) center;
