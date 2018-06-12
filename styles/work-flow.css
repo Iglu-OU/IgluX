@@ -78,6 +78,7 @@
   font-size: 2.5vw;
   font-weight: 700;
 }
+
 @media (max-width: 1023px) {
   .work-flow__content h1 {
     font-size: 30px;
@@ -87,6 +88,7 @@
 .work-flow__content dl {
   margin: 4.2vw 0 0;
 }
+
 @media (max-width: 1023px) {
   .work-flow__content dl {
     margin-top: 50px;
@@ -100,6 +102,7 @@
   line-height: 1.2;
   text-transform: uppercase;
 }
+
 @media (max-width: 1023px) {
   .work-flow__content dt {
     margin: 30px 0 0;
@@ -111,8 +114,18 @@
   margin: 0;
   font-size: 0.94vw;
 }
+
 @media (max-width: 1023px) {
   .work-flow__content dd {
     font-size: 12px;
   }
+}
+
+.work-flow__star {
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: url(../assets/star.svg) center;
 }

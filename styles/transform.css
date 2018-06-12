@@ -43,12 +43,12 @@
 
 /* transform header */
 
-.transform-header {
+.transform-head {
     will-change: transform, background, border;
     transition: all .32s ease;
     border-bottom: 1px solid #2096D4;
 }
-.transform-header--alt {
+.transform-head--alt {
     background: #002735;
     border-bottom: 1px solid #2096D4;
     transform: translateY(-1em);
