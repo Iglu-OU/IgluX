@@ -53,4 +53,5 @@
     background: #2096D4;
     border-bottom: 1px solid #fff;
     transform: translateY(-1em);
+    transition-delay: 0s;
   }
