@@ -42,16 +42,17 @@
 
 
 /* transform header */
-
-.transform-head {
-    background: #2096D4;
-    will-change: transform;
-    transition-delay: .68s;
-    transition: all .32s ease;
-    border-bottom: 1px solid transparent;
+@media(min-width: 768px) {
+    .transform-head {
+        background: #2096D4;
+        will-change: transform;
+        transition-delay: .68s;
+        transition: all .32s ease;
+        border-bottom: 1px solid transparent;
+    }
+    .transform-head--alt {
+        transform: translateY(-1.25em);
+        transition-delay: 0s;
+        border-bottom: 1px solid #fff;
+    }
 }
-.transform-head--alt {
-    transform: translateY(-1.25em);
-    transition-delay: 0s;
-    border-bottom: 1px solid #fff;
-  }
