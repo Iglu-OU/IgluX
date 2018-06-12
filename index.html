@@ -12,9 +12,8 @@
   <script src="./js/web-animations.min.js"></script>
   <script src="./js/index.js"></script>
 </head>
-
 <body>
-<div class="app-header">
+<div class="app-header transform-head" id="header">
   <input class="app-header__toggle-checkbox" type="checkbox" id="app-header__toggler">
   <p class="app-header__logo">
     <a href="#">
@@ -39,46 +38,50 @@
     <span>Toggle navigation</span>
   </label>
 </div>
-
-<div class="jumbotron">
-  <div class="jumbotron__content text-center">
-    <h1 class="mt-0">Full stack power
-      <strong>creating human experience</strong>
-    </h1>
-    <p>Driven to make <br> complex systems feel
-      <strong>elegant</strong> and
-      <strong>invisible</strong>.</p>
+<div class="transform-header" id="transform-header">
+  <div class="transform-header__jumbotron">
+    <div class="jumbotron">
+      <div class="jumbotron__content text-center">
+        <h1 class="mt-0">Full stack power
+          <strong>creating human experience</strong>
+        </h1>
+        <p>Driven to make <br> complex systems feel
+          <strong>elegant</strong> and
+          <strong>invisible</strong>.</p>
+      </div>
+      <div class="jumbotron__background"></div>
+      <div class="jumbotron__star-one"></div>
+      <div class="jumbotron__star-two"></div>
+    </div>
   </div>
-  <div class="jumbotron__background"></div>
-  <div class="jumbotron__star-one"></div>
-  <div class="jumbotron__star-two"></div>
-</div>
-<div class="work-flow" id="process">
-  <div class="work-flow__eskimo"></div>
-  <div class="work-flow__star"></div>
-  <div class="work-flow__sky"></div>
-  <div class="work-flow__iceberg"></div>
-  <div class="work-flow__wave-top"></div>
-  <div class="work-flow__waves"></div>
-  <div class="work-flow__content">
-    <h1>How we work</h1>
-    <dl>
-      <dt>Front-end development</dt>
-      <dd>Collaboration with back-end team</dd>
-      <dt>UI design</dt>
-      <dd>Typography, colors, documentation</dd>
-      <dt>Evaluate</dt>
-      <dd>User tests, iterations</dd>
-      <dt>Ideate</dt>
-      <dd>Whiteboard and HTML prototypes</dd>
-      <dt>User research</dt>
-      <dd>Interviews, data analyzation</dd>
-      <dt>Requirements</dt>
-      <dd>Identication, prioritisation of needs</dd>
-    </dl>
+  <div class="transform-header__workflow">
+    <div class="work-flow" id="process">
+      <div class="work-flow__eskimo"></div>
+      <div class="work-flow__star"></div>
+      <div class="work-flow__sky"></div>
+      <div class="work-flow__iceberg"></div>
+      <div class="work-flow__wave-top"></div>
+      <div class="work-flow__waves"></div>
+      <div class="work-flow__content">
+        <h1>How we work</h1>
+        <dl>
+          <dt>Front-end development</dt>
+          <dd>Collaboration with back-end team</dd>
+          <dt>UI design</dt>
+          <dd>Typography, colors, documentation</dd>
+          <dt>Evaluate</dt>
+          <dd>User tests, iterations</dd>
+          <dt>Ideate</dt>
+          <dd>Whiteboard and HTML prototypes</dd>
+          <dt>User research</dt>
+          <dd>Interviews, data analyzation</dd>
+          <dt>Requirements</dt>
+          <dd>Identication, prioritisation of needs</dd>
+        </dl>
+      </div>
+    </div>
   </div>
 </div>
-
 <div class="section journey" id="journey"></div>
 <div class="section" id="team">
   <ul class="mt-0 list-unstyled team">
@@ -373,5 +376,21 @@
         V18.8c0-0.6,0.5-1.2,1.2-1.2h5.6c0.6,0,1.2,0.5,1.2,1.2v2c1.3-2,3.3-3.5,7.5-3.5c9.2,0,9.2,8.6,9.2,13.4L43,41.5L43,41.5z"></path>
   </symbol>
 </svg>
+  <script>
+    var transitinContainer = document.getElementById('transform-header');
+    var transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
+
+    var transitionHeader = document.getElementById('header');
+
+    document.addEventListener('scroll', () => {
+      if(scrollY < transitionStartPoint) {
+        transitinContainer.classList.remove('transform-header--alt');
+        transitionHeader.classList.remove('transform-head--alt');
+      } else {
+        transitinContainer.classList.add('transform-header--alt');
+        transitionHeader.classList.add('transform-head--alt');
+      }
+    });
+  </script>
 </body>
 </html>
