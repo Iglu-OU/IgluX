@@ -44,14 +44,14 @@
 /* transform header */
 
 .transform-head {
-    will-change: transform, background, border;
+    background: #2096D4;
+    border-bottom: 1px solid #fff;
+    will-change: transform;
     transition-delay: .68s;
     transition: all .32s ease;
     border-bottom: 1px solid #2096D4;
 }
 .transform-head--alt {
-    background: #2096D4;
-    border-bottom: 1px solid #fff;
-    transform: translateY(-1em);
+    transform: translateY(-1.25em);
     transition-delay: 0s;
   }
