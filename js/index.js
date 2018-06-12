@@ -82,3 +82,86 @@ document.addEventListener('DOMContentLoaded', () => {
     iterations: Infinity,
   });
 }, false);
+
+
+/* Navigation */
+
+// browser detection //
+var root = document.documentElement;
+var ua = navigator.userAgent;
+var browser = "asd";
+if (ua.indexOf("MSIE 10") >= 0) {
+    browser += " ie10";
+}
+if (ua.indexOf("IEMobile") >= 0) {
+    browser += " wp";
+}
+if (ua.indexOf("iPad") >= 0) {
+    browser += " ipad";
+}
+root.className += browser;
+
+// ie9 no request animation frame
+window.iglu = window.iglu || {};
+iglu.nav = {
+	config: {
+		trigger: ".app-header__navigation a",
+		speed: 400 //scroll duration
+	},
+	interval: null,
+	scrollTo: function (element) {
+		var currentY = self.pageYOffset,
+      targetY = document.getElementById(element).offsetTop;
+      console.log(document.getElementById(element))
+      targetY -= 52;
+		function scrollTo(Y, duration) {
+			var start = Date.now(),
+				elem = document.documentElement.scrollTop ? document.documentElement : document.body,
+				from = elem.scrollTop,
+				easingFunction = function (t) {
+					return Math.pow(t, 0.48);
+				};
+			if(from === Y) {
+				return;
+			}
+			function min(a, b) {
+				return a < b ? a : b;
+			}
+			function scroll(timestamp) {
+				var currentTime = Date.now(),
+					time = min(1, ((currentTime - start) / duration)),
+					easedT = easingFunction(time);
+				window.scrollTo(0, (easedT * (Y - from)) + from);
+
+				if (time < 1) {
+					requestAnimationFrame(scroll);
+				}
+			}
+			requestAnimationFrame(scroll);
+		}
+		scrollTo(targetY, iglu.nav.config.speed);
+	},
+	setBindings: function () {
+		var config = iglu.nav.config,
+			navItems = document.querySelectorAll(iglu.nav.config.trigger),
+			eventFunction = function(e) {
+				e.preventDefault();
+				iglu.nav.scrollTo(this.href.split('#')[1]);
+        // $('#app-header__toggler').prop('checked', false);
+        document.getElementById('app-header__toggler').checked = false;
+			};
+		for (i = 0; i < navItems.length; i += 1) {
+			navItems[i].addEventListener("click", eventFunction);
+		}
+		// document.querySelectorAll('#logo a')[0].addEventListener("click", eventFunction);
+	},
+	init: function () {
+		iglu.nav.setBindings();
+	}
+};
+
+if (window.requestAnimationFrame)  {
+	document.addEventListener("DOMContentLoaded", function() {
+		iglu.nav.init();
+	});
+}

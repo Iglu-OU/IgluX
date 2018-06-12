@@ -35,12 +35,14 @@
     background: rgba(0, 39, 53, 1); 
 }
 
-.transform-header--alt .transform-header__jumbotron:before,
-.transform-header--alt .transform-header__workflow:before {
+.transform-header__jumbotron--alt:before,
+.transform-header__workflow--alt:before {
     opacity: 1;
 }
 
-
+.transform-head {
+    border-bottom: 1px solid #fff;
+}
 /* transform header */
 @media(min-width: 768px) {
     .transform-head {
