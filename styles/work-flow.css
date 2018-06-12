@@ -3,9 +3,9 @@
   position: relative;
   width: 100vw;
   height: 1080px;
-  background: var(--color-primary) url(../assets/iceberg-sky.svg) center;
-  background-size: cover;
   color: #ffffff;
+  background: url(../assets/iceberg-sky.svg) center;
+  background-size: cover;
 }
 
 .work-flow__eskimo {
