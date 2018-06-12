@@ -38,8 +38,7 @@
     <span>Toggle navigation</span>
   </label>
 </div>
-<div class="transform-header" id="transform-header">
-  <div class="transform-header__jumbotron">
+  <div class="transform-header__jumbotron" id="transform-header__jumbotron">
     <div class="jumbotron">
       <div class="jumbotron__content text-center">
         <h1 class="mt-0">Full stack power
@@ -54,8 +53,8 @@
       <div class="jumbotron__star-two"></div>
     </div>
   </div>
-  <div class="transform-header__workflow">
-    <div class="work-flow" id="process">
+  <div class="transform-header__workflow" id="process">
+    <div class="work-flow" >
       <div class="work-flow__eskimo"></div>
       <div class="work-flow__star"></div>
       <div class="work-flow__sky"></div>
@@ -81,7 +80,6 @@
       </div>
     </div>
   </div>
-</div>
 <div class="section journey" id="journey"></div>
 <div class="section" id="team">
   <ul class="mt-0 list-unstyled team">
@@ -376,17 +374,20 @@
   </symbol>
 </svg>
 <script>
-  var transitinContainer = document.getElementById('transform-header');
+  var transitinContainerJumbotron = document.getElementById('transform-header__jumbotron');
+  var transitinContainerWorkflow = document.getElementById('process');
   var transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
 
   var transitionHeader = document.getElementById('header');
 
   document.addEventListener('scroll', () => {
     if (scrollY < transitionStartPoint) {
-      transitinContainer.classList.remove('transform-header--alt');
+      transitinContainerJumbotron.classList.remove('transform-header__jumbotron--alt');
+      transitinContainerWorkflow.classList.remove('transform-header__workflow--alt');
       transitionHeader.classList.remove('transform-head--alt');
     } else {
-      transitinContainer.classList.add('transform-header--alt');
+      transitinContainerJumbotron.classList.add('transform-header__jumbotron--alt');
+      transitinContainerWorkflow.classList.add('transform-header__workflow--alt');
       transitionHeader.classList.add('transform-head--alt');
     }
   });
