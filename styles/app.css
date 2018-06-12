@@ -87,6 +87,7 @@
   background: var(--color-primary);
   z-index: 1000;
   cursor: pointer;
+  z-index: 2;
 }
 .app-header__toggler span {
   font: 0/0 a;
@@ -95,11 +96,26 @@
   .app-header {
     background: var(--color-primary);
   }
+  .app-header__logo {
+    position: relative;
+    z-index: 2;
+    background: #2096D4;
+  }
   .app-header__navigation {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: block;
+    background: #2096D4;
+    pointer-events: none;
+    transform: translateY(-100%);
+    transition: all 0.32s ease;
   }
   #app-header__toggler:checked ~ .app-header__navigation {
-    display: block;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 }
 
