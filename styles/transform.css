@@ -45,6 +45,7 @@
 
 .transform-head {
     will-change: transform, background, border;
+    transition-delay: .68s;
     transition: all .32s ease;
     border-bottom: 1px solid #2096D4;
 }
