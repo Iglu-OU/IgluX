@@ -36,7 +36,7 @@
 @media (min-width: 768px) {
   .app-header {
     display: flex;
-    padding: 1.5em 2em;
+    padding: 1.5em 2em 0.5em;
   }
   .app-header__logo {
     flex: 1 1 100%;

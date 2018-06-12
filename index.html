@@ -13,7 +13,7 @@
   <script src="./js/index.js"></script>
 </head>
 <body>
-<div class="app-header">
+<div class="app-header transform-header" id="header">
   <input class="app-header__toggle-checkbox" type="checkbox" id="app-header__toggler">
   <p class="app-header__logo">
     <a href="#">
@@ -358,11 +358,15 @@
     var transitinContainer = document.getElementById('transform-header');
     var transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
 
+    var transitionHeader = document.getElementById('header');
+
     document.addEventListener('scroll', () => {
       if(scrollY < transitionStartPoint) {
-        transitinContainer.classList.remove('transform-header--alt')
+        transitinContainer.classList.remove('transform-header--alt');
+        transitionHeader.classList.remove('transform-header--alt');
       } else {
-        transitinContainer.classList.add('transform-header--alt')
+        transitinContainer.classList.add('transform-header--alt');
+        transitionHeader.classList.add('transform-header--alt');
       }
     });
   </script>

@@ -39,3 +39,17 @@
 .transform-header--alt .transform-header__workflow:before {
     opacity: 1;
 }
+
+
+/* transform header */
+
+.transform-header {
+    will-change: transform, background, border;
+    transition: all .32s ease;
+    border-bottom: 1px solid #2096D4;
+}
+.transform-header--alt {
+    background: #002735;
+    border-bottom: 1px solid #2096D4;
+    transform: translateY(-1em);
+  }
