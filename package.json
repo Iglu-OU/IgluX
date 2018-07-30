@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run watch:scss",
     "watch:scss": "sass --watch styles/main.scss:styles/main.css",
-    "generate:scss": "sass styles/main.scss:styles/main.css",
+    "generate:scss": "sass styles/main.scss:styles/main.css && npm run autoprefix",
     "autoprefix": "postcss styles/*.css --use autoprefixer -d styles/",
     "prettier": "pretty-quick --staged",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,7 +27,7 @@
     "pretty-quick": "^1.6.0"
   },
   "husky": {
-    "pre-commit": "npm run prettier && npm run generate:scss && npm run autoprefix"
+    "pre-commit": "npm run prettier && npm run generate:scss"
   },
   "browserslist": [
     "> 1%",
