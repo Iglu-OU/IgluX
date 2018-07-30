@@ -29,9 +29,10 @@ a {
     height: 1.5em;
     fill: #fff;
     vertical-align: top;
-}
-.ico--sm {
-    width: 1em;
-    height: 1em;
-    margin: 0.25em;
+
+    &--sm {
+        width: 1em;
+        height: 1em;
+        margin: 0.25em;
+    }
 }

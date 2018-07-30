@@ -10,24 +10,25 @@
     z-index: 2;
     color: #fff;
     fill: #fff;
-}
-.navigation a {
-    display: block;
-    margin-top: 1rem;
-    padding: 1em;
-    font-size: 1em;
-    line-height: 1.5;
-    color: #fff;
-    text-decoration: none;
-    fill: #fff;
-}
-.navigation li:first-child {
-    flex: 1 1 1%;
-}
-.navigation svg {
-    display: inline-block;
-    width: 3.5em;
-    height: 3.5em;
-    margin: -1.3em 0.5em -1em 0;
-    vertical-align: top;
+
+    & a {
+        display: block;
+        margin-top: 1rem;
+        padding: 1em;
+        font-size: 1em;
+        line-height: 1.5;
+        color: #fff;
+        text-decoration: none;
+        fill: #fff;
+    }
+    & li:first-child {
+        flex: 1 1 1%;
+    }
+    & svg {
+        display: inline-block;
+        width: 3.5em;
+        height: 3.5em;
+        margin: -1.3em 0.5em -1em 0;
+        vertical-align: top;
+    }
 }

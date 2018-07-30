@@ -1,142 +1,127 @@
 .journey {
-  background: #2096d4 url(../assets/Timeline_line.svg) center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-y: 140px;
-  padding: 20px 0;
-  position: relative;
-  height: 1200px;
-  overflow: hidden;
+    background: #2096d4 url(../assets/Timeline_line.svg) center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 140px;
+    padding: 20px 0;
+    position: relative;
+    height: 1200px;
+    overflow: hidden;
 }
 
 .mask {
-  width: 100%;
-  height: 100%;
-  top: 156px;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  position: absolute;
-  background: #2096d4;
-  background: linear-gradient(to bottom, rgba(32, 150, 212, 0), rgba(32, 150, 212, 1) 5%);
+    width: 100%;
+    height: 100%;
+    top: 156px;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    position: absolute;
+    background: #2096d4;
+    background: linear-gradient(to bottom, rgba(32, 150, 212, 0), rgba(32, 150, 212, 1) 5%);
 }
 
 .journey__content {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .journey__content h1 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .event {
-  position: absolute;
-  width: calc(auto - 2rem);
-  max-width: 300px;
-  color: #ffffff;
-  transition: opacity 800ms, visibility 800ms;
+    position: absolute;
+    width: auto;
+    max-width: 300px;
+    color: #ffffff;
+    transition: opacity 800ms, visibility 800ms;
 }
 
 .event__name {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .event--left {
-  left: 20%;
+    left: 20%;
 }
 
 .event__circle {
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  bottom: 8px;
-  right: -30px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 8px;
+    right: -30px;
 }
 
 .event__circle--right {
-  right: unset;
-  left: -30px;
+    right: unset;
+    left: -30px;
 }
 
 .event--right {
-  right: 20%;
+    right: 20%;
 }
 
 .hide {
-  visibility: hidden;
-  opacity: 0;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .show {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .beginning {
-  top: 170px;
+    top: 170px;
 }
 
 .design-project {
-  top: 280px;
+    top: 280px;
 }
 
 .spa {
-  top: 430px;
+    top: 430px;
 }
 
 .app {
-  top: 580px;
+    top: 580px;
 }
 
 .ux-project {
-  top: 730px;
+    top: 730px;
 }
 
 .new-team {
-  top: 880px;
-}
-
-#timeline {
-  top: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  fill: #ffffff;
-}
-
-#path {
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 5;
-  stroke-linejoin: 100000;
+    top: 880px;
 }
 
 @media (max-width: 767px) {
-  .event {
-    font-size: 12px;
-    padding-right: 40px;
-  }
+    .event {
+        font-size: 12px;
+        padding-right: 40px;
+    }
 
-  .event--left {
-    left: 10%;
-  }
-  .event--right {
-    left: 10%;
-  }
+    .event--left {
+        left: 10%;
+    }
+    .event--right {
+        left: 10%;
+    }
 
-  .event__circle {
-    display: none;
-    right: none;
-    left: -30px;
-  }
+    .event__circle {
+        display: none;
+        right: 0;
+        left: -30px;
+    }
 
-  .journey {
-    background: #2096d4 url(../assets/Timeline_line.svg) no-repeat;
-    background-position: 90%;
-    background-position-y: 140px;
-  }
+    .journey {
+        background: #2096d4 url(../assets/Timeline_line.svg) no-repeat;
+        background-position: 90%;
+        background-position-y: 140px;
+    }
 }

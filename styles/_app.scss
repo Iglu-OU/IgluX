@@ -7,6 +7,16 @@
     color: #fff;
     font-size: 1em;
     z-index: 1000;
+    @media (max-width: 767px) {
+        background: $color-primary;
+    }
+    @media (min-width: 768px) {
+        display: flex;
+        padding: 1.5em 2em 0em;
+    }
+    @media (min-width: 1024px) {
+        font-size: 1.25vw;
+    }
 
     & a {
         color: #fff;
@@ -16,48 +26,59 @@
         text-transform: uppercase;
         fill: #fff;
     }
-    &__logo {
-        margin: 0;
+}
+
+.app-header__logo {
+    margin: 0;
+    @media (max-width: 767px) {
+        position: relative;
+        z-index: 2;
+        background: #2096d4;
     }
-    &__logo a {
+    @media (min-width: 768px) {
+        flex: 1 1 100%;
+    }
+
+    & a {
         display: block;
         padding: 0.5em 1em;
     }
-    &__logo svg {
+    & svg {
         display: inline-block;
         width: 3em;
         height: 2.25em;
         vertical-align: top;
     }
-    &__logo span {
+    & span {
         display: inline-block;
         padding: 0.75em 1em 0 0.5em;
     }
 }
-@media (min-width: 768px) {
-    .app-header {
-        display: flex;
-        padding: 1.5em 2em 0em;
-    }
-    .app-header__logo {
-        flex: 1 1 100%;
-    }
-    .app-header__toggler {
-        display: none;
-    }
-}
-@media (min-width: 1024px) {
-    .app-header {
-        font-size: 1.25vw;
-    }
-}
+
 .app-header__navigation {
     margin: 0;
     padding: 0;
     color: #fff;
     list-style: none;
+    @media (max-width: 767px) {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: block;
+        background: #2096d4;
+        pointer-events: none;
+        transform: translateY(-100%);
+        transition: all 0.32s ease;
+    }
     @media (min-width: 768px) {
         display: flex;
+    }
+    @media (max-width: 768px) {
+        & li:nth-child(2) a {
+            padding: 0.25rem 1rem;
+        }
     }
 
     a {
@@ -67,12 +88,6 @@
         font-size: 1em;
         font-weight: 600;
         text-decoration: none;
-    }
-
-    & li:nth-child(2) a {
-        @media (max-width: 768px) {
-            padding: 0.25rem 1rem;
-        }
     }
 }
 
@@ -92,31 +107,44 @@
     background: $color-primary;
     cursor: pointer;
     z-index: 2;
-}
-.app-header__toggler span {
-    font: 0/0 a;
-}
-@media (max-width: 767px) {
-    .app-header {
-        background: $color-primary;
+    @media (min-width: 768px) {
+        display: none;
     }
-    .app-header__logo {
-        position: relative;
-        z-index: 2;
-        background: #2096d4;
-    }
-    .app-header__navigation {
+
+    & span {
+        font: 0/0 a;
         display: block;
         position: absolute;
-        top: 100%;
+        top: calc(50% - 3px);
         left: 0;
-        right: 0;
-        display: block;
-        background: #2096d4;
-        pointer-events: none;
-        transform: translateY(-100%);
-        transition: all 0.32s ease;
+        width: 100%;
+        height: 4px;
+        transition: background-color 0.2s;
+        background-color: #fff;
+        font-size: 0;
+        border-radius: 10px;
+
+        &:before {
+            transform: translateY(-250%);
+        }
+        &:after {
+            transform: translateY(250%);
+        }
+        &:before,
+        &:after {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            content: '';
+            transition: all 0.4s;
+            background: #fff;
+            border-radius: 10px;
+        }
     }
+}
+@media (max-width: 767px) {
     #app-header__toggler:checked ~ .app-header__navigation {
         pointer-events: auto;
         transform: translateY(0);
@@ -124,36 +152,6 @@
     }
 }
 
-.app-header__toggler span {
-    display: block;
-    position: absolute;
-    top: calc(50% - 3px);
-    left: 0;
-    width: 100%;
-    height: 4px;
-    transition: background-color 0.2s;
-    background-color: #fff;
-    font-size: 0;
-    border-radius: 10px;
-}
-.app-header__toggler span:before {
-    transform: translateY(-250%);
-}
-.app-header__toggler span:after {
-    transform: translateY(250%);
-}
-.app-header__toggler span:before,
-.app-header__toggler span:after {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    content: '';
-    transition: all 0.4s;
-    background: #fff;
-    border-radius: 10px;
-}
 .app-header__toggle-checkbox:checked ~ .app-header__toggler span {
     background-color: rgba(0, 0, 0, 0);
 }
