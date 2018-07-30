@@ -1,9 +1,21 @@
 {
     "name": "Iglu Digital Agency",
-    "display": "browser",
+    "display": "standalone",
     "short_name": "Iglu DA",
-    "theme": {},
     "description": "Iglu DA website",
     "background_color": "transparent",
-    "icons": {}
+    "theme_color": "#1396d4",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "/favicon.ico",
+        "type:": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/favicon.ico",
+        "type:": "image/png",
+        "sizes": "512x512"
+      }
+    ]
 }
