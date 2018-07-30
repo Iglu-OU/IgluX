@@ -7,7 +7,7 @@
     "start": "npm run watch:scss",
     "watch:scss": "sass --watch styles/main.scss:styles/main.css",
     "generate:scss": "sass styles/main.scss:styles/main.css",
-    "autoprefix": "npx postcss styles/*.css --use autoprefixer -d styles/",
+    "autoprefix": "postcss styles/*.css --use autoprefixer -d styles/",
     "prettier": "pretty-quick --staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
