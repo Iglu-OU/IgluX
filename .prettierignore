@@ -1,0 +1,10 @@
+.vscode/**/*
+.idea/**/*
+node_modules/**/*
+.editorconfig
+.gitignore
+package-lock.json
+package.json
+README.md
+*.svg
+*.min.js

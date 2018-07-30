@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    overflow-x: hidden;
+}
+html {
+    font-size: $font-size;
+}
+body {
+    margin: 0;
+    background: $bg;
+    color: $color;
+}
+.muted,
+.muted a {
+    color: $color--muted;
+}
+.mt-0 {
+    margin-top: 0;
+}
+a {
+    color: $color-primary;
+}
+.ico {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    fill: #fff;
+    vertical-align: top;
+}
+.ico--sm {
+    width: 1em;
+    height: 1em;
+    margin: 0.25em;
+}
+
+.ico--linkedin {
+    background: #2096d4 url(../assets/linkedin.svg) center;
+    background-size: cover;
+}
+.ico--facebook {
+    background: #2096d4 url(../assets/facebook.svg) center;
+    background-size: cover;
+}

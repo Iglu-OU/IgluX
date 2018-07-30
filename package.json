@@ -1,0 +1,37 @@
+{
+  "name": "iglux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch:scss",
+    "watch:scss": "sass --watch styles/main.scss:styles/main.css",
+    "generate:scss": "sass styles/main.scss:styles/main.css",
+    "autoprefix": "npx postcss styles/*.css --use autoprefixer -d styles/",
+    "prettier": "pretty-quick --staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iglu-OU/IgluX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iglu-OU/IgluX/issues"
+  },
+  "homepage": "https://github.com/Iglu-OU/IgluX#readme",
+  "devDependencies": {
+    "husky": "^1.0.0-rc.13",
+    "prettier": "^1.14.0",
+    "pretty-quick": "^1.6.0"
+  },
+  "husky": {
+    "pre-commit": "npm run prettier && npm run generate:scss && npm run autoprefix"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 10"
+  ]
+}
