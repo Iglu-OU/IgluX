@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', animateContent(), false);
 
+WebFont.load({
+    google: {
+        families: ['Source Sans Pro:200,300,400,600,700'],
+    },
+});
+
 function animateContent() {
     let starOne = document.querySelector('.jumbotron__star-one');
     let starTwo = document.querySelector('.jumbotron__star-two');
