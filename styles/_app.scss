@@ -7,6 +7,7 @@
     color: #fff;
     font-size: 1em;
     z-index: 1000;
+    transition: all 0.32s ease;
     @media (max-width: 767px) {
         background: $color-primary;
     }
@@ -19,7 +20,7 @@
     }
 
     &.up {
-        transform: translateY(-100px);
+        transform: translateY(-250px);
     }
 
     & a {
