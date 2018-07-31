@@ -486,8 +486,20 @@
   var htmlElement = document.querySelector('html');
   var transitionHeader = document.getElementById('header');
   var prev = 0;
+  var didScroll = false;
 
   document.addEventListener('scroll', function () {
+    didScroll = true;
+  });
+
+  setInterval(function () {
+    if (didScroll) {
+      calculateNav();
+      didScroll = false;
+    }
+  }, 250);
+
+  function calculateNav() {
     var scrollY = window.scrollY;
     if (scrollY < transitionStartPoint) {
       transitionHeader.classList.remove('transform-head--alt');
@@ -509,7 +521,7 @@
     }
 
     prev = htmlElement.scrollTop;
-  });
+  }
 </script>
 </body>
 </html>
