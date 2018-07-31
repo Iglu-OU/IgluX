@@ -6,9 +6,10 @@
   "scripts": {
     "start": "npm run watch:scss",
     "watch:scss": "sass --watch styles/main.scss:styles/main.css",
-    "generate:scss": "sass styles/main.scss:styles/main.css && npm run autoprefix",
+    "generate:scss": "sass styles/main.scss:styles/main.css",
     "autoprefix": "postcss styles/*.css --use autoprefixer -d styles/",
     "prettier": "pretty-quick --staged",
+    "build": "npm run prettier && npm run generate:scss && npm run autoprefix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,16 +23,18 @@
   },
   "homepage": "https://github.com/Iglu-OU/IgluDA#readme",
   "devDependencies": {
+    "autoprefixer": "^9.0.2",
     "husky": "^1.0.0-rc.13",
+    "postcss-cli": "^6.0.0",
     "prettier": "^1.14.0",
     "pretty-quick": "^1.6.0"
   },
   "husky": {
-    "pre-commit": "npm run prettier && npm run generate:scss"
+    "pre-commit": "npm run build"
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions",
+    "last 1 versions",
     "IE 10"
   ]
 }
