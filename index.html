@@ -475,19 +475,32 @@
   var transitionContainerWorkflow = document.getElementById('process');
   var transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
 
+  var htmlElement = document.querySelector('html');
   var transitionHeader = document.getElementById('header');
+  var prev = 0;
 
   document.addEventListener('scroll', function () {
-    var y = window.scrollY;
-    if (y < transitionStartPoint) {
+    var scrollY = window.scrollY;
+    if (scrollY < transitionStartPoint) {
+      transitionHeader.classList.remove('transform-head--alt');
+      transitionHeader.classList.remove('up');
+
       transitionContainerJumbotron.classList.remove('transform-header__jumbotron--alt');
       transitionContainerWorkflow.classList.remove('transform-header__workflow--alt');
-      transitionHeader.classList.remove('transform-head--alt');
     } else {
+      transitionHeader.classList.add('transform-head--alt');
+
       transitionContainerJumbotron.classList.add('transform-header__jumbotron--alt');
       transitionContainerWorkflow.classList.add('transform-header__workflow--alt');
-      transitionHeader.classList.add('transform-head--alt');
     }
+
+    if (scrollY < transitionStartPoint || prev > htmlElement.scrollTop) {
+      transitionHeader.classList.remove('up');
+    } else {
+      transitionHeader.classList.add('up');
+    }
+
+    prev = htmlElement.scrollTop;
   });
 </script>
 </body>
