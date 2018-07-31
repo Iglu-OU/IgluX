@@ -1,16 +1,24 @@
-.journey {
-    background: #2096d4 url(../assets/Timeline_line.svg) center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: 140px;
+.journey-wrapper {
+    background-color: #2096d4;
     padding: 20px 0;
     position: relative;
     height: 1200px;
     overflow: hidden;
+}
+
+.journey {
+    position: relative;
+    background: #2096d4 url(../assets/Timeline_line.svg) no-repeat center;
+    background-size: contain;
+    background-position-y: 140px;
+    height: 1200px;
+    margin: 0 auto;
+    max-width: 1250px;
     @media (max-width: 1023px) {
-        background: #2096d4 url(../assets/Timeline_line.svg) no-repeat;
-        background-position: 90%;
+        background: #2096d4 url(../assets/Timeline_line.svg) no-repeat 90%;
         background-position-y: 140px;
+        background-position-x: 85%;
+        max-width: 750px;
     }
 }
 
@@ -44,29 +52,36 @@
     transition: opacity 800ms, visibility 800ms;
     @media (max-width: 1023px) {
         font-size: 12px;
-        padding-right: 40px;
-
-        &--left,
-        &--right {
-            left: 10%;
-        }
+        max-width: 200px;
     }
 
     &--left {
-        left: 15%;
+        right: 65%;
     }
 
     &--right {
-        right: 15%;
+        left: 65%;
+    }
+
+    @media (max-width: 1023px) {
+        &--left,
+        &--right {
+            left: -25%;
+            right: 0;
+            margin: 0 auto;
+        }
     }
 }
 
 .event__date {
+    display: inline;
+    margin: 0;
     opacity: 0.8;
 }
 
 .event__name {
-    margin-top: 0;
+    margin: 0;
+    display: inline;
 }
 
 .event__circle {
@@ -75,7 +90,7 @@
     width: 10px;
     height: 10px;
     position: absolute;
-    bottom: 8px;
+    bottom: calc(50% - 8px);
     right: -30px;
     @media (max-width: 1023px) {
         display: none;
@@ -84,7 +99,7 @@
     }
 
     &--right {
-        right: unset;
+        right: inherit;
         left: -30px;
     }
 }
@@ -100,26 +115,26 @@
 }
 
 .beginning {
-    top: 170px;
+    top: 200px;
 }
 
 .design-project {
-    top: 280px;
+    top: 350px;
 }
 
 .spa {
-    top: 430px;
-    max-width: 400px;
+    top: 500px;
+    width: 175px;
 }
 
 .app {
-    top: 580px;
+    top: 650px;
 }
 
 .ux-project {
-    top: 730px;
+    top: 800px;
 }
 
 .new-team {
-    top: 880px;
+    top: 950px;
 }

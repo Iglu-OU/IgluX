@@ -1,4 +1,4 @@
-var journeyWrapper = document.querySelector('.journey');
+var journeyWrapper = document.querySelector('.journey-wrapper');
 
 // events
 var beginning = document.querySelector('.beginning');
