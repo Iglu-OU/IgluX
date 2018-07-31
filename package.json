@@ -30,7 +30,9 @@
     "pretty-quick": "^1.6.0"
   },
   "husky": {
-    "pre-commit": "npm run build"
+    "hooks": {
+      "pre-commit": "npm run build"
+    }
   },
   "browserslist": [
     "> 1%",
