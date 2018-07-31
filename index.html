@@ -501,7 +501,7 @@
   var prev = 0;
 
   function calculateNav() {
-    var scrollY = window.scrollY;
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollY < transitionStartPoint) {
       transitionHeader.classList.remove('transform-head--alt');
       transitionHeader.classList.remove('up');
@@ -535,12 +535,12 @@
   var newTeam = document.querySelector('.new-team');
 
   events = [
-    {element: beginning, top: 170},
-    {element: designproject, top: 280},
-    {element: spa, top: 430},
-    {element: app, top: 580},
-    {element: uxProject, top: 730},
-    {element: newTeam, top: 880},
+    {element: beginning, top: 200},
+    {element: designproject, top: 350},
+    {element: spa, top: 500},
+    {element: app, top: 650},
+    {element: uxProject, top: 800},
+    {element: newTeam, top: 950},
   ];
 
   for (var i = 0; i < events.length; i++) {
@@ -551,8 +551,12 @@
   var minHeight;
 
   function updateJourney() {
-    var windowBottom = document.documentElement.scrollTop + document.documentElement.clientHeight;
-    var elementTop = journeyWrapper.offsetTop + document.documentElement.clientHeight / 2;
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    var htmlElement = document.querySelector('html');
+    var clientHeight = htmlElement.clientHeight;
+
+    var windowBottom = scrollY + clientHeight;
+    var elementTop = journeyWrapper.offsetTop + clientHeight / 2;
     var scrollPercentage = (windowBottom - elementTop) / (journeyWrapper.scrollHeight - 156);
 
     var scrolledOfJourney = scrollPercentage * journeyWrapper.offsetTop + 156;
