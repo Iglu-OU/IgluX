@@ -17,7 +17,6 @@
 
   <script src="js/web-animations.min.js" async defer></script>
   <script src="js/index.js" async defer></script>
-  <script src="js/journey.js" async defer></script>
   <script src="sw-register.js" async defer></script>
 </head>
 <body>
@@ -479,13 +478,6 @@
   </symbol>
 </svg>
 <script>
-  var transitionContainerJumbotron = document.getElementById('transform-header__jumbotron');
-  var transitionContainerWorkflow = document.getElementById('process');
-  var transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
-
-  var htmlElement = document.querySelector('html');
-  var transitionHeader = document.getElementById('header');
-  var prev = 0;
   var didScroll = false;
 
   document.addEventListener('scroll', function () {
@@ -495,9 +487,18 @@
   setInterval(function () {
     if (didScroll) {
       calculateNav();
+      updateJourney();
       didScroll = false;
     }
-  }, 250);
+  }, 50);
+
+  var transitionContainerJumbotron = document.getElementById('transform-header__jumbotron');
+  var transitionContainerWorkflow = document.getElementById('process');
+  var transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
+
+  var htmlElement = document.querySelector('html');
+  var transitionHeader = document.getElementById('header');
+  var prev = 0;
 
   function calculateNav() {
     var scrollY = window.scrollY;
@@ -521,6 +522,64 @@
     }
 
     prev = htmlElement.scrollTop;
+  }
+
+  var journeyWrapper = document.querySelector('.journey-wrapper');
+
+  // events
+  var beginning = document.querySelector('.beginning');
+  var designproject = document.querySelector('.design-project');
+  var spa = document.querySelector('.spa');
+  var app = document.querySelector('.app');
+  var uxProject = document.querySelector('.ux-project');
+  var newTeam = document.querySelector('.new-team');
+
+  events = [
+    {element: beginning, top: 170},
+    {element: designproject, top: 280},
+    {element: spa, top: 430},
+    {element: app, top: 580},
+    {element: uxProject, top: 730},
+    {element: newTeam, top: 880},
+  ];
+
+  for (var i = 0; i < events.length; i++) {
+    events[i].element.classList.add('hide');
+    events[i].element.classList.remove('show');
+  }
+
+  var minHeight;
+
+  function updateJourney() {
+    var windowBottom = document.documentElement.scrollTop + document.documentElement.clientHeight;
+    var elementTop = journeyWrapper.offsetTop + document.documentElement.clientHeight / 2;
+    console.log('Scroll', document.documentElement.scrollTop);
+    console.log('Client Height', document.documentElement.clientHeight);
+    var scrollPercentage = (windowBottom - elementTop) / (journeyWrapper.scrollHeight - 156);
+
+    var scrolledOfJourney = scrollPercentage * journeyWrapper.offsetTop + 156;
+
+    var mask = this.document.querySelector('.mask');
+
+    for (var i = 0; i < events.length; i++) {
+      checkEventVisibility(events[i].element, events[i].top, scrolledOfJourney);
+    }
+
+    if (scrolledOfJourney > 156 && scrolledOfJourney < 1044) {
+      if (!minHeight || minHeight < scrolledOfJourney) {
+        minHeight = scrolledOfJourney;
+      } else if (minHeight > scrolledOfJourney) {
+        scrolledOfJourney = minHeight;
+      }
+      mask.style.top = scrolledOfJourney + 'px';
+    }
+  }
+
+  function checkEventVisibility(element, top, now) {
+    if (now > top) {
+      element.classList.add('show');
+      element.classList.remove('hide');
+    }
   }
 </script>
 </body>
