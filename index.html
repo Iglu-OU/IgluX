@@ -553,8 +553,6 @@
   function updateJourney() {
     var windowBottom = document.documentElement.scrollTop + document.documentElement.clientHeight;
     var elementTop = journeyWrapper.offsetTop + document.documentElement.clientHeight / 2;
-    console.log('Scroll', document.documentElement.scrollTop);
-    console.log('Client Height', document.documentElement.clientHeight);
     var scrollPercentage = (windowBottom - elementTop) / (journeyWrapper.scrollHeight - 156);
 
     var scrolledOfJourney = scrollPercentage * journeyWrapper.offsetTop + 156;
