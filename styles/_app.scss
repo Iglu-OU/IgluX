@@ -162,8 +162,10 @@
     background-color: rgba(0, 0, 0, 0);
 }
 .app-header__toggle-checkbox:checked ~ .app-header__toggler span:before {
+    width: 100%;
     transform: translateY(0) rotate(45deg);
 }
 .app-header__toggle-checkbox:checked ~ .app-header__toggler span:after {
+    width: 100%;
     transform: translateY(0) rotate(-45deg);
 }
