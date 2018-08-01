@@ -20,7 +20,7 @@ self.addEventListener('fetch', function(event) {
       - https://github.com/paulirish/caltrainschedule.io/issues/49
       - https://bugs.chromium.org/p/chromium/issues/detail?id=823392
     */
-    if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
+    if (String(event.request.cache) === 'only-if-cached' && event.request.mode !== 'same-origin') {
         return;
     }
 
