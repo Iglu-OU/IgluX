@@ -15,6 +15,15 @@ self.addEventListener('install', function(event) {
 
 //If any fetch fails, it will look for the request in the cache and serve it from there first
 self.addEventListener('fetch', function(event) {
+    /*
+      This prevents issue with Chrome DevTools and 'only-if-cached'
+      - https://github.com/paulirish/caltrainschedule.io/issues/49
+      - https://bugs.chromium.org/p/chromium/issues/detail?id=823392
+    */
+    if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
+        return;
+    }
+
     var updateCache = function(request) {
         return caches.open('pwa-offline').then(function(cache) {
             return fetch(request).then(function(response) {
