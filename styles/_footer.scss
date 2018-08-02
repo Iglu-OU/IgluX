@@ -12,6 +12,9 @@
     }
     & li {
         justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-basis: 33.3%;
+        }
     }
     & a {
         display: block;

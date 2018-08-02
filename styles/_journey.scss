@@ -57,7 +57,9 @@
 
     &--left {
         right: 65%;
-        text-align: right;
+        @media (min-width: 1024px) {
+            text-align: right;
+        }
     }
 
     &--right {
@@ -93,15 +95,14 @@
     position: absolute;
     bottom: calc(50% - 8px);
     right: -30px;
-    @media (max-width: 1023px) {
-        display: none;
-        right: 0;
-        left: -30px;
-    }
 
     &--right {
-        right: inherit;
+        right: auto;
         left: -30px;
+        @media (max-width: 1023px) {
+            left: auto;
+            right: -30px;
+        }
     }
 }
 
@@ -125,7 +126,9 @@
 
 .spa {
     top: 500px;
-    width: 175px;
+    @media (min-width: 1024px) {
+        width: 175px;
+    }
 }
 
 .app {

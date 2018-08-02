@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', animateContent(), false);
 
 function animateContent() {
+    var height = screen.height;
+    var width = screen.width;
+
+    if (width >= 768) {
+        animateStars();
+        animateWaves();
+    }
+
+    animateIceberg();
+    animateInvisible();
+}
+
+function animateStars() {
     let starOne = document.querySelector('.jumbotron__star-one');
     let starTwo = document.querySelector('.jumbotron__star-two');
     let starThree = document.querySelector('.work-flow__star');
@@ -24,7 +37,9 @@ function animateContent() {
         duration: 5000,
         iterations: Infinity,
     });
+}
 
+function animateIceberg() {
     let iceberg = document.querySelector('.work-flow__iceberg');
     const icebergAnimation = {
         transform: ['translate(-50%, -50%)', 'translate(-50%, -51.5%)', 'translate(-50%, -50%)'],
@@ -44,7 +59,9 @@ function animateContent() {
         duration: 8000,
         iterations: Infinity,
     });
+}
 
+function animateWaves() {
     let waves = document.querySelector('.work-flow__waves');
     const wavesAnimation = {
         transform: ['skewY(1.5deg)', 'skewY(0deg)', 'skewY(1.5deg)'],
@@ -64,7 +81,9 @@ function animateContent() {
         duration: 12000,
         iterations: Infinity,
     });
+}
 
+function animateInvisible() {
     const invisible = document.querySelector('.invisible');
     const invisibleAnimation = {
         opacity: [1, 0.1, 1],
