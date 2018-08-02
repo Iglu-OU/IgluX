@@ -85,6 +85,10 @@
 .event__name {
     margin: 0;
     display: inline;
+
+    & span {
+        font-size: 1.375rem;
+    }
 }
 
 .event__circle {
@@ -126,9 +130,6 @@
 
 .spa {
     top: 500px;
-    @media (min-width: 1024px) {
-        width: 175px;
-    }
 }
 
 .app {
