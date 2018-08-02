@@ -502,15 +502,13 @@
 
   function calculateNav() {
     var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
     if (scrollY < transitionStartPoint) {
       transitionHeader.classList.remove('transform-head--alt');
-      transitionHeader.classList.remove('up');
-
       transitionContainerJumbotron.classList.remove('transform-header__jumbotron--alt');
       transitionContainerWorkflow.classList.remove('transform-header__workflow--alt');
     } else {
       transitionHeader.classList.add('transform-head--alt');
-
       transitionContainerJumbotron.classList.add('transform-header__jumbotron--alt');
       transitionContainerWorkflow.classList.add('transform-header__workflow--alt');
     }
