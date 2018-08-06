@@ -86,12 +86,12 @@ function animateWaves() {
 function animateInvisible() {
     const invisible = document.querySelector('.invisible');
     const invisibleAnimation = {
-        opacity: [1, 0.1, 1],
+        opacity: [0.1, 1],
         easing: 'ease-in-out',
     };
     invisible.animate(invisibleAnimation, {
-        duration: 20000,
-        iterations: Infinity,
+        duration: 15000,
+        iterations: 1,
     });
 }
 
