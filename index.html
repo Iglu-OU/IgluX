@@ -59,6 +59,7 @@
     <div class="jumbotron__background"></div>
     <div class="jumbotron__star-one"></div>
     <div class="jumbotron__star-two"></div>
+    <div class="jumbotron__star-three"></div>
   </div>
 </div>
 <div class="transform-header__workflow" id="process">
@@ -100,42 +101,42 @@
     <div class="event event--left beginning show">
       <h4 class="event__date">March 2013</h4>
       <br>
-      <h3 class="event__name">THE BEGINNING OF IGLU</h3>
+      <h3 class="event__name">The beginning of Iglu</h3>
       <div class="event__circle"></div>
     </div>
 
     <div class="event event--right design-project show">
-      <h4 class="event__date">June 2014</h4>
+      <h4 class="event__date">June 2014 * 1st Design project</h4>
       <br>
-      <h3 class="event__name"><span>1st Design project</span><br>EVOCON</h3>
+      <h3 class="event__name">Evocon</h3>
       <div class="event__circle event__circle--right"></div>
     </div>
 
     <div class="event event--left spa show">
-      <h4 class="event__date">January 2015</h4>
+      <h4 class="event__date">January 2015 * 1st Single page application</h4>
       <br>
-      <h3 class="event__name"><span>1st Single page application</span><br>SÜDAMEAPTEEK</h3>
+      <h3 class="event__name">Südameapteek</h3>
       <div class="event__circle"></div>
     </div>
 
     <div class="event event--right app show">
-      <h4 class="event__date">November 2016</h4>
+      <h4 class="event__date">November 2016 * 1st App</h4>
       <br>
-      <h3 class="event__name"><span>1st App</span><br>DIETLESS</h3>
+      <h3 class="event__name">Dietless</h3>
       <div class="event__circle event__circle--right"></div>
     </div>
 
     <div class="event event--left ux-project show">
-      <h4 class="event__date">December 2016</h4>
+      <h4 class="event__date">December 2016 * 1st UX Project</h4>
       <br>
-      <h3 class="event__name"><span>1st UX Project</span><br>VASTUTUSTUNDLIKU ETTEVÕTLUSE FOORUM</h3>
+      <h3 class="event__name">Vastutustundliku ettevõtluse foorum</h3>
       <div class="event__circle"></div>
     </div>
 
     <div class="event event--right new-team show">
-      <h4 class="event__date">January 2018</h4>
+      <h4 class="event__date">February 2018</h4>
       <br>
-      <h3 class="event__name">THE BEGINNING OF IGLU DIGITAL AGENCY TEAM</h3>
+      <h3 class="event__name">The beginning of Iglu Digital Agency team</h3>
       <div class="event__circle event__circle--right"></div>
     </div>
   </div>
@@ -533,12 +534,12 @@
   var newTeam = document.querySelector('.new-team');
 
   events = [
-    {element: beginning, top: 200},
-    {element: designproject, top: 350},
-    {element: spa, top: 500},
-    {element: app, top: 650},
-    {element: uxProject, top: 800},
-    {element: newTeam, top: 950},
+    {element: beginning, top: 150},
+    {element: designproject, top: 250},
+    {element: spa, top: 350},
+    {element: app, top: 450},
+    {element: uxProject, top: 550},
+    {element: newTeam, top: 650},
   ];
 
   for (var i = 0; i < events.length; i++) {
@@ -555,9 +556,9 @@
 
     var windowBottom = scrollY + clientHeight;
     var elementTop = journeyWrapper.offsetTop + clientHeight / 2;
-    var scrollPercentage = (windowBottom - elementTop) / (journeyWrapper.scrollHeight - 156);
+    var scrollPercentage = (windowBottom - elementTop) / journeyWrapper.scrollHeight;
 
-    var scrolledOfJourney = scrollPercentage * journeyWrapper.offsetTop + 156;
+    var scrolledOfJourney = scrollPercentage * journeyWrapper.offsetTop;
 
     var mask = this.document.querySelector('.mask');
 
@@ -565,13 +566,16 @@
       checkEventVisibility(events[i].element, events[i].top, scrolledOfJourney);
     }
 
-    if (scrolledOfJourney > 156 && scrolledOfJourney < 1044) {
+    if (scrolledOfJourney > 90 && scrolledOfJourney < 750) {
       if (!minHeight || minHeight < scrolledOfJourney) {
         minHeight = scrolledOfJourney;
       } else if (minHeight > scrolledOfJourney) {
         scrolledOfJourney = minHeight;
       }
       mask.style.top = scrolledOfJourney + 'px';
+    } else if (scrollPercentage > 1) {
+      scrolledOfJourney = 750;
+      mask.style.top = scrolledOfJourney + 'px'
     }
   }
 

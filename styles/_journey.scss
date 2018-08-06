@@ -2,7 +2,7 @@
     background-color: #2096d4;
     padding: 20px 0;
     position: relative;
-    height: 1200px;
+    height: 1000px;
     overflow: hidden;
 }
 
@@ -10,14 +10,12 @@
     position: relative;
     background: #2096d4 url(../assets/Timeline_line.svg) no-repeat center;
     background-size: contain;
-    background-position-y: 140px;
-    height: 1200px;
+    background-position-y: 100px;
+    height: 800px;
     margin: 0 auto;
     max-width: 1250px;
     @media (max-width: 1023px) {
-        background: #2096d4 url(../assets/Timeline_line.svg) no-repeat 90%;
-        background-position-y: 140px;
-        background-position-x: 85%;
+        background: #2096d4;
         max-width: 750px;
     }
 }
@@ -47,29 +45,29 @@
 .event {
     position: absolute;
     width: auto;
-    max-width: 300px;
+    max-width: 350px;
     color: #ffffff;
     transition: opacity 800ms, visibility 800ms;
     @media (max-width: 1023px) {
         font-size: 12px;
-        max-width: 200px;
+        max-width: 300px;
     }
 
     &--left {
-        right: 65%;
+        right: 60%;
         @media (min-width: 1024px) {
             text-align: right;
         }
     }
 
     &--right {
-        left: 65%;
+        left: 60%;
     }
 
     @media (max-width: 1023px) {
         &--left,
         &--right {
-            left: -25%;
+            left: 0;
             right: 0;
             margin: 0 auto;
         }
@@ -80,11 +78,16 @@
     display: inline;
     margin: 0;
     opacity: 0.8;
+    /*Replace*/
+    font-size: 16px;
 }
 
 .event__name {
     margin: 0;
     display: inline;
+    line-height: normal;
+    /*Replace*/
+    font-size: 20px;
 
     & span {
         font-size: 1.375rem;
@@ -99,14 +102,14 @@
     position: absolute;
     bottom: calc(50% - 5px);
     right: -30px;
+    @media (max-width: 1023px) {
+        right: auto;
+        left: -30px;
+    }
 
     &--right {
         right: auto;
         left: -30px;
-        @media (max-width: 1023px) {
-            left: auto;
-            right: -30px;
-        }
     }
 }
 
@@ -121,25 +124,28 @@
 }
 
 .beginning {
-    top: 200px;
+    top: 150px;
 }
 
 .design-project {
-    top: 350px;
+    top: 250px;
 }
 
 .spa {
-    top: 500px;
+    top: 350px;
 }
 
 .app {
-    top: 650px;
+    top: 450px;
 }
 
 .ux-project {
-    top: 800px;
+    top: 550px;
+    @media (max-width: 1023px) {
+        top: 538px;
+    }
 }
 
 .new-team {
-    top: 950px;
+    top: 650px;
 }

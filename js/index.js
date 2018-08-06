@@ -16,7 +16,8 @@ function animateContent() {
 function animateStars() {
     let starOne = document.querySelector('.jumbotron__star-one');
     let starTwo = document.querySelector('.jumbotron__star-two');
-    let starThree = document.querySelector('.work-flow__star');
+    let starThree = document.querySelector('.jumbotron__star-three');
+    let starWorkflow = document.querySelector('.work-flow__star');
 
     const starAnimation = {
         transform: ['scale(1, 1)', 'scale(0, 0)', 'scale(1, 1)'],
@@ -34,6 +35,11 @@ function animateStars() {
     });
 
     starThree.animate(starAnimation, {
+        duration: 7000,
+        iterations: Infinity,
+    });
+
+    starWorkflow.animate(starAnimation, {
         duration: 5000,
         iterations: Infinity,
     });
@@ -90,8 +96,8 @@ function animateInvisible() {
         easing: 'ease-in-out',
     };
     invisible.animate(invisibleAnimation, {
-        duration: 15000,
-        iterations: 1,
+        duration: 10000,
+        fill: 'forwards',
     });
 }
 

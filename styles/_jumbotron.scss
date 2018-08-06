@@ -36,6 +36,10 @@
     }
 }
 
+.invisible {
+    opacity: 0.1;
+}
+
 .jumbotron__content {
     position: absolute;
     width: calc(100% - 17px);
@@ -63,6 +67,15 @@
     position: absolute;
     left: 25%;
     bottom: 15%;
+    width: 0.75rem;
+    height: 0.75rem;
+    background: url(../assets/star.svg) center;
+}
+
+.jumbotron__star-three {
+    position: absolute;
+    left: 60%;
+    bottom: 20%;
     width: 0.75rem;
     height: 0.75rem;
     background: url(../assets/star.svg) center;
