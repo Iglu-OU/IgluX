@@ -2,20 +2,20 @@
     "name": "Iglu Digital Agency",
     "display": "standalone",
     "short_name": "Iglu DA",
-    "description": "Iglu DA website",
+    "description": "Iglu Digital Agency is the part of Iglu that handles design and UX.",
     "background_color": "transparent",
     "theme_color": "#1396d4",
     "start_url": "/",
     "icons": [
-      {
-        "src": "/favicon.ico",
-        "type:": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "/favicon.ico",
-        "type:": "image/png",
-        "sizes": "512x512"
-      }
+        {
+            "src": "/assets/iglu.png",
+            "type:": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/iglu.png",
+            "type:": "image/png",
+            "sizes": "512x512"
+        }
     ]
 }
