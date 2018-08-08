@@ -8,7 +8,7 @@
     min-height: 50vw;
     color: #fff;
 
-    & h1 {
+    h1 {
         font-size: 3.75vw;
         font-weight: 200;
         @media (orientation: portrait) and (max-width: 767px) {
@@ -16,11 +16,11 @@
         }
     }
 
-    & h1 strong {
+    h1 strong {
         font-weight: 600;
     }
 
-    & p {
+    p {
         margin: 5vw auto 0;
         font-size: 2.5vw;
         @media (orientation: portrait) and (max-width: 767px) {
@@ -31,7 +31,7 @@
         }
     }
 
-    & p strong {
+    p strong {
         font-weight: 600;
     }
 }

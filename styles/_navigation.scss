@@ -11,7 +11,7 @@
     color: #fff;
     fill: #fff;
 
-    & a {
+    a {
         display: block;
         margin-top: 1rem;
         padding: 1em;
@@ -21,10 +21,10 @@
         text-decoration: none;
         fill: #fff;
     }
-    & li:first-child {
+    li:first-child {
         flex: 1 1 1%;
     }
-    & svg {
+    svg {
         display: inline-block;
         width: 3.5em;
         height: 3.5em;

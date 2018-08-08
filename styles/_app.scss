@@ -23,11 +23,11 @@
         transform: translateY(-250px);
     }
 
-    & a {
+    a {
         color: #fff;
         text-decoration: none;
     }
-    & svg {
+    svg {
         text-transform: uppercase;
         fill: #fff;
     }
@@ -44,17 +44,17 @@
         flex: 1 1 100%;
     }
 
-    & a {
+    a {
         display: block;
         padding: 0.5em 1em;
     }
-    & svg {
+    svg {
         display: inline-block;
         width: 3em;
         height: 2.25em;
         vertical-align: top;
     }
-    & span {
+    span {
         display: inline-block;
         padding: 0.75em 1em 0 0.5em;
     }
@@ -115,7 +115,7 @@
         display: none;
     }
 
-    & span {
+    span {
         font: 0/0 a;
         display: block;
         position: absolute;

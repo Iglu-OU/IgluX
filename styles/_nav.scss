@@ -14,13 +14,13 @@
 .navigation-scrollable {
     height: 3em;
 
-    & ul {
+    ul {
         display: flex;
         margin: 0;
         padding: 0 1rem;
         list-style: none;
     }
-    & a {
+    a {
         display: block;
         padding: 0.75em 1em;
         background-color: $navigationBgColor;

@@ -14,12 +14,12 @@ function animateContent() {
 }
 
 function animateStars() {
-    let starOne = document.querySelector('.jumbotron__star-one');
-    let starTwo = document.querySelector('.jumbotron__star-two');
-    let starThree = document.querySelector('.jumbotron__star-three');
-    let starWorkflow = document.querySelector('.work-flow__star');
+    var starOne = document.querySelector('.jumbotron__star-one');
+    var starTwo = document.querySelector('.jumbotron__star-two');
+    var starThree = document.querySelector('.jumbotron__star-three');
+    var starWorkflow = document.querySelector('.work-flow__star');
 
-    const starAnimation = {
+    var starAnimation = {
         transform: ['scale(1, 1)', 'scale(0, 0)', 'scale(1, 1)'],
         easing: 'linear',
     };
@@ -46,8 +46,8 @@ function animateStars() {
 }
 
 function animateIceberg() {
-    let iceberg = document.querySelector('.work-flow__iceberg');
-    const icebergAnimation = {
+    var iceberg = document.querySelector('.work-flow__iceberg');
+    var icebergAnimation = {
         transform: ['translate(-50%, -50%)', 'translate(-50%, -51.5%)', 'translate(-50%, -50%)'],
         easing: 'ease-in-out',
     };
@@ -56,8 +56,8 @@ function animateIceberg() {
         iterations: Infinity,
     });
 
-    let eskimo = document.querySelector('.work-flow__eskimo');
-    const eskimoAnimation = {
+    var eskimo = document.querySelector('.work-flow__eskimo');
+    var eskimoAnimation = {
         transform: ['translate(0, 0)', 'translate(0, 2%)', 'translate(0, 0)'],
         easing: 'ease-in-out',
     };
@@ -68,8 +68,8 @@ function animateIceberg() {
 }
 
 function animateWaves() {
-    let waves = document.querySelector('.work-flow__waves');
-    const wavesAnimation = {
+    var waves = document.querySelector('.work-flow__waves');
+    var wavesAnimation = {
         transform: ['skewY(1.5deg)', 'skewY(0deg)', 'skewY(1.5deg)'],
         easing: 'ease-in-out',
     };
@@ -78,8 +78,8 @@ function animateWaves() {
         iterations: Infinity,
     });
 
-    let waveTop = document.querySelector('.work-flow__wave-top');
-    const waveTopAnimation = {
+    var waveTop = document.querySelector('.work-flow__wave-top');
+    var waveTopAnimation = {
         transform: ['translate(-100%, 0)', 'translate(100%, 0)'],
         easing: 'ease-in-out',
     };
@@ -90,8 +90,8 @@ function animateWaves() {
 }
 
 function animateInvisible() {
-    const invisible = document.querySelector('.invisible');
-    const invisibleAnimation = {
+    var invisible = document.querySelector('.invisible');
+    var invisibleAnimation = {
         opacity: [0.1, 1],
         easing: 'ease-in-out',
     };
@@ -103,20 +103,22 @@ function animateInvisible() {
 
 /* Navigation */
 
-// browser detection //
-var root = document.documentElement;
-var ua = navigator.userAgent;
-var browser = 'asd';
-if (ua.indexOf('MSIE 10') >= 0) {
-    browser += ' ie10';
-}
-if (ua.indexOf('IEMobile') >= 0) {
-    browser += ' wp';
-}
-if (ua.indexOf('iPad') >= 0) {
-    browser += ' ipad';
-}
-root.className += browser;
+(function() {
+    // browser detection //
+    var root = document.documentElement;
+    var ua = navigator.userAgent;
+    var browser = '';
+    if (ua.indexOf('MSIE 10') >= 0) {
+        browser += ' ie10';
+    }
+    if (ua.indexOf('IEMobile') >= 0) {
+        browser += ' wp';
+    }
+    if (ua.indexOf('iPad') >= 0) {
+        browser += ' ipad';
+    }
+    root.className += browser;
+})();
 
 // ie9 no request animation frame
 window.iglu = window.iglu || {};
@@ -129,15 +131,13 @@ iglu.nav = {
     scrollTo: function(element) {
         var currentY = self.pageYOffset;
         var targetY = document.getElementById(element).offsetTop;
-        console.log(document.getElementById(element));
-        targetY -= 52;
         function scrollTo(Y, duration) {
-            var start = Date.now(),
-                elem = document.documentElement.scrollTop ? document.documentElement : document.body,
-                from = elem.scrollTop,
-                easingFunction = function(t) {
-                    return Math.pow(t, 0.48);
-                };
+            var start = Date.now();
+            var elem = document.documentElement.scrollTop ? document.documentElement : document.body;
+            var from = elem.scrollTop;
+            var easingFunction = function(t) {
+                return Math.pow(t, 0.48);
+            };
             if (from === Y) {
                 return;
             }
@@ -145,9 +145,9 @@ iglu.nav = {
                 return a < b ? a : b;
             }
             function scroll(timestamp) {
-                var currentTime = Date.now(),
-                    time = min(1, (currentTime - start) / duration),
-                    easedT = easingFunction(time);
+                var currentTime = Date.now();
+                var time = min(1, (currentTime - start) / duration);
+                var easedT = easingFunction(time);
                 window.scrollTo(0, easedT * (Y - from) + from);
 
                 if (time < 1) {
@@ -159,14 +159,14 @@ iglu.nav = {
         scrollTo(targetY, iglu.nav.config.speed);
     },
     setBindings: function() {
-        var config = iglu.nav.config,
-            navItems = document.querySelectorAll(iglu.nav.config.trigger),
-            eventFunction = function(e) {
-                e.preventDefault();
-                iglu.nav.scrollTo(this.href.split('#')[1]);
-                // $('#app-header__toggler').prop('checked', false);
-                document.getElementById('app-header__toggler').checked = false;
-            };
+        var config = iglu.nav.config;
+        var navItems = document.querySelectorAll(iglu.nav.config.trigger);
+        var eventFunction = function(e) {
+            e.preventDefault();
+            iglu.nav.scrollTo(this.href.split('#')[1]);
+            // $('#app-header__toggler').prop('checked', false);
+            document.getElementById('app-header__toggler').checked = false;
+        };
         for (i = 0; i < navItems.length; i += 1) {
             navItems[i].addEventListener('click', eventFunction);
         }
@@ -178,7 +178,5 @@ iglu.nav = {
 };
 
 if (window.requestAnimationFrame) {
-    document.addEventListener('DOMContentLoaded', function() {
-        iglu.nav.init();
-    });
+    iglu.nav.init();
 }
