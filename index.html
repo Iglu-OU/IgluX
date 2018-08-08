@@ -20,7 +20,7 @@
   <script src="sw-register.js" async defer></script>
 </head>
 <body>
-<div class="app-header transform-head" id="header">
+<header class="app-header transform-head" id="header">
   <input class="app-header__toggle-checkbox" type="checkbox" id="app-header__toggler">
   <p class="app-header__logo">
     <a href="#">
@@ -44,359 +44,364 @@
   <label class="app-header__toggler" for="app-header__toggler">
     <span>Toggle navigation</span>
   </label>
-</div>
+</header>
 
-<div class="transform-header__jumbotron" id="transform-header__jumbotron">
-  <div class="jumbotron">
-    <div class="jumbotron__content text-center">
-      <h1 class="mt-0">Full stack power
-        <strong>creating human experience</strong>
-      </h1>
-      <p>Driven to make<br> complex systems feel
-        <strong>elegant</strong> and
-        <strong class="invisible">invisible</strong>.</p>
+<main>
+  <section class="transform-header__jumbotron" id="transform-header__jumbotron">
+    <div class="jumbotron">
+      <div class="jumbotron__content text-center">
+        <h1 class="mt-0">Full stack power
+          <strong>creating human experience</strong>
+        </h1>
+        <p>Driven to make<br> complex systems feel
+          <strong>elegant</strong> and
+          <strong class="invisible">invisible</strong>.</p>
+      </div>
+      <div class="jumbotron__background"></div>
+      <div class="jumbotron__star-one"></div>
+      <div class="jumbotron__star-two"></div>
+      <div class="jumbotron__star-three"></div>
     </div>
-    <div class="jumbotron__background"></div>
-    <div class="jumbotron__star-one"></div>
-    <div class="jumbotron__star-two"></div>
-    <div class="jumbotron__star-three"></div>
-  </div>
-</div>
-<div class="transform-header__workflow" id="process">
-  <div class="work-flow">
-    <div class="work-flow__eskimo"></div>
-    <div class="work-flow__star"></div>
-    <div class="work-flow__sky"></div>
-    <div class="work-flow__iceberg"></div>
-    <div class="work-flow__wave-top"></div>
-    <div class="work-flow__waves"></div>
-    <div class="work-flow__content">
-      <h1>How we work</h1>
-      <dl>
-        <dt>Front-end development</dt>
-        <dd>Collaboration with back-end team</dd>
-        <dt>UI design</dt>
-        <dd>Typography, colors, documentation</dd>
-        <dt>Evaluate</dt>
-        <dd>User tests, iterations</dd>
-        <dt>Ideate</dt>
-        <dd>Whiteboard and HTML prototypes</dd>
-        <dt>User research</dt>
-        <dd>Interviews, data analysis</dd>
-        <dt>Requirements</dt>
-        <dd>Identification, prioritisation of needs</dd>
-      </dl>
+  </section>
+
+  <section class="transform-header__workflow" id="process">
+    <div class="work-flow">
+      <div class="work-flow__eskimo"></div>
+      <div class="work-flow__star"></div>
+      <div class="work-flow__sky"></div>
+      <div class="work-flow__iceberg"></div>
+      <div class="work-flow__wave-top"></div>
+      <div class="work-flow__waves"></div>
+      <div class="work-flow__content">
+        <h1>How we work</h1>
+        <dl>
+          <dt>Front-end development</dt>
+          <dd>Collaboration with back-end team</dd>
+          <dt>UI design</dt>
+          <dd>Typography, colors, documentation</dd>
+          <dt>Evaluate</dt>
+          <dd>User tests, iterations</dd>
+          <dt>Ideate</dt>
+          <dd>Whiteboard and HTML prototypes</dd>
+          <dt>User research</dt>
+          <dd>Interviews, data analysis</dd>
+          <dt>Requirements</dt>
+          <dd>Identification, prioritisation of needs</dd>
+        </dl>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="section journey-wrapper" id="journey">
-  <div class="journey">
-    <div class="journey__content">
-      <h1>Journey</h1>
+  <section class="section journey-wrapper" id="journey">
+    <div class="journey">
+      <div class="journey__content">
+        <h1>Journey</h1>
+      </div>
+
+      <div class="mask"></div>
+
+      <div class="event event--left beginning show">
+        <h4 class="event__date">March 2013</h4>
+        <br>
+        <h3 class="event__name">The beginning of Iglu</h3>
+        <div class="event__circle"></div>
+      </div>
+
+      <div class="event event--right design-project show">
+        <h4 class="event__date">June 2014 * 1st Design project</h4>
+        <br>
+        <h3 class="event__name">Evocon</h3>
+        <div class="event__circle event__circle--right"></div>
+      </div>
+
+      <div class="event event--left spa show">
+        <h4 class="event__date">January 2015 * 1st Single page application</h4>
+        <br>
+        <h3 class="event__name">Südameapteek</h3>
+        <div class="event__circle"></div>
+      </div>
+
+      <div class="event event--right app show">
+        <h4 class="event__date">November 2016 * 1st App</h4>
+        <br>
+        <h3 class="event__name">Dietless</h3>
+        <div class="event__circle event__circle--right"></div>
+      </div>
+
+      <div class="event event--left ux-project show">
+        <h4 class="event__date">December 2016 * 1st UX Project</h4>
+        <br>
+        <h3 class="event__name">Vastutustundliku ettevõtluse foorum</h3>
+        <div class="event__circle"></div>
+      </div>
+
+      <div class="event event--right new-team show">
+        <h4 class="event__date">February 2018</h4>
+        <br>
+        <h3 class="event__name">The beginning of Iglu Digital Agency team</h3>
+        <div class="event__circle event__circle--right"></div>
+      </div>
     </div>
+  </section>
 
-    <div class="mask"></div>
+  <section class="section" id="team">
+    <ul class="mt-0 list-unstyled team">
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/laura-asu-40460663/">
+            <img src="assets/portraits/laura.svg" alt="Laura Asu's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Laura Asu
+            <span class="team-member__title">Team lead, UI & UX analyst</span>
+          </h3>
+          <p>
+            Keeps the team inspired and things running, smoothly.
+          </p>
+          <p>
+            Laura has extensive knowledge about UI analysis, her expertise includes business analysis, user research,
+            user
+            testing.
+          </p>
+        </div>
+      </li>
 
-    <div class="event event--left beginning show">
-      <h4 class="event__date">March 2013</h4>
-      <br>
-      <h3 class="event__name">The beginning of Iglu</h3>
-      <div class="event__circle"></div>
-    </div>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/kristo-danilson-a9a08b159/">
+            <img src="assets/portraits/kristo.svg" alt="Kristo Danilson's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Kristo Danilson
+            <span class="team-member__title">UI & UX analyst</span>
+          </h3>
+          <p>
+            Passionate about users and the business side of IT.
+          </p>
 
-    <div class="event event--right design-project show">
-      <h4 class="event__date">June 2014 * 1st Design project</h4>
-      <br>
-      <h3 class="event__name">Evocon</h3>
-      <div class="event__circle event__circle--right"></div>
-    </div>
+          <p>
+            Kristo is well-versed in business analysis and has experience in user research and user testing.
+          </p>
+        </div>
+      </li>
 
-    <div class="event event--left spa show">
-      <h4 class="event__date">January 2015 * 1st Single page application</h4>
-      <br>
-      <h3 class="event__name">Südameapteek</h3>
-      <div class="event__circle"></div>
-    </div>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/joonaskessel/">
+            <img src="assets/portraits/joonas.svg" alt="Joonas Kessel's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Joonas Kessel
+            <span class="team-member__title">UI & UX analyst</span>
+          </h3>
+          <p>
+            Ensures the projects are on track and the users&apos; needs are met.
+          </p>
+          <p>
+            Joonas has experience in user research and user testing, as well as prototyping.
+          </p>
+        </div>
+      </li>
 
-    <div class="event event--right app show">
-      <h4 class="event__date">November 2016 * 1st App</h4>
-      <br>
-      <h3 class="event__name">Dietless</h3>
-      <div class="event__circle event__circle--right"></div>
-    </div>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/kadi-lukas-a64a99130/">
+            <img src="assets/portraits/kadi.svg" alt="Kadi Lukas's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Kadi Lukas
+            <span class="team-member__title">UI & UX Designer</span>
+          </h3>
+          <p>
+            Has an eye or two (probably three) for detail.
+          </p>
+          <p>
+            Kadi has expertise in graphic design, cinematography and is experienced in UI design, user research, user
+            testing.
+          </p>
+        </div>
+      </li>
 
-    <div class="event event--left ux-project show">
-      <h4 class="event__date">December 2016 * 1st UX Project</h4>
-      <br>
-      <h3 class="event__name">Vastutustundliku ettevõtluse foorum</h3>
-      <div class="event__circle"></div>
-    </div>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/egle-kiik-a3341451/">
+            <img src="assets/portraits/egle.svg" alt="Egle Kiik's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Egle Kiik
+            <span class="team-member__title">UI & UX Designer</span>
+          </h3>
+          <p>
+            Bridges the gap between business and end user.
+          </p>
+          <p>
+            Egle has a background in video editing, printed media and is skilled in UI design, UX writing, user
+            research,
+            user testing.
+          </p>
+        </div>
+      </li>
 
-    <div class="event event--right new-team show">
-      <h4 class="event__date">February 2018</h4>
-      <br>
-      <h3 class="event__name">The beginning of Iglu Digital Agency team</h3>
-      <div class="event__circle event__circle--right"></div>
-    </div>
-  </div>
-</div>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/viljar-k%C3%A4rgenberg-81378398/">
+            <img src="assets/portraits/viljar.svg" alt="Viljar Kärgenberg's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Viljar Kärgenberg
+            <span class="team-member__title">Front-end lead</span>
+          </h3>
+          <p>
+            Leads and supports the dev team with dedication and eagerness.
+          </p>
 
-<div class="section" id="team">
-  <ul class="mt-0 list-unstyled team">
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/laura-asu-40460663/">
-          <img src="assets/portraits/laura.svg" alt="Laura Asu's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Laura Asu
-          <span class="team-member__title">Team lead, UI & UX analyst</span>
-        </h3>
-        <p>
-          Keeps the team inspired and things running, smoothly.
-        </p>
-        <p>
-          Laura has extensive knowledge about UI analysis, her expertise includes business analysis, user research, user
-          testing.
-        </p>
-      </div>
-    </li>
+          <p>
+            Viljar is proficient in using React, Vue.js, Angular.js and has vast experience with other frameworks.
+          </p>
+        </div>
+      </li>
 
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/kristo-danilson-a9a08b159/">
-          <img src="assets/portraits/kristo.svg" alt="Kristo Danilson's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Kristo Danilson
-          <span class="team-member__title">UI & UX analyst</span>
-        </h3>
-        <p>
-          Passionate about users and the business side of IT.
-        </p>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="#team">
+            <img src="assets/portraits/anton.svg" alt="Anton Aavik's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Anton Aavik
+            <span class="team-member__title">Senior front-end developer</span>
+          </h3>
+          <p>
+            Open-source enthusiast, who strives for perfection.
+          </p>
+          <p>
+            Anton&apos;s skill set includes React, Angular, Vue.js, BEM, semantic HTML and app development.
+          </p>
+        </div>
+      </li>
 
-        <p>
-          Kristo is well-versed in business analysis and has experience in user research and user testing.
-        </p>
-      </div>
-    </li>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/harles-herman-pilter-6a3636114/">
+            <img src="assets/portraits/harles.svg" alt="Harles-Herman Pilter's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Harles-Herman Pilter
+            <span class="team-member__title">Front-end developer</span>
+          </h3>
+          <p>
+            Skilled in creating excellent micro-interactions, also, has a strong sense for business.
+          </p>
 
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/joonaskessel/">
-          <img src="assets/portraits/joonas.svg" alt="Joonas Kessel's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Joonas Kessel
-          <span class="team-member__title">UI & UX analyst</span>
-        </h3>
-        <p>
-          Ensures the projects are on track and the users&apos; needs are met.
-        </p>
-        <p>
-          Joonas has experience in user research and user testing, as well as prototyping.
-        </p>
-      </div>
-    </li>
+          <p>
+            Harles has experience in React, Angular, Vue.js and Aurelia.
+          </p>
+        </div>
+      </li>
 
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/kadi-lukas-a64a99130/">
-          <img src="assets/portraits/kadi.svg" alt="Kadi Lukas's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Kadi Lukas
-          <span class="team-member__title">UI & UX Designer</span>
-        </h3>
-        <p>
-          Has an eye or two (probably three) for detail.
-        </p>
-        <p>
-          Kadi has expertise in graphic design, cinematography and is experienced in UI design, user research, user
-          testing.
-        </p>
-      </div>
-    </li>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/">
+            <img src="assets/portraits/ivar.svg" alt="Ivar Kallejärv's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Ivar Kallejärv
+            <span class="team-member__title">Front-end developer</span>
+          </h3>
 
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/egle-kiik-a3341451/">
-          <img src="assets/portraits/egle.svg" alt="Egle Kiik's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Egle Kiik
-          <span class="team-member__title">UI & UX Designer</span>
-        </h3>
-        <p>
-          Bridges the gap between business and end user.
-        </p>
-        <p>
-          Egle has a background in video editing, printed media and is skilled in UI design, UX writing, user research,
-          user testing.
-        </p>
-      </div>
-    </li>
+          <p>
+            Adept at data visualization complemented by knowledge of system analysis.
+          </p>
+          <p>
+            Ivar is competent in React, Angular, Aurelia, Ionic, C3, D3, Chart.js and app development.
+          </p>
+        </div>
+      </li>
 
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/viljar-k%C3%A4rgenberg-81378398/">
-          <img src="assets/portraits/viljar.svg" alt="Viljar Kärgenberg's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Viljar Kärgenberg
-          <span class="team-member__title">Front-end lead</span>
-        </h3>
-        <p>
-          Leads and supports the dev team with dedication and eagerness.
-        </p>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/t%C3%B5nis-terasmaa-79b6bbb7/">
+            <img src="/assets/portraits/terasmaa.svg" alt="Tõnis Terasmaa's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Tõnis Terasmaa
+            <span class="team-member__title">Front-end developer</span>
+          </h3>
+          <p>
+            Has a positive attitude in life, especially towards complex and challenging systems
+          </p>
 
-        <p>
-          Viljar is proficient in using React, Vue.js, Angular.js and has vast experience with other frameworks.
-        </p>
-      </div>
-    </li>
+          <p>
+            Tõnis has competence in React, Angular.js and Vue.js.
+          </p>
+        </div>
+      </li>
 
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="#team">
-          <img src="assets/portraits/anton.svg" alt="Anton Aavik's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Anton Aavik
-          <span class="team-member__title">Senior front-end developer</span>
-        </h3>
-        <p>
-          Open-source enthusiast, who strives for perfection.
-        </p>
-        <p>
-          Anton&apos;s skill set includes React, Angular, Vue.js, BEM, semantic HTML and app development.
-        </p>
-      </div>
-    </li>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/kaspar-suvi-141080120/">
+            <img src="/assets/portraits/kaspar.svg" alt="Kaspar Suvi's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Kaspar Suvi
+            <span class="team-member__title">Junior front-end developer</span>
+          </h3>
+          <p>
+            Started as a trainee and is discovering the wonderful world of front-end as a full-time team member.
+          </p>
 
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/harles-herman-pilter-6a3636114/">
-          <img src="assets/portraits/harles.svg" alt="Harles-Herman Pilter's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Harles-Herman Pilter
-          <span class="team-member__title">Front-end developer</span>
-        </h3>
-        <p>
-          Skilled in creating excellent micro-interactions, also, has a strong sense for business.
-        </p>
+          <p>
+            Kaspar has experience with React, Angular, BEM, semantic HTML.
+          </p>
+        </div>
+      </li>
 
-        <p>
-          Harles has experience in React, Angular, Vue.js and Aurelia.
-        </p>
-      </div>
-    </li>
+      <li class="team-member">
+        <div class="team-member__portrait mt-0">
+          <a href="https://www.linkedin.com/in/kerttu-lumi-835649153">
+            <img src="/assets/portraits/kerttu.svg" alt="Kerttu Lumi's portrait">
+          </a>
+        </div>
+        <div class="team-member__description">
+          <h3 class="team-member__name mt-0 h1">
+            Kerttu Lumi
+            <span class="team-member__title">UX designer trainee</span>
+          </h3>
+          <p>
+            Starry-eyed trainee who is proficient in pen and paper.
+          </p>
 
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/">
-          <img src="assets/portraits/ivar.svg" alt="Ivar Kallejärv's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Ivar Kallejärv
-          <span class="team-member__title">Front-end developer</span>
-        </h3>
+          <p>
+            Kerttu is skilled in drawing illustrations and has started her journey in the field of UI & UX.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
 
-        <p>
-          Adept at data visualization complemented by knowledge of system analysis.
-        </p>
-        <p>
-          Ivar is competent in React, Angular, Aurelia, Ionic, C3, D3, Chart.js and app development.
-        </p>
-      </div>
-    </li>
-
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/t%C3%B5nis-terasmaa-79b6bbb7/">
-          <img src="/assets/portraits/tõnis.svg" alt="Tõnis Terasmaa's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Tõnis Terasmaa
-          <span class="team-member__title">Front-end developer</span>
-        </h3>
-        <p>
-          Has a positive attitude in life, especially towards complex and challenging systems
-        </p>
-
-        <p>
-          Tõnis has competence in React, Angular.js and Vue.js.
-        </p>
-      </div>
-    </li>
-
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/kaspar-suvi-141080120/">
-          <img src="/assets/portraits/kaspar.svg" alt="Kaspar Suvi's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Kaspar Suvi
-          <span class="team-member__title">Junior front-end developer</span>
-        </h3>
-        <p>
-          Started as a trainee and is discovering the wonderful world of front-end as a full-time team member.
-        </p>
-
-        <p>
-          Kaspar has experience with React, Angular, BEM, semantic HTML.
-        </p>
-      </div>
-    </li>
-
-    <li class="team-member">
-      <div class="team-member__portrait mt-0">
-        <a href="https://www.linkedin.com/in/kerttu-lumi-835649153">
-          <img src="/assets/portraits/kerttu.svg" alt="Kerttu Lumi's portrait">
-        </a>
-      </div>
-      <div class="team-member__description">
-        <h3 class="team-member__name mt-0 h1">
-          Kerttu Lumi
-          <span class="team-member__title">UX designer trainee</span>
-        </h3>
-        <p>
-          Starry-eyed trainee who is proficient in pen and paper.
-        </p>
-
-        <p>
-          Kerttu is skilled in drawing illustrations and has started her journey in the field of UI & UX.
-        </p>
-      </div>
-    </li>
-  </ul>
-</div>
-
-<div class="footer">
+<footer class="footer">
   <ul class="mt-0 list-unstyled">
     <li>
       <a href="https://iglu.ee/" target="_blank" rel="noopener">Iglu</a>
@@ -432,7 +437,7 @@
       </a>
     </li>
   </ul>
-</div>
+</footer>
 <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
   <symbol id="logo" viewBox="0 0 48 36">
     <g transform="translate(0 -269.292)">
