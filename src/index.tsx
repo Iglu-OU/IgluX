@@ -176,6 +176,8 @@ class App extends Component<any, any> {
     }
 
     componentDidMount() {
+        // TODO Refactor all of this, including the animate section, separate HTML into components
+
         let didScroll = false;
 
         document.addEventListener('scroll', () => {

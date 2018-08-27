@@ -24,6 +24,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
+                //TODO Should use style-loader when in dev mode, in order to enable HMR
                 use: [MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
