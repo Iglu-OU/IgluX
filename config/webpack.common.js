@@ -28,7 +28,7 @@ module.exports = {
                 use: [MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(svg|png)$/,
+                test: /\.(ttf|svg|png)$/,
                 use: ['file-loader'],
             },
         ],
@@ -39,25 +39,30 @@ module.exports = {
         hot: true,
     },
     plugins: [
-        new CopyWebpackPlugin([
-            { from: path.resolve(__dirname, '../public/manifest.json'), to: 'manifest.json' },
-            { from: path.resolve(__dirname, '../public/robots.txt'), to: 'robots.txt' },
-        ]),
+        new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             favicon: path.resolve(__dirname, '../public/favicon.ico'),
             template: path.resolve(__dirname, '../public/index.html'),
             inject: 'body',
             title: 'Iglu Digital Agency',
+            minify: {
+                collapseWhitespace: true,
+                collapseInlineTagWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+            },
         }),
         new MiniCSSExtractPlugin({
             filename: '[name].[hash].css',
         }),
+        new CopyWebpackPlugin([
+            { from: path.resolve(__dirname, '../public/manifest.json'), to: 'manifest.json' },
+            { from: path.resolve(__dirname, '../public/robots.txt'), to: 'robots.txt' },
+            { from: path.resolve(__dirname, '../assets/iglu.png'), to: 'iglu.png' },
+        ]),
         new WorkboxPlugin.GenerateSW({
             clientsClaim: true,
             skipWaiting: true,
-        }),
-        new CleanWebpackPlugin(['dist'], {
-            verbose: true,
         }),
     ],
     output: {
