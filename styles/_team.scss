@@ -25,14 +25,14 @@
 
 .team-member {
     display: flex;
-    align-items: center;
     flex-direction: column;
     background: #002735;
     color: #fff;
 }
 
 .team-member__portrait img {
-    width: 250px;
+    width: 325px;
+    padding: 1rem 0 0 3rem;
 }
 
 .team-member__description {

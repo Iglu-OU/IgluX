@@ -1,8 +1,8 @@
-export function TeamMember({ data }) {
-    const {id,  name, title, description, descriptionExtended, imageUrl, imageSrc, imageAlt } = data;
+export default function({ data }) {
+    const { name, title, description, descriptionExtended, imageUrl, imageSrc, imageAlt } = data;
 
     return (
-        <li className="team-member" key={id}>
+        <li className="team-member">
             <div className="team-member__portrait mt-0">
                 <a href={imageUrl}>
                     <img src={imageSrc} alt={imageAlt} />

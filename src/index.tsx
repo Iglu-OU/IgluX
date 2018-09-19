@@ -1,7 +1,7 @@
 import { render, Component } from 'inferno';
-import { TeamMember } from './components/TeamMember';
-import { TeamMemberWrapper } from './components/TeamMemberWrapper';
-import { registerSW } from './utils/registerSW';
+import TeamMember from './components/TeamMember';
+import TeamMemberWrapper from './components/TeamMemberWrapper';
+import registerSW from './utils/registerSW';
 import 'web-animations-js';
 
 import '../styles/main.scss';
@@ -18,14 +18,13 @@ import HarlesPortrait from '../assets/portraits/harles.svg';
 import IvarPortrait from '../assets/portraits/ivar.svg';
 import TerasmaaPortrait from '../assets/portraits/terasmaa.svg';
 import KasparPortrait from '../assets/portraits/kaspar.svg';
-import KerttuPortrait from '../assets/portraits/kerttu.svg';
+import AlinaPortrait from '../assets/portraits/alina.svg';
 
 import IcoFacebook from '../assets/ico-fb.svg';
 import IcoInstagram from '../assets/ico-insta.svg';
 import IcoLinkedIn from '../assets/ico-linkedin.svg';
 
 interface ITeamMember {
-    id: number;
     name: string;
     title: string;
     description: string;
@@ -38,7 +37,6 @@ interface ITeamMember {
 class App extends Component<any, any> {
     teamMemberList: ITeamMember[] = [
         {
-            id: 1,
             name: 'Laura Asu',
             title: 'Team lead, UI & UX analyst',
             description: 'Keeps the team inspired and things running, smoothly.',
@@ -46,10 +44,9 @@ class App extends Component<any, any> {
                 'Laura has extensive knowledge about UI analysis, her expertise includes business analysis, user research, user testing.',
             imageUrl: 'https://www.linkedin.com/in/laura-asu-40460663/',
             imageSrc: LauraPortrait,
-            imageAlt: `Laura Asu's portrait`,
+            imageAlt: `Laura Asu's portrait... if she was an Eskimo`,
         },
         {
-            id: 2,
             name: 'Kristo Danilson',
             title: 'UI & UX analyst',
             description: 'Passionate about users and the business side of IT.',
@@ -57,20 +54,28 @@ class App extends Component<any, any> {
                 'Kristo is well-versed in business analysis and has experience in user research and user testing.',
             imageUrl: 'https://www.linkedin.com/in/kristo-danilson-a9a08b159/',
             imageSrc: KristoPortrait,
-            imageAlt: `Kristo Danilson's portrait`,
+            imageAlt: `Kristo Danilson's portrait... if he was an Eskimo`,
         },
         {
-            id: 3,
             name: 'Joonas Kessel',
             title: 'UI & UX analyst',
             description: `Ensures the projects are on track and the users' needs are met.`,
             descriptionExtended: 'Joonas has experience in user research and user testing, as well as prototyping.',
             imageUrl: 'https://www.linkedin.com/in/joonaskessel/',
             imageSrc: JoonasPortrait,
-            imageAlt: `Joonas Kessel's portrait`,
+            imageAlt: `Joonas Kessel's portrait... if he was an Eskimo`,
         },
         {
-            id: 4,
+            name: 'Alina Trussova',
+            title: 'Art Director, UI & UX Designer',
+            description: 'Sees the bigger picture, balancing creativity with rational thinking.',
+            descriptionExtended:
+                'Has learned from experts around the world, bringing together different ideas and mindsets. Her skillset ranges from branding to UI design, user research and user testing.',
+            imageUrl: 'Art Director, UI & UX Designer',
+            imageSrc: AlinaPortrait,
+            imageAlt: `Alina Trussova's portrait... if she was an Eskimo`,
+        },
+        {
             name: 'Kadi Lukas',
             title: 'UI & UX Designer',
             description: 'Has an eye or two (probably three) for detail.',
@@ -78,10 +83,9 @@ class App extends Component<any, any> {
                 'Kadi has expertise in graphic design, cinematography and is experienced in UI design, user research, user testing.',
             imageUrl: 'https://www.linkedin.com/in/kadi-lukas-a64a99130/',
             imageSrc: KadiPortrait,
-            imageAlt: `Kadi Lukas's portrait`,
+            imageAlt: `Kadi Lukas's portrait... if she was an Eskimo`,
         },
         {
-            id: 5,
             name: 'Egle Kiik',
             title: 'UI & UX Designer',
             description: 'Bridges the gap between business and end user.',
@@ -89,10 +93,9 @@ class App extends Component<any, any> {
                 'Egle has a background in video editing, printed media and is skilled in UI design, UX writing, user research, user testing.',
             imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
             imageSrc: EglePortrait,
-            imageAlt: `Egle Kiik's portrait`,
+            imageAlt: `Egle Kiik's portrait... if she was an Eskimo`,
         },
         {
-            id: 6,
             name: 'Viljar Kärgenberg',
             title: 'Front-end lead',
             description: 'Leads and supports the dev team with dedication and eagerness.',
@@ -100,30 +103,27 @@ class App extends Component<any, any> {
                 'Viljar is proficient in using React, Vue.js, Angular.js and has vast experience with other frameworks.',
             imageUrl: 'https://www.linkedin.com/in/viljar-k%C3%A4rgenberg-81378398/',
             imageSrc: ViljarPortrait,
-            imageAlt: `Viljar Kärgenberg's portrait`,
+            imageAlt: `Viljar Kärgenberg's portrait... if he was an Eskimo`,
         },
         {
-            id: 7,
             name: 'Anton Aavik',
             title: 'Senior front-end developer',
             description: 'Open-source enthusiast, who strives for perfection.',
             descriptionExtended: `Anton's skill set includes React, Angular, Vue.js, BEM, semantic HTML and app development.`,
             imageUrl: '#',
             imageSrc: AntonPortrait,
-            imageAlt: `Anton Aavik's portrait`,
+            imageAlt: `Anton Aavik's portrait... if he was an Eskimo`,
         },
         {
-            id: 8,
             name: 'Harles-Herman Pilter',
             title: 'Front-end developer',
             description: 'Skilled in creating excellent micro-interactions, also, has a strong sense for business.',
             descriptionExtended: 'Harles has experience in React, Angular, Vue.js and Aurelia.',
             imageUrl: 'https://www.linkedin.com/in/harles-herman-pilter-6a3636114/',
             imageSrc: HarlesPortrait,
-            imageAlt: `Harles-Herman Pilter's portrait`,
+            imageAlt: `Harles-Herman Pilter's portrait... if he was an Eskimo`,
         },
         {
-            id: 9,
             name: 'Ivar Kallejärv',
             title: 'Front-end developer',
             description: 'Adept at data visualization complemented by knowledge of system analysis.',
@@ -131,10 +131,9 @@ class App extends Component<any, any> {
                 'Ivar is competent in React, Angular, Aurelia, Ionic, C3, D3, Chart.js and app development.',
             imageUrl: 'https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/',
             imageSrc: IvarPortrait,
-            imageAlt: `Ivar Kallejärv's portrait`,
+            imageAlt: `Ivar Kallejärv's portrait... if he was an Eskimo`,
         },
         {
-            id: 10,
             name: 'Tõnis Terasmaa',
             title: 'Front-end developer',
             description: 'Has a positive attitude in life, especially towards complex and challenging systems',
@@ -144,7 +143,6 @@ class App extends Component<any, any> {
             imageAlt: `Tõnis Terasmaa's portrait`,
         },
         {
-            id: 11,
             name: 'Kaspar Suvi',
             title: 'Junior front-end developer',
             description:
@@ -152,18 +150,7 @@ class App extends Component<any, any> {
             descriptionExtended: 'Kaspar has experience with React, Angular, BEM, semantic HTML.',
             imageUrl: 'https://www.linkedin.com/in/kaspar-suvi-141080120/',
             imageSrc: KasparPortrait,
-            imageAlt: `Kaspar Suvi's portrait`,
-        },
-        {
-            id: 12,
-            name: 'Kerttu Lumi',
-            title: 'UX designer trainee',
-            description: 'Starry-eyed trainee who is proficient in pen and paper.',
-            descriptionExtended:
-                'Kerttu is skilled in drawing illustrations and has started her journey in the field of UI & UX.',
-            imageUrl: 'https://www.linkedin.com/in/kerttu-lumi-835649153',
-            imageSrc: KerttuPortrait,
-            imageAlt: `Kerttu Lumi's portrait`,
+            imageAlt: `Kaspar Suvi's portrait... if he was an Eskimo`,
         },
     ];
 
@@ -482,15 +469,15 @@ class App extends Component<any, any> {
 
     returnHeaderLinks() {
         const list = [
-            { id: 1, link: '#process', name: 'Process' },
-            { id: 2, link: '#journey', name: 'Journey' },
-            { id: 3, link: '#team', name: 'Team' },
+            { link: '#process', name: 'Process' },
+            { link: '#journey', name: 'Journey' },
+            { link: '#team', name: 'Team' },
         ];
 
-        return list.map((i) => {
-            const { id, link, name } = i;
+        return list.map((i, index) => {
+            const { link, name } = i;
             return (
-                <li key={id}>
+                <li key={index}>
                     <a href={link}>{name}</a>
                 </li>
             );
@@ -499,15 +486,15 @@ class App extends Component<any, any> {
 
     returnFooterLinks() {
         const internalList = [
-            { id: 1, link: 'https://iglu.ee/', name: 'Iglu' },
-            { id: 2, link: 'https://iglu.ee/#how', name: 'Clients' },
-            { id: 3, link: 'https://iglu.ee/#where', name: 'Contact us' },
+            { link: 'https://iglu.ee/', name: 'Iglu' },
+            { link: 'https://iglu.ee/#how', name: 'Clients' },
+            { link: 'https://iglu.ee/#where', name: 'Contact us' },
         ];
 
-        const internalLinkList = internalList.map((i) => {
-            const { id, link, name } = i;
+        const internalLinkList = internalList.map((i, index) => {
+            const { link, name } = i;
             return (
-                <li key={id}>
+                <li key={index}>
                     <a href={link} target="_blank" rel="noopener">
                         {name}
                     </a>
@@ -516,16 +503,14 @@ class App extends Component<any, any> {
         });
 
         const externalList = [
-            { id: 1, link: '#', name: 'Instagram', imageSrc: IcoInstagram, imageAlt: 'Instagram icon' },
+            { link: '#', name: 'Instagram', imageSrc: IcoInstagram, imageAlt: 'Instagram icon' },
             {
-                id: 2,
                 link: 'https://www.facebook.com/IgluOU/',
                 name: 'Facebook',
                 imageSrc: IcoFacebook,
                 imageAlt: 'Facebook icon',
             },
             {
-                id: 3,
                 link: 'https://www.linkedin.com/company/iglu-o%C3%BC/',
                 name: 'LinkedIn',
                 imageSrc: IcoLinkedIn,
@@ -533,12 +518,12 @@ class App extends Component<any, any> {
             },
         ];
 
-        const externalLinkList = externalList.map((i) => {
-            const { id, link, name, imageSrc, imageAlt } = i;
+        const externalLinkList = externalList.map((i, index) => {
+            const { link, name, imageSrc, imageAlt } = i;
             return (
-                <li key={id}>
+                <li key={index}>
                     <a href={link}>
-                        <img className="ico ico--sm" alt={imageAlt} src={imageSrc} />
+                        <img className="ico ico--sm lazyload" alt={imageAlt} src={imageSrc} />
                         {name}
                     </a>
                 </li>
@@ -666,8 +651,8 @@ class App extends Component<any, any> {
 
                     <section className="section" id="team">
                         <TeamMemberWrapper>
-                            {this.teamMemberList.map((i) => (
-                                <TeamMember data={i} />
+                            {this.teamMemberList.map((i, index) => (
+                                <TeamMember data={i} key={index} />
                             ))}
                         </TeamMemberWrapper>
                     </section>
