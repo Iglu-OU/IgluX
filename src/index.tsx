@@ -188,7 +188,7 @@ class App extends Component<any, any> {
         let prev = 0;
 
         const calculateNav = () => {
-            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
 
             if (scrollY < transitionStartPoint) {
                 transitionHeader!.classList.remove('transform-head--alt');
@@ -236,7 +236,7 @@ class App extends Component<any, any> {
         let minHeight;
 
         const updateJourney = () => {
-            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
             const clientHeight = htmlElement!.clientHeight;
 
             const windowBottom = scrollY + clientHeight;
@@ -398,7 +398,7 @@ class App extends Component<any, any> {
             if (ua.indexOf('iPad') >= 0) {
                 browser += ' ipad';
             }
-            root.className += browser;
+            root!.className += browser;
         })();
 
         // ie9 no request animation frame
@@ -415,8 +415,8 @@ class App extends Component<any, any> {
                 const targetY = document.getElementById(element)!.offsetTop;
                 function scrollTo(Y, duration) {
                     const start = Date.now();
-                    const elem = document.documentElement.scrollTop ? document.documentElement : document.body;
-                    const from = elem.scrollTop;
+                    const elem = document!.documentElement!.scrollTop ? document.documentElement : document.body;
+                    const from = elem!.scrollTop;
                     const easingFunction = (t) => {
                         return Math.pow(t, 0.48);
                     };
