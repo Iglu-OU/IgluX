@@ -1,26 +1,50 @@
 /* App Header */
+.app-header-wrapper {
+    height: 0;
+}
+
 .app-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
+    width: 100%;
     color: #fff;
     font-size: 1em;
-    z-index: 1000;
-    transition: all 0.32s ease;
-    @media (max-width: 767px) {
+    z-index: 10000;
+    transition: none;
+    box-shadow: none;
+
+    &.fixed {
         background: $color-primary;
     }
+
+    @media (max-width: 767px) {
+        height: auto;
+        background: $color-primary;
+    }
+
     @media (min-width: 768px) {
         display: flex;
         padding: 1.5em 2em 0em;
     }
+
     @media (min-width: 1024px) {
         font-size: 1.25vw;
     }
 
-    &.up {
-        transform: translateY(-250px);
+    &.fixed {
+        position: fixed;
+        top: -105px;
+        left: 0;
+        width: 100%;
+        transform: translateY(0);
+        transition: all 0.32s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    &.fixed.up {
+        transform: translateY(90px);
+        @media (max-width: 767px) {
+            transform: translateY(105px);
+        }
     }
 
     a {

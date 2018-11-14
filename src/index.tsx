@@ -1,4 +1,5 @@
 import { render, Component } from 'inferno';
+import Header from './components/Header';
 import TeamMember from './components/TeamMember';
 import TeamMemberWrapper from './components/TeamMemberWrapper';
 import registerSW from './utils/registerSW';
@@ -184,29 +185,17 @@ class App extends Component<any, any> {
         const transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
 
         const htmlElement = document.querySelector('html');
-        const transitionHeader = document.getElementById('header');
-        let prev = 0;
 
         const calculateNav = () => {
             const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
 
             if (scrollY < transitionStartPoint) {
-                transitionHeader!.classList.remove('transform-head--alt');
                 transitionContainerJumbotron!.classList.remove('transform-header__jumbotron--alt');
                 transitionContainerWorkflow!.classList.remove('transform-header__workflow--alt');
             } else {
-                transitionHeader!.classList.add('transform-head--alt');
                 transitionContainerJumbotron!.classList.add('transform-header__jumbotron--alt');
                 transitionContainerWorkflow!.classList.add('transform-header__workflow--alt');
             }
-
-            if (scrollY < transitionStartPoint || prev > htmlElement!.scrollTop) {
-                transitionHeader!.classList.remove('up');
-            } else {
-                transitionHeader!.classList.add('up');
-            }
-
-            prev = htmlElement!.scrollTop;
         };
 
         const journeyWrapper = document.querySelector('.journey-wrapper') as any;
@@ -536,19 +525,7 @@ class App extends Component<any, any> {
     public render() {
         return (
             <div>
-                <header className="app-header transform-head" id="header">
-                    <input className="app-header__toggle-checkbox" type="checkbox" id="app-header__toggler" />
-                    <p className="app-header__logo">
-                        <a href="#">
-                            <img className="ico ico--logo" alt="Iglu logo" src={Logo} /> <span>Digital Agency</span>
-                        </a>
-                    </p>
-                    <ul className="app-header__navigation">{this.returnHeaderLinks()}</ul>
-                    <label className="app-header__toggler" htmlFor="app-header__toggler">
-                        <span>Toggle navigation</span>
-                    </label>
-                </header>
-
+                <Header Logo={Logo} />
                 <main>
                     <section className="transform-header__jumbotron" id="transform-header__jumbotron">
                         <div className="jumbotron">
