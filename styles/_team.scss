@@ -1,11 +1,15 @@
+#team {
+    background: #002735;
+}
+
+.team-wrapper {
+    max-width: 1480px;
+    margin: auto;
+}
+
 .team {
     display: flex;
     flex-wrap: wrap;
-    padding: 3rem 19rem;
-    background: #002735;
-    @media (max-width: 1480px) {
-        padding: 3rem 0;
-    }
 
     p {
         line-height: 1.5rem;
