@@ -17,9 +17,5 @@ module.exports = merge(common, {
             new OptimizeCSSAssetsPlugin({}),
         ],
     },
-    plugins: [
-        new CompressionPlugin({
-            asset: '[path].gz[query]',
-        }),
-    ],
+    plugins: [new CompressionPlugin()],
 });
