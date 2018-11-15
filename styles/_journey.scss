@@ -19,6 +19,12 @@
         background: #2096d4;
         max-width: 750px;
     }
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
     &__header {
         color: #ffffff;
 
@@ -97,7 +103,7 @@
     transition: opacity 800ms, visibility 800ms;
     @media (max-width: 1023px) {
         font-size: 12px;
-        max-width: 225px;
+        max-width: 100%;
     }
 }
 
@@ -107,6 +113,23 @@
     opacity: 0.8;
     /*Replace*/
     font-size: 16px;
+
+    span {
+        display: inline-block;
+    }
+    span:after {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        margin: 0 6px;
+        border-radius: 50%;
+        background: #fff;
+        vertical-align: middle;
+    }
+    span:last-child:after {
+        display: none;
+    }
 }
 
 .event__name {
