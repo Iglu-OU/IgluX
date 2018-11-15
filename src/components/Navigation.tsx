@@ -26,17 +26,17 @@ export default class Navigation extends Component<INavigationProps, any> {
         document.addEventListener('scroll', scroll, false);
 
         function scroll(e) {
-            if (!htmlEl || !navEl || htmlEl.scrollTop < 0) {
+            if (!htmlEl || !navEl || getBodyScrollTop() < 0) {
                 return;
             }
 
-            if (htmlEl.scrollTop > 400) {
+            if (getBodyScrollTop() > 400) {
                 navEl.classList.add('fixed');
-            } else if (htmlEl.scrollTop <= 15) {
+            } else if (getBodyScrollTop() <= 15) {
                 navEl.classList.remove('fixed');
             }
 
-            if (prev < htmlEl.scrollTop) {
+            if (prev < getBodyScrollTop()) {
                 navEl.classList.add('down');
                 navEl.classList.remove('up');
             } else {
@@ -44,7 +44,12 @@ export default class Navigation extends Component<INavigationProps, any> {
                 navEl.classList.remove('down');
             }
 
-            prev = htmlEl.scrollTop;
+            prev = getBodyScrollTop();
+        }
+
+        function getBodyScrollTop() {
+            const el = document.scrollingElement || document.documentElement;
+            return el ? el.scrollTop : 0;
         }
 
         let isVisible = false;
