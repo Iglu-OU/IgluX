@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 1936 1034"
+   version="1.1"
+   id="svg180"
+   sodipodi:docname="Iceberg-bg.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata184">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Iceberg</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     id="namedview182"
+     showgrid="false"
+     inkscape:zoom="0.75020523"
+     inkscape:cx="878.98482"
+     inkscape:cy="411.17455"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg180" />
+  <defs
+     id="defs26">
+    <style
+       id="style2">.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#d6eef4;}.cls-3{fill:#ddeffa;}.cls-4{fill:#a1cada;}.cls-5{fill:none;}.cls-6{fill:#99bdc6;}.cls-7{fill:#fff;}.cls-8{fill:#e9e9ea;}.cls-9{fill:#799fa5;}.cls-10,.cls-11,.cls-12,.cls-13{opacity:0.5;}.cls-10{fill:url(#linear-gradient-2);}.cls-11{fill:url(#linear-gradient-3);}.cls-12{fill:url(#linear-gradient-4);}.cls-13{fill:url(#linear-gradient-5);}.cls-14{fill:#08353f;opacity:0.7;}.cls-15{fill:url(#linear-gradient-6);}</style>
+    <linearGradient
+       id="linear-gradient"
+       x1="968.59"
+       y1="309.68"
+       x2="968.59"
+       y2="328.14"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#004a55"
+         id="stop4" />
+      <stop
+         offset="0"
+         stop-color="#004a55"
+         stop-opacity="0.98"
+         id="stop6" />
+      <stop
+         offset="1"
+         stop-color="#00434f"
+         stop-opacity="0.4"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="968.59"
+       y1="327.38"
+       x2="968.59"
+       y2="818.04"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#01323e"
+         id="stop11" />
+      <stop
+         offset="1"
+         stop-color="#01323e"
+         stop-opacity="0"
+         id="stop13" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-3"
+       x1="968.33"
+       y1="389.28"
+       x2="968.33"
+       y2="862.55"
+       xlink:href="#linear-gradient-2" />
+    <linearGradient
+       id="linear-gradient-4"
+       x1="968.5"
+       y1="529.47"
+       x2="968.5"
+       y2="849.55"
+       xlink:href="#linear-gradient-2" />
+    <linearGradient
+       id="linear-gradient-5"
+       x1="968.33"
+       y1="628.26"
+       x2="968.33"
+       y2="852.25"
+       xlink:href="#linear-gradient-2" />
+    <linearGradient
+       id="linear-gradient-6"
+       x1="1"
+       y1="838.9"
+       x2="1936"
+       y2="838.9"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#01323e"
+         id="stop19" />
+      <stop
+         offset="1"
+         stop-color="#01323e"
+         id="stop21" />
+      <stop
+         offset="1"
+         stop-color="#01323e"
+         stop-opacity="0.95"
+         id="stop23" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title28">Iceberg</title>
+  <g
+     id="Bg">
+    <rect
+       class="cls-1"
+       x="1.19"
+       y="309.68"
+       width="1934.81"
+       height="18.45"
+       id="rect30" />
+  </g>
+</svg>

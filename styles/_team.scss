@@ -1,13 +1,28 @@
 #team {
     background: #002735;
+    position: relative;
+    width: 100%;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 12vh;
+        width: 100%;
+        background-color: #1396d4;
+        z-index: 1;
+    }
 }
 
 .team-wrapper {
+    position: relative;
+    padding-top: 21vh;
     max-width: 1480px;
     margin: auto;
 }
 
 .team {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,42 +31,48 @@
         line-height: 1.5rem;
         font-size: 1.125rem;
     }
+    &__top-fold {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        margin-top: auto;
+        background: url(../assets/iceberg/Iceberg-fold_reverse.svg) center;
+        background-size: cover;
+    }
 }
-
-.team-member-content-wrapper {
-    width: 100%;
-    height: 100%;
-    padding: 1rem 3rem;
-}
-
 .team-member {
     display: flex;
     flex-direction: column;
     background: #002735;
     color: #fff;
-    @media (min-width: 320px) and (max-width: 841px) {
+    @media (max-width: 841px) {
         flex-basis: 100%;
-        .team-member-content-wrapper {
-            padding: 1rem 0;
-        }
     }
-    @media (min-width: 842px) and (max-width: 1263px) {
+    @media (max-width: 1263px) {
         flex-basis: 50%;
-        &:nth-of-type(2n + 1) {
-            .team-member-content-wrapper {
-                padding-right: 0;
-            }
-        }
     }
     @media (min-width: 1264px) {
         flex-basis: 33.3%;
-        &:nth-of-type(3n + 1) {
-            .team-member-content-wrapper {
+    }
+    &-content-wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 1rem 3rem;
+        @media (min-width: 320px) and (max-width: 841px) {
+            padding: 1rem 0;
+        }
+        @media (min-width: 842px) and (max-width: 1263px) {
+            &:nth-of-type(2n + 1) {
                 padding-right: 0;
             }
         }
-        &:nth-of-type(3n + 3) {
-            .team-member-content-wrapper {
+        @media (min-width: 1264px) {
+            &:nth-of-type(3n + 1) {
+                padding-right: 0;
+            }
+            &:nth-of-type(3n + 3) {
                 padding-left: 0;
             }
         }

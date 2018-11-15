@@ -192,3 +192,18 @@
     width: 100%;
     transform: translateY(0) rotate(-45deg);
 }
+
+@keyframes foldMove {
+    0% {
+        transform: skewY(0);
+    }
+    25% {
+        transform: skewY(1deg);
+    }
+    75% {
+        transform: skewY(-1deg);
+    }
+    100% {
+        transform: skewY(0);
+    }
+}
