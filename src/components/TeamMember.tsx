@@ -3,21 +3,22 @@ export default function({ data }) {
 
     return (
         <li className="team-member">
-            <div className="team-member-content-wrapper">
-                <div className="team-member__portrait mt-0">
-                    <a href={imageUrl}>
-                        <img src={imageSrc} alt={imageAlt} />
-                    </a>
-                </div>
+            <a href={imageUrl} target="_blank" className="team-member-content-wrapper">
+                <p className="team-member__portrait mt-0">
+                    <img className="team-member__portrait-primary" src={imageSrc} alt={imageAlt} />
+                    <img className="team-member__portrait-secondary" src={imageSrc} alt={imageAlt} />
+                </p>
                 <div className="team-member__description">
                     <h3 className="team-member__name mt-0 h1">
-                        {name}
-                        <span className="team-member__title">{title}</span>
+                        <span>{name}</span>
                     </h3>
+                    <p className="team-member__title mt-0">
+                        <span>{title}</span>
+                    </p>
                     <p>{description}</p>
                     <p>{descriptionExtended}</p>
                 </div>
-            </div>
+            </a>
         </li>
     );
 }
