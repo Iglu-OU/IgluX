@@ -74,7 +74,7 @@
             height: 100%;
             top: 0;
             left: 0;
-
+            // animation: 8s linear 0s infinite portraitMove;
             .team-member-content-wrapper:hover & {
                 animation: 8s linear 0s infinite portraitMove;
             }
@@ -135,7 +135,7 @@
         transform: translate(0, 8px);
     }
     75% {
-        transform: translate(0, 8px);
+        transform: translate(0, -8px);
     }
     100% {
         transform: translate(0, 0);

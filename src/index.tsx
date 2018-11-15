@@ -9,18 +9,31 @@ import 'web-animations-js';
 import '../styles/main.scss';
 import Logo from '../assets/logo.svg';
 
-import LauraPortrait from '../assets/portraits/laura.svg';
-import KristoPortrait from '../assets/portraits/kristo.svg';
-import JoonasPortrait from '../assets/portraits/joonas.svg';
-import KadiPortrait from '../assets/portraits/kadi.svg';
-import EglePortrait from '../assets/portraits/egle.svg';
-import ViljarPortrait from '../assets/portraits/viljar.svg';
-import AntonPortrait from '../assets/portraits/anton.svg';
-import HarlesPortrait from '../assets/portraits/harles.svg';
-import IvarPortrait from '../assets/portraits/ivar.svg';
-import TerasmaaPortrait from '../assets/portraits/terasmaa.svg';
-import KasparPortrait from '../assets/portraits/kaspar.svg';
-import AlinaPortrait from '../assets/portraits/alina.svg';
+import LauraPortrait from '../assets/team/primary/laura.svg';
+import KristoPortrait from '../assets/team/primary/kristo.svg';
+import JoonasPortrait from '../assets/team/primary/joonas.svg';
+import KadiPortrait from '../assets/team/primary/kadi.svg';
+import EglePortrait from '../assets/team/primary/egle.svg';
+import ViljarPortrait from '../assets/team/primary/viljar.svg';
+import AntonPortrait from '../assets/team/primary/anton.svg';
+import HarlesPortrait from '../assets/team/primary/harles.svg';
+import IvarPortrait from '../assets/team/primary/ivar.svg';
+import TerasmaaPortrait from '../assets/team/primary/terasmaa.svg';
+import KasparPortrait from '../assets/team/primary/kaspar.svg';
+import AlinaPortrait from '../assets/team/primary/alina.svg';
+
+import LauraPortraitSec from '../assets/team/secondary/laura.svg';
+import KristoPortraitSec from '../assets/team/secondary/kristo.svg';
+import JoonasPortraitSec from '../assets/team/secondary/joonas.svg';
+import KadiPortraitSec from '../assets/team/secondary/kadi.svg';
+import EglePortraitSec from '../assets/team/secondary/egle.svg';
+import ViljarPortraitSec from '../assets/team/secondary/viljar.svg';
+import AntonPortraitSec from '../assets/team/secondary/anton.svg';
+import HarlesPortraitSec from '../assets/team/secondary/harles.svg';
+import IvarPortraitSec from '../assets/team/secondary/ivar.svg';
+import TerasmaaPortraitSec from '../assets/team/secondary/terasmaa.svg';
+import KasparPortraitSec from '../assets/team/secondary/kaspar.svg';
+import AlinaPortraitSec from '../assets/team/secondary/alina.svg';
 
 import IcoFacebook from '../assets/ico-fb.svg';
 import IcoInstagram from '../assets/ico-insta.svg';
@@ -33,6 +46,7 @@ interface ITeamMember {
     descriptionExtended: string;
     imageUrl: string;
     imageSrc: string;
+    imageSecSrc: string;
     imageAlt: string;
 }
 
@@ -46,6 +60,7 @@ class App extends Component<any, any> {
                 'Laura has extensive knowledge about UI analysis, her expertise includes business analysis, user research, user testing.',
             imageUrl: 'https://www.linkedin.com/in/laura-asu-40460663/',
             imageSrc: LauraPortrait,
+            imageSecSrc: LauraPortraitSec,
             imageAlt: `Laura Asu's portrait... if she was an Eskimo`,
         },
         {
@@ -56,6 +71,7 @@ class App extends Component<any, any> {
                 'Kristo is well-versed in business analysis and has experience in user research and user testing.',
             imageUrl: 'https://www.linkedin.com/in/kristo-danilson-a9a08b159/',
             imageSrc: KristoPortrait,
+            imageSecSrc: KristoPortraitSec,
             imageAlt: `Kristo Danilson's portrait... if he was an Eskimo`,
         },
         {
@@ -65,6 +81,7 @@ class App extends Component<any, any> {
             descriptionExtended: 'Joonas has experience in user research and user testing, as well as prototyping.',
             imageUrl: 'https://www.linkedin.com/in/joonaskessel/',
             imageSrc: JoonasPortrait,
+            imageSecSrc: JoonasPortraitSec,
             imageAlt: `Joonas Kessel's portrait... if he was an Eskimo`,
         },
         {
@@ -75,6 +92,7 @@ class App extends Component<any, any> {
                 'Has learned from experts around the world, bringing together different ideas and mindsets. Her skillset ranges from branding to UI design, user research and user testing.',
             imageUrl: 'Art Director, UI & UX Designer',
             imageSrc: AlinaPortrait,
+            imageSecSrc: AlinaPortraitSec,
             imageAlt: `Alina Trussova's portrait... if she was an Eskimo`,
         },
         {
@@ -85,6 +103,7 @@ class App extends Component<any, any> {
                 'Kadi has expertise in graphic design, cinematography and is experienced in UI design, user research, user testing.',
             imageUrl: 'https://www.linkedin.com/in/kadi-lukas-a64a99130/',
             imageSrc: KadiPortrait,
+            imageSecSrc: KadiPortraitSec,
             imageAlt: `Kadi Lukas's portrait... if she was an Eskimo`,
         },
         {
@@ -95,6 +114,7 @@ class App extends Component<any, any> {
                 'Egle has a background in video editing, printed media and is skilled in UI design, UX writing, user research, user testing.',
             imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
             imageSrc: EglePortrait,
+            imageSecSrc: EglePortraitSec,
             imageAlt: `Egle Kiik's portrait... if she was an Eskimo`,
         },
         {
@@ -105,6 +125,7 @@ class App extends Component<any, any> {
                 'Viljar is proficient in using React, Vue.js, Angular.js and has vast experience with other frameworks.',
             imageUrl: 'https://www.linkedin.com/in/viljar-k%C3%A4rgenberg-81378398/',
             imageSrc: ViljarPortrait,
+            imageSecSrc: ViljarPortraitSec,
             imageAlt: `Viljar Kärgenberg's portrait... if he was an Eskimo`,
         },
         {
@@ -114,6 +135,7 @@ class App extends Component<any, any> {
             descriptionExtended: `Anton's skill set includes React, Angular, Vue.js, BEM, semantic HTML and app development.`,
             imageUrl: '#',
             imageSrc: AntonPortrait,
+            imageSecSrc: AntonPortraitSec,
             imageAlt: `Anton Aavik's portrait... if he was an Eskimo`,
         },
         {
@@ -123,6 +145,7 @@ class App extends Component<any, any> {
             descriptionExtended: 'Harles has experience in React, Angular, Vue.js and Aurelia.',
             imageUrl: 'https://www.linkedin.com/in/harles-herman-pilter-6a3636114/',
             imageSrc: HarlesPortrait,
+            imageSecSrc: HarlesPortraitSec,
             imageAlt: `Harles-Herman Pilter's portrait... if he was an Eskimo`,
         },
         {
@@ -133,6 +156,7 @@ class App extends Component<any, any> {
                 'Ivar is competent in React, Angular, Aurelia, Ionic, C3, D3, Chart.js and app development.',
             imageUrl: 'https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/',
             imageSrc: IvarPortrait,
+            imageSecSrc: IvarPortraitSec,
             imageAlt: `Ivar Kallejärv's portrait... if he was an Eskimo`,
         },
         {
@@ -142,6 +166,7 @@ class App extends Component<any, any> {
             descriptionExtended: 'Tõnis has competence in React, Angular.js and Vue.js.',
             imageUrl: 'https://www.linkedin.com/in/t%C3%B5nis-terasmaa-79b6bbb7/',
             imageSrc: TerasmaaPortrait,
+            imageSecSrc: TerasmaaPortraitSec,
             imageAlt: `Tõnis Terasmaa's portrait`,
         },
         {
@@ -152,6 +177,7 @@ class App extends Component<any, any> {
             descriptionExtended: 'Kaspar has experience with React, Angular, BEM, semantic HTML.',
             imageUrl: 'https://www.linkedin.com/in/kaspar-suvi-141080120/',
             imageSrc: KasparPortrait,
+            imageSecSrc: KasparPortraitSec,
             imageAlt: `Kaspar Suvi's portrait... if he was an Eskimo`,
         },
     ];
