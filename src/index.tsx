@@ -247,6 +247,8 @@ class App extends Component<any, any> {
 
         let minHeight;
 
+        // Remove this comment
+
         const updateJourney = () => {
             const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
             const clientHeight = htmlElement!.clientHeight;
