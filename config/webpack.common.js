@@ -42,7 +42,6 @@ module.exports = {
         contentBase: 'src/',
         historyApiFallback: true,
         hot: true,
-        host: '192.168.8.111',
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),

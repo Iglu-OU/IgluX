@@ -56,8 +56,7 @@ class App extends Component<any, any> {
             name: 'Laura Asu',
             title: 'Team lead, UI & UX analyst',
             description: 'Keeps the team inspired and things running, smoothly.',
-            descriptionExtended:
-                'Laura has extensive knowledge about UI analysis, her expertise includes business analysis, user research, user testing.',
+            descriptionExtended: 'She is one of the few who can perform open-heart surgery to a live system.',
             imageUrl: 'https://www.linkedin.com/in/laura-asu-40460663/',
             imageSrc: LauraPortrait,
             imageSecSrc: LauraPortraitSec,
@@ -68,7 +67,7 @@ class App extends Component<any, any> {
             title: 'UI & UX analyst',
             description: 'Passionate about users and the business side of IT.',
             descriptionExtended:
-                'Kristo is well-versed in business analysis and has experience in user research and user testing.',
+                'There is a rumour that he discovered the true meaning of disco. But then they changed it.',
             imageUrl: 'https://www.linkedin.com/in/kristo-danilson-a9a08b159/',
             imageSrc: KristoPortrait,
             imageSecSrc: KristoPortraitSec,
@@ -78,7 +77,8 @@ class App extends Component<any, any> {
             name: 'Joonas Kessel',
             title: 'UI & UX analyst',
             description: `Ensures the projects are on track and the users' needs are met.`,
-            descriptionExtended: 'Joonas has experience in user research and user testing, as well as prototyping.',
+            descriptionExtended:
+                'Watch out, you most likely will be hit by several witty remarks during a minute. We like.',
             imageUrl: 'https://www.linkedin.com/in/joonaskessel/',
             imageSrc: JoonasPortrait,
             imageSecSrc: JoonasPortraitSec,
@@ -87,9 +87,8 @@ class App extends Component<any, any> {
         {
             name: 'Alina Trussova',
             title: 'Art Director, UI & UX Designer',
-            description: 'Sees the bigger picture, balancing creativity with rational thinking.',
-            descriptionExtended:
-                'Has learned from experts around the world, bringing together different ideas and mindsets. Her skillset ranges from branding to UI design, user research and user testing.',
+            description: 'Sparks the mind of designers while balancing creativity with rationality.',
+            descriptionExtended: 'When everything is elegant and perfect on the earth… the moon will be conquered.',
             imageUrl: 'Art Director, UI & UX Designer',
             imageSrc: AlinaPortrait,
             imageSecSrc: AlinaPortraitSec,
@@ -99,8 +98,7 @@ class App extends Component<any, any> {
             name: 'Kadi Lukas',
             title: 'UI & UX Designer',
             description: 'Has an eye or two (probably three) for detail.',
-            descriptionExtended:
-                'Kadi has expertise in graphic design, cinematography and is experienced in UI design, user research, user testing.',
+            descriptionExtended: 'The third eye helped her win a staring contest against Chuck Norris.',
             imageUrl: 'https://www.linkedin.com/in/kadi-lukas-a64a99130/',
             imageSrc: KadiPortrait,
             imageSecSrc: KadiPortraitSec,
@@ -111,7 +109,7 @@ class App extends Component<any, any> {
             title: 'UI & UX Designer',
             description: 'Bridges the gap between business and end user.',
             descriptionExtended:
-                'Egle has a background in video editing, printed media and is skilled in UI design, UX writing, user research, user testing.',
+                'Making digital rainbows with her unicorn skillset to make you feel like you are flying.',
             imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
             imageSrc: EglePortrait,
             imageSecSrc: EglePortraitSec,
@@ -121,8 +119,7 @@ class App extends Component<any, any> {
             name: 'Viljar Kärgenberg',
             title: 'Front-end lead',
             description: 'Leads and supports the dev team with dedication and eagerness.',
-            descriptionExtended:
-                'Viljar is proficient in using React, Vue.js, Angular.js and has vast experience with other frameworks.',
+            descriptionExtended: 'Scores 5-point slam dunks with ease while learning new emerging technologies.',
             imageUrl: 'https://www.linkedin.com/in/viljar-k%C3%A4rgenberg-81378398/',
             imageSrc: ViljarPortrait,
             imageSecSrc: ViljarPortraitSec,
@@ -132,7 +129,7 @@ class App extends Component<any, any> {
             name: 'Anton Aavik',
             title: 'Senior front-end developer',
             description: 'Open-source enthusiast, who strives for perfection.',
-            descriptionExtended: `Anton's skill set includes React, Angular, Vue.js, BEM, semantic HTML and app development.`,
+            descriptionExtended: `Abracadabra, hocus pocus add a bit of secret ingredients and magic happens, usually.`,
             imageUrl: '#',
             imageSrc: AntonPortrait,
             imageSecSrc: AntonPortraitSec,
@@ -141,8 +138,9 @@ class App extends Component<any, any> {
         {
             name: 'Harles-Herman Pilter',
             title: 'Front-end developer',
-            description: 'Skilled in creating excellent micro-interactions, also, has a strong sense for business.',
-            descriptionExtended: 'Harles has experience in React, Angular, Vue.js and Aurelia.',
+            description: 'Skilled in creating micro-interactions, also, has a strong sense for business.',
+            descriptionExtended:
+                'He built a code delivery system that consists entirely of drones. Mr. Bezos is so jealous.',
             imageUrl: 'https://www.linkedin.com/in/harles-herman-pilter-6a3636114/',
             imageSrc: HarlesPortrait,
             imageSecSrc: HarlesPortraitSec,
@@ -152,8 +150,7 @@ class App extends Component<any, any> {
             name: 'Ivar Kallejärv',
             title: 'Front-end developer',
             description: 'Adept at data visualization complemented by knowledge of system analysis.',
-            descriptionExtended:
-                'Ivar is competent in React, Angular, Aurelia, Ionic, C3, D3, Chart.js and app development.',
+            descriptionExtended: 'He could love books even more but they do not have landscape mode.',
             imageUrl: 'https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/',
             imageSrc: IvarPortrait,
             imageSecSrc: IvarPortraitSec,
@@ -162,8 +159,8 @@ class App extends Component<any, any> {
         {
             name: 'Tõnis Terasmaa',
             title: 'Front-end developer',
-            description: 'Has a positive attitude in life, especially towards complex and challenging systems',
-            descriptionExtended: 'Tõnis has competence in React, Angular.js and Vue.js.',
+            description: 'Doing creative wizardry with software and hardware.',
+            descriptionExtended: 'Cooking with one hand and coding with the other.... coding is a piece of cake.',
             imageUrl: 'https://www.linkedin.com/in/t%C3%B5nis-terasmaa-79b6bbb7/',
             imageSrc: TerasmaaPortrait,
             imageSecSrc: TerasmaaPortraitSec,
@@ -172,9 +169,8 @@ class App extends Component<any, any> {
         {
             name: 'Kaspar Suvi',
             title: 'Junior front-end developer',
-            description:
-                'Started as a trainee and is discovering the wonderful world of front-end as a full-time team member.',
-            descriptionExtended: 'Kaspar has experience with React, Angular, BEM, semantic HTML.',
+            description: 'Wants to provide only reasonable and valuable code.',
+            descriptionExtended: 'His daily routine consists of sport activities like badminton and git push-ups.',
             imageUrl: 'https://www.linkedin.com/in/kaspar-suvi-141080120/',
             imageSrc: KasparPortrait,
             imageSecSrc: KasparPortraitSec,
