@@ -1,5 +1,6 @@
 import { render, Component } from 'inferno';
-import Header from './components/Header';
+// import Header from './components/Header';
+import Navigation from './components/Navigation';
 import TeamMember from './components/TeamMember';
 import TeamMemberWrapper from './components/TeamMemberWrapper';
 import registerSW from './utils/registerSW';
@@ -541,7 +542,7 @@ class App extends Component<any, any> {
     public render() {
         return (
             <div>
-                <Header Logo={Logo} />
+                <Navigation Logo={Logo} />
                 <main>
                     <section className="transform-header__jumbotron" id="transform-header__jumbotron">
                         <div className="jumbotron">
