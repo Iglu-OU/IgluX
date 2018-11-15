@@ -21,7 +21,11 @@ export default class Navigation extends Component<INavigationProps, any> {
 
         let prev = 0;
 
-        document.addEventListener('scroll', (e) => {
+        document.addEventListener('touchmove', scroll, false);
+
+        document.addEventListener('scroll', scroll, false);
+
+        function scroll(e) {
             if (!htmlEl || !navEl || htmlEl.scrollTop < 0) {
                 return;
             }
@@ -41,7 +45,7 @@ export default class Navigation extends Component<INavigationProps, any> {
             }
 
             prev = htmlEl.scrollTop;
-        });
+        }
 
         let isVisible = false;
 
