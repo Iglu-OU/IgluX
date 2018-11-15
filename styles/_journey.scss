@@ -2,7 +2,7 @@
     background-color: #2096d4;
     padding: 20px 0;
     position: relative;
-    height: 1000px;
+    //height: 1000px;
     overflow: hidden;
 }
 
@@ -11,12 +11,38 @@
     background: #2096d4 url(../assets/Timeline_line.svg) no-repeat center;
     background-size: contain;
     background-position-y: 100px;
+    top: 0;
     height: 800px;
     margin: 0 auto;
     max-width: 1250px;
     @media (max-width: 1023px) {
         background: #2096d4;
         max-width: 750px;
+    }
+    &__header {
+        color: #ffffff;
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0;
+            padding-top: 1em;
+            @media (max-width: 1023px) {
+                padding: 0;
+            }
+        }
+    }
+    &__content {
+        position: absolute;
+        top: 100px;
+        bottom: 75px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 50px;
     }
 }
 
@@ -31,30 +57,15 @@
     background: #2096d4;
     background: linear-gradient(to bottom, rgba(32, 150, 212, 0), rgba(32, 150, 212, 1) 5%);
 }
-
-.journey__content {
-    color: #ffffff;
-
-    h1 {
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-}
-
-.event {
-    position: absolute;
-    width: auto;
-    max-width: 350px;
-    color: #ffffff;
-    transition: opacity 800ms, visibility 800ms;
-    @media (max-width: 1023px) {
-        font-size: 12px;
-        max-width: 300px;
-    }
+.event-wrapper {
+    position: relative;
+    display: flex;
+    width: 40%;
 
     &--left {
+        left: 0;
         right: 60%;
+        justify-content: flex-end;
         @media (min-width: 1024px) {
             text-align: right;
         }
@@ -62,6 +73,8 @@
 
     &--right {
         left: 60%;
+        right: 0;
+        justify-content: flex-start;
     }
 
     @media (max-width: 1023px) {
@@ -69,8 +82,22 @@
         &--right {
             left: 0;
             right: 0;
+            width: 100%;
+            justify-content: flex-start;
             margin: 0 auto;
         }
+    }
+}
+
+.event {
+    position: relative;
+    width: auto;
+    max-width: 350px;
+    color: #ffffff;
+    transition: opacity 800ms, visibility 800ms;
+    @media (max-width: 1023px) {
+        font-size: 12px;
+        max-width: 225px;
     }
 }
 
@@ -121,31 +148,4 @@
 .show {
     visibility: visible;
     opacity: 1;
-}
-
-.beginning {
-    top: 150px;
-}
-
-.design-project {
-    top: 250px;
-}
-
-.spa {
-    top: 350px;
-}
-
-.app {
-    top: 450px;
-}
-
-.ux-project {
-    top: 550px;
-    @media (max-width: 1023px) {
-        top: 538px;
-    }
-}
-
-.new-team {
-    top: 650px;
 }

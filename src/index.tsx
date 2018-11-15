@@ -362,14 +362,30 @@ class App extends Component<any, any> {
 
         function animateInvisible() {
             const invisible = document.querySelector('.invisible');
-            const invisibleAnimation: any = {
-                opacity: [0.1, 1],
+            const initialDuration = 3000;
+            const continuousDuration = 5000;
+            const fadeAmount = 0.2;
+            const initialAnimation: any = {
+                opacity: [0.1, 0.8],
                 easing: 'ease-in-out',
             };
-            invisible!.animate(invisibleAnimation, {
-                duration: 10000,
+            const continuousAnimation: any = {
+                opacity: [0.8, fadeAmount, 0.8],
+                easing: 'ease-in-out',
+            };
+            invisible!.animate(initialAnimation, {
+                duration: initialDuration,
                 fill: 'forwards',
             });
+            setTimeout(() => {
+                for (let i = 0; i < 6; i++) {
+                    continuousAnimation.opacity = [0.8, fadeAmount + (i + 1) * 0.1, 0.8];
+                    invisible!.animate(continuousAnimation, {
+                        delay: continuousDuration * i,
+                        duration: continuousDuration,
+                    });
+                }
+            }, initialDuration);
         }
 
         /* Navigation */
@@ -532,12 +548,12 @@ class App extends Component<any, any> {
                         <div className="jumbotron">
                             <div className="jumbotron__content text-center">
                                 <h1 className="mt-0">
-                                    Full stack power <strong>creating human experience</strong>
+                                    Full stack power for creating <strong>human experiences</strong>
                                 </h1>
                                 <p>
                                     Driven to make
                                     <br /> complex systems feel <strong>elegant</strong> and{' '}
-                                    <strong className="invisible">invisible</strong>.
+                                    <strong className="invisible">invisible</strong>
                                 </p>
                             </div>
                             <div className="jumbotron__background" />
@@ -577,52 +593,65 @@ class App extends Component<any, any> {
 
                     <section className="section journey-wrapper" id="journey">
                         <div className="journey">
-                            <div className="journey__content">
+                            <div className="journey__header">
                                 <h1>Journey</h1>
                             </div>
 
                             <div className="mask" />
+                            <div className="journey__content">
+                                <div className="event-wrapper event-wrapper--left beginning">
+                                    <div className="event show">
+                                        <h4 className="event__date">March 2013</h4>
+                                        <br />
+                                        <h3 className="event__name">The beginning of Iglu</h3>
+                                        <div className="event__circle" />
+                                    </div>
+                                </div>
 
-                            <div className="event event--left beginning show">
-                                <h4 className="event__date">March 2013</h4>
-                                <br />
-                                <h3 className="event__name">The beginning of Iglu</h3>
-                                <div className="event__circle" />
-                            </div>
+                                <div className="event-wrapper event-wrapper--right design-project">
+                                    <div className="event show">
+                                        <h4 className="event__date">June 2014 * 1st Design project</h4>
+                                        <br />
+                                        <h3 className="event__name">Evocon</h3>
+                                        <div className="event__circle event__circle--right" />
+                                    </div>
+                                </div>
 
-                            <div className="event event--right design-project show">
-                                <h4 className="event__date">June 2014 * 1st Design project</h4>
-                                <br />
-                                <h3 className="event__name">Evocon</h3>
-                                <div className="event__circle event__circle--right" />
-                            </div>
+                                <div className="event-wrapper event-wrapper--left spa">
+                                    <div className="event show">
+                                        <h4 className="event__date">January 2015 * 1st Single page application</h4>
+                                        <br />
+                                        <h3 className="event__name">Südameapteek</h3>
+                                        <div className="event__circle" />
+                                    </div>
+                                </div>
 
-                            <div className="event event--left spa show">
-                                <h4 className="event__date">January 2015 * 1st Single page application</h4>
-                                <br />
-                                <h3 className="event__name">Südameapteek</h3>
-                                <div className="event__circle" />
-                            </div>
+                                <div className="event-wrapper event-wrapper--right app">
+                                    <div className="event show">
+                                        <h4 className="event__date">November 2016 * 1st App</h4>
+                                        <br />
+                                        <h3 className="event__name">Dietless</h3>
+                                        <div className="event__circle event__circle--right" />
+                                    </div>
+                                </div>
 
-                            <div className="event event--right app show">
-                                <h4 className="event__date">November 2016 * 1st App</h4>
-                                <br />
-                                <h3 className="event__name">Dietless</h3>
-                                <div className="event__circle event__circle--right" />
-                            </div>
+                                <div className="event-wrapper event-wrapper--left ux-project">
+                                    <div className="event show">
+                                        <h4 className="event__date">December 2016 * 1st UX Project</h4>
+                                        <br />
+                                        <h3 className="event__name">Vastutustundliku ettevõtluse foorum</h3>
+                                        <div className="event__circle" />
+                                    </div>
+                                </div>
 
-                            <div className="event event--left ux-project show">
-                                <h4 className="event__date">December 2016 * 1st UX Project</h4>
-                                <br />
-                                <h3 className="event__name">Vastutustundliku ettevõtluse foorum</h3>
-                                <div className="event__circle" />
-                            </div>
-
-                            <div className="event event--right new-team show">
-                                <h4 className="event__date">February 2018</h4>
-                                <br />
-                                <h3 className="event__name">The beginning of Iglu Digital Agency team</h3>
-                                <div className="event__circle event__circle--right" />
+                                <div className="event-wrapper event-wrapper--right new-team">
+                                    <div className="event show">
+                                        <h4 className="event__date">February 2018</h4>
+                                        <br />
+                                        <h3 className="event__name">The beginning of Iglu Digital Agency team</h3>
+                                        <div className="event__circle event__circle--right" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>

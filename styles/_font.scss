@@ -1,34 +1,15 @@
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 200;
-    src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'),
-        url(../fonts/SourceSansPro-ExtraLight.ttf) format('ttf');
+.text {
+    &--upper-case {
+        text-transform: uppercase;
+    }
 }
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'),
-        url(../fonts/SourceSansPro-Light.ttf) format('ttf');
-}
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
-        url(../fonts/SourceSansPro-Regular.ttf) format('ttf');
-}
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 600;
-    src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'),
-        url(../fonts/SourceSansPro-SemiBold.ttf) format('ttf');
-}
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(../fonts/SourceSansPro-Bold.ttf) format('ttf');
+
+body {
+  font-size: 14px;
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
 }
