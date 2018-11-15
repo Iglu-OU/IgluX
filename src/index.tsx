@@ -9,18 +9,31 @@ import 'web-animations-js';
 import '../styles/main.scss';
 import Logo from '../assets/logo.svg';
 
-import LauraPortrait from '../assets/portraits/laura.svg';
-import KristoPortrait from '../assets/portraits/kristo.svg';
-import JoonasPortrait from '../assets/portraits/joonas.svg';
-import KadiPortrait from '../assets/portraits/kadi.svg';
-import EglePortrait from '../assets/portraits/egle.svg';
-import ViljarPortrait from '../assets/portraits/viljar.svg';
-import AntonPortrait from '../assets/portraits/anton.svg';
-import HarlesPortrait from '../assets/portraits/harles.svg';
-import IvarPortrait from '../assets/portraits/ivar.svg';
-import TerasmaaPortrait from '../assets/portraits/terasmaa.svg';
-import KasparPortrait from '../assets/portraits/kaspar.svg';
-import AlinaPortrait from '../assets/portraits/alina.svg';
+import LauraPortrait from '../assets/team/primary/laura.svg';
+import KristoPortrait from '../assets/team/primary/kristo.svg';
+import JoonasPortrait from '../assets/team/primary/joonas.svg';
+import KadiPortrait from '../assets/team/primary/kadi.svg';
+import EglePortrait from '../assets/team/primary/egle.svg';
+import ViljarPortrait from '../assets/team/primary/viljar.svg';
+import AntonPortrait from '../assets/team/primary/anton.svg';
+import HarlesPortrait from '../assets/team/primary/harles.svg';
+import IvarPortrait from '../assets/team/primary/ivar.svg';
+import TerasmaaPortrait from '../assets/team/primary/terasmaa.svg';
+import KasparPortrait from '../assets/team/primary/kaspar.svg';
+import AlinaPortrait from '../assets/team/primary/alina.svg';
+
+import LauraPortraitSec from '../assets/team/secondary/laura.svg';
+import KristoPortraitSec from '../assets/team/secondary/kristo.svg';
+import JoonasPortraitSec from '../assets/team/secondary/joonas.svg';
+import KadiPortraitSec from '../assets/team/secondary/kadi.svg';
+import EglePortraitSec from '../assets/team/secondary/egle.svg';
+import ViljarPortraitSec from '../assets/team/secondary/viljar.svg';
+import AntonPortraitSec from '../assets/team/secondary/anton.svg';
+import HarlesPortraitSec from '../assets/team/secondary/harles.svg';
+import IvarPortraitSec from '../assets/team/secondary/ivar.svg';
+import TerasmaaPortraitSec from '../assets/team/secondary/terasmaa.svg';
+import KasparPortraitSec from '../assets/team/secondary/kaspar.svg';
+import AlinaPortraitSec from '../assets/team/secondary/alina.svg';
 
 import IcoFacebook from '../assets/ico-fb.svg';
 import IcoInstagram from '../assets/ico-insta.svg';
@@ -33,6 +46,7 @@ interface ITeamMember {
     descriptionExtended: string;
     imageUrl: string;
     imageSrc: string;
+    imageSecSrc: string;
     imageAlt: string;
 }
 
@@ -42,10 +56,10 @@ class App extends Component<any, any> {
             name: 'Laura Asu',
             title: 'Team lead, UI & UX analyst',
             description: 'Keeps the team inspired and things running, smoothly.',
-            descriptionExtended:
-                'Laura has extensive knowledge about UI analysis, her expertise includes business analysis, user research, user testing.',
+            descriptionExtended: 'She is one of the few who can perform open-heart surgery to a live system.',
             imageUrl: 'https://www.linkedin.com/in/laura-asu-40460663/',
             imageSrc: LauraPortrait,
+            imageSecSrc: LauraPortraitSec,
             imageAlt: `Laura Asu's portrait... if she was an Eskimo`,
         },
         {
@@ -53,38 +67,41 @@ class App extends Component<any, any> {
             title: 'UI & UX analyst',
             description: 'Passionate about users and the business side of IT.',
             descriptionExtended:
-                'Kristo is well-versed in business analysis and has experience in user research and user testing.',
+                'There is a rumour that he discovered the true meaning of disco. But then they changed it.',
             imageUrl: 'https://www.linkedin.com/in/kristo-danilson-a9a08b159/',
             imageSrc: KristoPortrait,
+            imageSecSrc: KristoPortraitSec,
             imageAlt: `Kristo Danilson's portrait... if he was an Eskimo`,
         },
         {
             name: 'Joonas Kessel',
             title: 'UI & UX analyst',
             description: `Ensures the projects are on track and the users' needs are met.`,
-            descriptionExtended: 'Joonas has experience in user research and user testing, as well as prototyping.',
+            descriptionExtended:
+                'Watch out, you most likely will be hit by several witty remarks during a minute. We like.',
             imageUrl: 'https://www.linkedin.com/in/joonaskessel/',
             imageSrc: JoonasPortrait,
+            imageSecSrc: JoonasPortraitSec,
             imageAlt: `Joonas Kessel's portrait... if he was an Eskimo`,
         },
         {
             name: 'Alina Trussova',
             title: 'Art Director, UI & UX Designer',
-            description: 'Sees the bigger picture, balancing creativity with rational thinking.',
-            descriptionExtended:
-                'Has learned from experts around the world, bringing together different ideas and mindsets. Her skillset ranges from branding to UI design, user research and user testing.',
+            description: 'Sparks the mind of designers while balancing creativity with rationality.',
+            descriptionExtended: 'When everything is elegant and perfect on the earth… the moon will be conquered.',
             imageUrl: 'Art Director, UI & UX Designer',
             imageSrc: AlinaPortrait,
+            imageSecSrc: AlinaPortraitSec,
             imageAlt: `Alina Trussova's portrait... if she was an Eskimo`,
         },
         {
             name: 'Kadi Lukas',
             title: 'UI & UX Designer',
             description: 'Has an eye or two (probably three) for detail.',
-            descriptionExtended:
-                'Kadi has expertise in graphic design, cinematography and is experienced in UI design, user research, user testing.',
+            descriptionExtended: 'The third eye helped her win a staring contest against Chuck Norris.',
             imageUrl: 'https://www.linkedin.com/in/kadi-lukas-a64a99130/',
             imageSrc: KadiPortrait,
+            imageSecSrc: KadiPortraitSec,
             imageAlt: `Kadi Lukas's portrait... if she was an Eskimo`,
         },
         {
@@ -92,66 +109,71 @@ class App extends Component<any, any> {
             title: 'UI & UX Designer',
             description: 'Bridges the gap between business and end user.',
             descriptionExtended:
-                'Egle has a background in video editing, printed media and is skilled in UI design, UX writing, user research, user testing.',
+                'Making digital rainbows with her unicorn skillset to make you feel like you are flying.',
             imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
             imageSrc: EglePortrait,
+            imageSecSrc: EglePortraitSec,
             imageAlt: `Egle Kiik's portrait... if she was an Eskimo`,
         },
         {
             name: 'Viljar Kärgenberg',
             title: 'Front-end lead',
             description: 'Leads and supports the dev team with dedication and eagerness.',
-            descriptionExtended:
-                'Viljar is proficient in using React, Vue.js, Angular.js and has vast experience with other frameworks.',
+            descriptionExtended: 'Scores 5-point slam dunks with ease while learning new emerging technologies.',
             imageUrl: 'https://www.linkedin.com/in/viljar-k%C3%A4rgenberg-81378398/',
             imageSrc: ViljarPortrait,
+            imageSecSrc: ViljarPortraitSec,
             imageAlt: `Viljar Kärgenberg's portrait... if he was an Eskimo`,
         },
         {
             name: 'Anton Aavik',
             title: 'Senior front-end developer',
             description: 'Open-source enthusiast, who strives for perfection.',
-            descriptionExtended: `Anton's skill set includes React, Angular, Vue.js, BEM, semantic HTML and app development.`,
+            descriptionExtended: `Abracadabra, hocus pocus add a bit of secret ingredients and magic happens, usually.`,
             imageUrl: '#',
             imageSrc: AntonPortrait,
+            imageSecSrc: AntonPortraitSec,
             imageAlt: `Anton Aavik's portrait... if he was an Eskimo`,
         },
         {
             name: 'Harles-Herman Pilter',
             title: 'Front-end developer',
-            description: 'Skilled in creating excellent micro-interactions, also, has a strong sense for business.',
-            descriptionExtended: 'Harles has experience in React, Angular, Vue.js and Aurelia.',
+            description: 'Skilled in creating micro-interactions, also, has a strong sense for business.',
+            descriptionExtended:
+                'He built a code delivery system that consists entirely of drones. Mr. Bezos is so jealous.',
             imageUrl: 'https://www.linkedin.com/in/harles-herman-pilter-6a3636114/',
             imageSrc: HarlesPortrait,
+            imageSecSrc: HarlesPortraitSec,
             imageAlt: `Harles-Herman Pilter's portrait... if he was an Eskimo`,
         },
         {
             name: 'Ivar Kallejärv',
             title: 'Front-end developer',
             description: 'Adept at data visualization complemented by knowledge of system analysis.',
-            descriptionExtended:
-                'Ivar is competent in React, Angular, Aurelia, Ionic, C3, D3, Chart.js and app development.',
+            descriptionExtended: 'He could love books even more but they do not have landscape mode.',
             imageUrl: 'https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/',
             imageSrc: IvarPortrait,
+            imageSecSrc: IvarPortraitSec,
             imageAlt: `Ivar Kallejärv's portrait... if he was an Eskimo`,
         },
         {
             name: 'Tõnis Terasmaa',
             title: 'Front-end developer',
-            description: 'Has a positive attitude in life, especially towards complex and challenging systems',
-            descriptionExtended: 'Tõnis has competence in React, Angular.js and Vue.js.',
+            description: 'Doing creative wizardry with software and hardware.',
+            descriptionExtended: 'Cooking with one hand and coding with the other.... coding is a piece of cake.',
             imageUrl: 'https://www.linkedin.com/in/t%C3%B5nis-terasmaa-79b6bbb7/',
             imageSrc: TerasmaaPortrait,
+            imageSecSrc: TerasmaaPortraitSec,
             imageAlt: `Tõnis Terasmaa's portrait`,
         },
         {
             name: 'Kaspar Suvi',
             title: 'Junior front-end developer',
-            description:
-                'Started as a trainee and is discovering the wonderful world of front-end as a full-time team member.',
-            descriptionExtended: 'Kaspar has experience with React, Angular, BEM, semantic HTML.',
+            description: 'Wants to provide only reasonable and valuable code.',
+            descriptionExtended: 'His daily routine consists of sport activities like badminton and git push-ups.',
             imageUrl: 'https://www.linkedin.com/in/kaspar-suvi-141080120/',
             imageSrc: KasparPortrait,
+            imageSecSrc: KasparPortraitSec,
             imageAlt: `Kaspar Suvi's portrait... if he was an Eskimo`,
         },
     ];
@@ -608,7 +630,9 @@ class App extends Component<any, any> {
                             <div className="journey__content">
                                 <div className="event-wrapper event-wrapper--left beginning">
                                     <div className="event show">
-                                        <h4 className="event__date">March 2013</h4>
+                                        <h4 className="event__date">
+                                            <span>March 2013</span>
+                                        </h4>
                                         <br />
                                         <h3 className="event__name">The beginning of Iglu</h3>
                                         <div className="event__circle" />
@@ -617,43 +641,71 @@ class App extends Component<any, any> {
 
                                 <div className="event-wrapper event-wrapper--right design-project">
                                     <div className="event show">
-                                        <h4 className="event__date">June 2014 * 1st Design project</h4>
+                                        <h4 className="event__date">
+                                            <span>June 2014</span>
+                                            <span>
+                                                <a href="https://evocon.com/" target="_blank">
+                                                    Evocon
+                                                </a>
+                                            </span>
+                                        </h4>
                                         <br />
-                                        <h3 className="event__name">Evocon</h3>
+                                        <h3 className="event__name">First design project</h3>
                                         <div className="event__circle event__circle--right" />
                                     </div>
                                 </div>
 
                                 <div className="event-wrapper event-wrapper--left spa">
                                     <div className="event show">
-                                        <h4 className="event__date">January 2015 * 1st Single page application</h4>
+                                        <h4 className="event__date">
+                                            <span>January 2015</span>
+                                            <span>
+                                                <a href="https://www.sudameapteek.ee/" target="_blank">
+                                                    Südameapteek
+                                                </a>
+                                            </span>
+                                        </h4>
                                         <br />
-                                        <h3 className="event__name">Südameapteek</h3>
+                                        <h3 className="event__name">First single page application</h3>
                                         <div className="event__circle" />
                                     </div>
                                 </div>
 
                                 <div className="event-wrapper event-wrapper--right app">
                                     <div className="event show">
-                                        <h4 className="event__date">November 2016 * 1st App</h4>
+                                        <h4 className="event__date">
+                                            <span>November 2016</span>
+                                            <span>
+                                                <a href="https://www.dietless.co.uk/" target="_blank">
+                                                    Dietless
+                                                </a>
+                                            </span>
+                                        </h4>
                                         <br />
-                                        <h3 className="event__name">Dietless</h3>
+                                        <h3 className="event__name">First app</h3>
                                         <div className="event__circle event__circle--right" />
                                     </div>
                                 </div>
 
                                 <div className="event-wrapper event-wrapper--left ux-project">
                                     <div className="event show">
-                                        <h4 className="event__date">December 2016 * 1st UX Project</h4>
+                                        <h4 className="event__date">
+                                            <span>December 2016</span>
+                                            <span>
+                                                <a href="http://www.csr.ee/" target="_blank">
+                                                    Responsible business index
+                                                </a>
+                                            </span>
+                                        </h4>
                                         <br />
-                                        <h3 className="event__name">Vastutustundliku ettevõtluse foorum</h3>
+                                        <h3 className="event__name">First UX Project</h3>
                                         <div className="event__circle" />
                                     </div>
                                 </div>
 
                                 <div className="event-wrapper event-wrapper--right new-team">
                                     <div className="event show">
-                                        <h4 className="event__date">February 2018</h4>
+                                        <h4 className="event__date">January 2018</h4>
                                         <br />
                                         <h3 className="event__name">The beginning of Iglu Digital Agency team</h3>
                                         <div className="event__circle event__circle--right" />

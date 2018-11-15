@@ -17,10 +17,10 @@
     display: flex;
     width: 100%;
     font-size: 1rem;
-    padding: 0 1em;
+    padding: 0 1rem;
 
-    @media (min-width: 512px) {
-        padding: 1.5em 2em 0;
+    @media (min-width: 768px) {
+        padding: 1.5em 3rem 0;
     }
 
     @media (min-width: 1536px) {
@@ -79,6 +79,7 @@
 
 .navigation__home {
     position: relative;
+    display: inline-block;
     flex: 1 1;
     margin: 0;
     z-index: 2;
@@ -204,7 +205,7 @@
 
     &.fixed.up {
         transform: translateY(90px);
-        @media (max-width: 511px) {
+        @media (max-width: 767px) {
             transform: translateY(105px);
         }
     }
