@@ -339,9 +339,15 @@ class App extends Component<any, any> {
         }
 
         function animateIceberg() {
+            const icebergLeft = '-50%';
+            const icebergTranslateX = 'translateX(' + icebergLeft + ') ';
             const iceberg = document.querySelector('.work-flow__iceberg');
             const icebergAnimation: any = {
-                transform: ['translate(-50%, -50%)', 'translate(-50%, -51.5%)', 'translate(-50%, -50%)'],
+                transform: [
+                    icebergTranslateX + 'translateY(-7%)',
+                    icebergTranslateX + 'translateY(-5.5%)',
+                    icebergTranslateX + 'translateY(-7%)',
+                ],
                 easing: 'ease-in-out',
             };
             iceberg!.animate(icebergAnimation, {
@@ -363,7 +369,11 @@ class App extends Component<any, any> {
         function animateWaves() {
             const waves = document.querySelector('.work-flow__waves');
             const wavesAnimation: any = {
-                transform: ['skewY(1.5deg)', 'skewY(0deg)', 'skewY(1.5deg)'],
+                transform: [
+                    'rotateY(180deg) skewY(0.5deg)',
+                    'rotateY(180deg) skewY(0deg)',
+                    'rotateY(180deg) skewY(0.5deg)',
+                ],
                 easing: 'ease-in-out',
             };
             waves!.animate(wavesAnimation, {
@@ -568,15 +578,12 @@ class App extends Component<any, any> {
                 <main>
                     <section className="transform-header__jumbotron" id="transform-header__jumbotron">
                         <div className="jumbotron">
-                            <div className="jumbotron__content text-center">
+                            <div className="jumbotron__content">
                                 <h1 className="mt-0">
-                                    Full stack power for creating <strong>human experiences</strong>
+                                    We're driven to make complex systems
+                                    <br />
+                                    feel <strong>elegant</strong> and <strong className="invisible">invisible</strong>
                                 </h1>
-                                <p>
-                                    Driven to make
-                                    <br /> complex systems feel <strong>elegant</strong> and{' '}
-                                    <strong className="invisible">invisible</strong>
-                                </p>
                             </div>
                             <div className="jumbotron__background" />
                             <div className="jumbotron__star-one" />
@@ -590,26 +597,26 @@ class App extends Component<any, any> {
                             <div className="work-flow__eskimo" />
                             <div className="work-flow__star" />
                             <div className="work-flow__sky" />
+                            <div className="work-flow__waves-surface" />
                             <div className="work-flow__iceberg" />
                             <div className="work-flow__wave-top" />
                             <div className="work-flow__waves" />
                             <div className="work-flow__content">
-                                <h1>How we work</h1>
+                                <h1 className="text--white">How we work</h1>
                                 <dl>
-                                    <dt>Front-end development</dt>
-                                    <dd>Collaboration with back-end team</dd>
-                                    <dt>UI design</dt>
-                                    <dd>Typography, colors, documentation</dd>
-                                    <dt>Evaluate</dt>
-                                    <dd>User tests, iterations</dd>
-                                    <dt>Ideate</dt>
-                                    <dd>Whiteboard and HTML prototypes</dd>
-                                    <dt>User research</dt>
-                                    <dd>Interviews, data analysis</dd>
-                                    <dt>Requirements</dt>
-                                    <dd>Identification, prioritisation of needs</dd>
+                                    <dt className="text--white">Front-end development</dt>
+                                    <dd className="text--white">Coding, collaboration with developers</dd>
+                                    <dt className="text--white">Design</dt>
+                                    <dd className="text--white">Typography, colors, documentation</dd>
+                                    <dt className="text--gray">Validate</dt>
+                                    <dd className="text--gray">User tests, iterations, analytics</dd>
+                                    <dt className="text--gray">Ideate</dt>
+                                    <dd className="text--gray">Low-fidelity, high-fidelity, clickable, HTML</dd>
+                                    <dt className="text--gray">Discover</dt>
+                                    <dd className="text--gray">Interviews, data analysis, requirements gathering</dd>
                                 </dl>
                             </div>
+                            <div className="work-flow__bottom-fold" />
                         </div>
                     </section>
 
@@ -709,6 +716,7 @@ class App extends Component<any, any> {
                     </section>
 
                     <section className="section" id="team">
+                        <div className="team__top-fold" />
                         <TeamMemberWrapper>
                             {this.teamMemberList.map((i, index) => (
                                 <TeamMember data={i} key={index} />
