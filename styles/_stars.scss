@@ -23,6 +23,7 @@
     background: transparent;
 
     &:after {
+        border-radius: 50%;
         content: ' ';
         position: absolute;
         top: 2000px;
