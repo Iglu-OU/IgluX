@@ -45,12 +45,9 @@ $btn-bg: $oc-blue-8;
 $btn-color: white;
 
 /* Z-index */
-$zindex--topbar-bg: 990;
-$zindex--topbar: 1030;
-$zindex--modal-bg: 1040;
-$zindex--modal: 1050;
-$zindex--popover: 1060;
-$zindex--tooltip: 1070;
+$zindex--stars: 1;
+$zindex--svg: 2;
+$zindex--text: 3;
 
 /* Layout */
 $max-width: 64rem;

@@ -5,13 +5,13 @@
     height: 1080px;
     overflow: hidden;
     color: #ffffff;
-    background: url(../assets/iceberg-sky.svg) center;
+    // background: url(../assets/iceberg-sky.svg) center;
     background-size: cover;
     &__eskimo {
         max-width: 100vw;
-        z-index: 1;
+        z-index: $zindex--svg;
         margin-top: auto;
-        background: url(../assets/iceberg-jetpack-eskimo.svg) top;
+        // background: url(../assets/iceberg-jetpack-eskimo.svg) top;
         background-size: cover;
         position: absolute;
         top: 0;
@@ -30,13 +30,14 @@
     &__sky {
         max-width: 100vw;
         margin-top: auto;
-        background: url(../assets/iceberg-sky-clouds.svg) top;
+        // background: url(../assets/iceberg-sky-clouds.svg) top;
         background-size: cover;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 1080px;
+        z-index: $zindex--svg;
     }
     &__waves-surface {
         position: absolute;
@@ -46,6 +47,7 @@
         margin-top: auto;
         background: url(../assets/iceberg/Iceberg-bg.svg) center;
         background-size: cover;
+        z-index: $zindex--svg;
     }
     &__iceberg {
         position: absolute;
@@ -57,19 +59,19 @@
         transform: translate(-50%, -50%);
         background: url(../assets/iceberg.svg) top;
         background-size: cover;
+        z-index: $zindex--svg;
     }
     &__waves {
         width: 100vw;
         position: absolute;
         top: 7%;
-        z-index: 1;
         height: 1080px;
         margin-top: auto;
         background: url(../assets/iceberg/Iceberg-waves.svg) center;
         background-size: cover;
+        z-index: $zindex--svg;
     }
     &__wave-top {
-        z-index: 1;
         position: absolute;
         top: 7%;
         bottom: 0;
@@ -77,21 +79,14 @@
         height: 1080px;
         background: radial-gradient(circle at 50%, rgba(3, 49, 61, 0.4), rgba(3, 49, 61, 0) 75%);
         background-size: cover;
-    }
-    &__star {
-        position: absolute;
-        left: 15%;
-        top: 15%;
-        width: 0.75rem;
-        height: 0.75rem;
-        background: url(../assets/star.svg) center;
+        z-index: $zindex--svg;
     }
     &__content {
         position: absolute;
         top: 34%;
         left: 35%;
         color: #4fbbe7;
-        z-index: 100;
+        z-index: $zindex--text;
         transform: translate(-50%, -50%);
 
         h1 {
@@ -133,7 +128,7 @@
         top: 0;
         width: 100vw;
         height: 1080px;
-        z-index: 2;
+        z-index: $zindex--svg;
         margin-top: auto;
         background: url(../assets/iceberg/Iceberg-fold.svg) center;
         background-size: cover;

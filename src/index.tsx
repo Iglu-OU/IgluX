@@ -1,6 +1,7 @@
 import { render, Component } from 'inferno';
 // import Header from './components/Header';
 import Navigation from './components/Navigation';
+import Stars from './components/Stars';
 import TeamMember from './components/TeamMember';
 import TeamMemberWrapper from './components/TeamMemberWrapper';
 import registerSW from './utils/registerSW';
@@ -300,44 +301,11 @@ class App extends Component<any, any> {
             const width = screen.width;
 
             if (width >= 768) {
-                animateStars();
                 animateWaves();
             }
 
             animateIceberg();
             animateInvisible();
-        }
-
-        function animateStars() {
-            const starOne = document.querySelector('.jumbotron__star-one');
-            const starTwo = document.querySelector('.jumbotron__star-two');
-            const starThree = document.querySelector('.jumbotron__star-three');
-            const starWorkflow = document.querySelector('.work-flow__star');
-
-            const starAnimation: any = {
-                transform: ['scale(1, 1)', 'scale(0, 0)', 'scale(1, 1)'],
-                easing: 'linear',
-            };
-
-            starOne!.animate(starAnimation, {
-                duration: 4000,
-                iterations: Infinity,
-            });
-
-            starTwo!.animate(starAnimation, {
-                duration: 6000,
-                iterations: Infinity,
-            });
-
-            starThree!.animate(starAnimation, {
-                duration: 7000,
-                iterations: Infinity,
-            });
-
-            starWorkflow!.animate(starAnimation, {
-                duration: 5000,
-                iterations: Infinity,
-            });
         }
 
         function animateIceberg() {
@@ -577,27 +545,25 @@ class App extends Component<any, any> {
         return (
             <div>
                 <Navigation Logo={Logo} />
+
+                <Stars />
+
                 <main>
                     <section className="transform-header__jumbotron" id="transform-header__jumbotron">
                         <div className="jumbotron">
                             <div className="jumbotron__content">
                                 <h1 className="mt-0">
-                                    We're driven to make complex systems
+                                    Driven to make complex systems
                                     <br />
                                     feel <strong>elegant</strong> and <strong className="invisible">invisible</strong>
                                 </h1>
                             </div>
-                            <div className="jumbotron__background" />
-                            <div className="jumbotron__star-one" />
-                            <div className="jumbotron__star-two" />
-                            <div className="jumbotron__star-three" />
                         </div>
                     </section>
 
                     <section className="transform-header__workflow" id="process">
                         <div className="work-flow">
                             <div className="work-flow__eskimo" />
-                            <div className="work-flow__star" />
                             <div className="work-flow__sky" />
                             <div className="work-flow__waves-surface" />
                             <div className="work-flow__iceberg" />
@@ -609,7 +575,7 @@ class App extends Component<any, any> {
                                     <dt className="text--white">Front-end development</dt>
                                     <dd className="text--white">Coding, collaboration with developers</dd>
                                     <dt className="text--white">Design</dt>
-                                    <dd className="text--white">Typography, colors, documentation</dd>
+                                    <dd className="text--white stars-bottom">Typography, colors, documentation</dd>
                                     <dt className="text--gray">Validate</dt>
                                     <dd className="text--gray">User tests, iterations, analytics</dd>
                                     <dt className="text--gray">Ideate</dt>
