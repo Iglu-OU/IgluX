@@ -265,7 +265,7 @@ class App extends Component<any, any> {
                 checkEventVisibility(i.element, i.top, scrolledOfJourney);
             }
 
-            if (scrolledOfJourney > 90 && scrolledOfJourney < 750) {
+            if (scrolledOfJourney > 90 && scrolledOfJourney < 550) {
                 if (!minHeight || minHeight < scrolledOfJourney) {
                     minHeight = scrolledOfJourney;
                 } else if (minHeight > scrolledOfJourney) {
@@ -275,7 +275,7 @@ class App extends Component<any, any> {
                     (mask as any).style.top = scrolledOfJourney + 'px';
                 }
             } else if (scrollPercentage > 1) {
-                scrolledOfJourney = 750;
+                scrolledOfJourney = 550;
                 if (mask) {
                     (mask as any).style.top = scrolledOfJourney + 'px';
                 }
