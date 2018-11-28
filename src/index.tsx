@@ -232,12 +232,12 @@ class App extends Component<any, any> {
         const newTeam = document.querySelector('.new-team');
 
         const events = [
-            { element: beginning, top: 150 },
-            { element: designproject, top: 250 },
-            { element: spa, top: 350 },
-            { element: app, top: 450 },
-            { element: uxProject, top: 550 },
-            { element: newTeam, top: 650 },
+            { element: beginning, top: 100 },
+            { element: designproject, top: 200 },
+            { element: spa, top: 300 },
+            { element: app, top: 400 },
+            { element: uxProject, top: 500 },
+            { element: newTeam, top: 600 },
         ];
 
         for (const i of events) {
