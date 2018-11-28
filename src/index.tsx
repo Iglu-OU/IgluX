@@ -109,8 +109,7 @@ class App extends Component<any, any> {
             name: 'Egle Kiik',
             title: 'UI & UX Designer',
             description: 'Bridges the gap between business and end user.',
-            descriptionExtended:
-                'Making digital rainbows with her unicorn skillset to make you feel like you are flying.',
+            descriptionExtended: 'Making digital rainbows with her unicorn skillset to make you feel like flying.',
             imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
             imageSrc: EglePortrait,
             imageSecSrc: EglePortraitSec,
@@ -130,7 +129,7 @@ class App extends Component<any, any> {
             name: 'Anton Aavik',
             title: 'Senior front-end developer',
             description: 'Open-source enthusiast, who strives for perfection.',
-            descriptionExtended: `Abracadabra, hocus pocus add a bit of secret ingredients and magic happens, usually.`,
+            descriptionExtended: `Abracadabra, hocus pocus add a bit of secret ingredients and magic happens.`,
             imageUrl: '#',
             imageSrc: AntonPortrait,
             imageSecSrc: AntonPortraitSec,
@@ -602,7 +601,7 @@ class App extends Component<any, any> {
                                             <span>March 2013</span>
                                         </h4>
                                         <br />
-                                        <h3 className="event__name">The beginning of Iglu</h3>
+                                        <h3 className="event__name">Iglu is founded</h3>
                                         <div className="event__circle" />
                                     </div>
                                 </div>
@@ -612,7 +611,11 @@ class App extends Component<any, any> {
                                         <h4 className="event__date">
                                             <span>June 2014</span>
                                             <span>
-                                                <a href="https://evocon.com/" target="_blank">
+                                                <a
+                                                    className="event__project"
+                                                    href="https://evocon.com/"
+                                                    target="_blank"
+                                                >
                                                     Evocon
                                                 </a>
                                             </span>
@@ -628,7 +631,11 @@ class App extends Component<any, any> {
                                         <h4 className="event__date">
                                             <span>January 2015</span>
                                             <span>
-                                                <a href="https://www.sudameapteek.ee/" target="_blank">
+                                                <a
+                                                    className="event__project"
+                                                    href="https://www.sudameapteek.ee/"
+                                                    target="_blank"
+                                                >
                                                     Südameapteek
                                                 </a>
                                             </span>
@@ -644,7 +651,11 @@ class App extends Component<any, any> {
                                         <h4 className="event__date">
                                             <span>November 2016</span>
                                             <span>
-                                                <a href="https://www.dietless.co.uk/" target="_blank">
+                                                <a
+                                                    className="event__project"
+                                                    href="https://www.dietless.co.uk/"
+                                                    target="_blank"
+                                                >
                                                     Dietless
                                                 </a>
                                             </span>
@@ -660,7 +671,7 @@ class App extends Component<any, any> {
                                         <h4 className="event__date">
                                             <span>December 2016</span>
                                             <span>
-                                                <a href="http://www.csr.ee/" target="_blank">
+                                                <a className="event__project" href="http://www.csr.ee/" target="_blank">
                                                     Responsible business index
                                                 </a>
                                             </span>
@@ -675,7 +686,7 @@ class App extends Component<any, any> {
                                     <div className="event show">
                                         <h4 className="event__date">January 2018</h4>
                                         <br />
-                                        <h3 className="event__name">The beginning of Iglu Digital Agency team</h3>
+                                        <h3 className="event__name">Iglu`s Digital Agency team is created</h3>
                                         <div className="event__circle event__circle--right" />
                                     </div>
                                 </div>

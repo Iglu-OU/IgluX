@@ -10,7 +10,7 @@
         left: 0;
         height: 12vh;
         width: 100%;
-        background-color: #1396d4;
+        background-color: #2096d4;
         z-index: 1;
     }
 }
@@ -36,7 +36,7 @@
         position: absolute;
         top: 0;
         width: 100vw;
-        height: 100vh;
+        height: 105vh;
         z-index: 2;
         margin-top: auto;
         background: url(../assets/iceberg/Iceberg-fold_reverse.svg) center;
@@ -96,7 +96,7 @@
         top: 0;
         left: 0;
 
-        @media (hover: hover) {
+        @media (pointer: fine) {
             .team-member:hover & {
                 animation: 8s linear 0s infinite portraitMove;
             }
@@ -122,19 +122,23 @@
     span {
         display: inline-block;
 
-        @media (hover: hover) {
-            &:after {
-                content: '';
-                display: inline-block;
-                width: 24px;
-                height: 24px;
-                margin-left: 8px;
-                margin-bottom: 4px;
-                opacity: 0;
-                transition: opacity 0.32s ease;
-                background: url(../assets/ln.svg);
-                vertical-align: bottom;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+            margin-bottom: 4px;
+            opacity: 0;
+            transition: opacity 0.32s ease;
+            background: url(../assets/ln.svg);
+            vertical-align: bottom;
 
+            @media (pointer: coarse) {
+                opacity: 1 !important;
+            }
+
+            @media (pointer: fine) {
                 .team-member:hover & {
                     opacity: 1;
                 }

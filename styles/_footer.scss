@@ -21,8 +21,15 @@
     a {
         display: block;
         padding: 0.75em 1rem;
+        opacity: 0.8;
         color: #fff;
         text-decoration: none;
+        transition: opacity 0.2s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+
         @media (max-width: 767px) {
             padding: 11px;
             text-align: center;

@@ -76,7 +76,7 @@
         top: 7%;
         bottom: 0;
         width: 1080px;
-        height: 1080px;
+        height: 850px;
         background: radial-gradient(circle at 50%, rgba(3, 49, 61, 0.4), rgba(3, 49, 61, 0) 75%);
         background-size: cover;
         z-index: $zindex--svg;
@@ -126,6 +126,7 @@
     &__bottom-fold {
         position: absolute;
         top: 0;
+        left: -5px;
         width: 100vw;
         height: 1080px;
         z-index: $zindex--svg;

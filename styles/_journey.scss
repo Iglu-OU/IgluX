@@ -1,6 +1,5 @@
 .journey-wrapper {
     background-color: #2096d4;
-    padding: 20px 0;
     position: relative;
     //height: 1000px;
     overflow: hidden;
@@ -12,7 +11,7 @@
     background-size: contain;
     background-position-y: 100px;
     top: 0;
-    height: 800px;
+    height: 600px;
     margin: 0 auto;
     max-width: 1250px;
     @media (max-width: 1023px) {
@@ -33,7 +32,6 @@
             text-transform: uppercase;
             font-weight: 700;
             margin: 0;
-            padding-top: 1em;
             @media (max-width: 1023px) {
                 padding: 0;
             }
@@ -49,6 +47,10 @@
         flex-direction: column;
         justify-content: space-around;
         padding: 0 50px;
+
+        @media (max-width: 1023px) {
+            padding-right: 20px;
+        }
     }
 }
 
@@ -110,12 +112,12 @@
 .event__date {
     display: inline;
     margin: 0;
-    opacity: 0.8;
     /*Replace*/
     font-size: 16px;
 
     span {
         display: inline-block;
+        opacity: 0.8;
     }
     span:after {
         content: '';
@@ -141,6 +143,15 @@
 
     span {
         font-size: 1.375rem;
+    }
+}
+
+.event__project {
+    transition: opacity 0.2s ease-in-out;
+    opacity: inherit;
+
+    &:hover {
+        opacity: 1;
     }
 }
 
