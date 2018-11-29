@@ -156,6 +156,30 @@
     opacity: 0.8;
 }
 
+.team-member__skills {
+    list-style-type: none;
+    margin: 1em 0 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+        font-size: 1rem;
+        opacity: 0.8;
+
+        &:before {
+            padding-left: 3px;
+            content: '\00a0\2022\00a0\00a0';
+        }
+
+        &:first-child {
+            &:before {
+                padding-left: 0;
+                content: '';
+            }
+        }
+    }
+}
+
 @keyframes portraitMove {
     0% {
         transform: translate(0, 0);

@@ -20,7 +20,7 @@
     padding: 0 1rem;
 
     @media (min-width: 768px) {
-        padding: 1.5em 3rem 0;
+        padding: 0.5rem 3rem 0;
     }
 
     @media (min-width: 1536px) {
@@ -204,7 +204,7 @@
     }
 
     &.fixed.up {
-        transform: translateY(90px);
+        transform: translateY(105px);
         @media (max-width: 767px) {
             transform: translateY(105px);
         }
