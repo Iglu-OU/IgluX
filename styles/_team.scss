@@ -6,7 +6,7 @@
     &:before {
         content: '';
         position: absolute;
-        top: 0;
+        top: -1px; // 0 leaves spaces on some screens
         left: 0;
         height: 12vh;
         width: 100%;
