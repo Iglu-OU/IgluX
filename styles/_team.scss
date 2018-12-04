@@ -83,7 +83,7 @@
     position: relative;
     display: flex;
     flex-shrink: 1;
-    max-width: 320px;
+    max-width: 400px;
 
     &-primary {
         position: relative;
@@ -128,22 +128,21 @@
             width: 24px;
             height: 24px;
             margin-left: 8px;
-            margin-bottom: 4px;
             opacity: 0;
             transition: opacity 0.32s ease;
             background: url(../assets/ln.svg);
-            vertical-align: bottom;
+            vertical-align: middle;
 
             @media (pointer: coarse) {
                 opacity: 1 !important;
             }
-
-            @media (pointer: fine) {
-                .team-member:hover & {
-                    opacity: 1;
-                }
-            }
         }
+    }
+}
+
+@media (pointer: fine) {
+    .team-member__name:hover span:after {
+        opacity: 1;
     }
 }
 
