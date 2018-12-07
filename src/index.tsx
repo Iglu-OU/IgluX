@@ -423,7 +423,7 @@ class App extends Component<any, any> {
                                 <h1 className="text--white">How we work</h1>
                                 <dl>
                                     <dt className="text--white">Front-end development</dt>
-                                    <dd className="text--white">Coding, collaboration with developers</dd>
+                                    <dd className="text--white">Coding, collaboration with back-end developers</dd>
                                     <dt className="text--white">Design</dt>
                                     <dd className="text--white stars-bottom">Typography, colors, documentation</dd>
                                     <dt className="text--gray">Validate</dt>
@@ -431,7 +431,7 @@ class App extends Component<any, any> {
                                     <dt className="text--gray">Ideate</dt>
                                     <dd className="text--gray">Low-fidelity, high-fidelity, clickable, HTML</dd>
                                     <dt className="text--gray">Discover</dt>
-                                    <dd className="text--gray">Interviews, data analysis, requirements gathering</dd>
+                                    <dd className="text--gray">Interviews, data analysis, requirements</dd>
                                 </dl>
                             </div>
                             <div className="work-flow__bottom-fold" />

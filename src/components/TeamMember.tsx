@@ -8,7 +8,7 @@ export default function({ data }) {
                 <img className="team-member__portrait-secondary" src={imageSecSrc} alt={imageAlt} />
             </p>
             <div className="team-member__description">
-                <a className="team-member__name mt-0 h1" href={imageUrl} target="_blank">
+                <a className="team-member__name mt-0 h1" href={imageUrl} title={`LinkedIn - ${name}`} target="_blank">
                     <span>{name}</span>
                 </a>
                 <p className="team-member__title mt-0">
