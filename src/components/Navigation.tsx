@@ -4,7 +4,7 @@ export interface INavigationProps {
     Logo: string;
 }
 
-export default class Navigation extends Component<INavigationProps, any> {
+export default class Navigation extends Component<INavigationProps> {
     constructor(props, context) {
         super(props, context);
     }

@@ -1,6 +1,6 @@
 import { Component } from 'inferno';
 
-export default class Header extends Component<any, any> {
+export default class Header extends Component<any> {
     constructor(props, context) {
         super(props, context);
     }

@@ -1,6 +1,6 @@
 import { Component } from 'inferno';
 
-export default class Stars extends Component<any, any> {
+export default class Stars extends Component {
     constructor(props, context) {
         super(props, context);
     }

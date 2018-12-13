@@ -173,6 +173,7 @@ class App extends Component<any, any> {
                 iterations: Infinity,
             });
 
+            /*
             const eskimo = document.querySelector('.work-flow__eskimo');
             const eskimoAnimation: any = {
                 transform: ['translate(0, 0)', 'translate(0, 2%)', 'translate(0, 0)'],
@@ -182,6 +183,7 @@ class App extends Component<any, any> {
                 duration: 8000,
                 iterations: Infinity,
             });
+            */
         }
 
         function animateWaves() {
