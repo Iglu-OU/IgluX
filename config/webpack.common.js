@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: path.resolve(__dirname, '../src/index.tsx'),
@@ -29,8 +30,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                //TODO Should use style-loader when in dev mode, in order to enable HMR
-                use: [MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader'],
+                use: [devMode ? 'style-loader' : MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.(ttf|svg|png)$/,
@@ -42,6 +42,7 @@ module.exports = {
         contentBase: 'src/',
         historyApiFallback: true,
         hot: true,
+        open: true,
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
@@ -58,7 +59,8 @@ module.exports = {
             },
         }),
         new MiniCSSExtractPlugin({
-            filename: '[name].[hash].css',
+            filename: devMode ? '[name].css' : '[name].[hash].css',
+            chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
         }),
         new CopyWebpackPlugin([
             { from: path.resolve(__dirname, '../public/manifest.json'), to: 'manifest.json' },

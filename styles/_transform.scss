@@ -11,19 +11,7 @@
 .transform-header__workflow {
     position: relative;
     background-color: #064864;
-    top: -1px; // 0 leaves spaces on some screens
     color: #fff;
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: -2px; // 0 leaves spaces on some screens
-        left: 0;
-        height: 20%;
-        max-height: 200px;
-        width: 100%;
-        background-color: #2096d4;
-        z-index: 1;
-    }
 }
 
 .transform-header__jumbotron:before,
@@ -33,7 +21,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 101%;
     opacity: 0;
     transition: all 1s ease;
 }

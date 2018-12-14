@@ -2,6 +2,7 @@ import { render, Component } from 'inferno';
 // import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Stars from './components/Stars';
+import WorkFlow from './components/WorkFlow';
 import TeamMember from './components/TeamMember';
 import TeamMemberWrapper from './components/TeamMemberWrapper';
 import registerSW from './utils/registerSW';
@@ -98,8 +99,6 @@ class App extends Component<any, any> {
 
         let minHeight;
 
-        // Remove this comment
-
         const updateJourney = () => {
             const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
             const clientHeight = htmlElement!.clientHeight;
@@ -147,69 +146,7 @@ class App extends Component<any, any> {
         document.addEventListener('DOMContentLoaded', animateContent(), false);
 
         function animateContent(): any {
-            // const height = screen.height;
-            const width = screen.width;
-
-            if (width >= 768) {
-                animateWaves();
-            }
-
-            animateIceberg();
             animateInvisible();
-        }
-
-        function animateIceberg() {
-            const icebergLeft = '-50%';
-            const icebergTranslateX = 'translateX(' + icebergLeft + ') ';
-            const iceberg = document.querySelector('.work-flow__iceberg');
-            const icebergAnimation: any = {
-                transform: [
-                    icebergTranslateX + 'translateY(-7%)',
-                    icebergTranslateX + 'translateY(-5.5%)',
-                    icebergTranslateX + 'translateY(-7%)',
-                ],
-                easing: 'ease-in-out',
-            };
-            iceberg!.animate(icebergAnimation, {
-                duration: 8000,
-                iterations: Infinity,
-            });
-
-            const eskimo = document.querySelector('.work-flow__eskimo');
-            const eskimoAnimation: any = {
-                transform: ['translate(0, 0)', 'translate(0, 2%)', 'translate(0, 0)'],
-                easing: 'ease-in-out',
-            };
-            eskimo!.animate(eskimoAnimation, {
-                duration: 8000,
-                iterations: Infinity,
-            });
-        }
-
-        function animateWaves() {
-            const waves = document.querySelector('.work-flow__waves');
-            const wavesAnimation: any = {
-                transform: [
-                    'rotateY(180deg) skewY(0.5deg)',
-                    'rotateY(180deg) skewY(0deg)',
-                    'rotateY(180deg) skewY(0.5deg)',
-                ],
-                easing: 'ease-in-out',
-            };
-            waves!.animate(wavesAnimation, {
-                duration: 4000,
-                iterations: Infinity,
-            });
-
-            const waveTop = document.querySelector('.work-flow__wave-top');
-            const waveTopAnimation: any = {
-                transform: ['translate(-100%, 0)', 'translate(100%, 0)'],
-                easing: 'ease-in-out',
-            };
-            waveTop!.animate(waveTopAnimation, {
-                duration: 12000,
-                iterations: Infinity,
-            });
         }
 
         function animateInvisible() {
@@ -411,32 +348,7 @@ class App extends Component<any, any> {
                         </div>
                     </section>
 
-                    <section className="transform-header__workflow" id="process">
-                        <div className="work-flow">
-                            <div className="work-flow__eskimo" />
-                            <div className="work-flow__sky" />
-                            <div className="work-flow__waves-surface" />
-                            <div className="work-flow__iceberg" />
-                            <div className="work-flow__wave-top" />
-                            <div className="work-flow__waves" />
-                            <div className="work-flow__content">
-                                <h1 className="text--white">How we work</h1>
-                                <dl>
-                                    <dt className="text--white">Front-end development</dt>
-                                    <dd className="text--white">Coding, collaboration with back-end developers</dd>
-                                    <dt className="text--white">Design</dt>
-                                    <dd className="text--white stars-bottom">Typography, colors, documentation</dd>
-                                    <dt className="text--gray">Validate</dt>
-                                    <dd className="text--gray">User tests, iterations, analytics</dd>
-                                    <dt className="text--gray">Ideate</dt>
-                                    <dd className="text--gray">Low-fidelity, high-fidelity, clickable, HTML</dd>
-                                    <dt className="text--gray">Discover</dt>
-                                    <dd className="text--gray">Interviews, data analysis, requirements</dd>
-                                </dl>
-                            </div>
-                            <div className="work-flow__bottom-fold" />
-                        </div>
-                    </section>
+                    <WorkFlow />
 
                     <section className="section journey-wrapper" id="journey">
                         <div className="journey">

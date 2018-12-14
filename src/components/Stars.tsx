@@ -1,8 +1,8 @@
 import { Component } from 'inferno';
 
-export default class Stars extends Component<any, any> {
-    constructor(props, context) {
-        super(props, context);
+export default class Stars extends Component {
+    constructor(props) {
+        super(props);
     }
 
     componentDidMount() {
