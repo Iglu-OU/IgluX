@@ -8,7 +8,7 @@
         position: absolute;
         top: -1px; // 0 leaves spaces on some screens
         left: 0;
-        height: 12vh;
+        height: 17vh;
         width: 100%;
         background-color: #2096d4;
         z-index: 1;
@@ -39,7 +39,7 @@
         height: 105vh;
         z-index: 2;
         margin-top: auto;
-        background: url(../assets/iceberg/Iceberg-fold_reverse.svg) center;
+        background: url(../assets/iceberg/Iceberg-fold_reverse.svg);
         background-size: cover;
         pointer-events: none;
     }

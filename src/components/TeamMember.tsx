@@ -1,4 +1,4 @@
-export default function({ data }) {
+export default function({ data, key }) {
     const { name, title, description, descriptionExtended, imageUrl, imageSrc, imageSecSrc, imageAlt, skillSet } = data;
 
     return (

@@ -1,19 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1936 1034">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1936 1034" preserveAspectRatio="xMidYMid slice">
     <defs>
-        <linearGradient id="a" x1="968.59" y1="317" x2="968.59" y2="326.14" gradientUnits="userSpaceOnUse">
+        <linearGradient id="linear-gradient" x1="968" y1="51" x2="968" y2="60.14" gradientTransform="translate(0 266)" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#004a55"/>
-            <stop offset="0" stop-color="#fff" stop-opacity=".7"/>
-            <stop offset="1" stop-color="#00434f" stop-opacity=".4"/>
-        </linearGradient>
-        <linearGradient id="b" x1="-.04" y1="847.16" x2="1936.18" y2="847.16" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff" stop-opacity="0.7"/>
+            <stop offset="1" stop-color="#00434f" stop-opacity="0.4"/></linearGradient>
+        <linearGradient id="linear-gradient-2" y1="581.17" x2="1936.1" y2="581.17" gradientTransform="translate(0 266)" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#01323e"/>
             <stop offset="1" stop-color="#01323e"/>
-            <stop offset="1" stop-color="#01323e" stop-opacity=".95"/>
+            <stop offset="1" stop-color="#01323e" stop-opacity="0.95"/>
         </linearGradient>
     </defs>
-
-    <path fill="#2096d4" d="M1 848h1935v186H1z"/>
-    <path fill="#002735" d="M1935.84 848.02H1.03V325.4h1934.81z"/>
-    <path fill="url(#a)" d="M1.19 317H1936v9.14H1.19z"/>
-    <path d="M.12 914.55C471 855.07 947 963.29 1392.4 954.49c289.6-5.73 543.6-72.36 543.6-72.36s.4-120.55 0-120.62c-413.41-77.81-673.72 74.68-969 66.49-215.7-6-701-124-967-64.26 0 .02-.14 150.85.12 150.81z" fill="url(#b)"/>
+    <title>Iceberg-waves-bg</title>
+    <path class="waves-bg-1" fill="#2096d4" d="M0,848H1936.1v189.72H0Z"/>
+    <path class="waves-bg-2" fill="#002735" d="M1936.1,869.83H0V325.4H1936.1Z"/>
+    <path id="water-ice" class="waves-bg-3" fill="url(#linear-gradient)" d="M0,317H1936v9.14H0Z"/>
+    <path class="waves-bg-4" fill="url(#linear-gradient-2)" d="M0,914.55c470.88-59.48,947,48.74,1392.4,39.94,289.6-5.73,543.7-72.39,543.7-72.39V761.53C1522.69,683.72,1262.28,836.19,967,828,751.3,822,266,704,0,763.74Z"/>
 </svg>

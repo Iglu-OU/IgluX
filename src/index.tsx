@@ -2,6 +2,7 @@ import { render, Component } from 'inferno';
 // import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Stars from './components/Stars';
+import WorkFlow from './components/WorkFlow';
 import TeamMember from './components/TeamMember';
 import TeamMemberWrapper from './components/TeamMemberWrapper';
 import registerSW from './utils/registerSW';
@@ -145,71 +146,7 @@ class App extends Component<any, any> {
         document.addEventListener('DOMContentLoaded', animateContent(), false);
 
         function animateContent(): any {
-            // const height = screen.height;
-            const width = screen.width;
-
-            if (width >= 768) {
-                animateWaves();
-            }
-
-            animateIceberg();
             animateInvisible();
-        }
-
-        function animateIceberg() {
-            const icebergLeft = '-50%';
-            const icebergTranslateX = 'translateX(' + icebergLeft + ') ';
-            const iceberg = document.querySelector('.work-flow__iceberg');
-            const icebergAnimation: any = {
-                transform: [
-                    icebergTranslateX + 'translateY(-7%)',
-                    icebergTranslateX + 'translateY(-5.5%)',
-                    icebergTranslateX + 'translateY(-7%)',
-                ],
-                easing: 'ease-in-out',
-            };
-            iceberg!.animate(icebergAnimation, {
-                duration: 8000,
-                iterations: Infinity,
-            });
-
-            /*
-            const eskimo = document.querySelector('.work-flow__eskimo');
-            const eskimoAnimation: any = {
-                transform: ['translate(0, 0)', 'translate(0, 2%)', 'translate(0, 0)'],
-                easing: 'ease-in-out',
-            };
-            eskimo!.animate(eskimoAnimation, {
-                duration: 8000,
-                iterations: Infinity,
-            });
-            */
-        }
-
-        function animateWaves() {
-            const waves = document.querySelector('.work-flow__waves');
-            const wavesAnimation: any = {
-                transform: [
-                    'rotateY(180deg) skewY(0.5deg)',
-                    'rotateY(180deg) skewY(0deg)',
-                    'rotateY(180deg) skewY(0.5deg)',
-                ],
-                easing: 'ease-in-out',
-            };
-            waves!.animate(wavesAnimation, {
-                duration: 4000,
-                iterations: Infinity,
-            });
-
-            const waveTop = document.querySelector('.work-flow__wave-top');
-            const waveTopAnimation: any = {
-                transform: ['translate(-100%, 0)', 'translate(100%, 0)'],
-                easing: 'ease-in-out',
-            };
-            waveTop!.animate(waveTopAnimation, {
-                duration: 12000,
-                iterations: Infinity,
-            });
         }
 
         function animateInvisible() {
@@ -411,147 +348,7 @@ class App extends Component<any, any> {
                         </div>
                     </section>
 
-                    <section className="transform-header__workflow" id="process">
-                        <div className="work-flow">
-                            <svg
-                                className="work-flow__waves-bg"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 1936 1034"
-                                preserveAspectRatio="xMidYMid slice"
-                            >
-                                <defs>
-                                    <linearGradient
-                                        id="a"
-                                        x1="968.59"
-                                        y1="317"
-                                        x2="968.59"
-                                        y2="326.14"
-                                        gradientUnits="userSpaceOnUse"
-                                    >
-                                        <stop offset="0" stop-color="#004a55" />
-                                        <stop offset="0" stop-color="#fff" stop-opacity=".7" />
-                                        <stop offset="1" stop-color="#00434f" stop-opacity=".4" />
-                                    </linearGradient>
-                                    <linearGradient
-                                        id="b"
-                                        x1="-.04"
-                                        y1="847.16"
-                                        x2="1936.18"
-                                        y2="847.16"
-                                        gradientUnits="userSpaceOnUse"
-                                    >
-                                        <stop offset="0" stop-color="#01323e" />
-                                        <stop offset="1" stop-color="#01323e" />
-                                        <stop offset="1" stop-color="#01323e" stop-opacity=".95" />
-                                    </linearGradient>
-                                </defs>
-
-                                <path fill="#2096d4" d="M1 848h1935v186H1z" />
-                                <path fill="#002735" d="M1935.84 848.02H1.03V325.4h1934.81z" />
-                                <path fill="url(#a)" d="M1.19 317H1936v9.14H1.19z" />
-                                <path
-                                    d="M.12 914.55C471 855.07 947 963.29 1392.4 954.49c289.6-5.73 543.6-72.36 543.6-72.36s.4-120.55 0-120.62c-413.41-77.81-673.72 74.68-969 66.49-215.7-6-701-124-967-64.26 0 .02-.14 150.85.12 150.81z"
-                                    fill="url(#b)"
-                                />
-                            </svg>
-
-                            <div className="work-flow__iceberg" />
-
-                            <svg
-                                className="work-flow__waves"
-                                id="front_layer"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 1936 1034"
-                                preserveAspectRatio="xMidYMid slice"
-                            >
-                                <defs>
-                                    <linearGradient
-                                        id="linear-gradient"
-                                        x1="968.43"
-                                        y1="326.41"
-                                        x2="968.43"
-                                        y2="849.02"
-                                        gradientTransform="translate(1936.87 1175.43) rotate(180)"
-                                        gradientUnits="userSpaceOnUse"
-                                    >
-                                        <stop offset="0" stop-color="#1e4954" stop-opacity="0.82" />
-                                        <stop offset="0.04" stop-color="#083743" stop-opacity="0.45" />
-                                        <stop offset="1" stop-color="#01323e" stop-opacity="0" />
-                                    </linearGradient>
-                                    <linearGradient
-                                        id="linear-gradient-2"
-                                        x1="968.83"
-                                        y1="401.92"
-                                        x2="968.83"
-                                        y2="862.55"
-                                        gradientTransform="matrix(-1, 0, 0, 1, 1936.66, 0)"
-                                        gradientUnits="userSpaceOnUse"
-                                    >
-                                        <stop offset="0" stop-color="#01323e" />
-                                        <stop offset="1" stop-color="#01323e" stop-opacity="0" />
-                                    </linearGradient>
-                                    <linearGradient
-                                        id="linear-gradient-3"
-                                        x1="968.83"
-                                        y1="530.31"
-                                        x2="968.83"
-                                        y2="859"
-                                        xlinkHref="#linear-gradient-2"
-                                    />
-                                    <linearGradient
-                                        id="linear-gradient-4"
-                                        x1="968.83"
-                                        y1="640.26"
-                                        x2="968.83"
-                                        y2="872.25"
-                                        xlinkHref="#linear-gradient-2"
-                                    />
-                                </defs>
-                                <title>waves_layer</title>
-                                <rect
-                                    className="cls-1"
-                                    x="1.03"
-                                    y="326.41"
-                                    width="1934.81"
-                                    height="522.62"
-                                    transform="translate(1936.87 1175.43) rotate(-180)"
-                                />
-                                <path
-                                    className="cls-2"
-                                    d="M-.34,862.55V470.49C223,399,554.47,402.94,848,428c492,42,775-81.34,1088,6V862.55Z"
-                                />
-                                <path
-                                    className="cls-3"
-                                    d="M1935.66,851V601.22C1584,490,1218.32,540.68,1108.4,549.23,979,559.31,851.43,577,721.1,581.92c-113.47,4.32-227.61-1.07-339.78-11.48-74.94-7-149.89-16.17-225.86-15.45C101.35,555.5,0,549,0,549V859Z"
-                                />
-                                <path
-                                    className="cls-4"
-                                    d="M-.34,872.25V712.48C163.43,682.9,324.94,655.56,493,644.15c110.51-7.51,222.18-3.62,332.12,7.25,129.4,12.79,257,25.21,387.37,31.51,113.48,5.48,227.64-1.37,339.84-14.58,75-8.83,149.91-19.05,225.89-18.63C1832,650,1920,656,1936,662V872.25Z"
-                                />
-                                <path
-                                    className="cls-5"
-                                    d="M0,860.77V977.66c0,.23,167,30.28,326.16,28.19C462,1004.07,832,962.38,1036.9,972.4c174.37,8.53,600.75,35.91,690,35.6,100.13-.36,190.91-10.36,209.1-13.63V855.75c-97-6.79-399,34.89-595,34.89-220.23,0-352-33.92-565-32-217,2-357.49,23.06-531,27.35C88,889.88,0,860.77,0,860.77Z"
-                                />
-                            </svg>
-
-                            <div className="work-flow__wave-top" />
-                            <div className="work-flow__content">
-                                <h1 className="text--white">How we work</h1>
-                                <dl>
-                                    <dt className="text--white">Front-end development</dt>
-                                    <dd className="text--white">Coding, collaboration with back-end developers</dd>
-                                    <dt className="text--white">Design</dt>
-                                    <dd className="text--white stars-bottom">Typography, colors, documentation</dd>
-                                    <dt className="text--gray">Validate</dt>
-                                    <dd className="text--gray">User tests, iterations, analytics</dd>
-                                    <dt className="text--gray">Ideate</dt>
-                                    <dd className="text--gray">Low-fidelity, high-fidelity, clickable, HTML</dd>
-                                    <dt className="text--gray">Discover</dt>
-                                    <dd className="text--gray">Interviews, data analysis, requirements</dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </section>
+                    <WorkFlow />
 
                     <section className="section journey-wrapper" id="journey">
                         <div className="journey">
