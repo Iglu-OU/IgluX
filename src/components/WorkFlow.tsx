@@ -13,7 +13,6 @@ export default class WorkFlow extends Component {
     }
 
     getcontentPlacement(): any {
-        console.log('contentPlacement');
         // Caculate px's between water-ice-top and work-flow-section
         const waterIce = document.getElementById('water-ice');
         const workFlowSection = document.getElementById('process');

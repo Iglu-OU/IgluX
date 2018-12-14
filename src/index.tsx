@@ -34,7 +34,7 @@ class App extends Component<any, any> {
         super(props, context);
 
         if ('serviceWorker' in navigator) {
-            registerSW();
+            registerSW({});
         }
     }
 

@@ -6,9 +6,17 @@ export default class Stars extends Component {
     }
 
     componentDidMount() {
-        const bottom =
-            document.getElementsByClassName('stars-bottom')[0].getBoundingClientRect().bottom + window.pageYOffset;
-        document.getElementsByClassName('star__Wrapper')[0].setAttribute('style', `height: ${bottom + 20}px`);
+        window.addEventListener('resize', this.resizeWrapper);
+        this.resizeWrapper();
+    }
+
+    resizeWrapper() {
+        const waterIce = document.getElementById('water-ice');
+        const waterIceTop = waterIce ? waterIce.getBoundingClientRect().top : 0;
+
+        document
+            .getElementsByClassName('star__Wrapper')[0]
+            .setAttribute('style', `height: ${waterIceTop + window.pageYOffset}px`);
     }
 
     public render() {
