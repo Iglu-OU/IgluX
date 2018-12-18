@@ -1,15 +1,17 @@
 import { Component } from 'inferno';
 
 export default class WorkFlow extends Component {
+    waveTopAnimation: Animation | null = null;
+
     constructor(props) {
         super(props);
     }
 
     componentDidMount() {
         window.addEventListener('resize', this.getcontentPlacement);
+        window.addEventListener('resize', this.checkWavesTopAnimation);
+        document.addEventListener('DOMContentLoaded', this.animate(), false);
         this.getcontentPlacement();
-
-        this.animate();
     }
 
     getcontentPlacement(): any {
@@ -20,6 +22,7 @@ export default class WorkFlow extends Component {
         const waterIceTop = waterIce ? waterIce.getBoundingClientRect().top : 0;
         const workFlowSectionTop = workFlowSection ? workFlowSection.getBoundingClientRect().top : 0;
 
+        // Add content new top.
         const contentNewtop = waterIceTop - workFlowSectionTop - 30;
 
         const content = document.getElementById('work-flow__content');
@@ -28,58 +31,65 @@ export default class WorkFlow extends Component {
         }
     }
 
-    animate() {
-        document.addEventListener('DOMContentLoaded', animateContent(), false);
+    checkWavesTopAnimation = () => {
+        const width = screen.width;
 
-        function animateContent(): any {
-            // const height = screen.height;
-            const width = screen.width;
-
-            if (width >= 768) {
-                animateWaves();
-            }
-
-            animateIceberg();
+        // Stop animation when screen is smaller than 769px
+        if (width <= 768 && this.waveTopAnimation) {
+            this.waveTopAnimation!.cancel();
         }
 
-        function animateIceberg() {
-            const iceberg = document.querySelector('.work-flow__iceberg');
-            const icebergAnimation: any = {
-                transform: ['translateY(-7%)', 'translateY(-5.5%)', 'translateY(-7%)'],
-                easing: 'ease-in-out',
-            };
-            iceberg!.animate(icebergAnimation, {
-                duration: 8000,
-                iterations: Infinity,
-            });
+        // Start animation when screen is bigger than 768px and animation is not running.
+        if (width > 768 && this.waveTopAnimation && this.waveTopAnimation.playState !== 'running') {
+            this.waveTopAnimation.play();
         }
+    };
 
-        function animateWaves() {
-            const waves = document.querySelector('.work-flow__waves');
-            const wavesAnimation: any = {
-                transform: [
-                    'rotateY(180deg) skewY(0.5deg)',
-                    'rotateY(180deg) skewY(0deg)',
-                    'rotateY(180deg) skewY(0.5deg)',
-                ],
-                easing: 'ease-in-out',
-            };
-            waves!.animate(wavesAnimation, {
-                duration: 4000,
-                iterations: Infinity,
-            });
-
-            const waveTop = document.querySelector('.work-flow__wave-top');
-            const waveTopAnimation: any = {
-                transform: ['translate(-100%, 0)', 'translate(100%, 0)'],
-                easing: 'ease-in-out',
-            };
-            waveTop!.animate(waveTopAnimation, {
-                duration: 12000,
-                iterations: Infinity,
-            });
-        }
+    animate(): any {
+        this.animateWavesTop();
+        this.animateWaves();
+        this.animateIceberg();
     }
+
+    animateIceberg() {
+        const iceberg = document.querySelector('.work-flow__iceberg');
+        const icebergAnimation: any = {
+            transform: ['translateY(-7%)', 'translateY(-5.5%)', 'translateY(-7%)'],
+            easing: 'ease-in-out',
+        };
+        iceberg!.animate(icebergAnimation, {
+            duration: 8000,
+            iterations: Infinity,
+        });
+    }
+
+    animateWaves() {
+        const waves = document.querySelector('.work-flow__waves');
+        const wavesAnimation: any = {
+            transform: [
+                'rotateY(180deg) skewY(0.5deg)',
+                'rotateY(180deg) skewY(0deg)',
+                'rotateY(180deg) skewY(0.5deg)',
+            ],
+            easing: 'ease-in-out',
+        };
+        waves!.animate(wavesAnimation, {
+            duration: 4000,
+            iterations: Infinity,
+        });
+    }
+
+    animateWavesTop = () => {
+        const waveTop = document.querySelector('.work-flow__wave-top');
+        const waveTopAnimation: any = {
+            transform: ['translate(-100%, 0)', 'translate(100%, 0)'],
+            easing: 'ease-in-out',
+        };
+        this.waveTopAnimation = waveTop!.animate(waveTopAnimation, {
+            duration: 12000,
+            iterations: Infinity,
+        });
+    };
 
     renderWavesBg() {
         return (

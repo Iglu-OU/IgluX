@@ -3,39 +3,49 @@
     justify-content: space-around;
     background: $color-primary;
     color: #fff;
-
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        margin: auto;
-        padding: 0.25em;
+    @media (max-width: 767px) {
+        font-size: 14px;
     }
-    li {
-        justify-content: space-between;
-        @media (max-width: 767px) {
-            flex-basis: 100%;
-            font-size: 1.25em;
-            align-items: center;
+
+    @media (max-width: 424px) {
+        justify-content: left;
+    }
+}
+
+.footer__links {
+    display: flex;
+}
+
+.footer__links-item {
+    &:first-child .footer__link {
+        @media (max-width: 424px) {
+            padding-left: 1rem;
         }
     }
-    a {
-        display: block;
-        padding: 0.75em 1rem;
-        opacity: 0.8;
-        color: #fff;
-        text-decoration: none;
-        transition: opacity 0.2s ease-in-out;
+}
 
-        &:hover {
-            opacity: 1;
+.footer__link {
+    display: block;
+    padding: 0.75em 1rem;
+    opacity: 0.8;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @media (max-width: 424px) {
+        padding: 0.75em 0.5rem;
+        & span {
+            display: none;
         }
+    }
 
+    & span {
         @media (max-width: 767px) {
-            padding: 11px;
-            text-align: center;
-            & img {
-                display: none;
-            }
+            display: none;
         }
     }
 }

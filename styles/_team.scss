@@ -43,6 +43,21 @@
         background-size: cover;
         pointer-events: none;
     }
+
+    // Deleted from HTML, waiting for copy
+    &__header {
+        color: #2096d4;
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0;
+            @media (max-width: 1023px) {
+                padding: 0;
+            }
+        }
+    }
 }
 
 .team-member {

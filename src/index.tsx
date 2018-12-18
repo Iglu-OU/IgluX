@@ -3,6 +3,7 @@ import { render, Component } from 'inferno';
 import Navigation from './components/Navigation';
 import Stars from './components/Stars';
 import WorkFlow from './components/WorkFlow';
+import Footer from './components/Footer';
 import TeamMember from './components/TeamMember';
 import TeamMemberWrapper from './components/TeamMemberWrapper';
 import registerSW from './utils/registerSW';
@@ -12,10 +13,6 @@ import '../styles/main.scss';
 import Logo from '../assets/logo.svg';
 
 import { teamMemberList } from './utils/teamMembers';
-
-import IcoFacebook from '../assets/ico-fb.svg';
-import IcoInstagram from '../assets/ico-insta.svg';
-import IcoLinkedIn from '../assets/ico-linkedin.svg';
 
 export interface ITeamMember {
     name: string;
@@ -279,55 +276,6 @@ class App extends Component<any, any> {
         });
     }
 
-    returnFooterLinks() {
-        const internalList = [
-            { link: 'https://iglu.ee/', name: 'Iglu' },
-            { link: 'https://iglu.ee/#how', name: 'Clients' },
-            { link: 'https://iglu.ee/#where', name: 'Contact us' },
-        ];
-
-        const internalLinkList = internalList.map((i, index) => {
-            const { link, name } = i;
-            return (
-                <li key={index}>
-                    <a href={link} target="_blank" rel="noopener">
-                        {name}
-                    </a>
-                </li>
-            );
-        });
-
-        const externalList = [
-            { link: '#', name: 'Instagram', imageSrc: IcoInstagram, imageAlt: 'Instagram icon' },
-            {
-                link: 'https://www.facebook.com/IgluOU/',
-                name: 'Facebook',
-                imageSrc: IcoFacebook,
-                imageAlt: 'Facebook icon',
-            },
-            {
-                link: 'https://www.linkedin.com/company/iglu-o%C3%BC/',
-                name: 'LinkedIn',
-                imageSrc: IcoLinkedIn,
-                imageAlt: 'LinkedIn icon',
-            },
-        ];
-
-        const externalLinkList = externalList.map((i, index) => {
-            const { link, name, imageSrc, imageAlt } = i;
-            return (
-                <li key={index}>
-                    <a href={link}>
-                        <img className="ico ico--sm lazyload" alt={imageAlt} src={imageSrc} />
-                        {name}
-                    </a>
-                </li>
-            );
-        });
-
-        return [...internalLinkList, ...externalLinkList];
-    }
-
     public render() {
         return (
             <div>
@@ -467,9 +415,7 @@ class App extends Component<any, any> {
                     </section>
                 </main>
 
-                <footer className="footer">
-                    <ul className="mt-0 list-unstyled">{this.returnFooterLinks()}</ul>
-                </footer>
+                <Footer />
             </div>
         );
     }

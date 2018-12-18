@@ -39,18 +39,6 @@ export const teamMemberList: ITeamMember[] = [
         skillSet: ['UI analysis', 'Business analysis', 'User research', 'User testing'],
     },
     {
-        name: 'Kristo Danilson',
-        title: 'UI & UX analyst',
-        description: 'Passionate about users and the business side of IT.',
-        descriptionExtended:
-            'There is a rumour that he discovered the true meaning of disco. But then they changed it.',
-        imageUrl: 'https://www.linkedin.com/in/kristo-danilson-a9a08b159/',
-        imageSrc: KristoPortrait,
-        imageSecSrc: KristoPortraitSec,
-        imageAlt: `Kristo Danilson's portrait... if he was an Eskimo`,
-        skillSet: ['Business analysis', 'User research', 'User testing'],
-    },
-    {
         name: 'Joonas Kessel',
         title: 'UI & UX analyst',
         description: `Ensures the projects are on track and the users' needs are met.`,
@@ -61,6 +49,18 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: JoonasPortraitSec,
         imageAlt: `Joonas Kessel's portrait... if he was an Eskimo`,
         skillSet: ['Prototyping', 'User research', 'User testing'],
+    },
+    {
+        name: 'Kristo Danilson',
+        title: 'UI & UX analyst',
+        description: 'Passionate about users and the business side of IT.',
+        descriptionExtended:
+            'There is a rumour that he discovered the true meaning of disco. But then they changed it.',
+        imageUrl: 'https://www.linkedin.com/in/kristo-danilson-a9a08b159/',
+        imageSrc: KristoPortrait,
+        imageSecSrc: KristoPortraitSec,
+        imageAlt: `Kristo Danilson's portrait... if he was an Eskimo`,
+        skillSet: ['Business analysis', 'User research', 'User testing'],
     },
     {
         name: 'Alina Trussova',
@@ -119,7 +119,7 @@ export const teamMemberList: ITeamMember[] = [
     },
     {
         name: 'Harles-Herman Pilter',
-        title: 'Front-end developer',
+        title: 'Senior front-end developer',
         description: 'Skilled in creating micro-interactions, also, has a strong sense for business.',
         descriptionExtended:
             'He built a code delivery system that consists entirely of drones. Mr. Bezos is so jealous.',
