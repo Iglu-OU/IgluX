@@ -28,7 +28,12 @@ export default class Footer extends Component {
         });
 
         const externalList = [
-            { link: '#', name: 'Instagram', imageSrc: IcoInstagram, imageAlt: 'Instagram icon' },
+            {
+                link: 'https://www.instagram.com/igluda/',
+                name: 'Instagram',
+                imageSrc: IcoInstagram,
+                imageAlt: 'Instagram icon',
+            },
             {
                 link: 'https://www.facebook.com/IgluOU/',
                 name: 'Facebook',
