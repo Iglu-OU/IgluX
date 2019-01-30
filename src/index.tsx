@@ -1,18 +1,16 @@
 import { render, Component } from 'inferno';
-// import Header from './components/Header';
+
 import Navigation from './components/Navigation';
 import Stars from './components/Stars';
 import WorkFlow from './components/WorkFlow';
 import Footer from './components/Footer';
-import TeamMember from './components/TeamMember';
-import TeamMemberWrapper from './components/TeamMemberWrapper';
+import Team from './components/Team';
+
 import registerSW from './utils/registerSW';
 import 'web-animations-js';
 
 import '../styles/main.scss';
 import Logo from '../assets/logo.svg';
-
-import { teamMemberList } from './utils/teamMembers';
 
 export interface ITeamMember {
     name: string;
@@ -46,18 +44,21 @@ class App extends Component<any, any> {
 
         setInterval(() => {
             if (didScroll) {
-                calculateNav();
+                // calculateNav();
                 updateJourney();
                 didScroll = false;
             }
         }, 50);
 
+        /*
         const transitionContainerJumbotron = document.getElementById('transform-header__jumbotron');
         const transitionContainerWorkflow = document.getElementById('process');
         const transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
+        */
 
         const htmlElement = document.querySelector('html');
 
+        /*
         const calculateNav = () => {
             const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
 
@@ -69,9 +70,9 @@ class App extends Component<any, any> {
                 transitionContainerWorkflow!.classList.add('transform-header__workflow--alt');
             }
         };
+        */
 
         const journeyWrapper = document.querySelector('.journey-wrapper') as any;
-
         // events
         const beginning = document.querySelector('.beginning');
         const designproject = document.querySelector('.design-project');
@@ -259,23 +260,6 @@ class App extends Component<any, any> {
         }
     }
 
-    returnHeaderLinks() {
-        const list = [
-            { link: '#process', name: 'Process' },
-            { link: '#journey', name: 'Journey' },
-            { link: '#team', name: 'Team' },
-        ];
-
-        return list.map((i, index) => {
-            const { link, name } = i;
-            return (
-                <li key={index}>
-                    <a href={link}>{name}</a>
-                </li>
-            );
-        });
-    }
-
     public render() {
         return (
             <div>
@@ -311,7 +295,6 @@ class App extends Component<any, any> {
                                         <h4 className="event__date">
                                             <span>March 2013</span>
                                         </h4>
-                                        <br />
                                         <h3 className="event__name">Iglu is founded</h3>
                                         <div className="event__circle" />
                                     </div>
@@ -331,7 +314,6 @@ class App extends Component<any, any> {
                                                 </a>
                                             </span>
                                         </h4>
-                                        <br />
                                         <h3 className="event__name">First design project</h3>
                                         <div className="event__circle event__circle--right" />
                                     </div>
@@ -351,7 +333,6 @@ class App extends Component<any, any> {
                                                 </a>
                                             </span>
                                         </h4>
-                                        <br />
                                         <h3 className="event__name">First single page application</h3>
                                         <div className="event__circle" />
                                     </div>
@@ -371,7 +352,6 @@ class App extends Component<any, any> {
                                                 </a>
                                             </span>
                                         </h4>
-                                        <br />
                                         <h3 className="event__name">First app</h3>
                                         <div className="event__circle event__circle--right" />
                                     </div>
@@ -387,7 +367,6 @@ class App extends Component<any, any> {
                                                 </a>
                                             </span>
                                         </h4>
-                                        <br />
                                         <h3 className="event__name">First UX Project</h3>
                                         <div className="event__circle" />
                                     </div>
@@ -396,7 +375,6 @@ class App extends Component<any, any> {
                                 <div className="event-wrapper event-wrapper--right new-team">
                                     <div className="event show">
                                         <h4 className="event__date">January 2018</h4>
-                                        <br />
                                         <h3 className="event__name">Iglu`s Digital Agency team is created</h3>
                                         <div className="event__circle event__circle--right" />
                                     </div>
@@ -405,14 +383,7 @@ class App extends Component<any, any> {
                         </div>
                     </section>
 
-                    <section className="section" id="team">
-                        <div className="team__top-fold" />
-                        <TeamMemberWrapper>
-                            {teamMemberList.map((i: ITeamMember, index: number) => (
-                                <TeamMember data={i} key={index} />
-                            ))}
-                        </TeamMemberWrapper>
-                    </section>
+                    <Team />
                 </main>
 
                 <Footer />

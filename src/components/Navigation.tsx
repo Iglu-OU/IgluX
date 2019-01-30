@@ -14,11 +14,13 @@ export default class Navigation extends Component<INavigationProps> {
     }
 
     componentDidMount() {
-        const htmlEl = document.querySelector('html');
         const navEl = document.querySelector('.navigation');
         const togglerEl = document.querySelector('.navigation__burger a');
         const navigationItemEls = document.querySelectorAll('.navigation__item a');
 
+        // Show header on scroll top
+        /*
+        const htmlEl = document.querySelector('html');
         let prev = 0;
 
         document.addEventListener('touchmove', scroll, false);
@@ -51,6 +53,7 @@ export default class Navigation extends Component<INavigationProps> {
             const el = document.scrollingElement || document.documentElement;
             return el ? el.scrollTop : 0;
         }
+        */
 
         let isVisible = false;
 

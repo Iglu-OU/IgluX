@@ -1,20 +1,17 @@
 .navigation-wrapper {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     height: 0;
     z-index: 10000;
     color: #fff;
-
-    @media (min-width: 512px) {
-        position: relative;
-    }
 }
 
 .navigation {
     position: relative;
     display: flex;
+    justify-content: space-between;
     width: 100%;
     font-size: 1rem;
     padding: 0 1rem;
@@ -79,8 +76,6 @@
 
 .navigation__home {
     position: relative;
-    display: inline-block;
-    flex: 1 1;
     margin: 0;
     z-index: 2;
     @media (max-width: 511px) {

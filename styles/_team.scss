@@ -17,7 +17,7 @@
 
 .team-wrapper {
     position: relative;
-    padding-top: 21vh;
+    padding-top: 15vh;
     max-width: 1480px;
     margin: auto;
 }
@@ -36,17 +36,22 @@
         position: absolute;
         top: 0;
         width: 100vw;
-        height: 105vh;
+        height: 120vh;
         z-index: 2;
         margin-top: auto;
-        background: url(../assets/iceberg/Iceberg-fold_reverse.svg);
+        background: url(../assets/iceberg/Iceberg-fold_reverse.svg) no-repeat top center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover;
         pointer-events: none;
     }
 
-    // Deleted from HTML, waiting for copy
     &__header {
-        color: #2096d4;
+        color: #ffffff;
+        position: relative;
+        z-index: 10;
+        margin-bottom: 2rem;
 
         h1 {
             text-align: center;
