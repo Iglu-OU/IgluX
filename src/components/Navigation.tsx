@@ -102,7 +102,7 @@ export default class Navigation extends Component<INavigationProps> {
                 <div className={this.BEM}>
                     <p className="navigation__home">
                         <a href="#">
-                            <img alt="Iglu logo" src={this.props.Logo} />{' '}
+                            <img alt="Iglu logo" src={this.props.Logo} />
                             <h1 className="navigation__header">Digital Agency</h1>
                         </a>
                     </p>

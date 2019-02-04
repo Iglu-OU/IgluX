@@ -76,9 +76,13 @@
 .navigation__header {
     display: inline;
     font-weight: 300;
-    font-size: 1.25vw;
     line-height: 1.5;
     margin: 0;
+    font-size: 1rem;
+
+    @media (min-width: 1536px) {
+        font-size: 1.25vw;
+    }
 }
 
 .navigation__home {
