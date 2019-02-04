@@ -295,7 +295,7 @@ class App extends Component<any, any> {
                                         <div className="event__date">
                                             <span>March 2013</span>
                                         </div>
-                                        <h3 className="event__name">Iglu is founded</h3>
+                                        <h2 className="event__name">Iglu is founded</h2>
                                         <div className="event__circle" />
                                     </div>
                                 </div>
@@ -314,7 +314,7 @@ class App extends Component<any, any> {
                                                 </a>
                                             </span>
                                         </div>
-                                        <h3 className="event__name">First design project</h3>
+                                        <h2 className="event__name">First design project</h2>
                                         <div className="event__circle event__circle--right" />
                                     </div>
                                 </div>
@@ -333,7 +333,7 @@ class App extends Component<any, any> {
                                                 </a>
                                             </span>
                                         </div>
-                                        <h3 className="event__name">First single page application</h3>
+                                        <h2 className="event__name">First single page application</h2>
                                         <div className="event__circle" />
                                     </div>
                                 </div>
@@ -352,7 +352,7 @@ class App extends Component<any, any> {
                                                 </a>
                                             </span>
                                         </div>
-                                        <h3 className="event__name">First app</h3>
+                                        <h2 className="event__name">First app</h2>
                                         <div className="event__circle event__circle--right" />
                                     </div>
                                 </div>
@@ -367,7 +367,7 @@ class App extends Component<any, any> {
                                                 </a>
                                             </span>
                                         </div>
-                                        <h3 className="event__name">First UX Project</h3>
+                                        <h2 className="event__name">First UX Project</h2>
                                         <div className="event__circle" />
                                     </div>
                                 </div>
@@ -375,7 +375,7 @@ class App extends Component<any, any> {
                                 <div className="event-wrapper event-wrapper--right new-team">
                                     <div className="event show">
                                         <div className="event__date">January 2018</div>
-                                        <h3 className="event__name">Iglu`s Digital Agency team is created</h3>
+                                        <h2 className="event__name">Iglu`s Digital Agency team is created</h2>
                                         <div className="event__circle event__circle--right" />
                                     </div>
                                 </div>
