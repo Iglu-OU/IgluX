@@ -262,7 +262,7 @@ class App extends Component<any, any> {
 
     public render() {
         return (
-            <div>
+            <>
                 <Navigation Logo={Logo} />
 
                 <Stars />
@@ -292,9 +292,9 @@ class App extends Component<any, any> {
                             <div className="journey__content">
                                 <div className="event-wrapper event-wrapper--left beginning">
                                     <div className="event show">
-                                        <h4 className="event__date">
+                                        <div className="event__date">
                                             <span>March 2013</span>
-                                        </h4>
+                                        </div>
                                         <h3 className="event__name">Iglu is founded</h3>
                                         <div className="event__circle" />
                                     </div>
@@ -302,7 +302,7 @@ class App extends Component<any, any> {
 
                                 <div className="event-wrapper event-wrapper--right design-project">
                                     <div className="event show">
-                                        <h4 className="event__date">
+                                        <div className="event__date">
                                             <span>June 2014</span>
                                             <span>
                                                 <a
@@ -313,7 +313,7 @@ class App extends Component<any, any> {
                                                     Evocon
                                                 </a>
                                             </span>
-                                        </h4>
+                                        </div>
                                         <h3 className="event__name">First design project</h3>
                                         <div className="event__circle event__circle--right" />
                                     </div>
@@ -321,7 +321,7 @@ class App extends Component<any, any> {
 
                                 <div className="event-wrapper event-wrapper--left spa">
                                     <div className="event show">
-                                        <h4 className="event__date">
+                                        <div className="event__date">
                                             <span>January 2015</span>
                                             <span>
                                                 <a
@@ -332,7 +332,7 @@ class App extends Component<any, any> {
                                                     Südameapteek
                                                 </a>
                                             </span>
-                                        </h4>
+                                        </div>
                                         <h3 className="event__name">First single page application</h3>
                                         <div className="event__circle" />
                                     </div>
@@ -340,7 +340,7 @@ class App extends Component<any, any> {
 
                                 <div className="event-wrapper event-wrapper--right app">
                                     <div className="event show">
-                                        <h4 className="event__date">
+                                        <div className="event__date">
                                             <span>November 2016</span>
                                             <span>
                                                 <a
@@ -351,7 +351,7 @@ class App extends Component<any, any> {
                                                     Dietless
                                                 </a>
                                             </span>
-                                        </h4>
+                                        </div>
                                         <h3 className="event__name">First app</h3>
                                         <div className="event__circle event__circle--right" />
                                     </div>
@@ -359,14 +359,14 @@ class App extends Component<any, any> {
 
                                 <div className="event-wrapper event-wrapper--left ux-project">
                                     <div className="event show">
-                                        <h4 className="event__date">
+                                        <div className="event__date">
                                             <span>December 2016</span>
                                             <span>
                                                 <a className="event__project" href="http://www.csr.ee/" target="_blank">
                                                     Responsible business index
                                                 </a>
                                             </span>
-                                        </h4>
+                                        </div>
                                         <h3 className="event__name">First UX Project</h3>
                                         <div className="event__circle" />
                                     </div>
@@ -374,7 +374,7 @@ class App extends Component<any, any> {
 
                                 <div className="event-wrapper event-wrapper--right new-team">
                                     <div className="event show">
-                                        <h4 className="event__date">January 2018</h4>
+                                        <div className="event__date">January 2018</div>
                                         <h3 className="event__name">Iglu`s Digital Agency team is created</h3>
                                         <div className="event__circle event__circle--right" />
                                     </div>
@@ -387,7 +387,7 @@ class App extends Component<any, any> {
                 </main>
 
                 <Footer />
-            </div>
+            </>
         );
     }
 }

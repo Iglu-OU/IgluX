@@ -98,11 +98,12 @@ export default class Navigation extends Component<INavigationProps> {
 
     public render() {
         return (
-            <div className="navigation-wrapper">
+            <nav className="navigation-wrapper">
                 <div className={this.BEM}>
                     <p className="navigation__home">
                         <a href="#">
-                            <img alt="Iglu logo" src={this.props.Logo} /> <span>Digital Agency</span>
+                            <img alt="Iglu logo" src={this.props.Logo} />{' '}
+                            <h1 className="navigation__header">Digital Agency</h1>
                         </a>
                     </p>
                     <ul className="navigation__items">{this.returnHeaderLinks()}</ul>
@@ -114,7 +115,7 @@ export default class Navigation extends Component<INavigationProps> {
                         </a>
                     </p>
                 </div>
-            </div>
+            </nav>
         );
     }
 }

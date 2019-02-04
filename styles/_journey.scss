@@ -114,11 +114,14 @@
     margin: 0;
     /*Replace*/
     font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
 
     span {
         display: inline-block;
         opacity: 0.8;
     }
+
     span:after {
         content: '';
         display: inline-block;
@@ -129,6 +132,7 @@
         background: #fff;
         vertical-align: middle;
     }
+
     span:last-child:after {
         display: none;
     }

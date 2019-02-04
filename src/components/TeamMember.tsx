@@ -9,7 +9,7 @@ export default function({ data, key }) {
             </p>
             <div className="team-member__description">
                 <a className="team-member__name mt-0 h1" href={imageUrl} title={`LinkedIn - ${name}`} target="_blank">
-                    <span>{name}</span>
+                    <h2>{name}</h2>
                 </a>
                 <p className="team-member__title mt-0">
                     <span>{title}</span>
