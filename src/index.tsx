@@ -10,7 +10,7 @@ import registerSW from './utils/registerSW';
 import 'web-animations-js';
 
 import '../styles/main.scss';
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/logos/logo.svg';
 
 export interface ITeamMember {
     name: string;

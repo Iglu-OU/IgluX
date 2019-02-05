@@ -1,8 +1,8 @@
 import { Component } from 'inferno';
 
-import IcoFacebook from '../../assets/ico-fb.svg';
-import IcoInstagram from '../../assets/ico-insta.svg';
-import IcoLinkedIn from '../../assets/ico-linkedin.svg';
+import IcoFacebook from '../../assets/logos/ico-fb.svg';
+import IcoInstagram from '../../assets/logos/ico-insta.svg';
+import IcoLinkedIn from '../../assets/logos/ico-linkedin.svg';
 
 export default class Footer extends Component {
     constructor(props) {

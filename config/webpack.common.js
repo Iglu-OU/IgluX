@@ -65,7 +65,7 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: path.resolve(__dirname, '../public/manifest.json'), to: 'manifest.json' },
             { from: path.resolve(__dirname, '../public/robots.txt'), to: 'robots.txt' },
-            { from: path.resolve(__dirname, '../assets/iglu.png'), to: 'iglu.png' },
+            { from: path.resolve(__dirname, '../assets/logos/iglu.png'), to: 'iglu.png' },
         ]),
         new WorkboxPlugin.GenerateSW({
             clientsClaim: true,
