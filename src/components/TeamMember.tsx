@@ -2,7 +2,7 @@ export default function({ data, key }) {
     const { name, title, description, descriptionExtended, imageUrl, imageSrc, imageSecSrc, imageAlt, skillSet } = data;
 
     return (
-        <li className="team-member">
+        <li className="team-member" key={key}>
             <p className="team-member__portrait mt-0">
                 <img className="team-member__portrait-primary" src={imageSrc} alt={imageAlt} />
                 <img className="team-member__portrait-secondary" src={imageSecSrc} alt={imageAlt} />
@@ -17,8 +17,8 @@ export default function({ data, key }) {
                 <p>{description}</p>
                 <p>{descriptionExtended}</p>
                 <ul className="team-member__skills">
-                    {skillSet.map((skill: string, key: number) => {
-                        return <li key={key}>{skill}</li>;
+                    {skillSet.map((skill: string, skillSetKey: number) => {
+                        return <li key={skillSetKey}>{skill}</li>;
                     })}
                 </ul>
             </div>
