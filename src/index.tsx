@@ -10,7 +10,7 @@ import registerSW from './utils/registerSW';
 import 'web-animations-js';
 
 import '../styles/main.scss';
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/logos/logo.svg';
 
 export interface ITeamMember {
     name: string;
@@ -44,21 +44,18 @@ class App extends Component<any, any> {
 
         setInterval(() => {
             if (didScroll) {
-                // calculateNav();
+                calculateNav();
                 updateJourney();
                 didScroll = false;
             }
         }, 50);
 
-        /*
         const transitionContainerJumbotron = document.getElementById('transform-header__jumbotron');
         const transitionContainerWorkflow = document.getElementById('process');
         const transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
-        */
 
         const htmlElement = document.querySelector('html');
 
-        /*
         const calculateNav = () => {
             const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
 
@@ -70,7 +67,6 @@ class App extends Component<any, any> {
                 transitionContainerWorkflow!.classList.add('transform-header__workflow--alt');
             }
         };
-        */
 
         const journeyWrapper = document.querySelector('.journey-wrapper') as any;
         // events
