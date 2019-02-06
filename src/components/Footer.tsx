@@ -45,17 +45,14 @@ export default class Footer extends Component {
             },
         ];
 
-        const externalLinkList = externalList.map((i, index) => {
-            const { link, name, imageSrc, imageAlt } = i;
-            return (
-                <li className="footer__links-item" key={index}>
-                    <a className="footer__link" href={link} target="_blank" rel="noopener">
-                        <img className="ico ico--sm lazyload" alt={imageAlt} src={imageSrc} />
-                        <span>{name}</span>
-                    </a>
-                </li>
-            );
-        });
+        const externalLinkList = externalList.map(({ link, name, imageSrc, imageAlt }, index) => (
+            <li className="footer__links-item" key={index}>
+                <a className="footer__link" href={link} target="_blank" rel="noopener">
+                    <img className="ico ico--sm lazyload" alt={imageAlt} src={imageSrc} />
+                    <span>{name}</span>
+                </a>
+            </li>
+        ));
 
         return [...internalLinkList, ...externalLinkList];
     }

@@ -86,14 +86,11 @@ export default class Navigation extends Component<INavigationProps> {
             { link: '#team', name: 'Team' },
         ];
 
-        return list.map((i, index) => {
-            const { link, name } = i;
-            return (
-                <li key={index} className="navigation__item">
-                    <a href={link}>{name}</a>
-                </li>
-            );
-        });
+        return list.map(({ link, name }, index) => (
+            <li key={index} className="navigation__item">
+                <a href={link}>{name}</a>
+            </li>
+        ));
     }
 
     public render() {
