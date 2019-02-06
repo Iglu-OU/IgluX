@@ -1,6 +1,6 @@
-import { Component } from 'inferno';
+import * as React from 'react';
 
-export default class WorkFlow extends Component {
+export class WorkFlow extends React.Component {
     waveTopAnimation: Animation | null = null;
 
     constructor(props) {
@@ -638,7 +638,7 @@ export default class WorkFlow extends Component {
         );
     }
 
-    public render() {
+    render() {
         return (
             <section className="transform-header__workflow" id="process">
                 <div className="work-flow">

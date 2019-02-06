@@ -1,6 +1,8 @@
-export default function({
+import * as React from 'react';
+
+export const TeamMember = ({
     data: { name, title, description, descriptionExtended, imageUrl, imageSrc, imageSecSrc, imageAlt, skillSet },
-}) {
+}) => {
     return (
         <li className="team-member">
             <p className="team-member__portrait mt-0">
@@ -24,4 +26,4 @@ export default function({
             </div>
         </li>
     );
-}
+};

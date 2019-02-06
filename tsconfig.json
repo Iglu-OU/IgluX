@@ -8,8 +8,7 @@
         "sourceMap": true,
         "moduleResolution": "node",
         "lib": ["es6", "es7", "dom"],
-        "types": ["inferno"],
-        "jsx": "preserve",
+        "jsx": "react",
         "noUnusedLocals": true,
         "strictNullChecks": true,
         "removeComments": false

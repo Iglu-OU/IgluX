@@ -1,10 +1,10 @@
-import { Component } from 'inferno';
+import * as React from 'react';
 import { teamMemberList } from '../utils/teamMembers';
-import TeamMember from './TeamMember';
+import { TeamMember } from './TeamMember';
 import { ITeamMember } from '../index';
 
-export default class Team extends Component {
-    renderTeam(): JSX.Element {
+export class Team extends React.Component {
+    renderTeam() {
         return (
             <div className="team-wrapper">
                 <div className="team__header">
@@ -89,7 +89,7 @@ export default class Team extends Component {
         );
     }
 
-    public render() {
+    render() {
         return (
             <section className="section" id="team">
                 <div className="team__top-fold" />

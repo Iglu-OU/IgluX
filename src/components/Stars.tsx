@@ -1,10 +1,6 @@
-import { Component } from 'inferno';
+import * as React from 'react';
 
-export default class Stars extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+export class Stars extends React.Component {
     componentDidMount() {
         window.addEventListener('resize', this.resizeWrapper);
         this.resizeWrapper();
@@ -19,7 +15,7 @@ export default class Stars extends Component {
             .setAttribute('style', `height: ${waterIceTop + window.pageYOffset}px`);
     }
 
-    public render() {
+    render() {
         return (
             <div className="star__Wrapper">
                 <div className="stars1 star" />

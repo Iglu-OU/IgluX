@@ -20,7 +20,8 @@
 		"url": "https://github.com/Iglu-OU/IgluDA/issues"
 	},
 	"dependencies": {
-		"inferno": "^7.1.2",
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1",
 		"web-animations-js": "^2.3.1"
 	},
 	"devDependencies": {
@@ -29,6 +30,8 @@
 		"@babel/plugin-proposal-object-rest-spread": "^7.3.2",
 		"@babel/plugin-syntax-object-rest-spread": "^7.2.0",
 		"@babel/preset-env": "^7.3.1",
+		"@types/react": "^16.8.2",
+		"@types/react-dom": "^16.8.0",
 		"babel-loader": "^8.0.4",
 		"babel-plugin-inferno": "^6.0.4",
 		"clean-webpack-plugin": "^1.0.1",

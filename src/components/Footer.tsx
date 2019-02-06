@@ -1,14 +1,10 @@
-import { Component } from 'inferno';
+import * as React from 'react';
 
 import IcoFacebook from '../../assets/logos/ico-fb.svg';
 import IcoInstagram from '../../assets/logos/ico-insta.svg';
 import IcoLinkedIn from '../../assets/logos/ico-linkedin.svg';
 
-export default class Footer extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+export class Footer extends React.Component {
     returnFooterLinks() {
         const internalList = [
             { link: 'https://iglu.ee/', name: 'Iglu' },
@@ -57,7 +53,7 @@ export default class Footer extends Component {
         return [...internalLinkList, ...externalLinkList];
     }
 
-    public render() {
+    render() {
         return (
             <footer className="footer">
                 <ul className="footer__links mt-0 list-unstyled">{this.returnFooterLinks()}</ul>

@@ -1,10 +1,11 @@
-import { render, Component } from 'inferno';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-import Navigation from './components/Navigation';
-import Stars from './components/Stars';
-import WorkFlow from './components/WorkFlow';
-import Footer from './components/Footer';
-import Team from './components/Team';
+import { Navigation } from './components/Navigation';
+import { Stars } from './components/Stars';
+import { WorkFlow } from './components/WorkFlow';
+import { Footer } from './components/Footer';
+import { Team } from './components/Team';
 
 import registerSW from './utils/registerSW';
 import 'web-animations-js';
@@ -24,7 +25,7 @@ export interface ITeamMember {
     skillSet: string[];
 }
 
-class App extends Component<any, any> {
+class App extends React.Component<any, any> {
     constructor(props, context) {
         super(props, context);
 
@@ -256,10 +257,10 @@ class App extends Component<any, any> {
         }
     }
 
-    public render() {
+    render() {
         return (
             <>
-                <Navigation Logo={Logo} />
+                <Navigation logo={Logo} />
 
                 <Stars />
 
@@ -389,4 +390,4 @@ class App extends Component<any, any> {
 }
 
 const container = document.getElementById('app');
-render(<App />, container);
+ReactDOM.render(<App />, container);

@@ -1,14 +1,10 @@
-import { Component } from 'inferno';
+import * as React from 'react';
 
 export interface INavigationProps {
-    Logo: string;
+    logo: string;
 }
 
-export default class Navigation extends Component<INavigationProps> {
-    constructor(props, context) {
-        super(props, context);
-    }
-
+export class Navigation extends React.Component<INavigationProps> {
     get BEM(): string {
         return 'navigation';
     }
@@ -93,13 +89,15 @@ export default class Navigation extends Component<INavigationProps> {
         ));
     }
 
-    public render() {
+    render() {
+        const { logo } = this.props;
+
         return (
             <nav className="navigation-wrapper">
                 <div className={this.BEM}>
                     <p className="navigation__home">
                         <a href="#">
-                            <img alt="Iglu logo" src={this.props.Logo} />
+                            <img alt="Iglu logo" src={logo} />
                             <h1 className="navigation__header">Digital Agency</h1>
                         </a>
                     </p>
