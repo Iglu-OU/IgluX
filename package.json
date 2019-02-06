@@ -20,7 +20,7 @@
 		"url": "https://github.com/Iglu-OU/IgluDA/issues"
 	},
 	"dependencies": {
-		"inferno": "^7.1.1",
+		"inferno": "^7.1.2",
 		"web-animations-js": "^2.3.1"
 	},
 	"devDependencies": {
