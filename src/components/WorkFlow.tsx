@@ -8,13 +8,13 @@ export default class WorkFlow extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('resize', this.getcontentPlacement);
+        window.addEventListener('resize', this.getContentPlacement);
         window.addEventListener('resize', this.checkWavesTopAnimation);
         document.addEventListener('DOMContentLoaded', this.animate(), false);
-        this.getcontentPlacement();
+        this.getContentPlacement();
     }
 
-    getcontentPlacement(): any {
+    getContentPlacement(): any {
         // Calculate px's between water-ice-top and work-flow-section
         const waterIce = document.getElementById('water-ice');
         const workFlowSection = document.getElementById('process');
@@ -23,11 +23,11 @@ export default class WorkFlow extends Component {
         const workFlowSectionTop = workFlowSection ? workFlowSection.getBoundingClientRect().top : 0;
 
         // Add content new top.
-        const contentNewtop = waterIceTop - workFlowSectionTop - 30;
+        const contentNewTop = waterIceTop - workFlowSectionTop - 30;
 
         const content = document.getElementById('work-flow__content');
         if (content) {
-            content.style.top = `${contentNewtop}px`;
+            content.style.top = `${contentNewTop}px`;
         }
     }
 

@@ -1,5 +1,4 @@
 import { Component } from 'inferno';
-
 import { teamMemberList } from '../utils/teamMembers';
 import TeamMember from './TeamMember';
 import { ITeamMember } from '../index';
