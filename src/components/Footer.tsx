@@ -52,7 +52,7 @@ export default class Footer extends Component {
             const { link, name, imageSrc, imageAlt } = i;
             return (
                 <li className="footer__links-item" key={index}>
-                    <a className="footer__link" href={link}>
+                    <a className="footer__link" href={link} target="_blank" rel="noopener">
                         <img className="ico ico--sm lazyload" alt={imageAlt} src={imageSrc} />
                         <span>{name}</span>
                     </a>
