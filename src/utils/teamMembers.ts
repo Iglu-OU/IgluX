@@ -37,6 +37,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: LauraPortraitSec,
         imageAlt: `Laura Asu's portrait... if she was an Eskimo`,
         skillSet: ['UI analysis', 'Business analysis', 'User research', 'User testing'],
+        position: 'analyst',
     },
     {
         name: 'Kristo Danilson',
@@ -49,6 +50,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: KristoPortraitSec,
         imageAlt: `Kristo Danilson's portrait... if he was an Eskimo`,
         skillSet: ['Business analysis', 'User research', 'User testing'],
+        position: 'analyst',
     },
     {
         name: 'Joonas Kessel',
@@ -61,6 +63,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: JoonasPortraitSec,
         imageAlt: `Joonas Kessel's portrait... if he was an Eskimo`,
         skillSet: ['Prototyping', 'User research', 'User testing'],
+        position: 'analyst',
     },
     {
         name: 'Alina Trussova',
@@ -72,6 +75,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: AlinaPortraitSec,
         imageAlt: `Alina Trussova's portrait... if she was an Eskimo`,
         skillSet: ['Branding', 'Graphic design', 'UI design', 'User research', 'User testing'],
+        position: 'designer',
     },
     {
         name: 'Kadi Lukas',
@@ -83,6 +87,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: KadiPortraitSec,
         imageAlt: `Kadi Lukas's portrait... if she was an Eskimo`,
         skillSet: ['Graphic design', 'Cinematography', 'UI design', 'User research', 'User testing'],
+        position: 'designer',
     },
     {
         name: 'Egle Kiik',
@@ -94,6 +99,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: EglePortraitSec,
         imageAlt: `Egle Kiik's portrait... if she was an Eskimo`,
         skillSet: ['Video editing', 'Printed media', 'UX writing', 'UI design', 'User research', 'User testing'],
+        position: 'designer',
     },
     {
         name: 'Viljar Kärgenberg',
@@ -105,6 +111,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: ViljarPortraitSec,
         imageAlt: `Viljar Kärgenberg's portrait... if he was an Eskimo`,
         skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
+        position: 'fe',
     },
     {
         name: 'Harles-Herman Pilter',
@@ -117,6 +124,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: HarlesPortraitSec,
         imageAlt: `Harles-Herman Pilter's portrait... if he was an Eskimo`,
         skillSet: ['Vue', 'Aurelia', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
+        position: 'fe',
     },
     {
         name: 'Anton Aavik',
@@ -128,6 +136,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: AntonPortraitSec,
         imageAlt: `Anton Aavik's portrait... if he was an Eskimo`,
         skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
+        position: 'fe',
     },
     {
         name: 'Tõnis Terasmaa',
@@ -139,6 +148,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: TerasmaaPortraitSec,
         imageAlt: `Tõnis Terasmaa's portrait... if he was an Eskimo`,
         skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
+        position: 'fe',
     },
     {
         name: 'Ivar Kallejärv',
@@ -161,6 +171,7 @@ export const teamMemberList: ITeamMember[] = [
             'App development',
             'BEM',
         ],
+        position: 'fe',
     },
     {
         name: 'Kaspar Suvi',
@@ -172,5 +183,6 @@ export const teamMemberList: ITeamMember[] = [
         imageSecSrc: KasparPortraitSec,
         imageAlt: `Kaspar Suvi's portrait... if he was an Eskimo`,
         skillSet: ['React', 'Angular', 'TypeScript', 'BEM'],
+        position: 'fe',
     },
 ];

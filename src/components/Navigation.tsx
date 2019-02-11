@@ -95,12 +95,12 @@ export class Navigation extends React.Component<INavigationProps> {
         return (
             <nav className="navigation-wrapper">
                 <div className={this.BEM}>
-                    <p className="navigation__home">
+                    <div className="navigation__home">
                         <a href="#">
                             <img alt="Iglu logo" src={logo} />
                             <h1 className="navigation__header">Digital Agency</h1>
                         </a>
-                    </p>
+                    </div>
                     <ul className="navigation__items">{this.returnHeaderLinks()}</ul>
                     <p className="navigation__burger">
                         <a href="#">

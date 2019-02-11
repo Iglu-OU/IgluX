@@ -23,6 +23,7 @@ export interface ITeamMember {
     imageSecSrc: string;
     imageAlt: string;
     skillSet: string[];
+    position: 'designer' | 'analyst' | 'fe';
 }
 
 class App extends React.Component<any, any> {
@@ -301,15 +302,7 @@ class App extends React.Component<any, any> {
                                     <div className="event show">
                                         <div className="event__date">
                                             <span>June 2014</span>
-                                            <span>
-                                                <a
-                                                    className="event__project"
-                                                    href="https://evocon.com/"
-                                                    target="_blank"
-                                                >
-                                                    Evocon
-                                                </a>
-                                            </span>
+                                            <span>Evocon</span>
                                         </div>
                                         <h2 className="event__name">First design project</h2>
                                         <div className="event__circle event__circle--right" />
@@ -320,15 +313,7 @@ class App extends React.Component<any, any> {
                                     <div className="event show">
                                         <div className="event__date">
                                             <span>January 2015</span>
-                                            <span>
-                                                <a
-                                                    className="event__project"
-                                                    href="https://www.sudameapteek.ee/"
-                                                    target="_blank"
-                                                >
-                                                    Südameapteek
-                                                </a>
-                                            </span>
+                                            <span>Südameapteek</span>
                                         </div>
                                         <h2 className="event__name">First single page application</h2>
                                         <div className="event__circle" />
@@ -339,15 +324,7 @@ class App extends React.Component<any, any> {
                                     <div className="event show">
                                         <div className="event__date">
                                             <span>November 2016</span>
-                                            <span>
-                                                <a
-                                                    className="event__project"
-                                                    href="https://www.dietless.co.uk/"
-                                                    target="_blank"
-                                                >
-                                                    Dietless
-                                                </a>
-                                            </span>
+                                            <span>Dietless</span>
                                         </div>
                                         <h2 className="event__name">First app</h2>
                                         <div className="event__circle event__circle--right" />
@@ -358,11 +335,7 @@ class App extends React.Component<any, any> {
                                     <div className="event show">
                                         <div className="event__date">
                                             <span>December 2016</span>
-                                            <span>
-                                                <a className="event__project" href="http://www.csr.ee/" target="_blank">
-                                                    Responsible business index
-                                                </a>
-                                            </span>
+                                            <span>Responsible business index</span>
                                         </div>
                                         <h2 className="event__name">First UX Project</h2>
                                         <div className="event__circle" />

@@ -16,8 +16,9 @@ export const TeamMember = ({
                 <p className="team-member__title mt-0">
                     <span>{title}</span>
                 </p>
-                <p>{description}</p>
-                <p>{descriptionExtended}</p>
+                <p>
+                    {description} {descriptionExtended}
+                </p>
                 <ul className="team-member__skills">
                     {skillSet.map((skill: string, skillSetKey: number) => {
                         return <li key={`skillset-${skillSetKey}`}>{skill}</li>;
