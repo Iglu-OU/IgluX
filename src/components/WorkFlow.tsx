@@ -326,7 +326,7 @@ export class WorkFlow extends React.Component {
                     <stop offset="0" stopColor="#054868" />
                     <stop offset="1" stopColor="#00283B" stopOpacity="0.5" />
                 </linearGradient>
-                <path id="water-ice" fill="url(#water-ice-gradient)" opacity="0.5" d="M0,322.4h1936.2v4H0V322.4z" />
+                <path id="water-ice" fill="url(#water-ice-gradient)" opacity="0.3" d="M0,322.4h1936.2v4H0V322.4z" />
                 <path fill="url(#wave_1)" opacity="0.2" d="M0,841.4h1936v-515H0V841.4z" />
                 <path
                     fill="url(#wave_2)"

@@ -58,7 +58,7 @@ export class TeamStars extends React.Component {
             y: Math.random() * height,
             on,
             size: Math.random() * (13 - 1) + 1,
-            opacity: on ? Math.random() * 0.8 : 0,
+            opacity: on ? Math.random() * 0.3 : 0,
             clign: Math.random() > 0.5,
         };
     }
@@ -71,7 +71,7 @@ export class TeamStars extends React.Component {
         const maxX = x + halfSize;
         const maxY = y + halfSize;
         const random = Math.random();
-        const speed = random * (0.015 - 0.05) + 0.005;
+        const speed = random * (0.015 - 0.015) + 0.005;
 
         if (on) {
             if (opacity > random * (1 - 0.6) + 0.6 || opacity < random * 0.3) {
