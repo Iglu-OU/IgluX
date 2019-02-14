@@ -20,6 +20,8 @@
 		"url": "https://github.com/Iglu-OU/IgluDA/issues"
 	},
 	"dependencies": {
+		"@types/aos": "^3.0.1",
+		"aos": "^2.3.4",
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1",
 		"web-animations-js": "^2.3.1"

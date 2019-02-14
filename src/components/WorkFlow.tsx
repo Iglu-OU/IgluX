@@ -271,29 +271,6 @@ export class WorkFlow extends React.Component {
                 preserveAspectRatio="xMidYMax slice"
             >
                 <linearGradient
-                    id="water-ice-gradient"
-                    x1="1185.8875"
-                    y1="-93.9308"
-                    x2="1185.8875"
-                    y2="-89.9267"
-                    gradientTransform="matrix(1936 0 0 9.14 -2294910 2450.2607)"
-                >
-                    <stop offset="0" stopColor="#004A55" />
-                    <stop offset="0" stopColor="#FFFFFF" stopOpacity="0.7" />
-                    <stop offset="1" stopColor="#00434F" stopOpacity="0.4" />
-                </linearGradient>
-                <linearGradient
-                    id="wave_1"
-                    x1="968"
-                    y1="624.4"
-                    x2="968"
-                    y2="1139.4"
-                    gradientTransform="matrix(1 0 0 1 0 -298)"
-                >
-                    <stop offset="0" stopColor="#054868" />
-                    <stop offset="1" stopColor="#00283B" stopOpacity="0.5" />
-                </linearGradient>
-                <linearGradient
                     id="wave_2"
                     x1="968.15"
                     y1="692.3397"
@@ -326,8 +303,6 @@ export class WorkFlow extends React.Component {
                     <stop offset="0" stopColor="#054868" />
                     <stop offset="1" stopColor="#00283B" stopOpacity="0.5" />
                 </linearGradient>
-                <path id="water-ice" fill="url(#water-ice-gradient)" opacity="0.3" d="M0,322.4h1936.2v4H0V322.4z" />
-                <path fill="url(#wave_1)" opacity="0.2" d="M0,841.4h1936v-515H0V841.4z" />
                 <path
                     fill="url(#wave_2)"
                     opacity="0.2"
@@ -369,6 +344,29 @@ export class WorkFlow extends React.Component {
                     <stop offset="0" stopColor="#054868" />
                     <stop offset="1" stopColor="#00283B" stopOpacity="0.5" />
                 </linearGradient>
+                <linearGradient
+                    id="water-ice-gradient"
+                    x1="1185.8875"
+                    y1="-93.9308"
+                    x2="1185.8875"
+                    y2="-89.9267"
+                    gradientTransform="matrix(1936 0 0 9.14 -2294910 2450.2607)"
+                >
+                    <stop offset="0" stopColor="#004A55" />
+                    <stop offset="0" stopColor="#FFFFFF" stopOpacity="0.7" />
+                    <stop offset="1" stopColor="#00434F" stopOpacity="0.4" />
+                </linearGradient>
+                <linearGradient
+                    id="wave_1"
+                    x1="968"
+                    y1="624.4"
+                    x2="968"
+                    y2="1139.4"
+                    gradientTransform="matrix(1 0 0 1 0 -298)"
+                >
+                    <stop offset="0" stopColor="#054868" />
+                    <stop offset="1" stopColor="#00283B" stopOpacity="0.5" />
+                </linearGradient>
                 <path
                     fill="url(#bottom-wave-1)"
                     opacity="0.7"
@@ -379,6 +377,8 @@ export class WorkFlow extends React.Component {
                     fill="#05364D"
                     d="M0.5,920.7c470.8-59.5,947,48.7,1392.3,39.9c289.6-5.7,543.5-72.4,543.5-72.4V767.6c-413.3-77.8-673.6,74.7-968.9,66.5c-215.7-6-563-129.5-966.9-64.3C0.5,769.9,0.5,920.7,0.5,920.7z"
                 />
+                <path id="water-ice" fill="url(#water-ice-gradient)" opacity="0.3" d="M0,322.4h1936.2v4H0V322.4z" />
+                <path fill="url(#wave_1)" opacity="0.2" d="M0,841.4h1936v-515H0V841.4z" />
             </svg>
         );
     }

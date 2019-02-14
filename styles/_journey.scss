@@ -65,6 +65,7 @@
     position: absolute;
     background: #1396d4;
     background: linear-gradient(to bottom, rgba(32, 150, 212, 0), #1396d4 5%);
+    transition: top 500ms linear;
 }
 .event-wrapper {
     position: relative;
@@ -166,14 +167,4 @@
         right: auto;
         left: -30px;
     }
-}
-
-.hide {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.show {
-    visibility: visible;
-    opacity: 1;
 }

@@ -1,11 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import * as AOS from 'aos';
 
 import { Navigation } from './components/Navigation';
 import { Stars } from './components/Stars';
 import { WorkFlow } from './components/WorkFlow';
 import { Footer } from './components/Footer';
 import { Team } from './components/Team';
+import { Journey } from './components/Journey';
 
 import registerSW from './utils/registerSW';
 import 'web-animations-js';
@@ -33,6 +35,10 @@ class App extends React.Component<any, any> {
         if ('serviceWorker' in navigator) {
             registerSW({});
         }
+
+        AOS.init({
+            once: true,
+        });
     }
 
     componentDidMount() {
@@ -47,7 +53,6 @@ class App extends React.Component<any, any> {
         setInterval(() => {
             if (didScroll) {
                 calculateNav();
-                updateJourney();
                 didScroll = false;
             }
         }, 50);
@@ -55,8 +60,6 @@ class App extends React.Component<any, any> {
         const transitionContainerJumbotron = document.getElementById('transform-header__jumbotron');
         const transitionContainerWorkflow = document.getElementById('process');
         const transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
-
-        const htmlElement = document.querySelector('html');
 
         const calculateNav = () => {
             const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
@@ -67,71 +70,6 @@ class App extends React.Component<any, any> {
             } else {
                 transitionContainerJumbotron!.classList.add('transform-header__jumbotron--alt');
                 transitionContainerWorkflow!.classList.add('transform-header__workflow--alt');
-            }
-        };
-
-        const journeyWrapper = document.querySelector('.journey-wrapper') as any;
-        // events
-        const beginning = document.querySelector('.beginning');
-        const designproject = document.querySelector('.design-project');
-        const spa = document.querySelector('.spa');
-        const app = document.querySelector('.app');
-        const uxProject = document.querySelector('.ux-project');
-        const newTeam = document.querySelector('.new-team');
-
-        const events = [
-            { element: beginning, top: 100 },
-            { element: designproject, top: 200 },
-            { element: spa, top: 300 },
-            { element: app, top: 400 },
-            { element: uxProject, top: 500 },
-            { element: newTeam, top: 600 },
-        ];
-
-        for (const i of events) {
-            i.element!.classList.add('hide');
-            i.element!.classList.remove('show');
-        }
-
-        let minHeight;
-
-        const updateJourney = () => {
-            const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
-            const clientHeight = htmlElement!.clientHeight;
-
-            const windowBottom = scrollY + clientHeight;
-            const elementTop = journeyWrapper!.offsetTop + clientHeight / 2;
-            const scrollPercentage = (windowBottom - elementTop) / journeyWrapper.scrollHeight;
-
-            let scrolledOfJourney = scrollPercentage * journeyWrapper.offsetTop;
-
-            const mask = document.querySelector('.mask');
-
-            for (const i of events) {
-                checkEventVisibility(i.element, i.top, scrolledOfJourney);
-            }
-
-            if (scrolledOfJourney > 90 && scrolledOfJourney < 550) {
-                if (!minHeight || minHeight < scrolledOfJourney) {
-                    minHeight = scrolledOfJourney;
-                } else if (minHeight > scrolledOfJourney) {
-                    scrolledOfJourney = minHeight;
-                }
-                if (mask) {
-                    (mask as any).style.top = scrolledOfJourney + 'px';
-                }
-            } else if (scrollPercentage > 1) {
-                scrolledOfJourney = 550;
-                if (mask) {
-                    (mask as any).style.top = scrolledOfJourney + 'px';
-                }
-            }
-        };
-
-        const checkEventVisibility = (element, top, now) => {
-            if (now > top) {
-                element.classList.add('show');
-                element.classList.remove('hide');
             }
         };
 
@@ -269,7 +207,7 @@ class App extends React.Component<any, any> {
                     <section className="transform-header__jumbotron" id="transform-header__jumbotron">
                         <div className="jumbotron">
                             <div className="jumbotron__content">
-                                <h1 className="mt-0">
+                                <h1 className="mt-0" data-aos="zoom-in">
                                     Driven to make complex systems
                                     <br />
                                     feel <strong>elegant</strong> and <strong className="invisible">invisible</strong>
@@ -280,78 +218,7 @@ class App extends React.Component<any, any> {
 
                     <WorkFlow />
 
-                    <section className="section journey-wrapper" id="journey">
-                        <div className="journey">
-                            <div className="journey__header">
-                                <h1>Journey</h1>
-                            </div>
-
-                            <div className="mask" />
-                            <div className="journey__content">
-                                <div className="event-wrapper event-wrapper--left beginning">
-                                    <div className="event show">
-                                        <div className="event__date">
-                                            <span>March 2013</span>
-                                        </div>
-                                        <h2 className="event__name">Iglu is founded</h2>
-                                        <div className="event__circle" />
-                                    </div>
-                                </div>
-
-                                <div className="event-wrapper event-wrapper--right design-project">
-                                    <div className="event show">
-                                        <div className="event__date">
-                                            <span>June 2014</span>
-                                            <span>Evocon</span>
-                                        </div>
-                                        <h2 className="event__name">First design project</h2>
-                                        <div className="event__circle event__circle--right" />
-                                    </div>
-                                </div>
-
-                                <div className="event-wrapper event-wrapper--left spa">
-                                    <div className="event show">
-                                        <div className="event__date">
-                                            <span>January 2015</span>
-                                            <span>Südameapteek</span>
-                                        </div>
-                                        <h2 className="event__name">First single page application</h2>
-                                        <div className="event__circle" />
-                                    </div>
-                                </div>
-
-                                <div className="event-wrapper event-wrapper--right app">
-                                    <div className="event show">
-                                        <div className="event__date">
-                                            <span>November 2016</span>
-                                            <span>Dietless</span>
-                                        </div>
-                                        <h2 className="event__name">First app</h2>
-                                        <div className="event__circle event__circle--right" />
-                                    </div>
-                                </div>
-
-                                <div className="event-wrapper event-wrapper--left ux-project">
-                                    <div className="event show">
-                                        <div className="event__date">
-                                            <span>December 2016</span>
-                                            <span>Responsible business index</span>
-                                        </div>
-                                        <h2 className="event__name">First UX Project</h2>
-                                        <div className="event__circle" />
-                                    </div>
-                                </div>
-
-                                <div className="event-wrapper event-wrapper--right new-team">
-                                    <div className="event show">
-                                        <div className="event__date">January 2018</div>
-                                        <h2 className="event__name">Iglu`s Digital Agency team is created</h2>
-                                        <div className="event__circle event__circle--right" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <Journey />
 
                     <Team />
                 </main>

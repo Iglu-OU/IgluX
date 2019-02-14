@@ -68,7 +68,7 @@
 }
 
 .team__section {
-    margin: 5rem auto 0;
+    margin: 5rem auto 3rem;
     padding: 0 1rem;
     text-align: center;
     color: #1396d4;
@@ -185,6 +185,13 @@
         top: 0;
         left: 0;
         animation: 8s linear 0s infinite portraitMove;
+    }
+    .team-member:nth-of-type(2n) & .team-member__portrait-secondary {
+        animation-duration: 6s;
+    }
+
+    .team-member:nth-of-type(3n) & .team-member__portrait-secondary {
+        animation-duration: 7s;
     }
 
     img {

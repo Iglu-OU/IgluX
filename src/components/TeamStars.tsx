@@ -28,11 +28,12 @@ export class TeamStars extends React.Component {
     stars: IStar[] = [];
     debounceTimeout: number = 0;
     debouncedResizeHandler: () => any;
+    windowWidth: number | null = null;
 
     constructor(props) {
         super(props);
 
-        this.debouncedResizeHandler = TeamStars.debounce(this.init, this.debounceTimeout, 100);
+        this.debouncedResizeHandler = TeamStars.debounce(this.resizeHandler, this.debounceTimeout, 100);
     }
 
     componentDidMount() {
@@ -40,11 +41,23 @@ export class TeamStars extends React.Component {
             this.context = this.canvas.getContext('2d');
         }
 
+        this.windowWidth = document.documentElement.clientWidth;
+
         this.init();
         this.drawSky();
 
         window.addEventListener('resize', this.debouncedResizeHandler);
     }
+
+    resizeHandler = () => {
+        const windowWidth: number = document.documentElement.clientWidth;
+
+        if (windowWidth !== this.windowWidth) {
+            this.windowWidth = windowWidth;
+
+            this.init();
+        }
+    };
 
     getStar(index: number): IStar {
         const width = window.outerWidth;
@@ -58,7 +71,7 @@ export class TeamStars extends React.Component {
             y: Math.random() * height,
             on,
             size: Math.random() * (13 - 1) + 1,
-            opacity: on ? Math.random() * 0.3 : 0,
+            opacity: on ? Math.random() * 0.8 : 0,
             clign: Math.random() > 0.5,
         };
     }
