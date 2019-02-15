@@ -34,7 +34,7 @@ export class Team extends React.Component {
     renderTeamSection(title: string, desc: string, members: ITeamMember[]): JSX.Element {
         return (
             <React.Fragment>
-                <div className="team__section">
+                <div className="team__section" data-aos="zoom-in">
                     <h2 className="team__heading">{title}</h2>
                     <p className="team__description">{desc}</p>
                 </div>

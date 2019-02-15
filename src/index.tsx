@@ -57,9 +57,16 @@ class App extends React.Component<any, any> {
             }
         }, 50);
 
+        const jumbotron = document.getElementById('jumbotron');
         const transitionContainerJumbotron = document.getElementById('transform-header__jumbotron');
         const transitionContainerWorkflow = document.getElementById('process');
         const transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
+        const windowHeight = isNaN(window.innerHeight) ? window.outerHeight : window.innerHeight;
+        const iOSChromeDetected = /CriOS/.test(navigator.userAgent);
+
+        if (jumbotron && iOSChromeDetected) {
+            jumbotron.style.height = `${windowHeight}px`;
+        }
 
         const calculateNav = () => {
             const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
@@ -205,7 +212,7 @@ class App extends React.Component<any, any> {
 
                 <main>
                     <section className="transform-header__jumbotron" id="transform-header__jumbotron">
-                        <div className="jumbotron">
+                        <div className="jumbotron" id="jumbotron">
                             <div className="jumbotron__content">
                                 <h1 className="mt-0" data-aos="zoom-in">
                                     Driven to make complex systems

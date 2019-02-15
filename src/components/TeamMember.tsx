@@ -1,10 +1,15 @@
 import * as React from 'react';
 
+function getOffSet() {
+    const windowWidth = isNaN(window.innerWidth) ? window.outerWidth : window.innerWidth;
+    return windowWidth > 600 ? '200' : '350';
+}
+
 export const TeamMember = ({
     data: { name, title, description, descriptionExtended, imageUrl, imageSrc, imageSecSrc, imageAlt, skillSet },
 }) => {
     return (
-        <li className="team-member">
+        <li className="team-member" data-aos="fade-up" data-aos-offset={getOffSet}>
             <p className="team-member__portrait mt-0">
                 <img className="team-member__portrait-primary" src={imageSrc} alt={imageAlt} />
                 <img className="team-member__portrait-secondary" src={imageSecSrc} alt={imageAlt} />
