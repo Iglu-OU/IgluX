@@ -19,12 +19,12 @@ export class Team extends React.Component {
                 )}
                 {this.renderTeamSection(
                     'UX & UI Designers',
-                    'Design the most elegant solution for the user, making everything seem easy and effortless.',
+                    'Graceful and stylish, designing elegant solutions that feel easy and effortless.',
                     designer,
                 )}
                 {this.renderTeamSection(
-                    'Front-End developers',
-                    'Creating systems, pouring all their heart and soul towards the final goal.',
+                    'Front-End Developers',
+                    'The reasoning engine behind the team, that simplifies complexity and solves problems.',
                     fe,
                 )}
             </div>
