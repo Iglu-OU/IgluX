@@ -388,7 +388,7 @@ export class WorkFlow extends React.Component {
             <div id="work-flow__content" className="work-flow__content">
                 <h1 className="text--white">How we work</h1>
                 <dl>
-                    <dt className="text--white">Front-end development</dt>
+                    <dt className="text--white">Front-end Development</dt>
                     <dd className="text--white">Coding, collaboration with back-end developers</dd>
                     <dt className="text--white">Design</dt>
                     <dd className="text--white stars-bottom">Typography, colors, documentation</dd>

@@ -138,7 +138,7 @@ export class Journey extends React.Component {
                         >
                             <div className="event show">
                                 <div className="event__date">January 2018</div>
-                                <h2 className="event__name">Iglu`s Digital Agency team is created</h2>
+                                <h2 className="event__name">Iglu's Digital Agency team is created</h2>
                                 <div className="event__circle event__circle--right" />
                             </div>
                         </div>
