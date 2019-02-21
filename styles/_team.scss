@@ -32,7 +32,7 @@
 
     p {
         line-height: 1.5rem;
-        font-size: 1rem;
+        font-size: 1.125rem;
     }
     &__top-fold {
         position: absolute;
@@ -131,7 +131,12 @@
         height: 100%;
         top: 0;
         left: 0;
-        animation: 8s linear 0s infinite portraitMove;
+
+        @media (pointer: fine) {
+            .team-member:hover & {
+                animation: 8s linear 0s infinite portraitMove;
+            }
+        }
     }
 
     img {
@@ -142,6 +147,9 @@
 
 .team-member__description {
     width: 100%;
+    p {
+        font-size: 1.125rem;
+    }
 }
 
 .team-member__name {
@@ -178,8 +186,8 @@
     padding-top: 0.25rem;
     display: block;
     font-style: $font-family-light;
-    font-size: 0.9rem;
     font-weight: lighter;
+    font-size: 1.125rem;
     opacity: 0.8;
 }
 
@@ -187,12 +195,12 @@
     list-style-type: none;
     margin: 1em 0 0;
     padding: 0;
-    font-size: 0.9rem;
-    font-style: italic;
-    color: $color-primary;
+    line-height: normal;
 
     li {
         display: inline-block;
+        font-size: 1rem;
+        opacity: 0.8;
 
         &:before {
             padding-left: 3px;

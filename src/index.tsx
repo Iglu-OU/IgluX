@@ -304,7 +304,15 @@ class App extends Component<any, any> {
                                     <div className="event show">
                                         <h4 className="event__date">
                                             <span>June 2014</span>
-                                            <span> Evocon</span>
+                                            <span>
+                                                <a
+                                                    className="event__project"
+                                                    href="https://evocon.com/"
+                                                    target="_blank"
+                                                >
+                                                    Evocon
+                                                </a>
+                                            </span>
                                         </h4>
                                         <h3 className="event__name">First design project</h3>
                                         <div className="event__circle event__circle--right" />
@@ -315,7 +323,15 @@ class App extends Component<any, any> {
                                     <div className="event show">
                                         <h4 className="event__date">
                                             <span>January 2015</span>
-                                            <span>Südameapteek</span>
+                                            <span>
+                                                <a
+                                                    className="event__project"
+                                                    href="https://www.sudameapteek.ee/"
+                                                    target="_blank"
+                                                >
+                                                    Südameapteek
+                                                </a>
+                                            </span>
                                         </h4>
                                         <h3 className="event__name">First single page application</h3>
                                         <div className="event__circle" />
@@ -326,7 +342,15 @@ class App extends Component<any, any> {
                                     <div className="event show">
                                         <h4 className="event__date">
                                             <span>November 2016</span>
-                                            <span>Dietless</span>
+                                            <span>
+                                                <a
+                                                    className="event__project"
+                                                    href="https://www.dietless.co.uk/"
+                                                    target="_blank"
+                                                >
+                                                    Dietless
+                                                </a>
+                                            </span>
                                         </h4>
                                         <h3 className="event__name">First app</h3>
                                         <div className="event__circle event__circle--right" />
@@ -337,7 +361,11 @@ class App extends Component<any, any> {
                                     <div className="event show">
                                         <h4 className="event__date">
                                             <span>December 2016</span>
-                                            <span>Responsible business index</span>
+                                            <span>
+                                                <a className="event__project" href="http://www.csr.ee/" target="_blank">
+                                                    Responsible business index
+                                                </a>
+                                            </span>
                                         </h4>
                                         <h3 className="event__name">First UX Project</h3>
                                         <div className="event__circle" />

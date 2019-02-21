@@ -14,9 +14,8 @@ export default function({ data, key }) {
                 <p className="team-member__title mt-0">
                     <span>{title}</span>
                 </p>
-                <p>
-                    {description} {descriptionExtended}
-                </p>
+                <p>{description}</p>
+                <p>{descriptionExtended}</p>
                 <ul className="team-member__skills">
                     {skillSet.map((skill: string, key: number) => {
                         return <li key={key}>{skill}</li>;
