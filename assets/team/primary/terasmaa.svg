@@ -1,1 +1,24 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 251 151"><defs><style>.cls-1,.cls-2{opacity:0.1;}.cls-1{fill:url(#radial-gradient);}.cls-2{fill:url(#radial-gradient-2);}.cls-3{fill:#e1f1f9;}</style><radialGradient id="radial-gradient" cx="127.46" cy="96.77" r="71.73" gradientTransform="translate(3.33 36.11) scale(0.87 0.56)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.5"/><stop offset="0.4" stop-color="#fff" stop-opacity="0.27"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><radialGradient id="radial-gradient-2" cx="172.72" cy="88.27" r="71.73" gradientTransform="translate(16.06 32.5) scale(0.7 0.56)" xlink:href="#radial-gradient"/></defs><title>Tõnis-base</title><rect class="cls-1" x="40.84" y="40.8" width="146.19" height="98.05" rx="11.51" ry="11.51" transform="translate(-27.21 56.25) rotate(-24.87)"/><rect class="cls-2" x="78.16" y="32.47" width="118.23" height="98.05" rx="10.47" ry="10.47" transform="translate(-18.54 116.26) rotate(-43.27)"/><polygon class="cls-3" points="181.52 25.73 180.98 28.58 180.89 25.73 178.22 25.37 180.92 25.06 181.46 22.06 181.59 25.06 184.23 25.37 181.52 25.73"/><polygon class="cls-3" points="221.18 100.02 222.09 95.03 222.25 100.02 226.76 100.66 222.2 101.2 221.29 106.45 221.08 101.2 216.62 100.66 221.18 100.02"/><polygon class="cls-3" points="20.34 28.99 19.8 31.84 19.7 28.99 17.03 28.63 19.74 28.32 20.28 25.32 20.4 28.32 23.04 28.63 20.34 28.99"/><polygon class="cls-3" points="66.13 106.84 66.84 102.99 66.96 106.84 70.44 107.34 66.92 107.75 66.22 111.81 66.05 107.75 62.61 107.34 66.13 106.84"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 251 151" style="enable-background:new 0 0 251 151;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.1;fill:url(#SVGID_1_);enable-background:new    ;}
+	.st1{opacity:0.1;fill:url(#SVGID_2_);enable-background:new    ;}
+</style>
+<title>Tõnis-base</title>
+<radialGradient id="SVGID_1_" cx="-147.566" cy="-498.2573" r="71.73" gradientTransform="matrix(0.7893 -0.3659 -0.2355 -0.5081 113.5253 -217.0007)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+	<stop  offset="0.4" style="stop-color:#FFFFFF;stop-opacity:0.27"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path class="st0" d="M37.4,71.3l111.7-51.8c5.8-2.7,12.6-0.2,15.3,5.6L196,93.1c2.7,5.8,0.2,12.6-5.6,15.3L78.7,160.2
+	c-5.8,2.7-12.6,0.2-15.3-5.6L31.8,86.5C29.2,80.8,31.7,73.9,37.4,71.3z"/>
+<radialGradient id="SVGID_2_" cx="-395.978" cy="-418.4838" r="71.73" gradientTransform="matrix(0.5097 -0.4798 -0.3838 -0.4078 178.5406 -278.5945)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+	<stop  offset="0.4" style="stop-color:#FFFFFF;stop-opacity:0.27"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path class="st1" d="M68.3,79.2l70.8-66.7c4.2-4,10.8-3.8,14.8,0.4l52.9,56.1c4,4.2,3.8,10.8-0.4,14.8l-70.8,66.7
+	c-4.2,4-10.8,3.8-14.8-0.4L67.8,94C63.8,89.7,64,83.1,68.3,79.2z"/>
+</svg>

@@ -1,1 +1,24 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 251 151"><defs><style>.cls-1,.cls-2{opacity:0.1;}.cls-1{fill:url(#radial-gradient);}.cls-2{fill:url(#radial-gradient-2);}.cls-3{fill:#e1f1f9;}</style><radialGradient id="radial-gradient" cx="-1603.77" cy="165.54" r="71.73" gradientTransform="translate(1520.22 -1.62) scale(0.87 0.56)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.5"/><stop offset="0.4" stop-color="#fff" stop-opacity="0.27"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><radialGradient id="radial-gradient-2" cx="-1671.75" cy="-271.17" r="71.73" gradientTransform="translate(1326.48 241.91) scale(0.7 0.56)" xlink:href="#radial-gradient"/></defs><title>Egle-base</title><rect class="cls-1" x="55.52" y="41.23" width="146.19" height="98.05" rx="11.51" ry="11.51" transform="translate(-3.99 5.97) rotate(-2.62)"/><rect class="cls-2" x="94.26" y="42.37" width="118.23" height="98.05" rx="10.47" ry="10.47" transform="translate(-22.58 61.1) rotate(-21.02)"/><polygon class="cls-3" points="190.72 37.51 191.76 31.82 191.94 37.51 197.08 38.24 191.88 38.86 190.84 44.85 190.6 38.86 185.52 38.24 190.72 37.51"/><polygon class="cls-3" points="95.84 20.99 96.78 15.82 96.95 20.99 101.61 21.65 96.89 22.21 95.95 27.65 95.73 22.21 91.11 21.65 95.84 20.99"/><polygon class="cls-3" points="234.95 99.87 234.33 103.12 234.22 99.87 231.18 99.45 234.26 99.1 234.88 95.68 235.02 99.1 238.03 99.45 234.95 99.87"/><polygon class="cls-3" points="25.45 107.08 23.78 113.85 23.98 106.99 17.85 105.74 24.15 105.38 25.84 98.25 25.69 105.47 31.76 106.58 25.45 107.08"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 251 151" style="enable-background:new 0 0 251 151;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.1;fill:url(#SVGID_1_);enable-background:new    ;}
+	.st1{opacity:0.1;fill:url(#SVGID_2_);enable-background:new    ;}
+</style>
+<title>Egle-base</title>
+<radialGradient id="SVGID_1_" cx="-1597.9147" cy="-497.1193" r="71.73" gradientTransform="matrix(0.8691 -3.976917e-02 -2.559855e-02 -0.5594 1500.99 -250.3976)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+	<stop  offset="0.4" style="stop-color:#FFFFFF;stop-opacity:0.27"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path class="st0" d="M64.9,44.1l123-5.6c6.4-0.3,11.7,4.6,12,11l3.4,75c0.3,6.4-4.6,11.7-11,12l-123,5.6c-6.4,0.3-11.7-4.6-12-11
+	l-3.4-75C53.6,49.8,58.5,44.4,64.9,44.1z"/>
+<radialGradient id="SVGID_2_" cx="-1891.5466" cy="-130.4493" r="71.73" gradientTransform="matrix(0.6534 -0.2511 -0.2009 -0.5227 1365.3479 -454.0162)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+	<stop  offset="0.4" style="stop-color:#FFFFFF;stop-opacity:0.27"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path class="st1" d="M90.4,63.1l90.8-34.9c5.4-2.1,11.5,0.6,13.5,6l27.7,72c2.1,5.4-0.6,11.5-6,13.5l-90.8,34.9
+	c-5.4,2.1-11.5-0.6-13.5-6l-27.7-72C82.3,71.2,85,65.2,90.4,63.1z"/>
+</svg>

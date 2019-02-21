@@ -1,1 +1,16 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 251 151"><defs><style>.cls-1{opacity:0.1;fill:url(#radial-gradient);}.cls-2{fill:#e1f1f9;}</style><radialGradient id="radial-gradient" cx="-13.75" cy="-504.45" r="71.73" gradientTransform="translate(151.91 369.14) scale(0.87 0.56)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.5"/><stop offset="0.4" stop-color="#fff" stop-opacity="0.27"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><title>Harles-base</title><rect class="cls-1" x="66.88" y="40.12" width="146.19" height="98.05" rx="11.51" ry="11.51" transform="translate(19.95 -25.46) rotate(11.18)"/><polygon class="cls-2" points="231.26 27.09 230.7 30.06 230.6 27.09 227.81 26.7 230.63 26.38 231.19 23.25 231.33 26.38 234.08 26.7 231.26 27.09"/><polygon class="cls-2" points="32.36 102.54 30.83 108.73 31.01 102.46 25.4 101.31 31.16 100.98 32.71 94.46 32.58 101.07 38.12 102.08 32.36 102.54"/><polygon class="cls-2" points="125.5 37.47 124.94 40.44 124.83 37.47 122.05 37.09 124.86 36.77 125.44 33.63 125.56 36.77 128.31 37.09 125.5 37.47"/><polygon class="cls-2" points="134.57 123.79 134.01 126.76 133.91 123.79 131.12 123.41 133.94 123.09 134.51 119.96 134.64 123.09 137.39 123.41 134.57 123.79"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 251 151" style="enable-background:new 0 0 251 151;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.1;fill:url(#SVGID_1_);enable-background:new    ;}
+</style>
+<title>Harles-base</title>
+<radialGradient id="SVGID_1_" cx="149.7699" cy="298.3332" r="71.7164" gradientTransform="matrix(0.8535 0.1687 0.1086 -0.5494 -19.7516 225.3158)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+	<stop  offset="0.4" style="stop-color:#FFFFFF;stop-opacity:0.27"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path class="st0" d="M89.1,29.1L209.9,53c6.2,1.2,10.3,7.3,9.1,13.5l-14.5,73.6c-1.2,6.2-7.3,10.3-13.5,9.1L70.1,125.3
+	c-6.2-1.2-10.3-7.3-9.1-13.5l14.5-73.6C76.8,31.9,82.8,27.9,89.1,29.1z"/>
+</svg>

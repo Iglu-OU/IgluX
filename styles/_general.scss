@@ -4,13 +4,14 @@
 html,
 body {
     overflow-x: hidden;
+    background: $color-primary;
 }
 html {
     font-size: $font-size;
 }
 body {
     margin: 0;
-    background: $bg;
+    background: $color-primary;
     color: $color-dark;
 }
 .muted,

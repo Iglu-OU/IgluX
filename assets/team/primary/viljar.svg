@@ -1,1 +1,16 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 251 151"><defs><style>.cls-1{fill:#e1f1f9;}.cls-2{opacity:0.1;fill:url(#radial-gradient);}</style><radialGradient id="radial-gradient" cx="60.55" cy="-238.67" r="71.73" gradientTransform="translate(73.27 215.31) scale(0.7 0.56)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.5"/><stop offset="0.4" stop-color="#fff" stop-opacity="0.27"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><title>Viljar-BASE</title><polygon class="cls-1" points="223.44 122.74 222.88 125.72 222.78 122.74 219.99 122.36 222.81 122.04 223.37 118.91 223.5 122.04 226.25 122.36 223.44 122.74"/><rect class="cls-2" x="56.64" y="33.8" width="118.23" height="98.05" rx="10.47" ry="10.47" transform="translate(35.7 -34.86) rotate(20.19)"/><polygon class="cls-1" points="34.18 120.11 35.05 115.34 35.21 120.11 39.51 120.72 35.16 121.23 34.28 126.25 34.08 121.23 29.83 120.72 34.18 120.11"/><polygon class="cls-1" points="29.39 25.09 28 30.75 28.16 25.01 23.03 23.96 28.3 23.66 29.72 17.69 29.6 23.74 34.67 24.66 29.39 25.09"/><polygon class="cls-1" points="182.64 40.46 183.43 36.3 183.57 40.46 187.48 41 183.53 41.45 182.73 45.84 182.55 41.45 178.69 41 182.64 40.46"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 251 151" style="enable-background:new 0 0 251 151;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.1;fill:url(#SVGID_1_);enable-background:new    ;}
+</style>
+<title>Viljar-BASE</title>
+<radialGradient id="SVGID_1_" cx="436.9417" cy="144.6227" r="71.6701" gradientTransform="matrix(0.657 0.2416 0.1933 -0.5256 -198.8568 52.1781)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+	<stop  offset="0.4" style="stop-color:#FFFFFF;stop-opacity:0.27"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path class="st0" d="M87,20l91.3,33.6c5.4,2,8.2,8,6.2,13.4l-26.6,72.4c-2,5.4-8,8.2-13.4,6.2l-91.3-33.6c-5.4-2-8.2-8-6.2-13.4
+	l26.6-72.4C75.6,20.8,81.6,18,87,20z"/>
+</svg>

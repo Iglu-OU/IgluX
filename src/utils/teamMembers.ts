@@ -38,6 +38,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Laura Asu's portrait... if she was an Eskimo`,
         skillSet: ['UI analysis', 'Business analysis', 'User research', 'User testing'],
         position: 'analyst',
+        noHover: false,
     },
     {
         name: 'Kristo Danilson',
@@ -51,6 +52,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Kristo Danilson's portrait... if he was an Eskimo`,
         skillSet: ['Business analysis', 'User research', 'User testing'],
         position: 'analyst',
+        noHover: false,
     },
     {
         name: 'Joonas Kessel',
@@ -64,6 +66,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Joonas Kessel's portrait... if he was an Eskimo`,
         skillSet: ['Prototyping', 'User research', 'User testing'],
         position: 'analyst',
+        noHover: false,
     },
     {
         name: 'Alina Trussova',
@@ -76,6 +79,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Alina Trussova's portrait... if she was an Eskimo`,
         skillSet: ['Branding', 'Graphic design', 'UI design', 'User research', 'User testing'],
         position: 'designer',
+        noHover: true,
     },
     {
         name: 'Kadi Lukas',
@@ -88,6 +92,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Kadi Lukas's portrait... if she was an Eskimo`,
         skillSet: ['Graphic design', 'Cinematography', 'UI design', 'User research', 'User testing'],
         position: 'designer',
+        noHover: false,
     },
     {
         name: 'Egle Kiik',
@@ -100,6 +105,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Egle Kiik's portrait... if she was an Eskimo`,
         skillSet: ['Video editing', 'Printed media', 'UX writing', 'UI design', 'User research', 'User testing'],
         position: 'designer',
+        noHover: false,
     },
     {
         name: 'Viljar Kärgenberg',
@@ -112,6 +118,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Viljar Kärgenberg's portrait... if he was an Eskimo`,
         skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
         position: 'fe',
+        noHover: false,
     },
     {
         name: 'Harles-Herman Pilter',
@@ -125,6 +132,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Harles-Herman Pilter's portrait... if he was an Eskimo`,
         skillSet: ['Vue', 'Aurelia', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
         position: 'fe',
+        noHover: false,
     },
     {
         name: 'Anton Aavik',
@@ -137,6 +145,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Anton Aavik's portrait... if he was an Eskimo`,
         skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
         position: 'fe',
+        noHover: false,
     },
     {
         name: 'Tõnis Terasmaa',
@@ -149,6 +158,7 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Tõnis Terasmaa's portrait... if he was an Eskimo`,
         skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
         position: 'fe',
+        noHover: false,
     },
     {
         name: 'Ivar Kallejärv',
@@ -172,6 +182,7 @@ export const teamMemberList: ITeamMember[] = [
             'BEM',
         ],
         position: 'fe',
+        noHover: false,
     },
     {
         name: 'Kaspar Suvi',
@@ -184,5 +195,6 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Kaspar Suvi's portrait... if he was an Eskimo`,
         skillSet: ['React', 'Angular', 'TypeScript', 'BEM'],
         position: 'fe',
+        noHover: false,
     },
 ];

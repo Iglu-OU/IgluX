@@ -26,6 +26,7 @@ export interface ITeamMember {
     imageAlt: string;
     skillSet: string[];
     position: 'designer' | 'analyst' | 'fe';
+    noHover: boolean;
 }
 
 class App extends React.Component<any, any> {

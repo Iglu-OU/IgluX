@@ -197,6 +197,10 @@
         top: 0;
         left: 0;
         animation: 8s ease-in-out 0s infinite portraitMove;
+
+        &.no-hover {
+            animation: none;
+        }
     }
     .team-member:nth-of-type(2n) & .team-member__portrait-secondary {
         animation-duration: 6s;

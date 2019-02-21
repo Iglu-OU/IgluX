@@ -121,7 +121,7 @@ export class TeamStars extends React.Component {
     }
 
     init = () => {
-        const numberOfStars = window.outerWidth / 2;
+        const numberOfStars = window.outerWidth / 2 < 400 ? 400 : window.outerWidth / 2;
 
         if (this.canvas && document) {
             this.canvas.width = window.outerWidth;
