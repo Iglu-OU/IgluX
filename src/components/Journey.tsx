@@ -1,5 +1,12 @@
 import * as React from 'react';
 
+interface IEvent {
+    position: 'left' | 'right';
+    year: string;
+    title: string;
+    project?: string;
+}
+
 export class Journey extends React.Component {
     minHeight = 156;
 
@@ -47,6 +54,44 @@ export class Journey extends React.Component {
         }
     }
 
+    eventBEM(position: 'left' | 'right'): string {
+        const classArray = ['event-wrapper'];
+
+        classArray.push(`event-wrapper--${position}`);
+
+        return classArray.join(' ');
+    }
+
+    renderEvent(event: IEvent, key: number): JSX.Element {
+        const animation = event.position === 'left' ? 'fade-right' : 'fade-left';
+        return (
+            <div className={this.eventBEM(event.position)} data-aos-offset="250" data-aos={animation} key={key}>
+                <div className="event">
+                    <div className="event__year">{event.year}</div>
+                    <h2 className="event__title">{event.title}</h2>
+                    {event.project && <p className="event__project">{event.project}</p>}
+                </div>
+            </div>
+        );
+    }
+
+    renderEvents(): JSX.Element {
+        const events: IEvent[] = [
+            { position: 'left', title: 'Iglu is founded', year: '2013' },
+            { position: 'right', title: 'First design project', year: '2014', project: 'Evocon' },
+            { position: 'left', title: 'First single page application', year: '2015', project: 'Südameapteek' },
+            { position: 'right', title: 'First app', year: '2016', project: 'Dietless' },
+            { position: 'left', title: 'First UX project', year: '2016', project: 'Responsible business index' },
+            { position: 'right', title: "Iglu's Digital Agency team is created", year: '2018' },
+        ];
+
+        return (
+            <div className="journey__content">
+                {events.map((event: IEvent, index: number) => this.renderEvent(event, index))}
+            </div>
+        );
+    }
+
     render() {
         return (
             <section className="section journey-wrapper" id="journey">
@@ -56,93 +101,8 @@ export class Journey extends React.Component {
                     </div>
 
                     <div className="mask" />
-                    <div className="journey__content">
-                        <div
-                            className="event-wrapper event-wrapper--left beginning"
-                            data-aos-offset="250"
-                            data-aos="fade-right"
-                        >
-                            <div className="event show">
-                                <div className="event__date">
-                                    <span>March 2013</span>
-                                </div>
-                                <h2 className="event__name">Iglu is founded</h2>
-                                <div className="event__circle" />
-                            </div>
-                        </div>
 
-                        <div
-                            className="event-wrapper event-wrapper--right design-project"
-                            data-aos-offset="250"
-                            data-aos="fade-left"
-                        >
-                            <div className="event show">
-                                <div className="event__date">
-                                    <span>June 2014</span>
-                                    <span>Evocon</span>
-                                </div>
-                                <h2 className="event__name">First design project</h2>
-                                <div className="event__circle event__circle--right" />
-                            </div>
-                        </div>
-
-                        <div
-                            className="event-wrapper event-wrapper--left spa"
-                            data-aos-offset="250"
-                            data-aos="fade-right"
-                        >
-                            <div className="event show">
-                                <div className="event__date">
-                                    <span>January 2015</span>
-                                    <span>Südameapteek</span>
-                                </div>
-                                <h2 className="event__name">First single page application</h2>
-                                <div className="event__circle" />
-                            </div>
-                        </div>
-
-                        <div
-                            className="event-wrapper event-wrapper--right app"
-                            data-aos-offset="250"
-                            data-aos="fade-left"
-                        >
-                            <div className="event show">
-                                <div className="event__date">
-                                    <span>November 2016</span>
-                                    <span>Dietless</span>
-                                </div>
-                                <h2 className="event__name">First app</h2>
-                                <div className="event__circle event__circle--right" />
-                            </div>
-                        </div>
-
-                        <div
-                            className="event-wrapper event-wrapper--left ux-project"
-                            data-aos-offset="250"
-                            data-aos="fade-right"
-                        >
-                            <div className="event show">
-                                <div className="event__date">
-                                    <span>December 2016</span>
-                                    <span>Responsible business index</span>
-                                </div>
-                                <h2 className="event__name">First UX Project</h2>
-                                <div className="event__circle" />
-                            </div>
-                        </div>
-
-                        <div
-                            className="event-wrapper event-wrapper--right new-team"
-                            data-aos-offset="250"
-                            data-aos="fade-left"
-                        >
-                            <div className="event show">
-                                <div className="event__date">January 2018</div>
-                                <h2 className="event__name">Iglu's Digital Agency team is created</h2>
-                                <div className="event__circle event__circle--right" />
-                            </div>
-                        </div>
-                    </div>
+                    {this.renderEvents()}
                 </div>
             </section>
         );
