@@ -392,12 +392,12 @@ export class WorkFlow extends React.Component {
                     <dd className="text--white">Coding, collaboration with back-end developers</dd>
                     <dt className="text--white">Design</dt>
                     <dd className="text--white stars-bottom">Typography, colors, documentation</dd>
-                    <dt className="text--gray">Validate</dt>
-                    <dd className="text--gray">User tests, iterations, analytics</dd>
-                    <dt className="text--gray">Ideate</dt>
-                    <dd className="text--gray">Low-fidelity, high-fidelity, clickable, HTML</dd>
-                    <dt className="text--gray">Discover</dt>
-                    <dd className="text--gray">Interviews, data analysis, requirements</dd>
+                    <dt className="text--white">Validate</dt>
+                    <dd className="text--white">User tests, iterations, analytics</dd>
+                    <dt className="text--white">Ideate</dt>
+                    <dd className="text--white">Low-fidelity, high-fidelity, clickable, HTML</dd>
+                    <dt className="text--white">Discover</dt>
+                    <dd className="text--white">Interviews, data analysis, requirements</dd>
                 </dl>
             </div>
         );
