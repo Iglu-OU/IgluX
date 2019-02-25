@@ -22,7 +22,7 @@ export class Footer extends React.Component {
 
         const externalList = [
             {
-                link: 'https://www.instagram.com/igluda/',
+                link: 'https://www.instagram.com/iglukad/',
                 name: 'Instagram',
                 imageSrc: IcoInstagram,
                 imageAlt: 'Instagram icon',
