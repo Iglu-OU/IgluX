@@ -9,7 +9,6 @@ export class WorkFlow extends React.Component {
 
     componentDidMount() {
         window.addEventListener('resize', this.getContentPlacement);
-        window.addEventListener('resize', this.checkWavesTopAnimation);
         document.addEventListener('DOMContentLoaded', this.animate(), false);
         this.getContentPlacement();
     }
@@ -31,22 +30,7 @@ export class WorkFlow extends React.Component {
         }
     }
 
-    checkWavesTopAnimation = () => {
-        const width = screen.width;
-
-        // Stop animation when screen is smaller than 769px
-        if (width <= 768 && this.waveTopAnimation) {
-            this.waveTopAnimation!.cancel();
-        }
-
-        // Start animation when screen is bigger than 768px and animation is not running.
-        if (width > 768 && this.waveTopAnimation && this.waveTopAnimation.playState !== 'running') {
-            this.waveTopAnimation.play();
-        }
-    };
-
     animate(): any {
-        this.animateWavesTop();
         this.animateWaves();
         this.animateIceberg();
     }
@@ -80,18 +64,6 @@ export class WorkFlow extends React.Component {
             iterations: Infinity,
         });
     }
-
-    animateWavesTop = () => {
-        const waveTop = document.querySelector('.work-flow__wave-top');
-        const waveTopAnimation: any = {
-            transform: ['translate(-100%, 0)', 'translate(100%, 0)'],
-            easing: 'ease-in-out',
-        };
-        this.waveTopAnimation = waveTop!.animate(waveTopAnimation, {
-            duration: 12000,
-            iterations: Infinity,
-        });
-    };
 
     renderWavesBg() {
         return (
@@ -322,6 +294,31 @@ export class WorkFlow extends React.Component {
         );
     }
 
+    renderWavesTop() {
+        return (
+            <svg
+                className="work-flow__waves-top"
+                id="front_layer"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1936 1034"
+                preserveAspectRatio="xMidYMax slice"
+            >
+                <linearGradient
+                    id="wave_1"
+                    x1="968"
+                    y1="624.4"
+                    x2="968"
+                    y2="1139.4"
+                    gradientTransform="matrix(1 0 0 1 0 -298)"
+                >
+                    <stop offset="0" stopColor="#054868" />
+                    <stop offset="1" stopColor="#00283B" stopOpacity="0.5" />
+                </linearGradient>
+                <path fill="url(#wave_1)" opacity="0.2" d="M0,841.4h1936v-515H0V841.4z" />
+            </svg>
+        );
+    }
+
     renderWavesBottom() {
         return (
             <svg
@@ -356,17 +353,6 @@ export class WorkFlow extends React.Component {
                     <stop offset="0" stopColor="#FFFFFF" stopOpacity="0.7" />
                     <stop offset="1" stopColor="#00434F" stopOpacity="0.4" />
                 </linearGradient>
-                <linearGradient
-                    id="wave_1"
-                    x1="968"
-                    y1="624.4"
-                    x2="968"
-                    y2="1139.4"
-                    gradientTransform="matrix(1 0 0 1 0 -298)"
-                >
-                    <stop offset="0" stopColor="#054868" />
-                    <stop offset="1" stopColor="#00283B" stopOpacity="0.5" />
-                </linearGradient>
                 <path
                     fill="url(#bottom-wave-1)"
                     opacity="0.7"
@@ -378,7 +364,6 @@ export class WorkFlow extends React.Component {
                     d="M0.5,920.7c470.8-59.5,947,48.7,1392.3,39.9c289.6-5.7,543.5-72.4,543.5-72.4V767.6c-413.3-77.8-673.6,74.7-968.9,66.5c-215.7-6-563-129.5-966.9-64.3C0.5,769.9,0.5,920.7,0.5,920.7z"
                 />
                 <path id="water-ice" fill="url(#water-ice-gradient)" opacity="0.3" d="M0,322.4h1936.2v4H0V322.4z" />
-                <path fill="url(#wave_1)" opacity="0.2" d="M0,841.4h1936v-515H0V841.4z" />
             </svg>
         );
     }
@@ -392,11 +377,11 @@ export class WorkFlow extends React.Component {
                     <dd className="text--white">Coding, collaboration with back-end developers</dd>
                     <dt className="text--white">Design</dt>
                     <dd className="text--white stars-bottom">Typography, colors, documentation</dd>
-                    <dt className="text--white">Validate</dt>
+                    <dt className="text--white">Validation</dt>
                     <dd className="text--white">User tests, iterations, analytics</dd>
-                    <dt className="text--white">Ideate</dt>
+                    <dt className="text--white">Ideation</dt>
                     <dd className="text--white">Low-fidelity, high-fidelity, clickable, HTML</dd>
-                    <dt className="text--white">Discover</dt>
+                    <dt className="text--white">Discovery</dt>
                     <dd className="text--white">Interviews, data analysis, requirements</dd>
                 </dl>
             </div>
@@ -411,11 +396,11 @@ export class WorkFlow extends React.Component {
 
                     {this.renderIceberg()}
 
+                    {this.renderWavesTop()}
+
                     {this.renderWaves()}
 
                     {this.renderWavesBottom()}
-
-                    <div className="work-flow__wave-top" />
 
                     {this.renderContent()}
                 </div>

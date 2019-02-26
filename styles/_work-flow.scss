@@ -21,6 +21,7 @@
         right: 0;
         z-index: 2;
     }
+
     &__waves-bg {
         width: 100%;
         height: auto;
@@ -31,6 +32,7 @@
         right: 0;
         z-index: 2;
     }
+
     &__waves {
         width: 100%;
         height: auto;
@@ -41,7 +43,8 @@
         right: 0;
         z-index: 3;
     }
-    &__waves-bottom {
+
+    &__waves-top {
         width: 100%;
         height: auto;
         min-height: 100%;
@@ -51,23 +54,24 @@
         right: 0;
         z-index: 3;
     }
-    &__wave-top {
-        display: none;
-        position: absolute;
-        top: 7%;
-        bottom: 0;
+
+    &__waves-bottom {
         width: 100%;
-        height: 50%;
-        background: radial-gradient(circle at 50%, rgba(3, 49, 61, 0.4), rgba(3, 49, 61, 0) 75%);
-        background-size: cover;
-        z-index: 3;
+        height: auto;
+        min-height: 100%;
+        position: absolute;
+        bottom: 6px;
+        left: 0;
+        right: 0;
+        z-index: 4;
     }
+
     &__content {
         position: absolute;
         top: 23%;
         left: 35%;
         color: #4fbbe7;
-        z-index: $zindex--text;
+        z-index: 5;
         transform: translate(-50%, -50%);
 
         h1 {

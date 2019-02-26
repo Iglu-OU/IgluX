@@ -17,7 +17,7 @@ export const TeamMember = ({
     const windowWidth = isNaN(window.innerWidth) ? window.outerWidth : window.innerWidth;
 
     return (
-        <li className="team-member" data-aos="fade-up" data-aos-offset={windowWidth > 600 ? '200' : '350'}>
+        <li className="team-member" data-aos="fade-up" data-aos-offset={windowWidth > 600 ? '150' : '350'}>
             <p className="team-member__portrait mt-0">
                 <img className="team-member__portrait-primary" src={imageSrc} alt={imageAlt} />
                 <img

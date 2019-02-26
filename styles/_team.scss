@@ -156,8 +156,7 @@
     @media (max-width: 772px) {
         flex-direction: column;
         max-width: 400px;
-        margin-right: 1rem;
-        margin-left: 1rem;
+        margin: 2rem 1rem;
 
         &:nth-of-type(2n) {
             flex-direction: column;
@@ -219,6 +218,10 @@
 .team-member__description {
     width: 50%;
     margin-left: 50px;
+
+    @media (max-width: 772px) {
+        margin-top: 10px;
+    }
 }
 
 .team-member__name {

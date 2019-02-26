@@ -139,7 +139,7 @@ export const teamMemberList: ITeamMember[] = [
         title: 'Senior front-end developer',
         description: 'Open-source enthusiast, who strives for perfection.',
         descriptionExtended: `Abracadabra, hocus pocus, add a bit of secret ingredients and magic happens.`,
-        imageUrl: '#',
+        imageUrl: 'https://www.linkedin.com/in/anton-aavik-0ba1a9176/',
         imageSrc: AntonPortrait,
         imageSecSrc: AntonPortraitSec,
         imageAlt: `Anton Aavik's portrait... if he was an Eskimo`,
