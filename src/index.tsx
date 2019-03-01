@@ -29,9 +29,17 @@ export interface ITeamMember {
     noHover: boolean;
 }
 
-class App extends React.Component<any, any> {
+export interface IAppState {
+    headingShouldBreak: boolean;
+}
+
+class App extends React.Component<{}, IAppState> {
     constructor(props, context) {
         super(props, context);
+
+        this.state = {
+            headingShouldBreak: document.body.getBoundingClientRect().width > 460,
+        };
 
         if ('serviceWorker' in navigator) {
             registerSW({});
@@ -40,6 +48,8 @@ class App extends React.Component<any, any> {
         AOS.init({
             once: true,
         });
+
+        window.addEventListener('resize', this.updateHeaderShouldBreak);
     }
 
     componentDidMount() {
@@ -83,6 +93,19 @@ class App extends React.Component<any, any> {
 
         this.animate();
     }
+
+    componentWillUnmount(): void {
+        window.removeEventListener('resize', this.updateHeaderShouldBreak);
+    }
+
+    updateHeaderShouldBreak = () => {
+        console.log('resize');
+        if (this.state.headingShouldBreak !== document.body.getBoundingClientRect().width > 460) {
+            this.setState({
+                headingShouldBreak: document.body.getBoundingClientRect().width > 460,
+            });
+        }
+    };
 
     animate() {
         document.addEventListener('DOMContentLoaded', animateContent(), false);
@@ -191,8 +214,6 @@ class App extends React.Component<any, any> {
                 for (let i; i < navItems.length; i++) {
                     navItems[i].addEventListener('click', eventFunction);
                 }
-
-                // document.querySelectorAll('#logo a')[0].addEventListener("click", eventFunction);
             },
             init() {
                 iglu.nav.setBindings();
@@ -217,7 +238,7 @@ class App extends React.Component<any, any> {
                             <div className="jumbotron__content">
                                 <h1 className="mt-0" data-aos="zoom-in">
                                     Driven to make complex systems
-                                    <br />
+                                    {this.state.headingShouldBreak ? <br /> : ' '}
                                     feel <strong>elegant</strong> and <strong className="invisible">invisible</strong>
                                 </h1>
                             </div>
