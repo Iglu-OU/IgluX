@@ -39,13 +39,10 @@
         position: absolute;
         top: 0;
         width: 100vw;
-        height: 100vh;
+        height: 125vh;
         z-index: 2;
         margin-top: auto;
         background: url(../assets/iceberg/Iceberg-fold_reverse.svg) no-repeat top center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
         background-size: cover;
         pointer-events: none;
     }
@@ -59,8 +56,9 @@
     bottom: -1px;
     left: 0;
     right: 0;
-    top: 130px;
+    top: 150px;
     z-index: 3;
+    overflow: hidden;
 
     @media (max-width: 772px) {
         display: none;

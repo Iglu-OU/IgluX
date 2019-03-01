@@ -54,7 +54,7 @@ export class Team extends React.Component {
                 id="svg180"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1936 9665.72"
-                preserveAspectRatio="xMidYMin meet"
+                preserveAspectRatio="xMidYMax slice"
             >
                 <defs>
                     <linearGradient

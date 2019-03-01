@@ -5,12 +5,13 @@ html,
 body {
     overflow-x: hidden;
     background: $color-primary;
+    margin: 0;
+    padding: 0;
 }
 html {
     font-size: $font-size;
 }
 body {
-    margin: 0;
     background: $color-primary;
     color: $color-dark;
 }
