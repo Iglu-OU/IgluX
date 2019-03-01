@@ -57,10 +57,10 @@ export class TeamStars extends React.Component {
 
             this.init();
         }
-    };
+    }
 
     getStar(index: number): IStar {
-        const width = window.outerWidth;
+        const width = document.body.getBoundingClientRect().width;
         const teamSection = document.getElementById('canvas');
         const height = teamSection ? teamSection.getBoundingClientRect().height : 0;
         const on = Math.random() > 0.1;
@@ -121,10 +121,11 @@ export class TeamStars extends React.Component {
     }
 
     init = () => {
-        const numberOfStars = window.outerWidth / 2 < 400 ? 400 : window.outerWidth / 2;
+        const width = document.body.getBoundingClientRect().width;
+        const numberOfStars = width / 2 < 400 ? 400 : width / 2;
 
         if (this.canvas && document) {
-            this.canvas.width = window.outerWidth;
+            this.canvas.width = width;
             const teamSection = document.getElementById('canvas');
             this.canvas.height = teamSection ? teamSection.getBoundingClientRect().height : window.outerHeight;
         }
@@ -133,7 +134,7 @@ export class TeamStars extends React.Component {
         for (let i = 0; i < numberOfStars; i++) {
             this.stars.push(this.getStar(i));
         }
-    };
+    }
 
     drawSky = () => {
         if (this.context && this.canvas) {
@@ -145,7 +146,7 @@ export class TeamStars extends React.Component {
 
             requestAnimationFrame(this.drawSky);
         }
-    };
+    }
 
     render() {
         return <canvas id="canvas" className="canvas" ref={(el) => (this.canvas = el)} />;
