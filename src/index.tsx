@@ -99,7 +99,6 @@ class App extends React.Component<{}, IAppState> {
     }
 
     updateHeaderShouldBreak = () => {
-        console.log('resize');
         if (this.state.headingShouldBreak !== document.body.getBoundingClientRect().width > 460) {
             this.setState({
                 headingShouldBreak: document.body.getBoundingClientRect().width > 460,
