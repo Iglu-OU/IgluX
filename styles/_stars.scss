@@ -71,10 +71,10 @@
 }
 
 @keyframes animStar {
-    from {
-        transform: translateY(-2000px);
+    0% {
+        transform: translate(-500px, -2000px);
     }
-    to {
-        transform: translateY(0);
+    100% {
+        transform: translate(0, 0);
     }
 }
