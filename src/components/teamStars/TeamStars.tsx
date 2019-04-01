@@ -59,7 +59,7 @@ export class TeamStars extends React.Component {
 
             this.init();
         }
-    }
+    };
 
     getStar(index: number): IStar {
         const width = document.body.getBoundingClientRect().width;
@@ -136,7 +136,7 @@ export class TeamStars extends React.Component {
         for (let i = 0; i < numberOfStars; i++) {
             this.stars.push(this.getStar(i));
         }
-    }
+    };
 
     drawSky = () => {
         if (this.context && this.canvas) {
@@ -148,7 +148,7 @@ export class TeamStars extends React.Component {
 
             requestAnimationFrame(this.drawSky);
         }
-    }
+    };
 
     render() {
         return <canvas id="canvas" className="canvas" ref={(el) => (this.canvas = el)} />;

@@ -35,7 +35,7 @@ export class WorkFlow extends React.Component {
     animate = () => {
         this.animateWaves();
         this.animateIceberg();
-    }
+    };
 
     animateIceberg() {
         const iceberg = document.querySelector('.work-flow__iceberg');

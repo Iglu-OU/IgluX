@@ -1,5 +1,4 @@
 {
-    "extends": ["tslint:recommended", "tslint-react"],
     "rules": {
         "jsx-no-multiline-js": false,
         "ordered-imports": false,
@@ -8,7 +7,8 @@
         "no-var-requires": false,
         "max-line-length": false,
         "member-access": false,
-        "quotemark": [true, "single", "jsx-double"],
+        "quotemark": [true, "single", "jsx-double", "avoid-escape"],
         "interface-name": [false]
-    }
+    },
+    "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"]
 }
