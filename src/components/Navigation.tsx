@@ -66,7 +66,7 @@ export class Navigation extends React.Component<INavigationProps> {
             });
 
             if (navigationItemEls) {
-                [].forEach.call(navigationItemEls, (navigationItemEl) => {
+                [].forEach.call(navigationItemEls, (navigationItemEl: any) => {
                     navigationItemEl.addEventListener('click', () => {
                         navEl.classList.remove('navigation--open');
                     });

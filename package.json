@@ -1,70 +1,38 @@
 {
-	"name": "igluda",
-	"version": "1.0.0",
-	"description": "",
-	"private": true,
-	"main": "index.js",
-	"scripts": {
-		"start": "webpack-dev-server --config config/webpack.dev.js",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "webpack --config config/webpack.prod.js",
-		"lint": "tslint src/*.ts{,x} src/**/*.ts{,x} --fix"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Iglu-OU/IgluDA.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/Iglu-OU/IgluDA/issues"
-	},
-	"dependencies": {
-		"@types/aos": "^3.0.1",
-		"aos": "^2.3.4",
-		"react": "^16.8.1",
-		"react-dom": "^16.8.1",
-		"web-animations-js": "^2.3.1"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.2.0",
-		"@babel/plugin-proposal-class-properties": "^7.3.0",
-		"@babel/plugin-proposal-object-rest-spread": "^7.3.2",
-		"@babel/plugin-syntax-object-rest-spread": "^7.2.0",
-		"@babel/preset-env": "^7.3.1",
-		"@types/react": "^16.8.2",
-		"@types/react-dom": "^16.8.0",
-		"babel-loader": "^8.0.4",
-		"babel-plugin-inferno": "^6.0.4",
-		"clean-webpack-plugin": "^1.0.1",
-		"compression-webpack-plugin": "^2.0.0",
-		"copy-webpack-plugin": "^4.6.0",
-		"css-loader": "^2.0.0",
-		"file-loader": "^3.0.1",
-		"html-webpack-plugin": "^3.2.0",
-		"husky": "^1.2.0",
-		"mini-css-extract-plugin": "^0.5.0",
-		"node-sass": "^4.11.0",
-		"optimize-css-assets-webpack-plugin": "^5.0.0",
-		"prettier": "^1.16.4",
-		"pretty-quick": "^1.10.0",
-		"sass-loader": "^7.1.0",
-		"source-map-loader": "^0.2.3",
-		"style-loader": "^0.23.1",
-		"ts-loader": "^5.3.1",
-		"tslint": "^5.12.1",
-		"tslint-react": "^3.6.0",
-		"typescript": "^3.3.1",
-		"uglifyjs-webpack-plugin": "^2.0.1",
-		"webpack": "^4.29.2",
-		"webpack-cli": "^3.2.3",
-		"webpack-dev-server": "^3.1.10",
-		"webpack-merge": "^4.1.5",
-		"workbox-webpack-plugin": "^3.6.3"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged && npm run lint"
-		}
-	}
+  "name": "igluda",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@types/aos": "^3.0.1",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.12.2",
+    "@types/react": "^16.8.10",
+    "@types/react-dom": "^16.8.3",
+    "aos": "^2.3.4",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8",
+    "typescript": "^3.4.1",
+    "web-animations-js": "^2.3.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "tslint": "^5.14.0",
+    "tslint-react": "^4.0.0"
+  }
 }

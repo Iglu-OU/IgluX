@@ -3,10 +3,6 @@ import * as React from 'react';
 export class WorkFlow extends React.Component {
     waveTopAnimation: Animation | null = null;
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         window.addEventListener('resize', this.getContentPlacement);
         document.addEventListener('DOMContentLoaded', this.animate(), false);

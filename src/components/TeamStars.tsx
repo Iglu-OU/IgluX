@@ -30,7 +30,7 @@ export class TeamStars extends React.Component {
     debouncedResizeHandler: () => any;
     windowWidth: number | null = null;
 
-    constructor(props) {
+    constructor(props: any) {
         super(props);
 
         this.debouncedResizeHandler = TeamStars.debounce(this.resizeHandler, this.debounceTimeout, 100);

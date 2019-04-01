@@ -12,8 +12,8 @@ import { Journey } from './components/Journey';
 import registerSW from './utils/registerSW';
 import 'web-animations-js';
 
-import '../styles/main.scss';
-import Logo from '../assets/logos/logo.svg';
+import './styles/main.scss';
+import Logo from './assets/logos/logo.svg';
 
 export interface ITeamMember {
     name: string;
@@ -34,7 +34,7 @@ export interface IAppState {
 }
 
 class App extends React.Component<{}, IAppState> {
-    constructor(props, context) {
+    constructor(props: any, context: any) {
         super(props, context);
 
         this.state = {
@@ -169,20 +169,20 @@ class App extends React.Component<{}, IAppState> {
                 speed: 400, // scroll duration
             },
             interval: null,
-            scrollTo(element) {
+            scrollTo(element: any) {
                 // const currentY = self.pageYOffset;
                 const targetY = document.getElementById(element)!.offsetTop;
-                function scrollTo(Y, duration) {
+                function scrollTo(Y: any, duration: any) {
                     const start = Date.now();
                     const elem = document!.documentElement!.scrollTop ? document.documentElement : document.body;
                     const from = elem!.scrollTop;
-                    const easingFunction = (t) => {
+                    const easingFunction = (t: any) => {
                         return Math.pow(t, 0.48);
                     };
                     if (from === Y) {
                         return;
                     }
-                    function min(a, b) {
+                    function min(a: number, b: number) {
                         return a < b ? a : b;
                     }
                     function scroll() {
@@ -202,15 +202,16 @@ class App extends React.Component<{}, IAppState> {
             setBindings() {
                 // const config = iglu.nav.config;
                 const navItems = document.querySelectorAll(iglu.nav.config.trigger);
-                const eventFunction = function(e) {
+                const eventFunction = function(e: any) {
                     e.preventDefault();
-                    iglu.nav.scrollTo(this.href.split('#')[1]);
+
+                    // iglu.nav.scrollTo(this.href.split('#')[1]);
                     // $('#app-header__toggler').prop('checked', false);
                     const toggler: any = document.getElementById('app-header__toggler');
                     toggler!.checked = false;
                 };
 
-                for (let i; i < navItems.length; i++) {
+                for (let i = 0; i < navItems.length; i++) {
                     navItems[i].addEventListener('click', eventFunction);
                 }
             },

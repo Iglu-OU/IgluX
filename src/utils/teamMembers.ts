@@ -1,30 +1,30 @@
 import { ITeamMember } from '../index';
 
-import LauraPortrait from '../../assets/team/primary/laura.svg';
-import KristoPortrait from '../../assets/team/primary/kristo.svg';
-import JoonasPortrait from '../../assets/team/primary/joonas.svg';
-import KadiPortrait from '../../assets/team/primary/kadi.svg';
-import EglePortrait from '../../assets/team/primary/egle.svg';
-import ViljarPortrait from '../../assets/team/primary/viljar.svg';
-import AntonPortrait from '../../assets/team/primary/anton.svg';
-import HarlesPortrait from '../../assets/team/primary/harles.svg';
-import IvarPortrait from '../../assets/team/primary/ivar.svg';
-import TerasmaaPortrait from '../../assets/team/primary/terasmaa.svg';
-import KasparPortrait from '../../assets/team/primary/kaspar.svg';
-import AlinaPortrait from '../../assets/team/primary/alina.svg';
+import LauraPortrait from '../assets/team/primary/laura.svg';
+import KristoPortrait from '../assets/team/primary/kristo.svg';
+import JoonasPortrait from '../assets/team/primary/joonas.svg';
+import KadiPortrait from '../assets/team/primary/kadi.svg';
+import EglePortrait from '../assets/team/primary/egle.svg';
+import ViljarPortrait from '../assets/team/primary/viljar.svg';
+import AntonPortrait from '../assets/team/primary/anton.svg';
+import HarlesPortrait from '../assets/team/primary/harles.svg';
+import IvarPortrait from '../assets/team/primary/ivar.svg';
+import TerasmaaPortrait from '../assets/team/primary/terasmaa.svg';
+import KasparPortrait from '../assets/team/primary/kaspar.svg';
+import AlinaPortrait from '../assets/team/primary/alina.svg';
 
-import LauraPortraitSec from '../../assets/team/secondary/laura.svg';
-import KristoPortraitSec from '../../assets/team/secondary/kristo.svg';
-import JoonasPortraitSec from '../../assets/team/secondary/joonas.svg';
-import KadiPortraitSec from '../../assets/team/secondary/kadi.svg';
-import EglePortraitSec from '../../assets/team/secondary/egle.svg';
-import ViljarPortraitSec from '../../assets/team/secondary/viljar.svg';
-import AntonPortraitSec from '../../assets/team/secondary/anton.svg';
-import HarlesPortraitSec from '../../assets/team/secondary/harles.svg';
-import IvarPortraitSec from '../../assets/team/secondary/ivar.svg';
-import TerasmaaPortraitSec from '../../assets/team/secondary/terasmaa.svg';
-import KasparPortraitSec from '../../assets/team/secondary/kaspar.svg';
-import AlinaPortraitSec from '../../assets/team/secondary/alina.svg';
+import LauraPortraitSec from '../assets/team/secondary/laura.svg';
+import KristoPortraitSec from '../assets/team/secondary/kristo.svg';
+import JoonasPortraitSec from '../assets/team/secondary/joonas.svg';
+import KadiPortraitSec from '../assets/team/secondary/kadi.svg';
+import EglePortraitSec from '../assets/team/secondary/egle.svg';
+import ViljarPortraitSec from '../assets/team/secondary/viljar.svg';
+import AntonPortraitSec from '../assets/team/secondary/anton.svg';
+import HarlesPortraitSec from '../assets/team/secondary/harles.svg';
+import IvarPortraitSec from '../assets/team/secondary/ivar.svg';
+import TerasmaaPortraitSec from '../assets/team/secondary/terasmaa.svg';
+import KasparPortraitSec from '../assets/team/secondary/kaspar.svg';
+import AlinaPortraitSec from '../assets/team/secondary/alina.svg';
 
 export const teamMemberList: ITeamMember[] = [
     {
