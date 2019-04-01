@@ -1,31 +1,37 @@
 import * as React from 'react';
-import * as AOS from 'aos';
 
-import Logo from './assets/logos/logo.svg';
+import './Jumbotron.scss';
 
-import { WorkFlow } from './components/workFlow/WorkFlow';
-import { Journey } from './components/journey/Journey';
-import { Team } from './components/team/Team';
-import { Footer } from './components/footer/Footer';
-import { Stars } from './components/stars/Stars';
-import { Navigation } from './components/navigation/Navigation';
-import { Jumbotron } from './components/jumbotron/Jumbotron';
-import { Portfolio } from './components/portfolio/Portfolio';
+export interface IJumbotronState {
+    headingShouldBreak: boolean;
+}
 
-import './styles/main.scss';
-
-class App extends React.Component {
+export class Jumbotron extends React.Component<{}, IJumbotronState> {
     constructor(props: any) {
         super(props);
 
-        AOS.init({
-            once: true,
-        });
+        this.state = {
+            headingShouldBreak: document.body.getBoundingClientRect().width > 460,
+        };
+
+        window.addEventListener('resize', this.updateHeaderShouldBreak);
     }
 
     componentDidMount() {
         this.animate();
     }
+
+    componentWillUnmount(): void {
+        window.removeEventListener('resize', this.updateHeaderShouldBreak);
+    }
+
+    updateHeaderShouldBreak = () => {
+        if (this.state.headingShouldBreak !== document.body.getBoundingClientRect().width > 460) {
+            this.setState({
+                headingShouldBreak: document.body.getBoundingClientRect().width > 460,
+            });
+        }
+    };
 
     animate() {
         document.addEventListener('DOMContentLoaded', animateContent(), false);
@@ -65,27 +71,17 @@ class App extends React.Component {
 
     render() {
         return (
-            <>
-                <Navigation logo={Logo} />
-
-                <Stars />
-
-                <main>
-                    <Jumbotron />
-
-                    <WorkFlow />
-
-                    <Journey />
-
-                    <Team />
-
-                    <Portfolio />
-                </main>
-
-                <Footer />
-            </>
+            <section className="transform-header__jumbotron" id="transform-header__jumbotron">
+                <div className="jumbotron" id="jumbotron">
+                    <div className="jumbotron__content">
+                        <h1 className="mt-0" data-aos="zoom-in">
+                            Driven to make complex systems
+                            {this.state.headingShouldBreak ? <br /> : ' '}
+                            feel <strong>elegant</strong> and <strong className="invisible">invisible</strong>
+                        </h1>
+                    </div>
+                </div>
+            </section>
         );
     }
 }
-
-export default App;
