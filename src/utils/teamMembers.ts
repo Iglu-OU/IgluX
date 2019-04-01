@@ -1,5 +1,3 @@
-import { ITeamMember } from '../index';
-
 import LauraPortrait from '../assets/team/primary/laura.svg';
 import KristoPortrait from '../assets/team/primary/kristo.svg';
 import JoonasPortrait from '../assets/team/primary/joonas.svg';
@@ -25,6 +23,20 @@ import IvarPortraitSec from '../assets/team/secondary/ivar.svg';
 import TerasmaaPortraitSec from '../assets/team/secondary/terasmaa.svg';
 import KasparPortraitSec from '../assets/team/secondary/kaspar.svg';
 import AlinaPortraitSec from '../assets/team/secondary/alina.svg';
+
+export interface ITeamMember {
+    name: string;
+    title: string;
+    description: string;
+    descriptionExtended: string;
+    imageUrl: string;
+    imageSrc: string;
+    imageSecSrc: string;
+    imageAlt: string;
+    skillSet: string[];
+    position: 'designer' | 'analyst' | 'fe';
+    noHover: boolean;
+}
 
 export const teamMemberList: ITeamMember[] = [
     {

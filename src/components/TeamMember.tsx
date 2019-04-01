@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ITeamMember} from "../index";
+import { ITeamMember } from '../utils/teamMembers';
 
 interface ITeamMemberProps {
     data: ITeamMember,
