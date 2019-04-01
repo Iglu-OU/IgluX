@@ -96,7 +96,7 @@ export class Journey extends React.Component {
 
     render() {
         return (
-            <section className="section journey-wrapper" id="journey">
+            <section className="journey-wrapper" id="journey">
                 <div className="journey">
                     <div className="journey__header">
                         <h1>Journey</h1>

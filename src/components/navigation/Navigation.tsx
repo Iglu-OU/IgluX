@@ -7,51 +7,10 @@ export interface INavigationProps {
 }
 
 export class Navigation extends React.Component<INavigationProps> {
-    get BEM(): string {
-        return 'navigation';
-    }
-
     componentDidMount() {
         const navEl = document.querySelector('.navigation');
         const togglerEl = document.querySelector('.navigation__burger a');
         const navigationItemEls = document.querySelectorAll('.navigation__item a');
-
-        // Show header on scroll top
-        /*
-        const htmlEl = document.querySelector('html');
-        let prev = 0;
-
-        document.addEventListener('touchmove', scroll, false);
-
-        document.addEventListener('scroll', scroll, false);
-
-        function scroll(e) {
-            if (!htmlEl || !navEl || getBodyScrollTop() < 0) {
-                return;
-            }
-
-            if (getBodyScrollTop() > 400) {
-                navEl.classList.add('fixed');
-            } else if (getBodyScrollTop() <= 15) {
-                navEl.classList.remove('fixed');
-            }
-
-            if (prev < getBodyScrollTop()) {
-                navEl.classList.add('down');
-                navEl.classList.remove('up');
-            } else {
-                navEl.classList.add('up');
-                navEl.classList.remove('down');
-            }
-
-            prev = getBodyScrollTop();
-        }
-
-        function getBodyScrollTop() {
-            const el = document.scrollingElement || document.documentElement;
-            return el ? el.scrollTop : 0;
-        }
-        */
 
         let isVisible = false;
 
@@ -96,7 +55,7 @@ export class Navigation extends React.Component<INavigationProps> {
 
         return (
             <nav className="navigation-wrapper">
-                <div className={this.BEM}>
+                <div className="navigation">
                     <div className="navigation__home">
                         <a href="#">
                             <img alt="Iglu logo" src={logo} />

@@ -46,7 +46,7 @@ export class Footer extends React.Component {
         const externalLinkList = externalList.map(({ link, name, imageSrc, imageAlt }, index) => (
             <li className="footer__links-item" key={index}>
                 <a className="footer__link" href={link} target="_blank" rel="noopener">
-                    <img className="ico ico--sm lazyload" alt={imageAlt} src={imageSrc} />
+                    <img className="ico ico--sm" alt={imageAlt} src={imageSrc} />
                     <span>{name}</span>
                 </a>
             </li>

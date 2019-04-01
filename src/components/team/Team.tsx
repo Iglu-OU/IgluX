@@ -52,7 +52,7 @@ export class Team extends React.Component {
 
     render() {
         return (
-            <section className="section" id="team">
+            <section id="team">
                 <TeamStars />
 
                 <TeamCloudsSvg />
