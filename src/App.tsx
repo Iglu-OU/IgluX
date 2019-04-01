@@ -31,7 +31,6 @@ class App extends React.Component<{}, IAppState> {
     }
 
     componentDidMount() {
-        // TODO Refactor all of this, including the animate section, separate HTML into components
         this.animate();
     }
 

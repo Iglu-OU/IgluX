@@ -8,6 +8,7 @@
         "no-var-requires": false,
         "max-line-length": false,
         "member-access": false,
-        "quotemark": [true, "single", "jsx-double"]
+        "quotemark": [true, "single", "jsx-double"],
+        "interface-name": [false]
     }
 }
