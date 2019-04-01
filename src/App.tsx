@@ -10,6 +10,7 @@ import { Footer } from './components/footer/Footer';
 import { Stars } from './components/stars/Stars';
 import { Navigation } from './components/navigation/Navigation';
 import { Jumbotron } from './components/jumbotron/Jumbotron';
+import { Portfolio } from './components/portfolio/Portfolio';
 
 import './styles/main.scss';
 
@@ -77,6 +78,8 @@ class App extends React.Component {
                     <Journey />
 
                     <Team />
+
+                    <Portfolio />
                 </main>
 
                 <Footer />
