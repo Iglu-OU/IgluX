@@ -3,8 +3,6 @@ import * as AOS from 'aos';
 
 import Logo from './assets/logos/logo.svg';
 
-import 'web-animations-js';
-
 import './styles/main.scss';
 import { WorkFlow } from './components/workFlow/WorkFlow';
 import { Journey } from './components/journey/Journey';
@@ -34,43 +32,6 @@ class App extends React.Component<{}, IAppState> {
 
     componentDidMount() {
         // TODO Refactor all of this, including the animate section, separate HTML into components
-
-        let didScroll = false;
-
-        document.addEventListener('scroll', () => {
-            didScroll = true;
-        });
-
-        setInterval(() => {
-            if (didScroll) {
-                calculateNav();
-                didScroll = false;
-            }
-        }, 50);
-
-        const jumbotron = document.getElementById('jumbotron');
-        const transitionContainerJumbotron = document.getElementById('transform-header__jumbotron');
-        const transitionContainerWorkflow = document.getElementById('process');
-        const transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
-        const windowHeight = isNaN(window.innerHeight) ? window.outerHeight : window.innerHeight;
-        const iOSChromeDetected = /CriOS/.test(navigator.userAgent);
-
-        if (jumbotron && iOSChromeDetected) {
-            jumbotron.style.height = `${windowHeight}px`;
-        }
-
-        const calculateNav = () => {
-            const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
-
-            if (scrollY < transitionStartPoint) {
-                transitionContainerJumbotron!.classList.remove('transform-header__jumbotron--alt');
-                transitionContainerWorkflow!.classList.remove('transform-header__workflow--alt');
-            } else {
-                transitionContainerJumbotron!.classList.add('transform-header__jumbotron--alt');
-                transitionContainerWorkflow!.classList.add('transform-header__workflow--alt');
-            }
-        };
-
         this.animate();
     }
 
@@ -119,89 +80,6 @@ class App extends React.Component<{}, IAppState> {
                     });
                 }
             }, initialDuration);
-        }
-
-        /* Navigation */
-
-        (() => {
-            // browser detection //
-            const root = document.documentElement;
-            const ua = navigator.userAgent;
-            let browser = '';
-            if (ua.indexOf('MSIE 10') >= 0) {
-                browser += ' ie10';
-            }
-            if (ua.indexOf('IEMobile') >= 0) {
-                browser += ' wp';
-            }
-            if (ua.indexOf('iPad') >= 0) {
-                browser += ' ipad';
-            }
-            root!.className += browser;
-        })();
-
-        // ie9 no request animation frame
-        (window as any).iglu = (window as any).iglu || {};
-        const iglu = (window as any).iglu;
-        iglu.nav = {
-            config: {
-                trigger: '.app-header__navigation a',
-                speed: 400, // scroll duration
-            },
-            interval: null,
-            scrollTo(element: any) {
-                // const currentY = self.pageYOffset;
-                const targetY = document.getElementById(element)!.offsetTop;
-                function scrollTo(Y: any, duration: any) {
-                    const start = Date.now();
-                    const elem = document!.documentElement!.scrollTop ? document.documentElement : document.body;
-                    const from = elem!.scrollTop;
-                    const easingFunction = (t: any) => {
-                        return Math.pow(t, 0.48);
-                    };
-                    if (from === Y) {
-                        return;
-                    }
-                    function min(a: number, b: number) {
-                        return a < b ? a : b;
-                    }
-                    function scroll() {
-                        const currentTime = Date.now();
-                        const time = min(1, (currentTime - start) / duration);
-                        const easedT = easingFunction(time);
-                        window.scrollTo(0, easedT * (Y - from) + from);
-
-                        if (time < 1) {
-                            requestAnimationFrame(scroll);
-                        }
-                    }
-                    requestAnimationFrame(scroll);
-                }
-                scrollTo(targetY, iglu.nav.config.speed);
-            },
-            setBindings() {
-                // const config = iglu.nav.config;
-                const navItems = document.querySelectorAll(iglu.nav.config.trigger);
-                const eventFunction = function(e: any) {
-                    e.preventDefault();
-
-                    // iglu.nav.scrollTo(this.href.split('#')[1]);
-                    // $('#app-header__toggler').prop('checked', false);
-                    const toggler: any = document.getElementById('app-header__toggler');
-                    toggler!.checked = false;
-                };
-
-                for (let i = 0; i < navItems.length; i++) {
-                    navItems[i].addEventListener('click', eventFunction);
-                }
-            },
-            init() {
-                iglu.nav.setBindings();
-            },
-        };
-
-        if (window.requestAnimationFrame) {
-            iglu.nav.init();
         }
     }
 
