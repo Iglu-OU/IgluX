@@ -10,6 +10,7 @@ import { Team } from './components/team/Team';
 import { Footer } from './components/footer/Footer';
 import { Stars } from './components/stars/Stars';
 import { Navigation } from './components/navigation/Navigation';
+import { Portfolio } from './components/portfolio/Portfolio';
 
 export interface IAppState {
     headingShouldBreak: boolean;
@@ -107,6 +108,8 @@ class App extends React.Component<{}, IAppState> {
                     <Journey />
 
                     <Team />
+
+                    <Portfolio />
                 </main>
 
                 <Footer />
