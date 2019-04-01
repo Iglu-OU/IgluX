@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './TeamStars.scss';
+
 export interface IStar {
     id: string;
     x: number;

@@ -2,16 +2,16 @@ import * as React from 'react';
 import * as AOS from 'aos';
 
 import Logo from './assets/logos/logo.svg';
-import { Navigation } from './components/Navigation';
-import { Stars } from './components/Stars';
-import { WorkFlow } from './components/WorkFlow';
-import { Footer } from './components/Footer';
-import { Team } from './components/Team';
-import { Journey } from './components/Journey';
 
 import 'web-animations-js';
 
 import './styles/main.scss';
+import { WorkFlow } from './components/workFlow/WorkFlow';
+import { Journey } from './components/journey/Journey';
+import { Team } from './components/team/Team';
+import { Footer } from './components/footer/Footer';
+import { Stars } from './components/stars/Stars';
+import { Navigation } from './components/navigation/Navigation';
 
 export interface IAppState {
     headingShouldBreak: boolean;
@@ -84,7 +84,7 @@ class App extends React.Component<{}, IAppState> {
                 headingShouldBreak: document.body.getBoundingClientRect().width > 460,
             });
         }
-    };
+    }
 
     animate() {
         document.addEventListener('DOMContentLoaded', animateContent(), false);

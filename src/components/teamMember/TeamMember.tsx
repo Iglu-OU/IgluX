@@ -1,5 +1,20 @@
 import * as React from 'react';
-import { ITeamMember } from '../utils/teamMembers';
+
+import './TeamMember.scss';
+
+export interface ITeamMember {
+    name: string;
+    title: string;
+    description: string;
+    descriptionExtended: string;
+    imageUrl: string;
+    imageSrc: string;
+    imageSecSrc: string;
+    imageAlt: string;
+    skillSet: string[];
+    position: 'designer' | 'analyst' | 'fe';
+    noHover: boolean;
+}
 
 interface ITeamMemberProps {
     data: ITeamMember;

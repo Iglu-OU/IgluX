@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { ITeamMember, teamMemberList } from '../utils/teamMembers';
-import { TeamMember } from './TeamMember';
-import { TeamStars } from './TeamStars';
+import { teamMemberList } from '../../utils/teamMembers';
+import { ITeamMember, TeamMember } from '../teamMember/TeamMember';
+import { TeamStars } from '../teamStars/TeamStars';
+
+import './Team.scss';
 
 export class Team extends React.Component {
     renderTeam() {
