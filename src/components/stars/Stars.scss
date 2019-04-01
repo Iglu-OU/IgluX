@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 @function multiple-box-shadow($n) {
     $value: '#{random(2560)}px #{random(2000)}px #FFF';

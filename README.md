@@ -1,10 +1,9 @@
 # Iglu Digital Agency
 
-Running locally:
-* npm install
-* npm start
+Based on [CRA](https://facebook.github.io/create-react-app/)
 
-Before committing and/or pushing:
-* npm run lint
+Running locally:
+* `npm install`
+* `npm start`
 
 When code is pushed or merged to the master branch, it's automatically deployed

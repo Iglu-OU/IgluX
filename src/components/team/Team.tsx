@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { teamMemberList } from '../../utils/teamMembers';
+import { teamMemberList } from '../../content/teamMembers';
 import { ITeamMember, TeamMember } from '../teamMember/TeamMember';
 import { TeamStars } from '../teamStars/TeamStars';
 
