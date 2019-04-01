@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './Stars.scss';
+
 export class Stars extends React.Component {
     componentDidMount() {
         window.addEventListener('resize', this.resizeWrapper);

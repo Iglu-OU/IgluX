@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './Journey.scss';
+
 interface IEvent {
     position: 'left' | 'right';
     year: string;

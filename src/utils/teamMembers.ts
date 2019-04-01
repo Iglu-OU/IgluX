@@ -1,4 +1,4 @@
-import { ITeamMember } from '../index';
+import { ITeamMember } from '../components/teamMember/TeamMember';
 
 import LauraPortrait from '../assets/team/primary/laura.svg';
 import KristoPortrait from '../assets/team/primary/kristo.svg';

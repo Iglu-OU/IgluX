@@ -1,8 +1,10 @@
 import * as React from 'react';
 
-import IcoFacebook from '../assets/logos/ico-fb.svg';
-import IcoInstagram from '../assets/logos/ico-insta.svg';
-import IcoLinkedIn from '../assets/logos/ico-linkedin.svg';
+import IcoFacebook from '../../assets/logos/ico-fb.svg';
+import IcoInstagram from '../../assets/logos/ico-insta.svg';
+import IcoLinkedIn from '../../assets/logos/ico-linkedin.svg';
+
+import './Footer.scss';
 
 export class Footer extends React.Component {
     returnFooterLinks() {

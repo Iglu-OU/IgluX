@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 #team {
     padding: 2rem 0;
     background: #032230;
@@ -42,7 +44,7 @@
         height: 125vh;
         z-index: 2;
         margin-top: auto;
-        background: url(../assets/iceberg/Iceberg-fold_reverse.svg) no-repeat top center;
+        background: url(../../assets/iceberg/Iceberg-fold_reverse.svg) no-repeat top center;
         background-size: cover;
         pointer-events: none;
     }
@@ -84,7 +86,7 @@
             bottom: calc(-2.25rem / 2 - 6px);
             height: 12px;
             width: 126px;
-            background: url(../assets/team/title-line-team.svg) no-repeat top center;
+            background: url(../../assets/team/title-line-team.svg) no-repeat top center;
             background-size: 90%;
         }
     }
@@ -241,7 +243,7 @@
             margin-bottom: 5px;
             opacity: 0;
             transition: opacity 0.32s ease;
-            background: url(../assets/logos/ln.svg);
+            background: url(../../assets/logos/ln.svg);
             vertical-align: middle;
 
             @media (pointer: coarse) {
@@ -303,16 +305,4 @@
     100% {
         transform: translate(0, 0);
     }
-}
-
-/* TeamStars */
-
-.canvas {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
 }

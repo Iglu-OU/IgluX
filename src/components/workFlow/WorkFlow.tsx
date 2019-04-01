@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './WorkFlow.scss';
+
 export class WorkFlow extends React.Component {
     waveTopAnimation: Animation | null = null;
 

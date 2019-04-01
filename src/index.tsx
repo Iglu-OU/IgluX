@@ -2,32 +2,18 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as AOS from 'aos';
 
-import { Navigation } from './components/Navigation';
-import { Stars } from './components/Stars';
-import { WorkFlow } from './components/WorkFlow';
-import { Footer } from './components/Footer';
-import { Team } from './components/Team';
-import { Journey } from './components/Journey';
+import { Navigation } from './components/navigation/Navigation';
+import { Stars } from './components/stars/Stars';
+import { WorkFlow } from './components/workFlow/WorkFlow';
+import { Footer } from './components/footer/Footer';
+import { Team } from './components/team/Team';
+import { Journey } from './components/journey/Journey';
 
 import registerSW from './utils/registerSW';
 import 'web-animations-js';
 
 import './styles/main.scss';
 import Logo from './assets/logos/logo.svg';
-
-export interface ITeamMember {
-    name: string;
-    title: string;
-    description: string;
-    descriptionExtended: string;
-    imageUrl: string;
-    imageSrc: string;
-    imageSecSrc: string;
-    imageAlt: string;
-    skillSet: string[];
-    position: 'designer' | 'analyst' | 'fe';
-    noHover: boolean;
-}
 
 export interface IAppState {
     headingShouldBreak: boolean;
@@ -104,7 +90,7 @@ class App extends React.Component<{}, IAppState> {
                 headingShouldBreak: document.body.getBoundingClientRect().width > 460,
             });
         }
-    };
+    }
 
     animate() {
         document.addEventListener('DOMContentLoaded', animateContent(), false);
