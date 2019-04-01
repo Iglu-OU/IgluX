@@ -182,6 +182,7 @@ class App extends React.Component<{}, IAppState> {
             setBindings() {
                 // const config = iglu.nav.config;
                 const navItems = document.querySelectorAll(iglu.nav.config.trigger);
+                // tslint:disable-next-line
                 const eventFunction = function(e: any) {
                     e.preventDefault();
 
@@ -191,6 +192,7 @@ class App extends React.Component<{}, IAppState> {
                     toggler!.checked = false;
                 };
 
+                // tslint:disable-next-line
                 for (let i = 0; i < navItems.length; i++) {
                     navItems[i].addEventListener('click', eventFunction);
                 }

@@ -1,38 +1,55 @@
 {
-  "name": "igluda",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@types/aos": "^3.0.1",
-    "@types/jest": "^24.0.11",
-    "@types/node": "^11.12.2",
-    "@types/react": "^16.8.10",
-    "@types/react-dom": "^16.8.3",
-    "aos": "^2.3.4",
-    "node-sass": "^4.11.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8",
-    "typescript": "^3.4.1",
-    "web-animations-js": "^2.3.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "tslint": "^5.14.0",
-    "tslint-react": "^4.0.0"
-  }
+    "name": "igluda",
+    "version": "1.0.0",
+    "private": true,
+    "author": "Iglu",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Iglu-OU/IgluDA.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Iglu-OU/IgluDA/issues"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "lint": "tslint src/**/*.ts{,x} --fix"
+    },
+    "dependencies": {
+        "@types/aos": "^3.0.1",
+        "@types/jest": "^24.0.11",
+        "@types/node": "^11.12.2",
+        "@types/react": "^16.8.10",
+        "@types/react-dom": "^16.8.3",
+        "aos": "^2.3.4",
+        "node-sass": "^4.11.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-scripts": "2.1.8",
+        "typescript": "^3.4.1",
+        "web-animations-js": "^2.3.1"
+    },
+    "devDependencies": {
+        "husky": "^1.3.1",
+        "prettier": "^1.16.4",
+        "pretty-quick": "^1.10.0",
+        "tslint": "^5.14.0",
+        "tslint-react": "^4.0.0"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged && npm run lint"
+        }
+    }
 }

@@ -2,13 +2,24 @@ import * as React from 'react';
 import { ITeamMember } from '../utils/teamMembers';
 
 interface ITeamMemberProps {
-    data: ITeamMember,
+    data: ITeamMember;
 }
 
 export class TeamMember extends React.Component<ITeamMemberProps> {
     render() {
         const windowWidth = isNaN(window.innerWidth) ? window.outerWidth : window.innerWidth;
-        const {title, noHover, name, description, descriptionExtended, imageAlt, imageSecSrc, imageSrc, imageUrl, skillSet} = this.props.data;
+        const {
+            title,
+            noHover,
+            name,
+            description,
+            descriptionExtended,
+            imageAlt,
+            imageSecSrc,
+            imageSrc,
+            imageUrl,
+            skillSet,
+        } = this.props.data;
 
         return (
             <li className="team-member" data-aos="fade-up" data-aos-offset={windowWidth > 600 ? '150' : '350'}>
@@ -21,7 +32,12 @@ export class TeamMember extends React.Component<ITeamMemberProps> {
                     />
                 </p>
                 <div className="team-member__description">
-                    <a className="team-member__name mt-0 h1" href={imageUrl} title={`LinkedIn - ${name}`} target="_blank">
+                    <a
+                        className="team-member__name mt-0 h1"
+                        href={imageUrl}
+                        title={`LinkedIn - ${name}`}
+                        target="_blank"
+                    >
                         <h2>{name}</h2>
                     </a>
                     <p className="team-member__title mt-0">
