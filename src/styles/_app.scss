@@ -1,0 +1,209 @@
+/* App Header */
+.app-header-wrapper {
+    height: 0;
+}
+
+.app-header {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    font-size: 1em;
+    z-index: 10000;
+    transition: none;
+    box-shadow: none;
+
+    &.fixed {
+        background: $color-primary;
+    }
+
+    @media (max-width: 767px) {
+        height: auto;
+        background: $color-primary;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+        padding: 1.5em 2em 0em;
+    }
+
+    @media (min-width: 1024px) {
+    }
+
+    &.fixed {
+        position: fixed;
+        top: -105px;
+        left: 0;
+        width: 100%;
+        transform: translateY(0);
+        transition: all 0.32s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    &.fixed.up {
+        transform: translateY(90px);
+        @media (max-width: 767px) {
+            transform: translateY(105px);
+        }
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    svg {
+        text-transform: uppercase;
+        fill: #fff;
+    }
+}
+
+.app-header__logo {
+    margin: 0;
+    @media (max-width: 767px) {
+        position: relative;
+        z-index: 2;
+        background: #2096d4;
+    }
+    @media (min-width: 768px) {
+        flex: 1 1 100%;
+    }
+
+    a {
+        display: block;
+        padding: 0.5em 1em;
+    }
+    svg {
+        display: inline-block;
+        width: 3em;
+        height: 2.25em;
+        vertical-align: top;
+    }
+    span {
+        display: inline-block;
+        padding: 0.75em 1em 0 0.5em;
+    }
+}
+
+.app-header__navigation {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    list-style: none;
+    @media (max-width: 767px) {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #2096d4;
+        pointer-events: none;
+        transform: translateY(-100%);
+        transition: all 0.32s ease;
+    }
+    @media (min-width: 768px) {
+        display: flex;
+    }
+    @media (max-width: 768px) {
+        & li:nth-child(2) a {
+            padding: 0.25rem 1rem;
+        }
+    }
+
+    a {
+        display: block;
+        padding: 1em;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+
+/* Toggler */
+
+.app-header__toggle-checkbox {
+    display: none;
+}
+.app-header__toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2em;
+    height: 3.25em;
+    margin: 0 0.75rem;
+    padding: 0.75rem;
+    background: $color-primary;
+    cursor: pointer;
+    z-index: 2;
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    span {
+        font: 0/0 a;
+        display: block;
+        position: absolute;
+        top: calc(50% - 3px);
+        right: 0;
+        width: 100%;
+        height: 4px;
+        transition: background-color 0.2s;
+        background-color: #fff;
+        font-size: 0;
+        border-radius: 10px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            content: '';
+            transition: all 0.4s;
+            background: #fff;
+            border-radius: 10px;
+        }
+        &:before {
+            width: 90%;
+            transform: translateY(-250%);
+        }
+        &:after {
+            width: 70%;
+            transform: translateY(250%);
+        }
+    }
+}
+@media (max-width: 767px) {
+    #app-header__toggler:checked ~ .app-header__navigation {
+        pointer-events: auto;
+        transform: translateY(0);
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.app-header__toggle-checkbox:checked ~ .app-header__toggler span {
+    background-color: rgba(0, 0, 0, 0);
+}
+.app-header__toggle-checkbox:checked ~ .app-header__toggler span:before {
+    width: 100%;
+    transform: translateY(0) rotate(45deg);
+}
+.app-header__toggle-checkbox:checked ~ .app-header__toggler span:after {
+    width: 100%;
+    transform: translateY(0) rotate(-45deg);
+}
+
+@keyframes foldMove {
+    0% {
+        transform: skewY(0);
+    }
+    25% {
+        transform: skewY(1deg);
+    }
+    75% {
+        transform: skewY(-1deg);
+    }
+    100% {
+        transform: skewY(0);
+    }
+}

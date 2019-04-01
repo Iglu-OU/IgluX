@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 251 151" style="enable-background:new 0 0 251 151;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.1;fill:url(#SVGID_1_);enable-background:new    ;}
+	.st1{opacity:0.1;fill:url(#SVGID_2_);enable-background:new    ;}
+	.st2{fill:#BDBBBB;}
+</style>
+<title>Kadi-base</title>
+<radialGradient id="SVGID_1_" cx="-1567.6416" cy="-2465.032" r="71.73" gradientTransform="matrix(-0.8439 0.2117 -0.1362 -0.5432 -1544.5201 -901.3558)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+	<stop  offset="0.4" style="stop-color:#FFFFFF;stop-opacity:0.27"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path class="st0" d="M183.7,137.9l-119.5,30c-6.2,1.5-12.4-2.2-14-8.4L32,86.7c-1.5-6.2,2.2-12.4,8.4-14l119.5-30
+	c6.2-1.5,12.4,2.2,14,8.4l18.3,72.8C193.6,130.1,189.9,136.3,183.7,137.9z"/>
+<radialGradient id="SVGID_2_" cx="431.8468" cy="1167.9729" r="71.73" gradientTransform="matrix(0.7789 0.3876 -0.2495 0.5013 44.9261 -685.2256)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+	<stop  offset="0.4" style="stop-color:#FFFFFF;stop-opacity:0.27"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path class="st1" d="M56.3-2l110.3,54.9c5.7,2.8,8,9.7,5.2,15.4l-33.4,67.2c-2.8,5.7-9.7,8-15.4,5.2l-110.4-55
+	c-5.7-2.8-8-9.7-5.2-15.4L40.8,3.1C43.7-2.6,50.6-4.9,56.3-2z"/>
+<path class="st2" d="M155.8,61.2c-3.3,0.7-3.2,6-0.9,6.5c2.6,0.5,5,0.1,5.4-1.6S159.5,60.5,155.8,61.2z"/>
+</svg>

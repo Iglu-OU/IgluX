@@ -1,0 +1,41 @@
+img {
+    display: block;
+    width: 100%;
+    outline: none;
+}
+.cover {
+    position: relative;
+    display: block;
+    padding-bottom: 50%;
+    overflow: hidden;
+    background: rgba(33, 37, 41, 0.2);
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        outline: none;
+    }
+
+    &--portrait {
+        padding-bottom: 150%;
+    }
+    &--landscape {
+        padding-bottom: 66.6665%;
+    }
+    &--wide {
+        padding-bottom: 50%;
+    }
+    &--superwide {
+        padding-bottom: 25%;
+    }
+    &--square {
+        padding-bottom: 100%;
+    }
+    &--circle {
+        padding-bottom: 100%;
+        border-radius: 50%;
+    }
+}
