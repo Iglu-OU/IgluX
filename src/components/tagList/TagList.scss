@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.tag-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+    font-style: italic;
+    color: $color-primary;
+
+    li {
+        display: inline-block;
+
+        &:before {
+            padding-left: 3px;
+            content: '\00a0\2022\00a0\00a0';
+        }
+
+        &:first-child {
+            &:before {
+                padding-left: 0;
+                content: '';
+            }
+        }
+    }
+}
