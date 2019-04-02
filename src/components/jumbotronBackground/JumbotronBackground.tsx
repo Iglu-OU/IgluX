@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import './Stars.scss';
+import './JumbotronBackground.scss';
 
-export class Stars extends React.Component {
+export class JumbotronBackground extends React.Component {
     componentDidMount() {
         window.addEventListener('resize', this.resizeWrapper);
         this.resizeWrapper();
@@ -13,13 +13,13 @@ export class Stars extends React.Component {
         const waterIceTop = waterIce ? waterIce.getBoundingClientRect().top : 0;
 
         document
-            .getElementsByClassName('star__Wrapper')[0]
+            .getElementsByClassName('jumbotron__background')[0]
             .setAttribute('style', `height: ${waterIceTop + window.pageYOffset}px`);
     }
 
     render() {
         return (
-            <div className="star__Wrapper">
+            <div className="jumbotron__background">
                 <div className="stars1 star" />
                 <div className="stars2 star" />
                 <div className="stars3 star" />

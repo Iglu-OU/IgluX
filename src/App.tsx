@@ -7,12 +7,12 @@ import { WorkFlow } from './components/workFlow/WorkFlow';
 import { Journey } from './components/journey/Journey';
 import { Team } from './components/team/Team';
 import { Footer } from './components/footer/Footer';
-import { Stars } from './components/stars/Stars';
 import { Navigation } from './components/navigation/Navigation';
 import { Jumbotron } from './components/jumbotron/Jumbotron';
 import { Portfolio } from './components/portfolio/Portfolio';
 
 import './styles/main.scss';
+import { JumbotronBackground } from './components/jumbotronBackground/JumbotronBackground';
 
 class App extends React.Component {
     constructor(props: any) {
@@ -68,7 +68,7 @@ class App extends React.Component {
             <>
                 <Navigation logo={Logo} />
 
-                <Stars />
+                <JumbotronBackground />
 
                 <main>
                     <Jumbotron />
