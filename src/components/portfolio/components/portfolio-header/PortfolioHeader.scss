@@ -8,7 +8,7 @@
     &__title {
         z-index: 6;
         position: absolute;
-        bottom: 4rem;
+        bottom: 5rem;
         margin-top: 0;
         padding: 0 8rem;
         color: $color-typography-white;
@@ -20,7 +20,8 @@
     &__background {
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 800px;
+        min-height: 100%;
     }
 
     &__characters {
@@ -44,5 +45,10 @@
         top: -17rem;
         right: 0;
         width: 40rem;
+
+        @media (max-width: 1220px) {
+            left: 36rem;
+            right: auto;
+        }
     }
 }
