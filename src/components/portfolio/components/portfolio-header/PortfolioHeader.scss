@@ -1,6 +1,8 @@
 @import '../../../../styles/variables';
 
 .portfolio-header {
+    height: 300px;
+
     &__background {
         z-index: 3;
         position: absolute;
