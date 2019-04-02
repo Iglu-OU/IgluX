@@ -4,4 +4,8 @@
     position: relative;
     background: $color-dark;
     margin-top: -1rem;
+
+    @media (max-width: 770px) {
+        background-image: linear-gradient(to bottom, #032230, #043f5a);
+    }
 }

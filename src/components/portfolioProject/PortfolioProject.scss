@@ -1,6 +1,10 @@
 .project {
     position: relative;
     margin-top: -100px;
+
+    @media (max-width: 770px) {
+        margin-top: 0;
+    }
 }
 
 .project__content {
@@ -15,22 +19,19 @@
     @media (max-width: 770px) {
         padding: 100px 40px;
         flex-direction: column;
-
-        .project--right & {
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-        }
     }
 
     .project--right & {
         align-items: flex-end;
         flex-direction: row-reverse;
         text-align: right;
-    }
-}
 
-.project--middle {
+        @media (max-width: 770px) {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
 }
 
 .project__background {
@@ -50,8 +51,16 @@
     margin: 0 2rem 0 0;
     align-self: center;
 
+    @media (max-width: 770px) {
+        margin: 0;
+    }
+
     .project--right & {
         margin: 0 0 0 2rem;
+
+        @media (max-width: 770px) {
+            margin: 0;
+        }
     }
 
     * {
@@ -71,10 +80,15 @@
 
     @media (max-width: 770px) {
         max-width: 100%;
+        align-items: center;
     }
 
     .project--right & {
         align-items: flex-end;
+
+        @media (max-width: 770px) {
+            align-items: center;
+        }
     }
 }
 
