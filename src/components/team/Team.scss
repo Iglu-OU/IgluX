@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 #team {
-    padding: 2rem 0 15rem;
+    padding: 2rem 0 25rem;
     background: #032230;
     position: relative;
     width: 100%;
@@ -51,19 +51,38 @@
 }
 
 .team__clouds {
-    width: 100%;
-    height: auto;
-    min-height: 100%;
     position: absolute;
-    bottom: -1px;
     left: 0;
     right: 0;
-    top: 150px;
-    z-index: 3;
-    overflow: hidden;
+    top: 0;
+    bottom: 300px;
 
     @media (max-width: 772px) {
         display: none;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background-repeat: repeat-y;
+    }
+
+    &:before {
+        left: 0;
+        background-image: url('../../assets/team/left_clouds.svg');
+        background-position-y: 400px;
+        background-position-x: left;
+    }
+
+    &:after {
+        right: 0;
+        background-image: url('../../assets/team/right_clouds.svg');
+        background-position-y: 290px;
+        background-position-x: right;
     }
 }
 

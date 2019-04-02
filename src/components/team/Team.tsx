@@ -3,8 +3,6 @@ import { teamMemberList } from '../../content/teamMembers';
 import { ITeamMember, TeamMember } from '../teamMember/TeamMember';
 import { TeamStars } from '../teamStars/TeamStars';
 
-import { ReactComponent as TeamCloudsSvg } from '../../assets/team/clouds.svg';
-
 import './Team.scss';
 
 export class Team extends React.Component {
@@ -55,7 +53,7 @@ export class Team extends React.Component {
             <section id="team">
                 <TeamStars />
 
-                <TeamCloudsSvg />
+                <div className="team__clouds" />
 
                 <div className="team__top-fold" />
                 {this.renderTeam()}

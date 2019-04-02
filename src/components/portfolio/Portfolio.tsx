@@ -8,8 +8,8 @@ export class Portfolio extends React.PureComponent {
     render() {
         return (
             <section className="section portfolio" id="portfolio">
-                <PortfolioHeader />
-                <PortfolioContent />
+                <PortfolioHeader title="What have we done" />
+                {<PortfolioContent />}
             </section>
         );
     }
