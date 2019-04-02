@@ -6,7 +6,15 @@
 .project__content {
     display: flex;
     color: white;
-    padding: 100px 0;
+    padding: 100px 160px;
+
+    @media (max-width: 1180px) {
+        padding: 100px 80px;
+    }
+
+    @media (max-width: 770px) {
+        padding: 100px 80px;
+    }
 
     .project--right & {
         align-items: flex-end;
@@ -45,6 +53,14 @@
     flex-direction: column;
     max-width: 40%;
     padding-top: 1rem;
+
+    @media (max-width: 1180px) {
+        max-width: 80%;
+    }
+
+    @media (max-width: 770px) {
+        max-width: 100%;
+    }
 
     .project--right & {
         align-items: flex-end;

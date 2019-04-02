@@ -2,6 +2,8 @@
 
 .portfolio-header {
     height: 300px;
+    position: relative;
+    z-index: 4;
 
     &__title {
         z-index: 6;

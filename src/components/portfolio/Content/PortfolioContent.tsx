@@ -5,8 +5,8 @@ import { IProject, PortfolioProject } from '../../portfolioProject/PortfolioProj
 import './PortfolioContent.scss';
 
 export class PortfolioContent extends React.PureComponent {
-    renderProject(project: IProject, position: 'left' | 'right') {
-        return <PortfolioProject project={project} position={position} />;
+    renderProject(project: IProject, i: number) {
+        return <PortfolioProject key={i} project={project} position={this.getPosition(i)} />;
     }
 
     getPosition(i: number): 'left' | 'right' {
@@ -16,7 +16,7 @@ export class PortfolioContent extends React.PureComponent {
     render() {
         return (
             <div className="portfolio__content">
-                {portfolioProjects.map((project, i: number) => this.renderProject(project, this.getPosition(i)))}
+                {portfolioProjects.map((project, i: number) => this.renderProject(project, i))}
             </div>
         );
     }
