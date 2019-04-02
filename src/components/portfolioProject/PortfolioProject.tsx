@@ -9,7 +9,7 @@ import { ReactComponent as BottomWave } from '../../assets/portfolio/bottom-wave
 
 import './PortfolioProject.scss';
 
-export type TProjects = 'Erik Orgu' | 'VEF' | 'E-showcase Briefing';
+export type TProjects = 'Erik Orgu' | 'Estonian responsible business index' | 'E-showcase Briefing';
 
 export interface IProject {
     title: TProjects;
@@ -39,7 +39,7 @@ export class PortfolioProject extends React.PureComponent<IPortfolioProjectProps
         switch (project) {
             case 'Erik Orgu':
                 return <DietlessLogo />;
-            case 'VEF':
+            case 'Estonian responsible business index':
                 return <VefLogo />;
             case 'E-showcase Briefing':
                 return <ShowroomLogo />;
@@ -52,7 +52,7 @@ export class PortfolioProject extends React.PureComponent<IPortfolioProjectProps
         switch (project) {
             case 'Erik Orgu':
                 return <Topwave className={className} />;
-            case 'VEF':
+            case 'Estonian responsible business index':
                 return <MiddleWave className={className} />;
             case 'E-showcase Briefing':
                 return <BottomWave className={className} />;
