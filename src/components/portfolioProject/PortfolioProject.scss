@@ -1,5 +1,6 @@
 .project {
     position: relative;
+    margin-top: -100px;
 }
 
 .project__content {
@@ -55,15 +56,7 @@
 
 .project__title {
     text-align: inherit;
-    margin: 0;
-}
-
-.project__tags {
-    text-align: inherit;
-}
-
-.project__description {
-    margin-bottom: 2.25rem;
+    margin: 0 0 2.25rem 0;
     position: relative;
 
     &:after {
@@ -81,6 +74,14 @@
         right: 0;
         left: unset;
     }
+}
+
+.project__tags {
+    text-align: inherit;
+}
+
+.project__description {
+    position: relative;
 }
 
 .project__collaboration-title {

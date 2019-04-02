@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { TagList } from '../tagList/TagList';
 import { ReactComponent as DietlessLogo } from '../../assets/portfolio/dietless-est.svg';
+import { ReactComponent as VefLogo } from '../../assets/portfolio/vef-logo.svg';
+import { ReactComponent as ShowroomLogo } from '../../assets/portfolio/showroom-logo.svg';
 import { ReactComponent as Topwave } from '../../assets/portfolio/top-wave.svg';
 import { ReactComponent as MiddleWave } from '../../assets/portfolio/middle-wave.svg';
 import { ReactComponent as BottomWave } from '../../assets/portfolio/bottom-wave.svg';
 
 import './PortfolioProject.scss';
 
-export type TProjects = 'Dietless' | 'middle' | 'bottom';
+export type TProjects = 'Erik Orgu' | 'VEF' | 'E-showcase Briefing';
 
 export interface IProject {
     title: TProjects;
@@ -35,12 +37,12 @@ export class PortfolioProject extends React.PureComponent<IPortfolioProjectProps
 
     getIcon(project: TProjects) {
         switch (project) {
-            case 'Dietless':
+            case 'Erik Orgu':
                 return <DietlessLogo />;
-            case 'middle':
-                return <DietlessLogo />;
-            case 'bottom':
-                return <DietlessLogo />;
+            case 'VEF':
+                return <VefLogo />;
+            case 'E-showcase Briefing':
+                return <ShowroomLogo />;
         }
     }
 
@@ -48,11 +50,11 @@ export class PortfolioProject extends React.PureComponent<IPortfolioProjectProps
         const className = 'project__background';
 
         switch (project) {
-            case 'Dietless':
+            case 'Erik Orgu':
                 return <Topwave className={className} />;
-            case 'middle':
+            case 'VEF':
                 return <MiddleWave className={className} />;
-            case 'bottom':
+            case 'E-showcase Briefing':
                 return <BottomWave className={className} />;
         }
     }
