@@ -1,6 +1,8 @@
 @import '../../../styles/variables';
 
 .portfolio__content {
+    z-index: 3;
+    position: relative;
     margin-top: -25rem;
     padding-top: 25rem;
     background: $color-dark;
