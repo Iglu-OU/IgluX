@@ -1,0 +1,67 @@
+.project {
+    display: flex;
+    color: white;
+    position: relative;
+}
+
+.project--right {
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.project__logo {
+    margin: 0 2rem 0 0;
+    align-self: center;
+
+    .project--right & {
+        margin: 0 0 0 2rem;
+    }
+
+    * {
+        width: 150px;
+    }
+}
+
+.project__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+
+    .project--right & {
+        align-items: flex-end;
+    }
+}
+
+.project__description {
+}
+
+.project__title {
+    text-align: inherit;
+    margin: 0;
+}
+
+.project__tags {
+    text-align: inherit;
+}
+
+.project__description {
+    margin-bottom: 2.25rem;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: calc(-2.25rem / 2 - 6px);
+        left: 0;
+        height: 12px;
+        width: 126px;
+        background: url(../../assets/team/title-line-team.svg) no-repeat top center;
+        background-size: 90%;
+    }
+
+    .project--right &:after {
+        right: 0;
+        left: unset;
+    }
+}
