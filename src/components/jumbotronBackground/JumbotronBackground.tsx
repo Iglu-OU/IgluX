@@ -13,7 +13,7 @@ export class JumbotronBackground extends React.Component {
         const waterIceTop = waterIce ? waterIce.getBoundingClientRect().top : 0;
 
         document
-            .getElementsByClassName('star__Wrapper')[0]
+            .getElementsByClassName('jumbotron__background')[0]
             .setAttribute('style', `height: ${waterIceTop + window.pageYOffset}px`);
     }
 
