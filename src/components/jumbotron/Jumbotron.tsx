@@ -18,6 +18,45 @@ export class Jumbotron extends React.Component<{}, IJumbotronState> {
     }
 
     componentDidMount() {
+        /**
+         * Jumbotron transparent gradient animation when scrolling
+         */
+        let didScroll = false;
+
+        document.addEventListener('scroll', () => {
+            didScroll = true;
+        });
+
+        setInterval(() => {
+            if (didScroll) {
+                calculateNav();
+                didScroll = false;
+            }
+        }, 50);
+
+        const jumbotron = document.getElementById('jumbotron');
+        const transitionContainerJumbotron = document.getElementById('transform-header__jumbotron');
+        const transitionContainerWorkflow = document.getElementById('process');
+        const transitionStartPoint = Math.max(0, window.innerHeight * 0.25);
+        const windowHeight = isNaN(window.innerHeight) ? window.outerHeight : window.innerHeight;
+        const iOSChromeDetected = /CriOS/.test(navigator.userAgent);
+
+        if (jumbotron && iOSChromeDetected) {
+            jumbotron.style.height = `${windowHeight}px`;
+        }
+
+        const calculateNav = () => {
+            const scrollY = window.pageYOffset || document!.documentElement!.scrollTop;
+
+            if (scrollY < transitionStartPoint) {
+                transitionContainerJumbotron!.classList.remove('transform-header__jumbotron--alt');
+                transitionContainerWorkflow!.classList.remove('transform-header__workflow--alt');
+            } else {
+                transitionContainerJumbotron!.classList.add('transform-header__jumbotron--alt');
+                transitionContainerWorkflow!.classList.add('transform-header__workflow--alt');
+            }
+        };
+
         this.animate();
     }
 
