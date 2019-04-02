@@ -45,5 +45,10 @@
         top: -17rem;
         right: 0;
         width: 40rem;
+
+        @media (max-width: 1220px) {
+            left: 36rem;
+            right: auto;
+        }
     }
 }
