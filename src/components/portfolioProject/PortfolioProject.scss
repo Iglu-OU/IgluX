@@ -1,10 +1,20 @@
 .project {
     position: relative;
     margin-top: -100px;
+
+    @media (min-width: 771px) {
+        &:nth-child(2):before {
+            content: url('../../assets/portfolio/trees.svg');
+            position: absolute;
+            right: 0;
+            bottom: 44%;
+        }
+    }
 }
 
 .project__content {
     display: flex;
+    position: relative;
     color: white;
     padding: 100px 160px;
 
