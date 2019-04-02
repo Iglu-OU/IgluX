@@ -1,4 +1,26 @@
 @import '../../../../styles/variables';
 
 .portfolio-header {
+    &__background {
+        z-index: 3;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__iglu {
+        z-index: 5;
+        position: absolute;
+        top: -1rem;
+        left: 0;
+        width: 30rem;
+    }
+
+    &__eskimos {
+        z-index: 5;
+        position: absolute;
+        top: -12rem;
+        right: 0;
+        width: 30rem;
+    }
 }
