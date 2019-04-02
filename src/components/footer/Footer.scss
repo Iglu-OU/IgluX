@@ -4,6 +4,8 @@
     background: #011e2b;
     color: #fff;
     padding: 0 1rem;
+    position: relative;
+    z-index: 4;
 
     @media (max-width: 767px) {
         font-size: 14px;

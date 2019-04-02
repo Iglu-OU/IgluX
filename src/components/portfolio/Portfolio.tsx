@@ -9,7 +9,7 @@ export class Portfolio extends React.PureComponent {
         return (
             <section className="section portfolio" id="portfolio">
                 <PortfolioHeader />
-                {<PortfolioContent />}
+                <PortfolioContent />
             </section>
         );
     }
