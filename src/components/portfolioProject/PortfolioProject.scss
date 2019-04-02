@@ -6,12 +6,30 @@
         margin-top: 0;
     }
 
-    @media (min-width: 771px) {
+    @media (min-width: 1050px) {
         &:nth-child(2):before {
             content: url('../../assets/portfolio/trees.svg');
             position: absolute;
             right: 0;
-            bottom: 44%;
+            bottom: 40%;
+        }
+
+        &:nth-child(3):before {
+            content: url('../../assets/portfolio/trees.svg');
+            transform: scale(-1, 1);
+            position: absolute;
+            left: 0;
+            bottom: 17%;
+        }
+    }
+
+    @media (max-width: 1350px) {
+        &:nth-child(2):before {
+            right: -20%;
+        }
+
+        &:nth-child(3):before {
+            left: -20%;
         }
     }
 
@@ -154,11 +172,5 @@
     position: relative;
 }
 
-.project__collaboration-title {
-    font-size: 16px;
-    margin: 0;
-}
-
 .project__collaboration {
-    margin: 0;
 }

@@ -40,7 +40,7 @@ export class Journey extends React.Component {
 
         const mask = document.querySelector('.mask');
 
-        if (scrolledOfJourney > 156 && scrolledOfJourney < 550) {
+        if (scrolledOfJourney > 156 && scrolledOfJourney < 650) {
             if (!this.minHeight || this.minHeight < scrolledOfJourney) {
                 this.minHeight = scrolledOfJourney;
             } else if (this.minHeight > scrolledOfJourney) {
@@ -49,9 +49,9 @@ export class Journey extends React.Component {
             if (mask) {
                 (mask as any).style.top = scrolledOfJourney + 'px';
             }
-        } else if (scrolledOfJourney >= 550) {
+        } else if (scrolledOfJourney >= 650) {
             if (mask) {
-                (mask as any).style.top = 550 + 'px';
+                (mask as any).style.top = 650 + 'px';
             }
         }
     }

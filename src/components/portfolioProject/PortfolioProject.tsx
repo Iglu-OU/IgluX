@@ -30,8 +30,6 @@ export class PortfolioProject extends React.PureComponent<IPortfolioProjectProps
 
         classArray.push(`project--${this.props.position}`);
 
-        classArray.push(`project--${this.props.project.title}`);
-
         return classArray.join(' ');
     }
 
@@ -71,8 +69,7 @@ export class PortfolioProject extends React.PureComponent<IPortfolioProjectProps
                         <h2 className="project__title">{project.title}</h2>
                         <TagList className="project__tags" tags={project.tags} />
                         <p className="project__description">{project.description}</p>
-                        <h5 className="project__collaboration-title">Collaborations</h5>
-                        <p className="project__collaboration">{project.collaborations}</p>
+                        <p className="project__collaboration">Collaborations: {project.collaborations}</p>
                     </div>
                 </div>
 

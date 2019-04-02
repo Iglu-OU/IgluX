@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { portfolioProjects } from '../../../content/portfolioProjects';
-import { IProject, PortfolioProject } from '../../portfolioProject/PortfolioProject';
+import { portfolioProjects } from '../../../../content/portfolioProjects';
+import { IProject, PortfolioProject } from '../../../portfolioProject/PortfolioProject';
 
 import './PortfolioContent.scss';
 
