@@ -6,13 +6,20 @@ import { ReactComponent as PortfolioEskimos } from '../../../../assets/portfolio
 
 import './PortfolioHeader.scss';
 
-export class PortfolioHeader extends React.PureComponent {
+export interface IPortfolioHeaderProps {
+    title: string;
+}
+
+export class PortfolioHeader extends React.PureComponent<IPortfolioHeaderProps> {
     render() {
         return (
             <div className="portfolio-header">
                 <PortfolioBG className="portfolio-header__background" />
-                <PortfolioIglu className="portfolio-header__iglu" />
-                <PortfolioEskimos className="portfolio-header__eskimos" />
+                <div className="portfolio-header__characters">
+                    <h2 className="portfolio-header__title">{this.props.title}</h2>
+                    <PortfolioIglu className="portfolio-header__iglu" />
+                    <PortfolioEskimos className="portfolio-header__eskimos" />
+                </div>
             </div>
         );
     }
