@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import './TeamMember.scss';
+import { TagList } from '../tagList/TagList';
 
 export interface ITeamMember {
     name: string;
@@ -61,11 +62,7 @@ export class TeamMember extends React.Component<ITeamMemberProps> {
                     <p>
                         {description} {descriptionExtended}
                     </p>
-                    <ul className="team-member__skills">
-                        {skillSet.map((skill: string, skillSetKey: number) => {
-                            return <li key={`skillset-${skillSetKey}`}>{skill}</li>;
-                        })}
-                    </ul>
+                    <TagList tags={skillSet} className="team-member__skills" />
                 </div>
             </li>
         );
