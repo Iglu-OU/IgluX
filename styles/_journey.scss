@@ -6,20 +6,17 @@
 }
 
 .journey {
-    padding-top: 2rem;
+    padding: 2rem 0;
     position: relative;
     background: #1396d4 url(../assets/Timeline_line.svg) no-repeat center;
     background-size: contain;
     background-position-y: 100px;
-    top: 0;
-    height: 600px;
     margin: 0 auto;
     max-width: 1250px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 770px) {
         background: #1396d4;
         max-width: 750px;
-        height: 700px;
     }
 
     a {
@@ -34,25 +31,20 @@
             text-align: center;
             text-transform: uppercase;
             font-weight: 700;
-            margin: 0;
-            @media (max-width: 900px) {
+            margin: 0 0 1rem 0;
+            @media (max-width: 770px) {
                 text-align: left;
                 padding: 0 41px;
             }
         }
     }
     &__content {
-        position: absolute;
-        top: 100px;
-        bottom: 75px;
-        left: 0;
-        right: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         padding: 0 41px;
 
-        @media (max-width: 900px) {
+        @media (max-width: 770px) {
             padding-right: 20px;
             bottom: 15px;
         }
@@ -81,7 +73,7 @@
         left: 0;
         right: 60%;
         justify-content: flex-end;
-        @media (min-width: 901px) {
+        @media (min-width: 771px) {
             text-align: right;
         }
     }
@@ -92,7 +84,7 @@
         justify-content: flex-start;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 770px) {
         &--left,
         &--right {
             left: 0;
@@ -110,8 +102,10 @@
     max-width: 350px;
     color: #ffffff;
     transition: opacity 800ms, visibility 800ms;
-    @media (max-width: 900px) {
+
+    @media (max-width: 770px) {
         max-width: 100%;
+        margin: 0.75rem 0;
     }
 }
 
@@ -133,7 +127,7 @@
             transform: scaleX(-1);
             filter: flipH();
 
-            @media (max-width: 900px) {
+            @media (max-width: 770px) {
                 right: unset;
                 left: -25px;
                 transform: none;
@@ -146,7 +140,7 @@
         }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 770px) {
         font-size: 20px;
     }
 }
@@ -156,7 +150,7 @@
     font-size: 22px;
     font-weight: 500;
 
-    @media (max-width: 900px) {
+    @media (max-width: 770px) {
         font-size: 18px;
     }
 }
@@ -166,7 +160,7 @@
     margin: 0;
     opacity: 0.8;
 
-    @media (max-width: 900px) {
+    @media (max-width: 770px) {
         font-size: 16px;
     }
 }
