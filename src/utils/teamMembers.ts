@@ -29,7 +29,7 @@ import AlinaPortraitSec from '../../assets/team/secondary/alina.svg';
 export const teamMemberList: ITeamMember[] = [
     {
         name: 'Laura Asu',
-        title: 'Team lead, UI & UX analyst',
+        title: 'Team lead, UX & UI analyst',
         description: 'Keeps the team inspired and things running, smoothly.',
         descriptionExtended: 'She is one of the few who can perform open-heart surgery on a live system.',
         imageUrl: 'https://www.linkedin.com/in/laura-asu-40460663/',
@@ -42,7 +42,7 @@ export const teamMemberList: ITeamMember[] = [
     },
     {
         name: 'Kristo Danilson',
-        title: 'UI & UX analyst',
+        title: 'UX & UI analyst',
         description: 'Passionate about users and the business side of IT.',
         descriptionExtended:
             'There is a rumour that he discovered the true meaning of disco. But then they changed it.',
@@ -56,7 +56,7 @@ export const teamMemberList: ITeamMember[] = [
     },
     {
         name: 'Joonas Kessel',
-        title: 'UI & UX analyst',
+        title: 'UX & UI analyst',
         description: `Ensures the projects are on track and the users' needs are met.`,
         descriptionExtended:
             'Watch out, you will most likely be hit by several witty remarks within a minute. We like.',
@@ -70,10 +70,10 @@ export const teamMemberList: ITeamMember[] = [
     },
     {
         name: 'Alina Trussova',
-        title: 'Art Director, UI & UX Designer',
+        title: 'Art Director, UX & UI Designer',
         description: 'Sparks the minds of designers while balancing creativity with rationality.',
         descriptionExtended: 'When everything is elegant and perfect on earth… the moon will be conquered.',
-        imageUrl: 'Art Director, UI & UX Designer',
+        imageUrl: 'Art Director, UX & UI Designer',
         imageSrc: AlinaPortrait,
         imageSecSrc: AlinaPortraitSec,
         imageAlt: `Alina Trussova's portrait... if she was an Eskimo`,
@@ -83,7 +83,7 @@ export const teamMemberList: ITeamMember[] = [
     },
     {
         name: 'Kadi Lukas',
-        title: 'UI & UX Designer',
+        title: 'UX & UI Designer',
         description: 'Has an eye or two (probably three) for detail.',
         descriptionExtended: 'The third eye helped her win a staring contest against Chuck Norris.',
         imageUrl: 'https://www.linkedin.com/in/kadi-lukas-a64a99130/',
@@ -96,7 +96,7 @@ export const teamMemberList: ITeamMember[] = [
     },
     {
         name: 'Egle Kiik',
-        title: 'UI & UX Designer',
+        title: 'UX & UI Designer',
         description: 'Bridges the gap between business and end user.',
         descriptionExtended: "Making digital rainbows with her unicorn skillset to make you feel like you're flying.",
         imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
