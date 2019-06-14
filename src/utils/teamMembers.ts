@@ -12,6 +12,7 @@ import IvarPortrait from '../../assets/team/primary/ivar.svg';
 import TerasmaaPortrait from '../../assets/team/primary/terasmaa.svg';
 import KasparPortrait from '../../assets/team/primary/kaspar.svg';
 import AlinaPortrait from '../../assets/team/primary/alina.svg';
+import Praktikantortrait from '../../assets/team/primary/praktikant.svg';
 
 import LauraPortraitSec from '../../assets/team/secondary/laura.svg';
 import KristoPortraitSec from '../../assets/team/secondary/kristo.svg';
@@ -195,6 +196,19 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Kaspar Suvi's portrait... if he was an Eskimo`,
         skillSet: ['React', 'Angular', 'TypeScript', 'BEM'],
         position: 'fe',
+        noHover: false,
+    },
+    {
+        name: 'Jana Jevtuhh',
+        title: 'UX & UI intern',
+        description: 'Opening her heart to new experiences and striving for perfection in everything she does.',
+        descriptionExtended: 'https://www.linkedin.com/in/jana-jevtuhh-514271149/',
+        imageUrl: 'https://www.linkedin.com/in/kaspar-suvi-141080120/',
+        imageSrc: Praktikantortrait,
+        imageSecSrc: false,
+        imageAlt: `Jana Jevtuhh's portrait... if he was an Eskimo`,
+        skillSet: ['Graphic design', 'User research', 'Branding', 'Illustrations'],
+        position: 'designer',
         noHover: false,
     },
 ];
