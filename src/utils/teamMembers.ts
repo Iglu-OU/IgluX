@@ -104,7 +104,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSrc: EglePortrait,
         imageSecSrc: EglePortraitSec,
         imageAlt: `Egle Kiik's portrait... if she was an Eskimo`,
-        skillSet: ['Video editing', 'Printed media', 'UX writing', 'UI design', 'User research', 'User testing'],
+        skillSet: ['Printed media', 'Microcopy', 'UX analysis', 'UX/UI design', 'UX research', 'User testing'],
         position: 'designer',
         noHover: false,
     },
