@@ -14,7 +14,7 @@ export class Team extends React.Component {
             <div className="team-wrapper">
                 {this.renderTeamSection(
                     'UX & UI Analysts',
-                    "The invisible force behind a system, helping users reach point C without realizing they've already passed point B.",
+                    'The invisible force behind a system, helping users reach point C without realizing they\'ve already passed point B.',
                     analyst,
                 )}
                 {this.renderTeamSection(

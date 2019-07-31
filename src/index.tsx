@@ -104,7 +104,7 @@ class App extends React.Component<{}, IAppState> {
                 headingShouldBreak: document.body.getBoundingClientRect().width > 460,
             });
         }
-    };
+    }
 
     animate() {
         document.addEventListener('DOMContentLoaded', animateContent(), false);

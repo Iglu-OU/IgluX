@@ -82,7 +82,7 @@ export class Journey extends React.Component {
             { position: 'left', title: 'First single page application', year: '2015', project: 'Südameapteek' },
             { position: 'right', title: 'First app', year: '2016', project: 'Dietless' },
             { position: 'left', title: 'First UX project', year: '2016', project: 'Responsible business index' },
-            { position: 'right', title: "Iglu's Digital Agency team is created", year: '2018' },
+            { position: 'right', title: 'Iglu\'s Digital Agency team is created', year: '2018' },
         ];
 
         return (
