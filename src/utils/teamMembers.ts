@@ -12,7 +12,6 @@ import IvarPortrait from '../../assets/team/primary/ivar.svg';
 import TerasmaaPortrait from '../../assets/team/primary/terasmaa.svg';
 import KasparPortrait from '../../assets/team/primary/kaspar.svg';
 import AlinaPortrait from '../../assets/team/primary/alina.svg';
-import Praktikantortrait from '../../assets/team/primary/praktikant.svg';
 
 import LauraPortraitSec from '../../assets/team/secondary/laura.svg';
 import KristoPortraitSec from '../../assets/team/secondary/kristo.svg';
@@ -99,7 +98,7 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Egle Kiik',
         title: 'UX & UI Designer',
         description: 'Bridges the gap between business and end user.',
-        descriptionExtended: 'Making digital rainbows with her unicorn skillset to make you feel like you\'re flying.',
+        descriptionExtended: "Making digital rainbows with her unicorn skillset to make you feel like you're flying.",
         imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
         imageSrc: EglePortrait,
         imageSecSrc: EglePortraitSec,
@@ -165,7 +164,7 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Ivar Kallejärv',
         title: 'Front-end developer',
         description: 'Adept at data visualization complemented by knowledge of system analysis.',
-        descriptionExtended: 'He could love books even more but they don\'t have landscape mode.',
+        descriptionExtended: "He could love books even more but they don't have landscape mode.",
         imageUrl: 'https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/',
         imageSrc: IvarPortrait,
         imageSecSrc: IvarPortraitSec,
@@ -196,19 +195,6 @@ export const teamMemberList: ITeamMember[] = [
         imageAlt: `Kaspar Suvi's portrait... if he was an Eskimo`,
         skillSet: ['React', 'Angular', 'TypeScript', 'BEM'],
         position: 'fe',
-        noHover: false,
-    },
-    {
-        name: 'Jana Jevtuhh',
-        title: 'UX & UI intern',
-        description: 'Opening her heart to new experiences and striving for perfection in everything she does.',
-        descriptionExtended: '',
-        imageUrl: 'https://www.linkedin.com/in/jana-jevtuhh-514271149/',
-        imageSrc: Praktikantortrait,
-        imageSecSrc: false,
-        imageAlt: `Jana Jevtuhh's portrait... if he was an Eskimo`,
-        skillSet: ['Graphic design', 'User research', 'Branding', 'Illustrations'],
-        position: 'designer',
         noHover: false,
     },
 ];
