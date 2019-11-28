@@ -3,7 +3,6 @@ import { ITeamMember } from '../index';
 import LauraPortrait from '../../assets/team/primary/laura.svg';
 import KristoPortrait from '../../assets/team/primary/kristo.svg';
 import JoonasPortrait from '../../assets/team/primary/joonas.svg';
-import KadiPortrait from '../../assets/team/primary/kadi.svg';
 import EglePortrait from '../../assets/team/primary/egle.svg';
 import ViljarPortrait from '../../assets/team/primary/viljar.svg';
 import AntonPortrait from '../../assets/team/primary/anton.svg';
@@ -16,7 +15,6 @@ import AlinaPortrait from '../../assets/team/primary/alina.svg';
 import LauraPortraitSec from '../../assets/team/secondary/laura.svg';
 import KristoPortraitSec from '../../assets/team/secondary/kristo.svg';
 import JoonasPortraitSec from '../../assets/team/secondary/joonas.svg';
-import KadiPortraitSec from '../../assets/team/secondary/kadi.svg';
 import EglePortraitSec from '../../assets/team/secondary/egle.svg';
 import ViljarPortraitSec from '../../assets/team/secondary/viljar.svg';
 import AntonPortraitSec from '../../assets/team/secondary/anton.svg';
@@ -36,7 +34,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSrc: LauraPortrait,
         imageSecSrc: LauraPortraitSec,
         imageAlt: `Laura Asu's portrait... if she was an Eskimo`,
-        skillSet: ['UI analysis', 'Business analysis', 'User research', 'usability testing'],
+        skillSet: ['UI analysis', 'Business analysis', 'User research', 'Usability testing'],
         position: 'analyst',
         noHover: false,
     },
@@ -50,7 +48,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSrc: KristoPortrait,
         imageSecSrc: KristoPortraitSec,
         imageAlt: `Kristo Danilson's portrait... if he was an Eskimo`,
-        skillSet: ['Business analysis', 'User research', 'usability testing'],
+        skillSet: ['Business analysis', 'User research', 'Usability testing'],
         position: 'analyst',
         noHover: false,
     },
@@ -64,7 +62,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSrc: JoonasPortrait,
         imageSecSrc: JoonasPortraitSec,
         imageAlt: `Joonas Kessel's portrait... if he was an Eskimo`,
-        skillSet: ['Prototyping', 'User research', 'usability testing'],
+        skillSet: ['Prototyping', 'User research', 'Usability testing'],
         position: 'analyst',
         noHover: false,
     },
@@ -77,33 +75,20 @@ export const teamMemberList: ITeamMember[] = [
         imageSrc: AlinaPortrait,
         imageSecSrc: AlinaPortraitSec,
         imageAlt: `Alina Trussova's portrait... if she was an Eskimo`,
-        skillSet: ['Branding', 'Graphic design', 'UI design', 'User research', 'usability testing'],
+        skillSet: ['Branding', 'Graphic design', 'UI design', 'User research', 'Usability testing'],
         position: 'designer',
         noHover: true,
-    },
-    {
-        name: 'Kadi Lukas',
-        title: 'UX & UI Designer',
-        description: 'Has an eye or two (probably three) for detail.',
-        descriptionExtended: 'The third eye helped her win a staring contest against Chuck Norris.',
-        imageUrl: 'https://www.linkedin.com/in/kadi-lukas-a64a99130/',
-        imageSrc: KadiPortrait,
-        imageSecSrc: KadiPortraitSec,
-        imageAlt: `Kadi Lukas's portrait... if she was an Eskimo`,
-        skillSet: ['Graphic design', 'Cinematography', 'UI design', 'User research', 'usability testing'],
-        position: 'designer',
-        noHover: false,
     },
     {
         name: 'Egle Kiik',
         title: 'UX & UI Designer',
         description: 'Bridges the gap between business and end user.',
-        descriptionExtended: 'Making digital rainbows with her unicorn skillset to make you feel like you\'re flying.',
+        descriptionExtended: "Making digital rainbows with her unicorn skillset to make you feel like you're flying.",
         imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
         imageSrc: EglePortrait,
         imageSecSrc: EglePortraitSec,
         imageAlt: `Egle Kiik's portrait... if she was an Eskimo`,
-        skillSet: ['Printed media', 'Microcopy', 'UX analysis', 'UX/UI design', 'UX research', 'usability testing'],
+        skillSet: ['Printed media', 'Microcopy', 'UX analysis', 'UX/UI design', 'UX research', 'Usability testing'],
         position: 'designer',
         noHover: false,
     },
@@ -164,7 +149,7 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Ivar Kallejärv',
         title: 'Front-end developer',
         description: 'Adept at data visualization complemented by knowledge of system analysis.',
-        descriptionExtended: 'He could love books even more but they don\'t have landscape mode.',
+        descriptionExtended: "He could love books even more but they don't have landscape mode.",
         imageUrl: 'https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/',
         imageSrc: IvarPortrait,
         imageSecSrc: IvarPortraitSec,
@@ -186,7 +171,7 @@ export const teamMemberList: ITeamMember[] = [
     },
     {
         name: 'Kaspar Suvi',
-        title: 'Junior front-end developer',
+        title: 'Front-end developer',
         description: 'Wants to provide only reasonable and valuable code.',
         descriptionExtended: 'His daily routine consists of sports activities like badminton and git push-ups.',
         imageUrl: 'https://www.linkedin.com/in/kaspar-suvi-141080120/',
