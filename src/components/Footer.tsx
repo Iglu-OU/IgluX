@@ -57,6 +57,13 @@ export class Footer extends React.Component {
         return (
             <footer className="footer">
                 <ul className="footer__links mt-0 list-unstyled">{this.returnFooterLinks()}</ul>
+                <ul className="footer__links mt-0 list-unstyled">
+                    <li className="footer__links-item">
+                        <a href="https://www.iglu.ee/da/gdpr/" className="footer__link footer__link--small">
+                            Terms and conditions
+                        </a>
+                    </li>
+                </ul>
             </footer>
         );
     }
