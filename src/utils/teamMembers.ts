@@ -4,7 +4,6 @@ import LauraPortrait from '../../assets/team/primary/laura.svg';
 import KristoPortrait from '../../assets/team/primary/kristo.svg';
 import JoonasPortrait from '../../assets/team/primary/joonas.svg';
 import EglePortrait from '../../assets/team/primary/egle.svg';
-import ViljarPortrait from '../../assets/team/primary/viljar.svg';
 import AntonPortrait from '../../assets/team/primary/anton.svg';
 import HarlesPortrait from '../../assets/team/primary/harles.svg';
 import IvarPortrait from '../../assets/team/primary/ivar.svg';
@@ -16,7 +15,6 @@ import LauraPortraitSec from '../../assets/team/secondary/laura.svg';
 import KristoPortraitSec from '../../assets/team/secondary/kristo.svg';
 import JoonasPortraitSec from '../../assets/team/secondary/joonas.svg';
 import EglePortraitSec from '../../assets/team/secondary/egle.svg';
-import ViljarPortraitSec from '../../assets/team/secondary/viljar.svg';
 import AntonPortraitSec from '../../assets/team/secondary/anton.svg';
 import HarlesPortraitSec from '../../assets/team/secondary/harles.svg';
 import IvarPortraitSec from '../../assets/team/secondary/ivar.svg';
@@ -83,26 +81,13 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Egle Kiik',
         title: 'UX & UI Designer',
         description: 'Bridges the gap between business and end user.',
-        descriptionExtended: "Making digital rainbows with her unicorn skillset to make you feel like you're flying.",
+        descriptionExtended: 'Making digital rainbows with her unicorn skillset to make you feel like you\'re flying.',
         imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
         imageSrc: EglePortrait,
         imageSecSrc: EglePortraitSec,
         imageAlt: `Egle Kiik's portrait... if she was an Eskimo`,
         skillSet: ['Printed media', 'Microcopy', 'UX analysis', 'UX/UI design', 'UX research', 'Usability testing'],
         position: 'designer',
-        noHover: false,
-    },
-    {
-        name: 'Viljar Kärgenberg',
-        title: 'Front-end lead',
-        description: 'Leads and supports the dev team with dedication and eagerness.',
-        descriptionExtended: 'Scores 5-point slam dunks with ease while learning new emerging technologies.',
-        imageUrl: 'https://www.linkedin.com/in/viljar-k%C3%A4rgenberg-81378398/',
-        imageSrc: ViljarPortrait,
-        imageSecSrc: ViljarPortraitSec,
-        imageAlt: `Viljar Kärgenberg's portrait... if he was an Eskimo`,
-        skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
-        position: 'fe',
         noHover: false,
     },
     {
@@ -149,7 +134,7 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Ivar Kallejärv',
         title: 'Front-end developer',
         description: 'Adept at data visualization complemented by knowledge of system analysis.',
-        descriptionExtended: "He could love books even more but they don't have landscape mode.",
+        descriptionExtended: 'He could love books even more but they don\'t have landscape mode.',
         imageUrl: 'https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/',
         imageSrc: IvarPortrait,
         imageSecSrc: IvarPortraitSec,
