@@ -1,5 +1,8 @@
 import { ITeamMember } from '../index';
 
+/*
+ * Primary file is the glow/non-moving parts
+ * */
 import LauraPortrait from '../../assets/team/primary/laura.svg';
 import KristoPortrait from '../../assets/team/primary/kristo.svg';
 import JoonasPortrait from '../../assets/team/primary/joonas.svg';
@@ -8,9 +11,13 @@ import AntonPortrait from '../../assets/team/primary/anton.svg';
 import HarlesPortrait from '../../assets/team/primary/harles.svg';
 import IvarPortrait from '../../assets/team/primary/ivar.svg';
 import TerasmaaPortrait from '../../assets/team/primary/terasmaa.svg';
-import KasparPortrait from '../../assets/team/primary/kaspar.svg';
+import KasparSPortrait from '../../assets/team/primary/kaspars.svg';
+import KasparNPortrait from '../../assets/team/primary/kasparn.svg';
 import AlinaPortrait from '../../assets/team/primary/alina.svg';
 
+/*
+ * Secondary file is the eskimo/floating parts
+ * */
 import LauraPortraitSec from '../../assets/team/secondary/laura.svg';
 import KristoPortraitSec from '../../assets/team/secondary/kristo.svg';
 import JoonasPortraitSec from '../../assets/team/secondary/joonas.svg';
@@ -19,7 +26,8 @@ import AntonPortraitSec from '../../assets/team/secondary/anton.svg';
 import HarlesPortraitSec from '../../assets/team/secondary/harles.svg';
 import IvarPortraitSec from '../../assets/team/secondary/ivar.svg';
 import TerasmaaPortraitSec from '../../assets/team/secondary/terasmaa.svg';
-import KasparPortraitSec from '../../assets/team/secondary/kaspar.svg';
+import KasparSPortraitSec from '../../assets/team/secondary/kaspars.svg';
+import KasparNPortraitSec from '../../assets/team/secondary/kasparn.svg';
 import AlinaPortraitSec from '../../assets/team/secondary/alina.svg';
 
 export const teamMemberList: ITeamMember[] = [
@@ -81,7 +89,7 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Egle Kiik',
         title: 'UX & UI Designer',
         description: 'Bridges the gap between business and end user.',
-        descriptionExtended: 'Making digital rainbows with her unicorn skillset to make you feel like you\'re flying.',
+        descriptionExtended: "Making digital rainbows with her unicorn skill set to make you feel like you're flying.",
         imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
         imageSrc: EglePortrait,
         imageSecSrc: EglePortraitSec,
@@ -108,7 +116,7 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Anton Aavik',
         title: 'Senior front-end developer',
         description: 'Open-source enthusiast, who strives for perfection.',
-        descriptionExtended: `Abracadabra, hocus pocus, add a bit of secret ingredients and magic happens.`,
+        descriptionExtended: `Abracadabra, hocus-pocus, add a bit of secret ingredients and magic happens.`,
         imageUrl: 'https://www.linkedin.com/in/anton-aavik-0ba1a9176/',
         imageSrc: AntonPortrait,
         imageSecSrc: AntonPortraitSec,
@@ -134,7 +142,7 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Ivar Kallejärv',
         title: 'Front-end developer',
         description: 'Adept at data visualization complemented by knowledge of system analysis.',
-        descriptionExtended: 'He could love books even more but they don\'t have landscape mode.',
+        descriptionExtended: "He could love books even more but they don't have landscape mode.",
         imageUrl: 'https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/',
         imageSrc: IvarPortrait,
         imageSecSrc: IvarPortraitSec,
@@ -160,10 +168,23 @@ export const teamMemberList: ITeamMember[] = [
         description: 'Wants to provide only reasonable and valuable code.',
         descriptionExtended: 'His daily routine consists of sports activities like badminton and git push-ups.',
         imageUrl: 'https://www.linkedin.com/in/kaspar-suvi-141080120/',
-        imageSrc: KasparPortrait,
-        imageSecSrc: KasparPortraitSec,
+        imageSrc: KasparSPortrait,
+        imageSecSrc: KasparSPortraitSec,
         imageAlt: `Kaspar Suvi's portrait... if he was an Eskimo`,
         skillSet: ['React', 'Angular', 'TypeScript', 'BEM'],
+        position: 'fe',
+        noHover: false,
+    },
+    {
+        name: 'Kaspar Naaber',
+        title: 'Front-end developer',
+        description: "A gentleman and a scholar, who likes to keep pace in today's hectic world.",
+        descriptionExtended: 'Balances an active lifestyle with active client communication.',
+        imageUrl: 'https://www.linkedin.com/in/kaspar-naaber-6a240264/',
+        imageSrc: KasparNPortrait,
+        imageSecSrc: KasparNPortraitSec,
+        imageAlt: `Kaspar Naaber's portrait... if he was an Eskimo`,
+        skillSet: ['React', 'TypeScript', 'BEM'],
         position: 'fe',
         noHover: false,
     },

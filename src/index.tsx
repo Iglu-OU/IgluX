@@ -104,7 +104,7 @@ class App extends React.Component<{}, IAppState> {
                 headingShouldBreak: document.body.getBoundingClientRect().width > 460,
             });
         }
-    }
+    };
 
     animate() {
         document.addEventListener('DOMContentLoaded', animateContent(), false);
@@ -219,6 +219,7 @@ class App extends React.Component<{}, IAppState> {
             },
         };
 
+        // @ts-ignore
         if (window.requestAnimationFrame) {
             iglu.nav.init();
         }

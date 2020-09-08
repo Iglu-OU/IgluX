@@ -1,6 +1,7 @@
 {
     "extends": ["tslint:recommended", "tslint-react"],
     "rules": {
+        "semicolon": [true, "always", "strict-bound-class-methods"],
         "jsx-no-multiline-js": false,
         "ordered-imports": false,
         "no-console": false,

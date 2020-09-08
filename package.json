@@ -4,11 +4,6 @@
 	"description": "",
 	"private": true,
 	"main": "index.js",
-	"scripts": {
-		"start": "webpack-dev-server --config config/webpack.dev.js",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "webpack --config config/webpack.prod.js"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Iglu-OU/IgluDA.git"
@@ -17,6 +12,11 @@
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/Iglu-OU/IgluDA/issues"
+	},
+	"scripts": {
+		"start": "webpack-dev-server --config config/webpack.dev.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack --config config/webpack.prod.js"
 	},
 	"dependencies": {
 		"aos": "^2.3.4",
