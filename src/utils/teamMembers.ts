@@ -184,7 +184,7 @@ export const teamMemberList: ITeamMember[] = [
         imageSrc: KasparNPortrait,
         imageSecSrc: KasparNPortraitSec,
         imageAlt: `Kaspar Naaber's portrait... if he was an Eskimo`,
-        skillSet: ['React', 'TypeScript', 'BEM'],
+        skillSet: ['React', 'TypeScript', 'Flow', 'GraphQL', 'BEM'],
         position: 'fe',
         noHover: false,
     },
