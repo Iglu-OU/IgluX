@@ -14,6 +14,7 @@ import TerasmaaPortrait from '../../assets/team/primary/terasmaa.svg';
 import KasparSPortrait from '../../assets/team/primary/kaspars.svg';
 import KasparNPortrait from '../../assets/team/primary/kasparn.svg';
 import AlinaPortrait from '../../assets/team/primary/alina.svg';
+import InternPortrait from '../../assets/team/primary/praktikant.svg';
 
 /*
  * Secondary file is the eskimo/floating parts
@@ -29,6 +30,7 @@ import TerasmaaPortraitSec from '../../assets/team/secondary/terasmaa.svg';
 import KasparSPortraitSec from '../../assets/team/secondary/kaspars.svg';
 import KasparNPortraitSec from '../../assets/team/secondary/kasparn.svg';
 import AlinaPortraitSec from '../../assets/team/secondary/alina.svg';
+import InternPortraitSec from '../../assets/team/primary/praktikant.svg';
 
 export const teamMemberList: ITeamMember[] = [
     {
@@ -89,7 +91,7 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Egle Kiik',
         title: 'UX & UI Designer',
         description: 'Bridges the gap between business and end user.',
-        descriptionExtended: 'Making digital rainbows with her unicorn skill set to make you feel like you\'re flying.',
+        descriptionExtended: "Making digital rainbows with her unicorn skill set to make you feel like you're flying.",
         imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
         imageSrc: EglePortrait,
         imageSecSrc: EglePortraitSec,
@@ -97,6 +99,19 @@ export const teamMemberList: ITeamMember[] = [
         skillSet: ['Printed media', 'Microcopy', 'UX analysis', 'UX/UI design', 'UX research', 'Usability testing'],
         position: 'designer',
         noHover: false,
+    },
+    {
+        name: 'Kerli Aava',
+        title: 'UX & UI Intern',
+        description: 'A connoisseur of life, who seeks out new experiences and places on a frequent basis.',
+        descriptionExtended: "Possessing a wide range of skills, there's not much that escapes her eye.",
+        imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
+        imageSrc: InternPortrait,
+        imageSecSrc: InternPortraitSec,
+        imageAlt: `Kerli Aava's portrait... if she was an Eskimo`,
+        skillSet: ['In progress...'],
+        position: 'designer',
+        noHover: true,
     },
     {
         name: 'Harles-Herman Pilter',
@@ -142,7 +157,7 @@ export const teamMemberList: ITeamMember[] = [
         name: 'Ivar Kallejärv',
         title: 'Front-end developer',
         description: 'Adept at data visualization complemented by knowledge of system analysis.',
-        descriptionExtended: 'He could love books even more but they don\'t have landscape mode.',
+        descriptionExtended: "He could love books even more but they don't have landscape mode.",
         imageUrl: 'https://www.linkedin.com/in/ivar-kallej%C3%A4rv-21986611a/',
         imageSrc: IvarPortrait,
         imageSecSrc: IvarPortraitSec,
@@ -178,7 +193,7 @@ export const teamMemberList: ITeamMember[] = [
     {
         name: 'Kaspar Naaber',
         title: 'Front-end developer',
-        description: 'A gentleman and a scholar who likes to keep pace in today\'s hectic world.',
+        description: "A gentleman and a scholar who likes to keep pace in today's hectic world.",
         descriptionExtended: 'Balances an active lifestyle with active client communication.',
         imageUrl: 'https://www.linkedin.com/in/kaspar-naaber-6a240264/',
         imageSrc: KasparNPortrait,
