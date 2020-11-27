@@ -1,0 +1,514 @@
+@import 'variables';
+
+// TODO @tonister: Need to add mobile-min responsive styles!
+
+@keyframes fire_burning_lg {
+    0% {
+        transform: skewX(0) translateX(0);
+        opacity: 90%;
+    }
+    25% {
+        transform: skewX(2.2deg) translateX(-6%);
+        opacity: 100%;
+    }
+    75% {
+        transform: skewX(-2.2deg) translateX(6%);
+        opacity: 85%;
+    }
+    100% {
+        transform: skewX(0) translateX(0);
+        opacity: 90%;
+    }
+}
+
+@keyframes fire_burning_md {
+    0% {
+        transform: skewX(0) translateX(0);
+        opacity: 100%;
+    }
+    25% {
+        transform: skewX(2deg) translateX(-5%);
+        opacity: 90%;
+    }
+    75% {
+        transform: skewX(-2deg) translateX(5%);
+        opacity: 95%;
+    }
+    100% {
+        transform: skewX(0) translateX(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes fire_burning_sm {
+    0% {
+        transform: skewX(0) translateX(0);
+    }
+    25% {
+        transform: skewX(1.5deg) translateX(-4%);
+    }
+    75% {
+        transform: skewX(-1.5deg) translateX(4%);
+    }
+    100% {
+        transform: skewX(0) translateX(0);
+    }
+}
+
+@keyframes fire_glow_lg {
+    0% {
+        opacity: 0.05;
+    }
+    25% {
+        opacity: 0.15;
+    }
+    75% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.05;
+    }
+}
+
+@keyframes fire_glow_sm {
+    0% {
+        opacity: 0.15;
+    }
+    25% {
+        opacity: 0.05;
+    }
+    75% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.15;
+    }
+}
+
+#portfolio {
+    background-color: #032230;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.portfolio {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    span,
+    p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    &__header {
+        position: relative;
+        display: block;
+        color: white;
+        text-align: center;
+        padding-bottom: 130px;
+
+        @media screen and (max-width: $break-mob-max) {
+            max-width: 80%;
+            text-align: center;
+            padding-bottom: 0;
+            padding-top: 200px;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: bold;
+            line-height: 70px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: normal;
+            line-height: 28px;
+        }
+    }
+
+    &__top-fold {
+        position: relative;
+        @media screen and (max-width: $break-dt-min) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.background-wrapper {
+    position: relative;
+
+    @media screen and (max-width: $break-mob-max) {
+        margin-top: 150px;
+    }
+}
+
+.horizon {
+    display: block;
+    min-width: 1920px;
+    width: 100%;
+    left: 0;
+    margin-bottom: -520px;
+    overflow: hidden;
+
+    @media screen and (max-width: $break-mob-max) {
+        min-width: $break-mob-max;
+    }
+
+    > svg {
+        min-width: 1920px;
+        width: 100%;
+
+        @media screen and (max-width: $break-mob-max) {
+            min-width: $break-mob-max;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.fire {
+    position: absolute;
+    transform: rotateY(180deg);
+    top: -360px;
+    left: 611px;
+
+    @media screen and (max-width: $break-mob-max) {
+        display: none;
+    }
+}
+
+.igloo {
+    position: absolute;
+    top: 35px;
+    left: 1128px;
+
+    svg {
+        transform: scale(0.825);
+    }
+
+    @media screen and (max-width: $break-mob-max) {
+        top: 0;
+        left: 500px;
+    }
+}
+
+.trees {
+    display: block;
+    position: absolute;
+
+    &--left {
+        top: 10px;
+        left: 0;
+    }
+
+    &--right {
+        top: 0;
+        left: 1368px;
+
+        @media screen and (max-width: $break-mob-max) {
+            display: none;
+        }
+    }
+}
+
+.eskimos {
+    position: absolute;
+    top: 100px;
+    left: 460px;
+    transform: rotateY(180deg);
+
+    @media screen and (max-width: $break-mob-max) {
+        display: none;
+    }
+}
+
+.fire-glow-lg {
+    animation: 5s ease-in-out 0s infinite fire_glow_lg;
+}
+
+.fire-glow-sm {
+    animation: 5s ease-in-out 0s infinite fire_glow_sm;
+}
+
+.fire-lg {
+    animation: 5s ease-in-out 0s infinite fire_burning_lg;
+}
+
+.fire-md {
+    animation: 2s ease-in-out 0s infinite fire_burning_md;
+}
+
+.fire-sm {
+    animation: 4s ease-in-out 0s infinite fire_burning_sm;
+}
+
+.portfolio-project {
+    position: relative;
+    height: 500px;
+
+    @media screen and (max-width: $break-mob-max) {
+        height: unset;
+
+        &:first-child {
+            .details {
+                padding-top: 60px;
+            }
+        }
+    }
+
+    .background {
+        position: absolute;
+        top: -100px;
+        height: calc(100% + 100px);
+        width: 100%;
+        min-width: 1920px;
+
+        @media screen and (max-width: $break-dt-min) {
+            margin: 0;
+            height: 100%;
+            top: -50px;
+            right: 0;
+        }
+
+        @media screen and (max-width: $break-mob-max) {
+            top: 0;
+            height: 100%;
+            background: $full-gradient;
+        }
+    }
+
+    .hills {
+        position: absolute;
+        width: 100%;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    .trees {
+        position: absolute;
+        top: 135px;
+        left: 100px;
+
+        @media screen and (max-width: $break-dt-min) {
+            display: none;
+        }
+    }
+
+    .headline-separator {
+        margin: $space-x 0;
+
+        @media screen and (max-width: $break-mob-max) {
+            text-align: center;
+        }
+    }
+
+    .details {
+        display: grid;
+        grid-template-columns: 1fr $space-x 1fr $space-x 1fr;
+        grid-template-rows: 1fr 2fr;
+        justify-items: stretch;
+        position: relative;
+        height: 100%;
+        width: 50%;
+        vertical-align: middle;
+        color: white;
+        float: right;
+        right: 10%;
+        padding: (4 * $space-x) 0;
+
+        @media screen and (max-width: $break-dt-min) {
+            width: 60%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            float: unset;
+        }
+
+        @media screen and (max-width: $break-mob-max) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            width: 80%;
+            display: block;
+            text-align: center;
+        }
+
+        &__logo {
+            align-self: start;
+            max-height: 141px;
+            max-width: 352px;
+
+            img {
+                padding-top: 7px;
+                max-height: 100%;
+                max-width: 100%;
+            }
+
+            @media screen and (max-width: $break-mob-max) {
+                text-align: center;
+            }
+        }
+
+        &__links {
+            text-align: center;
+            margin-top: $space-x;
+
+            @media screen and (max-width: $break-mob-max) {
+                text-align: left;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-primary;
+
+                &:not(:last-child) {
+                    span {
+                        &:first-child {
+                            &:after {
+                                content: '';
+                                height: 1.5em;
+                                width: 1px;
+                                background-color: currentColor;
+                                margin: 0 0.5em;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__name,
+        &__description,
+        &__collab,
+        &__tags {
+            display: block;
+            width: 100%;
+        }
+
+        &__name {
+            font-size: 36px;
+            font-weight: bold;
+
+            @media screen and (max-width: $break-mob-max) {
+                max-width: 60%;
+                text-align: center;
+            }
+        }
+
+        &__description {
+            word-wrap: normal;
+            white-space: normal;
+            font-size: 18px;
+        }
+
+        &__tags {
+            .tag {
+                color: $color-primary;
+                font-size: 18px;
+                font-style: italic;
+
+                &:not(:last-child) {
+                    &:after {
+                        content: '\2022';
+                        padding: 0 0.5em;
+                    }
+                }
+            }
+        }
+
+        &__logo,
+        &__golden-egg {
+            padding: 0;
+            text-align: center;
+            justify-content: center;
+        }
+
+        &__header,
+        &__main {
+            padding: 0;
+            text-align: right;
+            align-self: stretch;
+            grid-column: 1/4;
+        }
+
+        &__header {
+            grid-row: 1/2;
+
+            @media screen and (max-width: $break-mob-max) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
+        }
+
+        &__main {
+            grid-row: 2/3;
+
+            @media screen and (max-width: $break-mob-max) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        .logo-wrapper {
+            grid-column: 5/6;
+            grid-row: 2/3;
+
+            @media screen and (max-width: $break-mob-max) {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+
+    &.project--reversed {
+        .background {
+            transform: rotateY(180deg);
+            @media screen and (max-width: $break-dt-min) {
+                left: 0;
+            }
+        }
+
+        .details {
+            right: unset;
+            left: 10%;
+            float: left;
+            @media screen and (max-width: $break-dt-min) {
+                right: 0;
+                left: 0;
+                float: unset;
+            }
+
+            .logo-wrapper {
+                grid-column: 1/2;
+            }
+
+            &__header,
+            &__main,
+            &__footer {
+                padding: 0;
+                text-align: left;
+                grid-column: 3/6;
+            }
+        }
+    }
+}

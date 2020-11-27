@@ -1,0 +1,29 @@
+<svg width="1935" height="239.47" version="1.1" viewBox="0 0 1935 239.47" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#d6eef4;}.cls-3{fill:#ddeffa;}.cls-4{fill:#a1cada;}.cls-5{fill:none;}.cls-6{fill:#99bdc6;}.cls-7{fill:#fff;}.cls-8{fill:#e9e9ea;}.cls-9{fill:#799fa5;}.cls-10,.cls-11,.cls-12,.cls-13{opacity:0.5;}.cls-10{fill:url(#linear-gradient-2);}.cls-11{fill:url(#linear-gradient-3);}.cls-12{fill:url(#linear-gradient-4);}.cls-13{fill:url(#linear-gradient-5);}.cls-14{fill:#08353f;opacity:0.7;}.cls-15{fill:url(#linear-gradient-6);}</style>
+        <linearGradient id="linear-gradient" x1="968.59" x2="968.59" y1="309.68" y2="328.14" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#004a55" offset="0"/>
+            <stop stop-color="#004a55" stop-opacity=".98" offset="0"/>
+            <stop stop-color="#00434f" stop-opacity=".4" offset="1"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="968.59" x2="968.59" y1="327.38" y2="818.04" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#01323e" offset="0"/>
+            <stop stop-color="#01323e" stop-opacity="0" offset="1"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-3" x1="968.33" x2="968.33" y1="389.28" y2="862.55" xlink:href="#linear-gradient-2"/>
+        <linearGradient id="linear-gradient-4" x1="968.5" x2="968.5" y1="529.47" y2="849.55" xlink:href="#linear-gradient-2"/>
+        <linearGradient id="linear-gradient-5" x1="968.33" x2="968.33" y1="628.26" y2="852.25" xlink:href="#linear-gradient-2"/>
+        <linearGradient id="linear-gradient-6" x1="1" x2="1936" y1="838.9" y2="838.9" gradientTransform="translate(0,46)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#002735" offset="0"/>
+            <stop stop-color="#01323e" offset="1"/>
+            <stop stop-color="#002735" stop-opacity=".949" offset="1"/>
+        </linearGradient>
+    </defs>
+    <title>Iceberg</title>
+    <g id="Üleminek" transform="rotate(180 968 516.53)">
+        <g transform="rotate(180 968.5 913.33)">
+            <path class="cls-14" d="m1 872.25v133.52c35.65 6.31 200.39 23.22 326.16 25.08 135.84 2 544.12-34.51 710.74-34.51 174.59 0 600.75 37 690 36.72 100.13-0.36 189.22-10.26 207.41-13.63v-147.18z" fill="#08353f" opacity=".7"/>
+            <path class="cls-15" d="m2.12 940.77s287.69-23.43 423.48-21.59c148.15 2 775.62 56.91 968.8 57 239.46 0.12 541.6-63.76 541.6-63.76l-0.59-107.42s-84.09-11.41-198.94-11.41c-117.41 0-542 68.64-757.75 67.14s-601.54-58.4-939.57-58.4c-27.62 0-38.15 3.19-38.15 3.19z" fill="#002735"/>
+        </g>
+    </g>
+</svg>

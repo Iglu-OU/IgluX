@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import * as AOS from 'aos';
 
 import { Navigation } from './components/Navigation';
-import { Stars } from './components/Stars';
+import { MovingStars } from './components/MovingStars';
 import { WorkFlow } from './components/WorkFlow';
 import { Footer } from './components/Footer';
 import { Team } from './components/Team';
@@ -14,6 +14,7 @@ import 'web-animations-js';
 
 import '../styles/main.scss';
 import Logo from '../assets/logos/logo.svg';
+import { Portfolio } from './components/Portfolio';
 
 export interface ITeamMember {
     name: string;
@@ -230,7 +231,7 @@ class App extends React.Component<{}, IAppState> {
             <>
                 <Navigation logo={Logo} />
 
-                <Stars />
+                <MovingStars />
 
                 <main>
                     <section className="transform-header__jumbotron" id="transform-header__jumbotron">
@@ -250,6 +251,8 @@ class App extends React.Component<{}, IAppState> {
                     <Journey />
 
                     <Team />
+
+                    <Portfolio />
                 </main>
 
                 <Footer />

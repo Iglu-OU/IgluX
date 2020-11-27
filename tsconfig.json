@@ -13,7 +13,7 @@
         "strictNullChecks": true,
         "removeComments": false
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "custom.d.ts"],
     "exclude": ["node_modules"],
     "files": ["custom.d.ts"],
     "compileOnSave": false

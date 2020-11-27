@@ -2,7 +2,7 @@ import * as React from 'react';
 import { teamMemberList } from '../utils/teamMembers';
 import { TeamMember } from './TeamMember';
 import { ITeamMember } from '../index';
-import { TeamStars } from './TeamStars';
+import { Stars } from './Stars';
 
 export class Team extends React.Component {
     renderTeam() {
@@ -14,7 +14,7 @@ export class Team extends React.Component {
             <div className="team-wrapper">
                 {this.renderTeamSection(
                     'UX & UI Analysts',
-                    'The invisible force behind a system, helping users reach point C without realizing they\'ve already passed point B.',
+                    "The invisible force behind a system, helping users reach point C without realizing they've already passed point B.",
                     analyst,
                 )}
                 {this.renderTeamSection(
@@ -345,7 +345,7 @@ export class Team extends React.Component {
     render() {
         return (
             <section className="section" id="team">
-                <TeamStars />
+                <Stars />
 
                 {this.renderClouds()}
 

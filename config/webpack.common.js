@@ -33,8 +33,12 @@ module.exports = {
                 use: [devMode ? 'style-loader' : MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(ttf|svg|png)$/,
+                test: /\.(ttf|png)$/,
                 use: ['file-loader'],
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack', 'url-loader'],
             },
         ],
     },
@@ -43,6 +47,7 @@ module.exports = {
         historyApiFallback: true,
         hot: true,
         open: true,
+        inline: true,
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),

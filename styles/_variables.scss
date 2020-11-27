@@ -1,3 +1,4 @@
+@import 'oc';
 /* General */
 $space-x: 1rem;
 $space-y: 1em;
@@ -9,6 +10,9 @@ $color-dark: #032230;
 $bg: #fff;
 $color: #000;
 $color--muted: #555;
+
+/* Gradients */
+$full-gradient: linear-gradient(#043f5a, #032230);
 
 /* Typography */
 $color-typography-white: #fff;
@@ -56,3 +60,8 @@ $max-width: 64rem;
 /* Schemas */
 $schema-blue-bg: $oc-blue-8;
 $schema-blue-color: #fff;
+
+/* Responsive */
+$break-dt-min: 1366px;
+$break-mob-max: 768px;
+$break-mob-min: 320px;
