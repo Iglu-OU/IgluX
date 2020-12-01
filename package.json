@@ -14,7 +14,8 @@
         "url": "https://github.com/Iglu-OU/IgluDA/issues"
     },
     "scripts": {
-        "start": "next dev",
+        "dev": "next dev",
+        "start": "next start",
         "build": "next build && next export",
         "postbuild": "next-on-netlify",
         "lint": "eslint ./**/*.{ts,tsx} --fix"
