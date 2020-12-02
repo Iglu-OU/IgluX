@@ -4,15 +4,6 @@
     "description": "",
     "private": true,
     "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Iglu-OU/IgluDA.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Iglu-OU/IgluDA/issues"
-    },
     "scripts": {
         "dev": "next dev",
         "start": "next start",

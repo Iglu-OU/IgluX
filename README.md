@@ -1,10 +1,10 @@
 # Iglu Digital Agency
 
 Running locally:
-* npm install
-* npm start
+* npm i
+* npm run dev
 
-Before committing and/or pushing:
+Checking for TypeScript and/or Prettier errors
 * npm run lint
 
-When code is pushed or merged to the master branch, it's automatically deployed
+When code is pushed or merged to the master branch, it's automatically deployed to Netlify via Git Hooks

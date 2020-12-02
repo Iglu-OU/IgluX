@@ -1,7 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires,no-undef
 const withPWA = require('next-pwa');
 
-// eslint-disable-next-line no-undef
 module.exports = withPWA({
   target: 'serverless',
   pwa: {
