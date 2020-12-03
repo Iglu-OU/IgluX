@@ -1,10 +1,8 @@
 import * as React from 'react';
 
-export interface INavigationProps {
-    logo: string;
-}
+import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
 
-export class Navigation extends React.Component<INavigationProps> {
+export class Navigation extends React.Component {
     get BEM(): string {
         return 'navigation';
     }
@@ -90,14 +88,12 @@ export class Navigation extends React.Component<INavigationProps> {
     }
 
     render() {
-        const { logo } = this.props;
-
         return (
             <nav className="navigation-wrapper">
                 <div className={this.BEM}>
                     <div className="navigation__home">
                         <a href="#">
-                            <img alt="Iglu logo" src={logo} />
+                            <Logo />
                             <h1 className="navigation__header">Digital Agency</h1>
                         </a>
                     </div>

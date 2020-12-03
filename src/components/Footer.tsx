@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import IcoFacebook from '../../assets/logos/ico-fb.svg';
-import IcoInstagram from '../../assets/logos/ico-insta.svg';
-import IcoLinkedIn from '../../assets/logos/ico-linkedin.svg';
+import IcoFacebook, { ReactComponent as IcoFacebookSVG } from '../../assets/logos/ico-fb.svg';
+import IcoInstagram, { ReactComponent as IcoInstagramSVG } from '../../assets/logos/ico-insta.svg';
+import IcoLinkedIn, { ReactComponent as IcoLinkedInSVG } from '../../assets/logos/ico-linkedin.svg';
 
 export class Footer extends React.Component {
     returnFooterLinks() {
@@ -24,22 +24,27 @@ export class Footer extends React.Component {
             {
                 link: 'https://www.instagram.com/iglukad/',
                 name: 'Instagram',
+                svg: IcoInstagramSVG,
                 imageSrc: IcoInstagram,
                 imageAlt: 'Instagram icon',
             },
             {
                 link: 'https://www.facebook.com/IgluOU/',
                 name: 'Facebook',
+                svg: IcoFacebookSVG,
                 imageSrc: IcoFacebook,
                 imageAlt: 'Facebook icon',
             },
             {
                 link: 'https://www.linkedin.com/company/iglu-o%C3%BC/',
                 name: 'LinkedIn',
+                svg: IcoLinkedInSVG,
                 imageSrc: IcoLinkedIn,
                 imageAlt: 'LinkedIn icon',
             },
         ];
+
+        console.log('DEBUG::images', IcoLinkedIn, IcoLinkedInSVG);
 
         const externalLinkList = externalList.map(({ link, name, imageSrc, imageAlt }, index) => (
             <li className="footer__links-item" key={index}>

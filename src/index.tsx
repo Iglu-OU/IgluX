@@ -8,13 +8,12 @@ import { WorkFlow } from './components/WorkFlow';
 import { Footer } from './components/Footer';
 import { Team } from './components/Team';
 import { Journey } from './components/Journey';
+import { Portfolio } from './components/Portfolio';
 
 import registerSW from './utils/registerSW';
-import 'web-animations-js';
 
+import 'web-animations-js';
 import '../styles/main.scss';
-import Logo from '../assets/logos/logo.svg';
-import { Portfolio } from './components/Portfolio';
 
 export interface ITeamMember {
     name: string;
@@ -229,7 +228,7 @@ class App extends React.Component<{}, IAppState> {
     render() {
         return (
             <>
-                <Navigation logo={Logo} />
+                <Navigation />
 
                 <MovingStars />
 

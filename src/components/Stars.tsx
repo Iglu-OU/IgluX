@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 
 export interface IStar {
     id: string;
@@ -17,8 +18,9 @@ export interface IStars {
 
 const CANVAS_DEFAULT_ID: string = 'canvas';
 
-export class Stars extends React.Component<IStars> {
-    static debounce(fn: (...args: any[]) => any, timeout: number, delay: number): (...args: any[]) => any {
+export const Stars = (props: IStars) => {
+    const { id, maxStars } = props;
+    function debounce(fn: (...args: any[]) => any, timeout: number, delay: number): (...args: any[]) => any {
         return (...args: any[]) => {
             if (timeout) {
                 window.clearTimeout(timeout);
@@ -30,43 +32,42 @@ export class Stars extends React.Component<IStars> {
         };
     }
 
-    canvas: HTMLCanvasElement | null = null;
-    context: CanvasRenderingContext2D | null = null;
-    stars: IStar[] = [];
-    debounceTimeout: number = 0;
-    debouncedResizeHandler: () => any;
-    windowWidth: number | null = null;
+    let canvas: HTMLCanvasElement | null = null;
+    let context: CanvasRenderingContext2D | null = null;
+    let stars: IStar[] = [];
+    const debounceTimeout: number = 0;
+    let debouncedResizeHandler: () => any;
+    // let windowWidth: number | null = null;
+    const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
-    constructor(props) {
-        super(props);
-        this.debouncedResizeHandler = Stars.debounce(this.resizeHandler, this.debounceTimeout, 100);
-    }
+    useEffect(() => {
+        debouncedResizeHandler = debounce(resizeHandler, debounceTimeout, 100);
+    });
 
-    componentDidMount() {
-        if (this.canvas) {
-            this.context = this.canvas.getContext('2d');
+    useEffect(() => {
+        if (canvas) {
+            context = canvas.getContext('2d');
         }
 
-        this.windowWidth = document.documentElement.clientWidth;
+        setWindowWidth(document.documentElement.clientWidth);
 
-        this.init();
-        this.drawSky();
+        init();
+        drawSky();
 
-        window.addEventListener('resize', this.debouncedResizeHandler);
-    }
+        window.addEventListener('resize', debouncedResizeHandler);
+    }, []);
 
-    resizeHandler = () => {
-        const windowWidth: number = document.documentElement.clientWidth;
+    const resizeHandler = () => {
+        const newWidth: number = document.documentElement.clientWidth;
 
-        if (windowWidth !== this.windowWidth) {
-            this.windowWidth = windowWidth;
+        if (newWidth !== windowWidth) {
+            setWindowWidth(newWidth);
 
-            this.init();
+            init();
         }
     };
 
-    getStar(index: number): IStar {
-        const { id } = this.props;
+    function getStar(index: number): IStar {
         const width = document.body.getBoundingClientRect().width;
         const teamSection = document.getElementById(id || CANVAS_DEFAULT_ID);
         const height = teamSection ? teamSection.getBoundingClientRect().height : 0;
@@ -83,7 +84,7 @@ export class Stars extends React.Component<IStars> {
         };
     }
 
-    drawStar(star: IStar, index: number) {
+    function drawStar(star: IStar, index: number) {
         const { x, y, size, on, opacity, clign } = star;
 
         const halfSize = size / 2;
@@ -95,70 +96,65 @@ export class Stars extends React.Component<IStars> {
 
         if (on) {
             if (opacity > random * (1 - 0.6) + 0.6 || opacity < random * 0.3) {
-                this.stars[index] = { ...this.stars[index], clign: !clign };
+                stars[index] = { ...stars[index], clign: !clign };
             }
-            this.stars[index] = {
-                ...this.stars[index],
+            stars[index] = {
+                ...stars[index],
                 on: random > 0.005,
                 opacity: clign ? opacity + speed : opacity - speed,
             };
         } else {
-            this.stars[index] = { ...this.stars[index], on: random > 0.5, opacity: opacity < 0 ? 0 : opacity - speed };
+            stars[index] = { ...stars[index], on: random > 0.5, opacity: opacity < 0 ? 0 : opacity - speed };
         }
 
-        if (this.context) {
-            this.context.fillStyle = '#fff';
+        if (context) {
+            context.fillStyle = '#fff';
 
-            this.context.globalAlpha = opacity < 0 ? 0 : opacity;
-            this.context.globalAlpha = opacity > 1 ? 1 : opacity;
+            context.globalAlpha = opacity < 0 ? 0 : opacity;
+            context.globalAlpha = opacity > 1 ? 1 : opacity;
 
-            this.context.beginPath();
-            this.context.moveTo(maxX, y);
-            this.context.bezierCurveTo(x + curve, maxY, x + curve, maxY, maxX, y + size);
-            this.context.bezierCurveTo(x + size - curve, maxY, x + size - curve, maxY, maxX, y);
-            this.context.fill();
-            this.context.closePath();
-            this.context.beginPath();
-            this.context.moveTo(x, maxY);
-            this.context.bezierCurveTo(maxX, y + curve, maxX, y + curve, x + size, maxY);
-            this.context.bezierCurveTo(maxX, y + size - curve, maxX, y + size - curve, x, maxY);
-            this.context.fill();
-            this.context.closePath();
+            context.beginPath();
+            context.moveTo(maxX, y);
+            context.bezierCurveTo(x + curve, maxY, x + curve, maxY, maxX, y + size);
+            context.bezierCurveTo(x + size - curve, maxY, x + size - curve, maxY, maxX, y);
+            context.fill();
+            context.closePath();
+            context.beginPath();
+            context.moveTo(x, maxY);
+            context.bezierCurveTo(maxX, y + curve, maxX, y + curve, x + size, maxY);
+            context.bezierCurveTo(maxX, y + size - curve, maxX, y + size - curve, x, maxY);
+            context.fill();
+            context.closePath();
         }
     }
 
-    init = () => {
-        const { maxStars } = this.props;
+    const init = () => {
         const width = document.body.getBoundingClientRect().width;
         const numberOfStars = maxStars ? maxStars : width / 2 < 400 ? 400 : width / 2;
 
-        if (this.canvas && document) {
-            this.canvas.width = width;
-            const { id } = this.props;
+        if (canvas && document) {
+            canvas.width = width;
             const teamSection = document.getElementById(id || CANVAS_DEFAULT_ID);
-            this.canvas.height = teamSection ? teamSection.getBoundingClientRect().height : window.outerHeight;
+            canvas.height = teamSection ? teamSection.getBoundingClientRect().height : window.outerHeight;
         }
 
-        this.stars = [];
+        stars = [];
         for (let i = 0; i < numberOfStars; i++) {
-            this.stars.push(this.getStar(i));
+            stars.push(getStar(i));
         }
     };
 
-    drawSky = () => {
-        if (this.context && this.canvas) {
-            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    const drawSky = () => {
+        if (context && canvas) {
+            context.clearRect(0, 0, canvas.width, canvas.height);
 
-            this.stars.map((star, index: number) => {
-                this.drawStar(star, index);
+            stars.map((star, index: number) => {
+                drawStar(star, index);
             });
 
-            requestAnimationFrame(this.drawSky);
+            requestAnimationFrame(drawSky);
         }
     };
 
-    render() {
-        const { id } = this.props;
-        return <canvas id={id || CANVAS_DEFAULT_ID} className="canvas" ref={(el) => (this.canvas = el)} />;
-    }
-}
+    return <canvas id={id || CANVAS_DEFAULT_ID} className="canvas" ref={(el) => (canvas = el)} />;
+};

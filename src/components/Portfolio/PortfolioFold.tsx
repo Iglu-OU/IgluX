@@ -7,6 +7,7 @@ import { ReactComponent as Eskimos } from '../../../assets/portfolio/eskimos.svg
 import { ReactComponent as TreesRight } from '../../../assets/portfolio/trees_5.svg';
 import PortfolioFire from './PortfolioFire';
 import { Stars } from '../Stars';
+import { EScreenSize } from '../Portfolio';
 
 interface IPortfolioContent {
     title: string;
@@ -19,16 +20,19 @@ const portfolioContent: IPortfolioContent = {
 };
 
 interface IPortfolioFoldProps {
-    isMobile: boolean;
+    screenSize: EScreenSize;
 }
 
 const PortfolioFold = (props: IPortfolioFoldProps) => {
-    const { isMobile } = props;
+    const { screenSize } = props;
+    const isMobile = [EScreenSize.MOB_MAX, EScreenSize.MOB_MIN].includes(screenSize);
     const renderHeader = () => (
         <div className="portfolio__header">
             {!isMobile && <Stars id={'portfolio-fold-stars'} maxStars={25} />}
-            <h1>{portfolioContent.title}</h1>
-            <h2>{portfolioContent.subtitle}</h2>
+            <div className="text-wrapper" data-aos={'zoom-in'}>
+                <h1>{portfolioContent.title}</h1>
+                <h2>{portfolioContent.subtitle}</h2>
+            </div>
         </div>
     );
     const renderMobileBackground = () => (

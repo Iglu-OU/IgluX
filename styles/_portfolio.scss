@@ -108,6 +108,7 @@
         color: white;
         text-align: center;
         padding-bottom: 130px;
+        width: 100%;
 
         @media screen and (max-width: $break-mob-max) {
             max-width: 80%;
@@ -254,7 +255,7 @@
 
 .portfolio-project {
     position: relative;
-    height: 500px;
+    height: 600px;
 
     @media screen and (max-width: $break-mob-max) {
         height: unset;
@@ -289,10 +290,9 @@
 
     .hills {
         position: absolute;
-        width: 100%;
 
         svg {
-            width: 100%;
+            position: relative;
         }
     }
 
@@ -316,7 +316,7 @@
 
     .details {
         display: grid;
-        grid-template-columns: 1fr $space-x 1fr $space-x 1fr;
+        grid-template-columns: 1fr 40px 1fr 40px 1fr;
         grid-template-rows: 1fr 2fr;
         justify-items: stretch;
         position: relative;
@@ -329,7 +329,7 @@
         padding: (4 * $space-x) 0;
 
         @media screen and (max-width: $break-dt-min) {
-            width: 60%;
+            width: 900px;
             left: 0;
             right: 0;
             margin-left: auto;
@@ -347,13 +347,16 @@
 
         &__logo {
             align-self: start;
-            max-height: 141px;
-            max-width: 352px;
+            max-height: 165px;
+            min-height: 96px;
+            max-width: 400px;
+            min-width: 114px;
 
             img {
                 padding-top: 7px;
                 max-height: 100%;
                 max-width: 100%;
+                height: 100%;
             }
 
             @media screen and (max-width: $break-mob-max) {
@@ -362,7 +365,6 @@
         }
 
         &__links {
-            text-align: center;
             margin-top: $space-x;
 
             @media screen and (max-width: $break-mob-max) {
@@ -482,9 +484,9 @@
 
     &.project--reversed {
         .background {
-            transform: rotateY(180deg);
+            //transform: rotateY(180deg);
             @media screen and (max-width: $break-dt-min) {
-                left: 0;
+                //left: 0;
             }
         }
 
