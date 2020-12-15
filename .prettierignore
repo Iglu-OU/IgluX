@@ -1,6 +1,6 @@
-.vscode/**/*
-.idea/**/*
-node_modules/**/*
+.vscode
+.idea
+node_modules
 .editorconfig
 .gitignore
 package-lock.json
@@ -9,3 +9,12 @@ README.md
 main.css
 *.svg
 *.min.js
+
+.next
+out
+
+public
+!public/assets
+!public/favicon.ico
+!public/manifest.json
+!public/robots.txt

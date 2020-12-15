@@ -1,17 +1,17 @@
 @import './variables';
 
 .text {
-    &--upper-case {
-        text-transform: uppercase;
-    }
-    &--white {
-        color: $color-typography-white;
-    }
-    &--gray {
-        color: $color-typography-med-gray;
-    }
+  &--upper-case {
+    text-transform: uppercase;
+  }
+  &--white {
+    color: $color-typography-white;
+  }
+  &--gray {
+    color: $color-typography-med-gray;
+  }
 }
 
 body {
-    font-size: 16px;
+  font-size: 16px;
 }

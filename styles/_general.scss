@@ -1,45 +1,45 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 html,
 body {
-    overflow-x: hidden;
-    background: $color-primary;
+  overflow-x: hidden;
+  background: $color-primary;
 }
 html {
-    font-size: $font-size;
+  font-size: $font-size;
 }
 body {
-    margin: 0;
-    background: $color-primary;
-    color: $color-dark;
+  margin: 0;
+  background: $color-primary;
+  color: $color-dark;
 }
 .muted,
 .muted a {
-    color: $color--muted;
+  color: $color--muted;
 }
 .mt-0 {
-    margin-top: 0;
+  margin-top: 0;
 }
 a {
-    color: $color-primary;
+  color: $color-primary;
 }
 .ico {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    fill: #fff;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  fill: #fff;
+  vertical-align: top;
+
+  &--sm {
+    width: 1em;
+    height: 1em;
+    margin: 0.25em;
+  }
+
+  &--logo {
+    width: 3em;
+    height: 2.25em;
     vertical-align: top;
-
-    &--sm {
-        width: 1em;
-        height: 1em;
-        margin: 0.25em;
-    }
-
-    &--logo {
-        width: 3em;
-        height: 2.25em;
-        vertical-align: top;
-    }
+  }
 }

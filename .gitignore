@@ -8,11 +8,15 @@
 # testing
 /coverage
 
+public
+!public/assets
+!public/favicon.ico
+!public/manifest.json
+!public/robots.txt
+
 # next.js
 .next
 out
-out_functions
-out_publish
 
 # production
 /build

@@ -1,112 +1,112 @@
 .work-flow {
-    display: flex;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    color: #ffffff;
-    min-height: 800px;
-    background-size: cover;
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff;
+  min-height: 800px;
+  background-size: cover;
 
-    @media (max-width: 768px) {
-        height: 768px;
+  @media (max-width: 768px) {
+    height: 768px;
+  }
+
+  &__iceberg {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__waves-bg {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__waves {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+
+  &__waves-top {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+
+  &__waves-bottom {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    z-index: 4;
+  }
+
+  &__content {
+    position: absolute;
+    top: 23%;
+    left: 35%;
+    color: #4fbbe7;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 2.5em;
+      font-weight: 700;
+      @media (max-width: 1023px) {
+        font-size: 30px;
+      }
     }
 
-    &__iceberg {
-        width: 100%;
-        height: auto;
-        min-height: 100%;
-        position: absolute;
-        bottom: 2%;
-        left: 0;
-        right: 0;
-        z-index: 2;
+    dl {
+      margin: 2.5vw 0 0;
+      @media (max-width: 1023px) {
+        margin-top: 50px;
+      }
     }
 
-    &__waves-bg {
-        width: 100%;
-        height: auto;
-        min-height: 100%;
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        right: 0;
-        z-index: 2;
+    dt {
+      margin: 2rem 0 0;
+      font-size: 1.25em;
+      font-weight: 400;
+      line-height: 1.2;
+      text-transform: uppercase;
     }
 
-    &__waves {
-        width: 100%;
-        height: auto;
-        min-height: 100%;
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        right: 0;
-        z-index: 3;
+    dd {
+      margin: 0;
+      font-size: 1em;
     }
 
-    &__waves-top {
-        width: 100%;
-        height: auto;
-        min-height: 100%;
-        position: absolute;
-        bottom: 6px;
-        left: 0;
-        right: 0;
-        z-index: 3;
+    @media (max-width: 500px) {
+      left: 0;
+      transform: translate(0, -50%);
+      padding: 0 1rem;
     }
-
-    &__waves-bottom {
-        width: 100%;
-        height: auto;
-        min-height: 100%;
-        position: absolute;
-        bottom: 6px;
-        left: 0;
-        right: 0;
-        z-index: 4;
-    }
-
-    &__content {
-        position: absolute;
-        top: 23%;
-        left: 35%;
-        color: #4fbbe7;
-        z-index: 5;
-        transform: translate(-50%, -50%);
-
-        h1 {
-            text-transform: uppercase;
-            font-size: 2.5em;
-            font-weight: 700;
-            @media (max-width: 1023px) {
-                font-size: 30px;
-            }
-        }
-
-        dl {
-            margin: 2.5vw 0 0;
-            @media (max-width: 1023px) {
-                margin-top: 50px;
-            }
-        }
-
-        dt {
-            margin: 2rem 0 0;
-            font-size: 1.25em;
-            font-weight: 400;
-            line-height: 1.2;
-            text-transform: uppercase;
-        }
-
-        dd {
-            margin: 0;
-            font-size: 1em;
-        }
-
-        @media (max-width: 500px) {
-            left: 0;
-            transform: translate(0, -50%);
-            padding: 0 1rem;
-        }
-    }
+  }
 }
