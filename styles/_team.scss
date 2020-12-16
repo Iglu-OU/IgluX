@@ -42,7 +42,7 @@
     height: 125vh;
     z-index: 2;
     margin-top: auto;
-    background: url(/assets/iceberg/Iceberg-fold_reverse.svg) no-repeat top center;
+    background: url(/assets/Iceberg-fold_reverse.svg) no-repeat top center;
     background-size: cover;
     pointer-events: none;
   }
@@ -84,7 +84,7 @@
       bottom: calc(-2.25rem / 2 - 6px);
       height: 12px;
       width: 126px;
-      background: url(/assets/team/title-line-team.svg) no-repeat top center;
+      background: url(/assets/title-line-team.svg) no-repeat top center;
       background-size: 90%;
     }
   }
