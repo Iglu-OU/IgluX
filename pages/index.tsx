@@ -148,8 +148,6 @@ const NewIndex: React.FC = () => {
           {/* prettier-ignore */}
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700&display=swap" />
         </noscript>
-        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet" />
-        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js" />
       </Head>
       <Navigation />
       <MovingStars />
