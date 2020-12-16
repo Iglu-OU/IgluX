@@ -106,20 +106,12 @@ const NewIndex: React.FC = () => {
     <>
       <Head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133742543-1" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-133742543-1');`,
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(h, o, t, j, a, r) { h.hj = h.hj || function() { (h.hj.q = h.hj.q || []).push(arguments); }; h._hjSettings = { hjid: 1173879, hjsv: 6 }; a = o.getElementsByTagName('head')[0]; r = o.createElement('script'); r.async = 1; r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv; a.appendChild(r); })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');`,
-          }}
-        />
-        <meta
-          name="description"
-          content="Iglu Digital Agency is the part of Iglu that handles design, UX and front-end development."
-        />
+        {/* prettier-ignore */}
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-133742543-1');` }} />
+        {/* prettier-ignore */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(h, o, t, j, a, r) { h.hj = h.hj || function() { (h.hj.q = h.hj.q || []).push(arguments); }; h._hjSettings = { hjid: 1173879, hjsv: 6 }; a = o.getElementsByTagName('head')[0]; r = o.createElement('script'); r.async = 1; r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv; a.appendChild(r); })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');`, }} />
+        {/* prettier-ignore */}
+        <meta name="description" content="Iglu Digital Agency is the part of Iglu that handles design, UX and front-end development." />
         <meta name="theme-color" content="#1396d4" />
         <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
@@ -127,10 +119,8 @@ const NewIndex: React.FC = () => {
         <meta property="og:url" content="https://da.iglu.ee" />
         <meta property="og:site_name" content="Iglu DA" />
         <meta property="og:title" content="Iglu Digital Agency" />
-        <meta
-          property="og:description"
-          content="Iglu Digital Agency is the part of Iglu that handles design, UX and front-end development."
-        />
+        {/* prettier-ignore */}
+        <meta property="og:description" content="Iglu Digital Agency is the part of Iglu that handles design, UX and front-end development." />
         <meta property="og:image" content="https://da.iglu.ee/iglu.png" />
         <title>Iglu Digital Agency</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
