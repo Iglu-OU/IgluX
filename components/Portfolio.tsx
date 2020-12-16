@@ -14,7 +14,7 @@ export const portfolioProjectList: IPortfolioProject[] = [
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers.',
     Svg: <DietlessSVG />,
     goldenEgg: { text: 'Kuldmuna 2018', link: 'https://defol.io/kuldmuna/2018-erik-orgus-tailor-made-meal-plan-app' },
-    project: { text: 'Dietless', link: 'https://www.erikorgu.ee' },
+    project: 'https://www.erikorgu.ee',
     tags: ['Development', 'Angular', 'Cordova', 'User testing'],
   },
   {
@@ -23,10 +23,7 @@ export const portfolioProjectList: IPortfolioProject[] = [
     description:
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers.',
     Svg: <EShowcaseSVG />,
-    project: {
-      text: 'Questionnaire',
-      link: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
-    },
+    project: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
     tags: ['User research', 'Prototype', 'User testing', 'Development', 'Design', 'Aurelia'],
   },
   {
@@ -82,7 +79,7 @@ export const Portfolio: React.FC = () => {
   return (
     <section className="section portfolio" id="portfolio">
       <PortfolioFold screenSize={state.screenSize} />
-      <div className="portfolio-wrapper">
+      <ul className="portfolio-wrapper">
         {portfolioProjectList.map((project, index) => (
           <PortfolioProject
             data={project}
@@ -92,7 +89,7 @@ export const Portfolio: React.FC = () => {
             screenSize={state.screenSize}
           />
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

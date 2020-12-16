@@ -10,7 +10,7 @@ export interface IPortfolioProject {
   title: string;
   description: string;
   goldenEgg?: { text: string; link: string };
-  project?: { text: string; link: string };
+  project?: string;
   Svg: React.ReactElement;
   tags: string[];
 }
@@ -41,45 +41,6 @@ export const PortfolioProject: React.FC<IPortfolioProjectProps> = ({ data, index
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const renderLogo = () => (
-    <div className="logo-wrapper">
-      <div className="details__logo">{Svg}</div>
-    </div>
-  );
-
-  const renderDescription = () => (
-    <>
-      <div className="details__header">
-        <h2 className="details__name">{name}</h2>
-        <div className="headline-separator">
-          <Separator />
-        </div>
-      </div>
-      <div className="details__main">
-        <span className="details__description">{description}</span>
-        <p className="details__links">
-          {goldenEgg ? (
-            <a href={goldenEgg.link}>
-              <span className="golden-egg">{goldenEgg.text}</span>
-            </a>
-          ) : null}
-          {project ? (
-            <a href={project.link}>
-              <span className="project-home">{project.text}</span>
-            </a>
-          ) : null}
-        </p>
-        <p className="details__tags">
-          {tags.map((tag, i) => (
-            <span className="tag" key={`${tag}_${i}`}>
-              {tag}
-            </span>
-          ))}
-        </p>
-      </div>
-    </>
-  );
-
   return (
     <li
       className={`portfolio-project${index % 2 === 0 && !isMobile ? '' : ' project--reversed'}${
@@ -101,17 +62,40 @@ export const PortfolioProject: React.FC<IPortfolioProjectProps> = ({ data, index
         )}
       </div>
       <div className="details">
-        {index % 2 === 0 && !isMobile ? (
-          <>
-            {renderDescription()}
-            {renderLogo()}
-          </>
-        ) : (
-          <>
-            {renderLogo()}
-            {renderDescription()}
-          </>
-        )}
+        <div className="details__header">
+          <h2 className="details__name">{name}</h2>
+          <div className="headline-separator">
+            <Separator />
+          </div>
+        </div>
+        <div className="details__main">
+          <span className="details__description">{description}</span>
+          <p className="details__tags">
+            {tags.map((tag, i) => (
+              <React.Fragment key={`${tag}_${i}`}>
+                {tag}
+                <span className="tag" />
+              </React.Fragment>
+            ))}
+          </p>
+          <p className="details__links">
+            {project ? (
+              <a href={project}>
+                <span className="project-home">Visit website</span>
+              </a>
+            ) : null}
+            {goldenEgg ? (
+              <a href={goldenEgg.link}>
+                <span className="golden-egg">{goldenEgg.text}</span>
+              </a>
+            ) : null}
+          </p>
+        </div>
+        {!isMobile ? (
+          <div className="logo-wrapper">
+            <div className="details__logo">{Svg}</div>
+          </div>
+        ) : null}
       </div>
     </li>
   );

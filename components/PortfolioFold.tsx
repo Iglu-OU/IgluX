@@ -17,14 +17,14 @@ const PortfolioFold: React.FC<{ screenSize: EScreenSize }> = ({ screenSize }) =>
       {!isMobile ? <PortfolioHeader isMobile={isMobile} /> : null}
       <div className="background-wrapper">
         <div className="horizon">{isMobile ? <HorizonMobileMax /> : <Horizon />}</div>
-        <div className="trees trees--left">
-          <Trees4 />
-        </div>
-        <div className="igloo">
-          <Igloo />
-        </div>
         {!isMobile ? (
           <>
+            <div className="trees trees--left">
+              <Trees4 />
+            </div>
+            <div className="igloo">
+              <Igloo />
+            </div>
             <div className="trees trees--right">
               <Trees5 />
             </div>
