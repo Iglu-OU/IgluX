@@ -31,7 +31,7 @@ export const Navigation: React.FC = () => {
           ))}
         </ul>
         <p className="navigation__burger">
-          <button onClick={toggleNav}>
+          <button aria-label="Open navigation" onClick={toggleNav}>
             <span>
               <span />
             </span>

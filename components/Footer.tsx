@@ -27,7 +27,7 @@ export const Footer: React.FC = () => (
       ))}
       {footerExternalLinks.map(({ link, name, Icon }, index) => (
         <li className="footer__links-item" key={index}>
-          <a className="footer__link" href={link} target="_blank" rel="noreferrer noopener">
+          <a className="footer__link" aria-label={name} href={link} target="_blank" rel="noreferrer noopener">
             {Icon}
             <span>{name}</span>
           </a>
