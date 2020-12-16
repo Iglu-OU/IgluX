@@ -5,6 +5,7 @@ import { Footer } from '../components/Footer';
 import { Journey } from '../components/Journey';
 import { MovingStars } from '../components/MovingStars';
 import { Navigation } from '../components/Navigation';
+import { Portfolio } from '../components/Portfolio';
 import { Team } from '../components/Team';
 import { WorkFlow } from '../components/WorkFlow';
 
@@ -156,7 +157,7 @@ const NewIndex: React.FC = () => {
         <WorkFlow />
         <Journey />
         <Team />
-        {/* TODO <Portfolio /> */}
+        <Portfolio />
       </main>
       <Footer />
     </>
