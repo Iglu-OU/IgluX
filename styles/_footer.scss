@@ -30,12 +30,21 @@
 }
 
 .footer__link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 0.75em 1rem;
   opacity: 0.8;
   color: #fff;
   text-decoration: none;
   transition: opacity 0.2s ease-in-out;
+
+  @media (max-width: 424px) {
+    padding: 0.75em 0.5rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 
   &--small {
     padding: 0.5em 1rem;
@@ -43,14 +52,13 @@
     opacity: 0.6;
   }
 
-  &:hover {
-    opacity: 1;
-  }
+  svg {
+    margin-right: 0.25rem;
+    width: 1rem;
+    height: 1rem;
 
-  @media (max-width: 424px) {
-    padding: 0.75em 0.5rem;
-    & span {
-      display: none;
+    @media (max-width: 767px) {
+      margin-right: 0;
     }
   }
 

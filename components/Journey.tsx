@@ -17,7 +17,7 @@ const events: IEvent[] = [
 ];
 
 export const Journey: React.FC = () => {
-  let minHeight = 156;
+  const [minHeight, setMinHeight] = React.useState(156);
 
   React.useEffect(() => {
     onScroll();
@@ -28,7 +28,7 @@ export const Journey: React.FC = () => {
   });
 
   const onScroll = () => {
-    const journeyWrapper = document.querySelector('.journey-wrapper') as any;
+    const journeyWrapper = document.querySelector('.journey-wrapper') as HTMLElement;
     const htmlElement = document.querySelector('html');
 
     const scrollY = window.pageYOffset || document.documentElement.scrollTop;
@@ -40,40 +40,22 @@ export const Journey: React.FC = () => {
 
     let scrolledOfJourney = scrollPercentage * journeyWrapper.offsetTop;
 
-    const mask: any = document.querySelector('.mask');
+    const mask = document.querySelector('.mask') as HTMLElement;
 
     if (scrolledOfJourney > 156 && scrolledOfJourney < 650) {
       if (!minHeight || minHeight < scrolledOfJourney) {
-        minHeight = scrolledOfJourney;
+        setMinHeight(scrolledOfJourney);
       } else if (minHeight > scrolledOfJourney) {
         scrolledOfJourney = minHeight;
       }
       if (mask) {
-        mask.style.top = scrolledOfJourney + 'px';
+        mask.style.top = `${scrolledOfJourney}px`;
       }
     } else if (scrolledOfJourney >= 650) {
       if (mask) {
-        mask.style.top = 650 + 'px';
+        mask.style.top = '650px';
       }
     }
-  };
-
-  const renderEvent = (event: IEvent, key: number): JSX.Element => {
-    const animation = event.position === 'left' ? 'fade-right' : 'fade-left';
-    return (
-      <div
-        className={`event-wrapper event-wrapper--${event.position}`}
-        data-aos-offset="250"
-        data-aos={animation}
-        key={key}
-      >
-        <div className="event">
-          <div className="event__year">{event.year}</div>
-          <h2 className="event__title">{event.title}</h2>
-          {event.project && <p className="event__project">{event.project}</p>}
-        </div>
-      </div>
-    );
   };
 
   return (
@@ -84,9 +66,24 @@ export const Journey: React.FC = () => {
         </div>
         <div className="mask" />
         <div className="journey__content">
-          {events.map((event: IEvent, index: number) => renderEvent(event, index))}
+          {events.map((event, index) => (
+            <JourneyEvent key={index} {...event} />
+          ))}
         </div>
       </div>
     </section>
+  );
+};
+
+const JourneyEvent = ({ position, year, title, project }: IEvent): JSX.Element => {
+  const animation = position === 'left' ? 'fade-right' : 'fade-left';
+  return (
+    <div className={`event-wrapper event-wrapper--${position}`} data-aos-offset="250" data-aos={animation}>
+      <div className="event">
+        <div className="event__year">{year}</div>
+        <h2 className="event__title">{title}</h2>
+        {project && <p className="event__project">{project}</p>}
+      </div>
+    </div>
   );
 };

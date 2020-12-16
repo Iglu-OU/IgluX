@@ -7,7 +7,7 @@ interface TeamMemberProps {
 }
 
 export const TeamMember: React.FC<TeamMemberProps> = ({
-  data: { name, title, description, descriptionExtended, imageUrl, imageSrc, imageSecSrc, imageAlt, skillSet, noHover },
+  data: { name, title, description, descriptionExtended, imageUrl, PrimaryImage, SecondaryImage, skillSet, noHover },
 }) => {
   const [windowWidth, setWindowWidth] = React.useState(0);
 
@@ -18,14 +18,9 @@ export const TeamMember: React.FC<TeamMemberProps> = ({
   return (
     <li className="team-member" data-aos="fade-up" data-aos-offset={windowWidth > 600 ? '150' : '350'}>
       <div className="team-member__portrait mt-0">
-        <img className="team-member__portrait-primary" loading="lazy" src={imageSrc} alt={imageAlt} />
-        {imageSecSrc && (
-          <img
-            className={`team-member__portrait-secondary${noHover ? ' no-hover' : ''}`}
-            loading="lazy"
-            src={imageSecSrc}
-            alt={imageAlt}
-          />
+        <div className="team-member__portrait-primary">{PrimaryImage}</div>
+        {SecondaryImage && (
+          <div className={`team-member__portrait-secondary${noHover ? ' no-hover' : ''}`}>{SecondaryImage}</div>
         )}
       </div>
       <div className="team-member__description">

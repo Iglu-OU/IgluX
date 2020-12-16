@@ -8,11 +8,7 @@
 # testing
 /coverage
 
-public
-!public/assets
-!public/favicon.ico
-!public/manifest.json
-!public/robots.txt
+public/**/*.js
 
 # next.js
 .next

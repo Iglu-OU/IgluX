@@ -1,29 +1,18 @@
 import React from 'react';
 
+import Facebook from './images/ico-fb.svg';
+import Instagram from './images/ico-insta.svg';
+import Linkedin from './images/ico-linkedin.svg';
+
 const footerInternalLinks = [
   { link: 'https://iglu.ee/', name: 'Iglu' },
   { link: 'https://iglu.ee/#how', name: 'Clients' },
   { link: 'https://iglu.ee/#where', name: 'Contact us' },
 ];
 const footerExternalLinks = [
-  {
-    link: 'https://www.instagram.com/iglukad/',
-    name: 'Instagram',
-    imageSrc: '/assets/logos/ico-insta.svg',
-    imageAlt: 'Instagram icon',
-  },
-  {
-    link: 'https://www.facebook.com/IgluOU/',
-    name: 'Facebook',
-    imageSrc: '/assets/logos/ico-fb.svg',
-    imageAlt: 'Facebook icon',
-  },
-  {
-    link: 'https://www.linkedin.com/company/iglu-o%C3%BC/',
-    name: 'LinkedIn',
-    imageSrc: '/assets/logos/ico-linkedin.svg',
-    imageAlt: 'LinkedIn icon',
-  },
+  { link: 'https://www.instagram.com/iglukad/', name: 'Instagram', Icon: <Facebook /> },
+  { link: 'https://www.facebook.com/IgluOU/', name: 'Facebook', Icon: <Instagram /> },
+  { link: 'https://www.linkedin.com/company/iglu-o%C3%BC/', name: 'LinkedIn', Icon: <Linkedin /> },
 ];
 
 export const Footer: React.FC = () => (
@@ -36,10 +25,10 @@ export const Footer: React.FC = () => (
           </a>
         </li>
       ))}
-      {footerExternalLinks.map(({ link, name, imageSrc, imageAlt }, index) => (
+      {footerExternalLinks.map(({ link, name, Icon }, index) => (
         <li className="footer__links-item" key={index}>
           <a className="footer__link" href={link} target="_blank" rel="noreferrer noopener">
-            <img className="ico ico--sm" alt={imageAlt} src={imageSrc} loading="lazy" />
+            {Icon}
             <span>{name}</span>
           </a>
         </li>

@@ -101,6 +101,7 @@
     }
   }
 
+  svg,
   img {
     position: absolute;
     top: 0.5em;
@@ -124,7 +125,7 @@
     display: none;
   }
 
-  a {
+  button {
     position: absolute;
     top: 0;
     right: 6px;
@@ -133,6 +134,8 @@
     padding: 10px;
     cursor: pointer;
     z-index: 2;
+    background: none;
+    border: none;
 
     > span {
       position: relative;
