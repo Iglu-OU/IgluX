@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Eskimos from './images/Eskimos.svg';
-import Fire from './images/Fire.svg';
+import { Fire } from './images/Fire';
 import Horizon from './images/Horizon.svg';
 import HorizonMobileMax from './images/Horizon-Mobile-Max.svg';
 import Igloo from './images/Igloo.svg';
