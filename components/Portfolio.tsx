@@ -3,8 +3,15 @@ import React from 'react';
 import DietlessSVG from './images/Dietless.svg';
 import EShowcaseSVG from './images/E-Showcase-Briefing.svg';
 import ERBISVG from './images/ERBI.svg';
-import PortfolioFold from './PortfolioFold';
+import Eskimos from './images/Eskimos.svg';
+import { Fire } from './images/Fire';
+import Horizon from './images/Horizon.svg';
+import HorizonMobileMax from './images/Horizon-Mobile-Max.svg';
+import Igloo from './images/Igloo.svg';
+import Trees4 from './images/Trees-4.svg';
+import Trees5 from './images/Trees-5.svg';
 import { IPortfolioProject, PortfolioProject } from './PortfolioProject';
+import { Stars } from './Stars';
 
 export const portfolioProjectList: IPortfolioProject[] = [
   {
@@ -22,7 +29,7 @@ export const portfolioProjectList: IPortfolioProject[] = [
     title: 'Estonian Responsible Business Index',
     description:
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers.',
-    Svg: <EShowcaseSVG />,
+    Svg: <ERBISVG />,
     project: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
     tags: ['User research', 'Prototype', 'User testing', 'Development', 'Design', 'Aurelia'],
   },
@@ -31,7 +38,7 @@ export const portfolioProjectList: IPortfolioProject[] = [
     title: 'E-Showcase Briefing',
     description:
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
-    Svg: <ERBISVG />,
+    Svg: <EShowcaseSVG />,
     tags: ['Prototyping', 'UI analysis', 'Business analysis', 'User research'],
   },
 ];
@@ -50,6 +57,7 @@ interface PortfolioState {
 
 export const Portfolio: React.FC = () => {
   const [state, setState] = React.useState<PortfolioState>({ screenWidth: 0, screenSize: EScreenSize.DT_MAX });
+  const isMobile = [EScreenSize.MOB_MAX, EScreenSize.MOB_MIN].includes(state.screenSize);
 
   React.useEffect(() => {
     updateScreenSize();
@@ -78,7 +86,33 @@ export const Portfolio: React.FC = () => {
 
   return (
     <section className="section portfolio" id="portfolio">
-      <PortfolioFold screenSize={state.screenSize} />
+      <div className={`portfolio__top-fold${isMobile ? ' is-mobile' : ''}`}>
+        {!isMobile ? <PortfolioHeader isMobile={isMobile} /> : null}
+        <div className="background-wrapper">
+          <div className="horizon">{isMobile ? <HorizonMobileMax /> : <Horizon />}</div>
+          {!isMobile ? (
+            <>
+              <div className="trees trees--left">
+                <Trees4 />
+              </div>
+              <div className="igloo">
+                <Igloo />
+              </div>
+              <div className="trees trees--right">
+                <Trees5 />
+              </div>
+              <div className="eskimos">
+                <Eskimos />
+              </div>
+              <div className="fire">
+                <Fire />
+              </div>
+            </>
+          ) : null}
+        </div>
+        {isMobile ? <PortfolioHeader isMobile={isMobile} /> : null}
+      </div>
+
       <ul className="portfolio-wrapper">
         {portfolioProjectList.map((project, index) => (
           <PortfolioProject
@@ -93,3 +127,13 @@ export const Portfolio: React.FC = () => {
     </section>
   );
 };
+
+const PortfolioHeader: React.FC<{ isMobile: boolean }> = (isMobile) => (
+  <div className="portfolio__header">
+    {!isMobile && <Stars id="portfolio-fold-stars" maxStars={25} />}
+    <div className="text-wrapper" data-aos="zoom-in">
+      <h1>Projects</h1>
+      <h2>Some of our Clients we have worked with along the way</h2>
+    </div>
+  </div>
+);
