@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Iceberg } from './images/Iceberg';
-import { Waves } from './images/Waves';
-import { WavesBG } from './images/WavesBG';
-import { WavesBottom } from './images/WavesBottom';
-import { WavesTop } from './images/WavesTop';
+import { Iceberg } from '../_images/Iceberg';
+import { Waves } from '../_images/Waves';
+import { WavesBG } from '../_images/WavesBG';
+import { WavesBottom } from '../_images/WavesBottom';
+import { WavesTop } from '../_images/WavesTop';
 
 export const WorkFlow: React.FC = () => {
   React.useEffect(() => {

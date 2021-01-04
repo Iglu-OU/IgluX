@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Facebook from './images/ico-fb.svg';
-import Instagram from './images/ico-insta.svg';
-import Linkedin from './images/ico-linkedin.svg';
+import Facebook from '../_images/ico-fb.svg';
+import Instagram from '../_images/ico-insta.svg';
+import Linkedin from '../_images/ico-linkedin.svg';
 
 const footerInternalLinks = [
   { link: 'https://iglu.ee/', name: 'Iglu' },

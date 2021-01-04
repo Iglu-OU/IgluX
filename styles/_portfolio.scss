@@ -1,523 +1,184 @@
-@import 'variables';
+$screen-sm-min: 320px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
 
-// TODO @tonister: Need to add mobile-min responsive styles!
-
-@keyframes fire_burning_lg {
-  0% {
-    transform: skewX(0) translateX(0);
-    opacity: 90%;
-  }
-  25% {
-    transform: skewX(2.2deg) translateX(-6%);
-    opacity: 100%;
-  }
-  75% {
-    transform: skewX(-2.2deg) translateX(6%);
-    opacity: 85%;
-  }
-  100% {
-    transform: skewX(0) translateX(0);
-    opacity: 90%;
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
   }
 }
 
-@keyframes fire_burning_md {
-  0% {
-    transform: skewX(0) translateX(0);
-    opacity: 100%;
-  }
-  25% {
-    transform: skewX(2deg) translateX(-5%);
-    opacity: 90%;
-  }
-  75% {
-    transform: skewX(-2deg) translateX(5%);
-    opacity: 95%;
-  }
-  100% {
-    transform: skewX(0) translateX(0);
-    opacity: 100%;
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
   }
 }
 
-@keyframes fire_burning_sm {
-  0% {
-    transform: skewX(0) translateX(0);
-  }
-  25% {
-    transform: skewX(1.5deg) translateX(-4%);
-  }
-  75% {
-    transform: skewX(-1.5deg) translateX(4%);
-  }
-  100% {
-    transform: skewX(0) translateX(0);
+#portfolio-stars {
+  display: none;
+  height: 33.75rem;
+
+  @include md {
+    display: block;
   }
 }
 
-@keyframes fire_glow_lg {
-  0% {
-    opacity: 0.05;
-  }
-  25% {
-    opacity: 0.15;
-  }
-  75% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.05;
-  }
-}
+.PortfolioBG_svg__portfolio-background {
+  display: none;
+  width: 1920px;
+  height: auto;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: -1px;
+  z-index: 1;
 
-@keyframes fire_glow_sm {
-  0% {
-    opacity: 0.15;
+  @include md {
+    display: block;
   }
-  25% {
-    opacity: 0.05;
-  }
-  75% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.15;
-  }
-}
-
-#portfolio {
-  background-color: #032230;
-  position: relative;
-  box-sizing: border-box;
 }
 
 .portfolio {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #032230;
+  padding-top: 15vh;
+  overflow: hidden;
+
+  @include md {
+    height: 2392px;
+  }
+}
+
+.portfolio-header {
   position: relative;
   display: block;
-  overflow: hidden;
-  padding-top: 15vh;
+  color: white;
+  text-align: center;
+  margin-bottom: auto;
+  background-color: #043f5a;
+  padding: 0 1rem;
 
-  span,
-  p {
-    font-size: 18px;
-    line-height: 26px;
-  }
-
-  &-wrapper {
-    margin: 0;
+  @include md {
+    background: none;
     padding: 0;
   }
 
-  &__header {
-    position: relative;
-    display: block;
-    color: white;
-    text-align: center;
-    padding-bottom: 130px;
-    width: 100%;
-
-    @media screen and (max-width: $break-mob-max) {
-      max-width: 80%;
-      text-align: center;
-      padding-bottom: 0;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 300;
-    }
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
   }
 
-  &__top-fold {
-    position: relative;
-    @media screen and (max-width: $break-mob-max) {
-      background-color: #043f5a;
-    }
-    @media screen and (max-width: $break-dt-min) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  &__subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
   }
 }
 
-.background-wrapper {
-  position: relative;
-}
-
-.horizon {
-  display: block;
-  min-width: 1920px;
-  width: 100%;
-  left: 0;
-  margin-bottom: -520px;
-  overflow: hidden;
-
-  @media screen and (max-width: $break-mob-max) {
-    min-width: $break-mob-max;
-  }
-
-  > svg {
-    min-width: 1920px;
-    width: 100%;
-
-    @media screen and (max-width: $break-mob-max) {
-      min-width: $break-mob-max;
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-
-.fire {
-  position: absolute;
-  top: -360px;
-  left: 760px;
-  transform: rotateY(180deg);
-
-  @media screen and (min-width: $break-dt-min) {
-    left: 611px;
-  }
-
-  @media screen and (max-width: $break-mob-max) {
-    display: none;
-  }
-}
-
-.igloo {
-  position: absolute;
-  top: 35px;
-  left: 1128px;
-
-  svg {
-    transform: scale(0.825);
-  }
-
-  @media screen and (max-width: $break-mob-max) {
-    top: 0;
-    left: 500px;
-  }
-}
-
-.trees {
-  display: block;
-  position: absolute;
-
-  &--left {
-    top: 10px;
-    left: 0;
-  }
-
-  &--right {
-    top: 0;
-    left: 1368px;
-
-    @media screen and (max-width: $break-mob-max) {
-      display: none;
-    }
-  }
-}
-
-.eskimos {
-  position: absolute;
-  top: 100px;
-  left: 600px;
-  transform: rotateY(180deg);
-
-  @media screen and (min-width: $break-dt-min) {
-    left: 460px;
-  }
-
-  @media screen and (max-width: $break-mob-max) {
-    display: none;
-  }
-}
-
-.fire-glow-lg {
-  animation: 5s ease-in-out 0s infinite fire_glow_lg;
-}
-
-.fire-glow-sm {
-  animation: 5s ease-in-out 0s infinite fire_glow_sm;
-}
-
-.fire-lg {
-  animation: 5s ease-in-out 0s infinite fire_burning_lg;
-}
-
-.fire-md {
-  animation: 2s ease-in-out 0s infinite fire_burning_md;
-}
-
-.fire-sm {
-  animation: 4s ease-in-out 0s infinite fire_burning_sm;
+.portfolio-project-wrapper {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
 }
 
 .portfolio-project {
-  position: relative;
-  height: 600px;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #043f5a -4.28%, #032230 125.15%);
 
-  @media screen and (max-width: $break-mob-max) {
-    height: unset;
+  @include md {
+    &:first-of-type {
+      height: 29.875rem;
+    }
 
-    &:first-child {
-      .details {
-        padding-top: 60px;
-      }
+    padding: 0 1rem;
+    background: none;
+
+    height: 36.875rem;
+    max-width: 43.75rem;
+
+    text-align: right;
+    align-self: center;
+    margin-left: 5rem;
+  }
+
+  @include lg {
+    padding: 0;
+    margin-left: 15rem;
+  }
+
+  &:nth-of-type(2n) {
+    @include md {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 5rem;
+      flex-direction: row-reverse;
+    }
+    @include lg {
+      margin-right: 15rem;
     }
   }
 
-  .background {
-    position: absolute;
-    top: -100px;
-    height: calc(99% + 100px);
-    width: 100%;
-    min-width: 1920px;
-
-    @media screen and (max-width: $break-dt-min) {
-      margin: 0;
-      height: 100%;
-      top: -50px;
-      right: 0;
-    }
-
-    @media screen and (max-width: $break-mob-max) {
-      top: 0;
-      height: 100%;
-      background: $full-gradient;
-    }
+  &__title {
+    font-size: 2.25rem;
+    margin: 0;
   }
 
-  .hills {
-    position: absolute;
-
-    svg {
-      position: relative;
-    }
+  &__squiggle {
+    margin-top: 1rem;
   }
 
-  .trees {
-    position: absolute;
-    top: 135px;
-    left: 100px;
-
-    @media screen and (max-width: $break-dt-min) {
-      display: none;
-    }
+  &__description {
+    font-size: 1.125rem;
   }
 
-  .headline-separator {
-    margin: $space-x 0;
-
-    @media screen and (max-width: $break-mob-max) {
-      align-self: flex-start;
-    }
+  &__tags {
+    padding: 0;
   }
 
-  .details {
-    display: grid;
-    grid-template-columns: 1fr 40px 1fr 40px 1fr;
-    grid-template-rows: 1fr 2fr;
-    justify-items: stretch;
-    position: relative;
-    height: 100%;
-    width: 50%;
-    vertical-align: middle;
-    color: white;
-    float: right;
-    right: 10%;
-    padding: (4 * $space-x) 0;
+  &__tags-item {
+    display: inline-block;
+    color: #1396d4;
+    font-size: 1.125rem;
+    font-style: italic;
+  }
 
-    @media screen and (max-width: $break-dt-min) {
-      max-width: 900px;
-      width: 90%;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      float: unset;
-    }
+  &__tags-item:not(:first-child):before {
+    padding-left: 0.25rem;
+    content: '\00a0\2022\00a0\00a0';
+    color: #1396d4;
+  }
 
-    @media screen and (max-width: $break-mob-max) {
+  &__external {
+    font-size: 1.125rem;
+    color: #1396d4;
+  }
+
+  &__external-project,
+  &__external-award {
+    text-decoration: none;
+  }
+
+  &__logo {
+    display: none;
+    margin-left: 2rem;
+
+    @include md {
       display: block;
-      text-align: center;
-    }
-
-    &__logo {
-      align-self: start;
-      max-height: 165px;
-      min-height: 96px;
-      max-width: 400px;
-      min-width: 114px;
-
-      img {
-        padding-top: 7px;
-        max-height: 100%;
-        max-width: 100%;
-        height: 100%;
-      }
-
-      @media screen and (max-width: $break-mob-max) {
-        text-align: center;
-      }
-    }
-
-    &__links {
-      margin-top: $space-x;
-
-      @media screen and (max-width: $break-mob-max) {
-        text-align: left;
-      }
-
-      a {
-        text-decoration: none;
-        color: $color-primary;
-
-        &:not(:last-child) {
-          span {
-            &:first-child {
-              &:after {
-                content: '';
-                height: 1.5em;
-                width: 1px;
-                background-color: currentColor;
-                margin: 0 0.5em;
-                display: inline-block;
-                vertical-align: middle;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    &__name,
-    &__description,
-    &__tags {
-      display: block;
-      width: 100%;
-    }
-
-    &__name {
-      font-size: 36px;
-      font-weight: bold;
-      @media screen and (max-width: $break-mob-max) {
-        margin: 0;
-      }
-    }
-
-    &__description {
-      word-wrap: normal;
-      white-space: normal;
-      font-size: 18px;
-    }
-
-    &__tags {
-      overflow-wrap: break-word;
-      color: $color-primary;
-      font-size: 18px;
-      font-style: italic;
-
-      .tag {
-        &:not(:last-child) {
-          &:after {
-            content: '\2022';
-            padding: 0 0.5em;
-          }
-        }
-      }
-    }
-
-    &__logo,
-    &__golden-egg {
-      padding: 0;
-      text-align: center;
-      justify-content: center;
-    }
-
-    &__header,
-    &__main {
-      padding: 0;
-      text-align: right;
-      align-self: stretch;
-      grid-column: 1/4;
-    }
-
-    &__header {
-      grid-row: 1/2;
-
-      @media screen and (max-width: $break-mob-max) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-      }
-    }
-
-    &__main {
-      grid-row: 2/3;
-
-      @media screen and (max-width: $break-mob-max) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-      }
-    }
-
-    .logo-wrapper {
-      grid-column: 5/6;
-      grid-row: 2/3;
-
-      @media screen and (max-width: $break-mob-max) {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-      }
     }
   }
 
-  &.project--reversed {
-    .background {
-      //transform: rotateY(180deg);
-      @media screen and (max-width: $break-dt-min) {
-        //left: 0;
-      }
-    }
-
-    .details {
-      right: unset;
-      left: 10%;
-      float: left;
-      @media screen and (max-width: $break-dt-min) {
-        right: 0;
-        left: 0;
-        float: unset;
-      }
-
-      .logo-wrapper {
-        grid-column: 1/2;
-      }
-
-      &__header,
-      &__main,
-      &__footer {
-        padding: 0;
-        text-align: left;
-        grid-column: 3/6;
-      }
-    }
+  &:nth-of-type(2n) &__logo {
+    margin-left: 0;
+    margin-right: 2rem;
   }
 }
