@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ITeamMember } from '../pages/index';
+import { ITeamMember } from '../../../pages/index';
 
 interface TeamMemberProps {
   data: ITeamMember;

@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 
-import HillTrees from './images/Hill-Trees.svg';
-import RollingHills from './images/Rolling-Hills.svg';
-import Separator from './images/Separator.svg';
-import { EScreenSize } from './Portfolio';
+import HillTrees from '../../_images/Hill-Trees.svg';
+import RollingHills from '../../_images/Rolling-Hills.svg';
+import Separator from '../../_images/Separator.svg';
+import { EScreenSize } from '../Portfolio';
 
 export interface IPortfolioProject {
   name: string;
   title: string;
   description: string;
-  goldenEgg?: { text: string; link: string };
+  award?: { text: string; link: string };
   project?: string;
   Svg: React.ReactElement;
   tags: string[];
@@ -30,7 +30,7 @@ const svgLocations = [
 
 export const PortfolioProject: React.FC<IPortfolioProjectProps> = ({ data, index, isMobile, screenSize }) => {
   const [windowWidth, setWindowWidth] = React.useState<number | null>(null);
-  const { name, description, Svg, project, goldenEgg, tags } = data;
+  const { name, description, Svg, project, award, tags } = data;
   const { hills, trees } = svgLocations[index];
   const hillStyle = { left: screenSize === EScreenSize.DT_MAX ? hills.dtMax.left : hills.dtMin.left };
   const treeStyle = { top: trees.top, left: trees.left, transform: `rotateY(${trees.rotation})` };
@@ -84,9 +84,9 @@ export const PortfolioProject: React.FC<IPortfolioProjectProps> = ({ data, index
                 <span className="project-home">Visit website</span>
               </a>
             ) : null}
-            {goldenEgg ? (
-              <a href={goldenEgg.link}>
-                <span className="golden-egg">{goldenEgg.text}</span>
+            {award ? (
+              <a href={award.link}>
+                <span className="golden-egg">{award.text}</span>
               </a>
             ) : null}
           </p>

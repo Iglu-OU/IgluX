@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Logo from './images/logo.svg';
+import Logo from '../_images/logo.svg';
 
 const HeaderLinks = [
   { link: '#process', name: 'Process' },

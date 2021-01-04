@@ -1,17 +1,17 @@
 import React from 'react';
 
-import DietlessSVG from './images/Dietless.svg';
-import EShowcaseSVG from './images/E-Showcase-Briefing.svg';
-import ERBISVG from './images/ERBI.svg';
-import Eskimos from './images/Eskimos.svg';
-import { Fire } from './images/Fire';
-import Horizon from './images/Horizon.svg';
-import HorizonMobileMax from './images/Horizon-Mobile-Max.svg';
-import Igloo from './images/Igloo.svg';
-import Trees4 from './images/Trees-4.svg';
-import Trees5 from './images/Trees-5.svg';
-import { IPortfolioProject, PortfolioProject } from './PortfolioProject';
-import { Stars } from './Stars';
+import DietlessSVG from '../_images/Dietless.svg';
+import EShowcaseSVG from '../_images/E-Showcase-Briefing.svg';
+import ERBISVG from '../_images/ERBI.svg';
+import Eskimos from '../_images/Eskimos.svg';
+import { Fire } from '../_images/Fire';
+import Horizon from '../_images/Horizon.svg';
+import HorizonMobileMax from '../_images/Horizon-Mobile-Max.svg';
+import Igloo from '../_images/Igloo.svg';
+import Trees4 from '../_images/Trees-4.svg';
+import Trees5 from '../_images/Trees-5.svg';
+import { Stars } from '../stars/Stars';
+import { IPortfolioProject, PortfolioProject } from './components/PortfolioProject';
 
 export const portfolioProjectList: IPortfolioProject[] = [
   {
@@ -20,7 +20,7 @@ export const portfolioProjectList: IPortfolioProject[] = [
     description:
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers.',
     Svg: <DietlessSVG />,
-    goldenEgg: { text: 'Kuldmuna 2018', link: 'https://defol.io/kuldmuna/2018-erik-orgus-tailor-made-meal-plan-app' },
+    award: { text: 'Kuldmuna 2018', link: 'https://defol.io/kuldmuna/2018-erik-orgus-tailor-made-meal-plan-app' },
     project: 'https://www.erikorgu.ee',
     tags: ['Development', 'Angular', 'Cordova', 'User testing'],
   },

@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import React from 'react';
 
-import { Footer } from '../components/Footer';
-import { Journey } from '../components/Journey';
-import { MovingStars } from '../components/MovingStars';
-import { Navigation } from '../components/Navigation';
-import { Team } from '../components/Team';
-import { WorkFlow } from '../components/WorkFlow';
+import { Footer } from '../components/footer/Footer';
+import { Journey } from '../components/journey/Journey';
+import { Navigation } from '../components/navigation/Navigation';
+import { Portfolio2 } from '../components/portfolio-2/Portfolio2';
+import { MovingStars } from '../components/stars/MovingStars';
+import { Team } from '../components/team/Team';
+import { WorkFlow } from '../components/workflow/WorkFlow';
 
 export interface ITeamMember {
   name: string;
@@ -156,7 +157,8 @@ const NewIndex: React.FC = () => {
         <WorkFlow />
         <Journey />
         <Team />
-        {/* TODO <Portfolio /> */}
+        {/*<Portfolio />*/}
+        {/*<Portfolio2 />*/}
       </main>
       <Footer />
     </>
