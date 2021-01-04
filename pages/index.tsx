@@ -4,7 +4,6 @@ import React from 'react';
 import { Footer } from '../components/footer/Footer';
 import { Journey } from '../components/journey/Journey';
 import { Navigation } from '../components/navigation/Navigation';
-import { Portfolio2 } from '../components/portfolio-2/Portfolio2';
 import { MovingStars } from '../components/stars/MovingStars';
 import { Team } from '../components/team/Team';
 import { WorkFlow } from '../components/workflow/WorkFlow';
@@ -157,8 +156,7 @@ const NewIndex: React.FC = () => {
         <WorkFlow />
         <Journey />
         <Team />
-        {/*<Portfolio />*/}
-        {/*<Portfolio2 />*/}
+        {/* <Portfolio /> */}
       </main>
       <Footer />
     </>

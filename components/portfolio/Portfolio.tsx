@@ -42,45 +42,45 @@ export const ProjectList: IProject[] = [
   },
 ];
 
-export const Portfolio2: React.FC = () => (
-  <section className="section portfolio2">
+export const Portfolio: React.FC = () => (
+  <section className="section portfolio">
     <PortfolioBG />
     <Stars id="portfolio-stars" maxStars={25} />
-    <div className="portfolio2-header" data-aos="zoom-in">
-      <h1 className="portfolio2-header__title">Portfolio</h1>
-      <p className="portfolio2-header__subtitle">Some of our clients we have worked with along the way</p>
+    <div className="portfolio-header" data-aos="zoom-in">
+      <h1 className="portfolio-header__title">Portfolio</h1>
+      <p className="portfolio-header__subtitle">Some of our clients we have worked with along the way</p>
     </div>
-    <ul className="portfolio2-project-wrapper">
+    <ul className="portfolio-project-wrapper">
       {ProjectList.map(({ name, description, tags, project, award, image }, index) => (
-        <li key={`project-${name}-${index}`} className="portfolio2-project" data-aos="fade-up">
+        <li key={`project-${name}-${index}`} className="portfolio-project" data-aos="fade-up">
           <div>
-            <h2 className="portfolio2-project__title">{name}</h2>
-            <div className="portfolio2-project__squiggle">
+            <h2 className="portfolio-project__title">{name}</h2>
+            <div className="portfolio-project__squiggle">
               <Separator />
             </div>
-            <p className="portfolio2-project__description">{description}</p>
-            <ul className="portfolio2-project__tags">
+            <p className="portfolio-project__description">{description}</p>
+            <ul className="portfolio-project__tags">
               {tags.map((i, index) => (
-                <li key={`index-${i}-${index}`} className="portfolio2-project__tags-item">
+                <li key={`index-${i}-${index}`} className="portfolio-project__tags-item">
                   {i}
                 </li>
               ))}
             </ul>
-            <p className="portfolio2-project__external">
+            <p className="portfolio-project__external">
               {project ? (
-                <a className="portfolio2-project__external-project" href={project}>
+                <a className="portfolio-project__external-project" href={project}>
                   Visit website
                 </a>
               ) : null}{' '}
               {project && award ? <span aria-hidden={true}>|</span> : null}{' '}
               {award ? (
-                <a className="portfolio2-project__external-award" href={award.link}>
+                <a className="portfolio-project__external-award" href={award.link}>
                   {award.text}{' '}
                 </a>
               ) : null}
             </p>
           </div>
-          <div className="portfolio2-project__logo">{image}</div>
+          <div className="portfolio-project__logo">{image}</div>
         </li>
       ))}
     </ul>
