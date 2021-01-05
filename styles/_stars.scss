@@ -20,7 +20,7 @@
   background: transparent;
   border-radius: 50%;
   position: absolute;
-  z-index: $zindex--stars;
+  z-index: 1;
 
   &::after {
     background: transparent;

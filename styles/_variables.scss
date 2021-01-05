@@ -1,4 +1,4 @@
-@import 'oc';
+@use 'oc';
 
 /* General */
 $space-x: 1rem;
@@ -47,17 +47,12 @@ $font-weight--h6: 400;
 
 /* Buttons */
 
-$btn-bg: $oc-blue-8;
+$btn-bg: oc.$oc-blue-8;
 $btn-color: #fff;
-
-/* Z-index */
-$zindex--stars: 1;
-$zindex--svg: 2;
-$zindex--text: 3;
 
 /* Layout */
 $max-width: 64rem;
 
 /* Schemas */
-$schema-blue-bg: $oc-blue-8;
+$schema-blue-bg: oc.$oc-blue-8;
 $schema-blue-color: #fff;

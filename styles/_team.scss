@@ -1,3 +1,5 @@
+@use 'variables';
+
 /* stylelint-disable */
 #team {
   /* stylelint-enable */
@@ -273,14 +275,14 @@
 
 .team-member__title {
   display: block;
-  font-style: $font-family-light;
+  font-style: variables.$font-family-light;
   font-weight: lighter;
   opacity: 0.8;
   padding-top: 0.25rem;
 }
 
 .team-member__skills {
-  color: $color-primary;
+  color: variables.$color-primary;
   font-size: 1rem;
   font-style: italic;
   list-style-type: none;

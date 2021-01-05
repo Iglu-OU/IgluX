@@ -1,3 +1,5 @@
+@use 'variables';
+
 .navigation-wrapper {
   color: #fff;
   height: 0;
@@ -46,7 +48,7 @@
   }
 
   @media (max-width: 512px) {
-    background: $color-primary;
+    background: variables.$color-primary;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: block;
     left: 0;
@@ -91,7 +93,7 @@
   position: relative;
   z-index: 2;
   @media (max-width: 511px) {
-    background: $color-primary;
+    background: variables.$color-primary;
   }
 
   a {
@@ -204,11 +206,11 @@
 
 .navigation {
   @media (max-width: 511px) {
-    background: $color-primary;
+    background: variables.$color-primary;
   }
 
   &.fixed {
-    background: $color-primary;
+    background: variables.$color-primary;
   }
 
   &.fixed {

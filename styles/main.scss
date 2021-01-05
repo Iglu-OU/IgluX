@@ -1,21 +1,21 @@
 @charset "utf-8";
 
-@import 'oc';
-@import 'variables';
+@use 'oc';
+@use 'variables';
 
-@import 'general';
-@import 'type';
-@import 'images';
+@use 'general';
+@use 'type';
+@use 'images';
 
-@import 'navigation';
-@import 'stars';
-@import 'jumbotron';
-@import 'work-flow';
-@import 'portfolio';
+@use 'navigation';
+@use 'stars';
+@use 'jumbotron';
+@use 'work-flow';
+@use 'portfolio';
 
-@import 'team';
-@import 'journey';
-@import 'footer';
+@use 'team';
+@use 'journey';
+@use 'footer';
 
-@import 'transform';
-@import 'font';
+@use 'transform';
+@use 'font';
