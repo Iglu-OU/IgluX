@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { CloudsSVG } from '../_images/Clouds';
+import Separator from '../_images/Separator.svg';
 import AlinaPrimary from '../_images/team/primary/alina.svg';
 import AntonPrimary from '../_images/team/primary/anton.svg';
 import EglePrimary from '../_images/team/primary/egle.svg';
@@ -209,6 +210,9 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, desc, members }) => {
     <>
       <div className="team__section" data-aos="zoom-in">
         <h2 className="team__heading">{title}</h2>
+        <p className="team__heading-separator" aria-hidden="true">
+          <Separator />
+        </p>
         <p className="team__description">{desc}</p>
       </div>
       <ul className="mt-0 list-unstyled team">
