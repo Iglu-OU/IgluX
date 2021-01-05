@@ -169,7 +169,7 @@ const Developers: ITeamMember[] = [
 ];
 
 export const Team: React.FC = () => (
-  <section className="section" id="team">
+  <section id="team">
     <Stars />
     <CloudsSVG />
     <div className="team__top-fold" />

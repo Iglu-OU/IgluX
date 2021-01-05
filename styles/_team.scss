@@ -1,64 +1,69 @@
+/* stylelint-disable */
 #team {
-  padding: 2rem 0;
+  /* stylelint-enable */
   background: #032230;
+  overflow: hidden;
+  padding: 2rem 0;
   position: relative;
   width: 100%;
-  overflow: hidden;
 
-  &:before {
+  /* stylelint-disable */
+  &::before {
+    /* stylelint-enable */
+    background-color: #1396d4;
     content: '';
+    height: 17vh;
+    left: 0;
     position: absolute;
     top: -1px; // 0 leaves spaces on some screens
-    left: 0;
-    height: 17vh;
     width: 100%;
-    background-color: #1396d4;
     z-index: 1;
   }
 }
 
 .team-wrapper {
-  position: relative;
-  padding-top: 15vh;
-  max-width: 1480px;
   margin: auto;
+  max-width: 1480px;
+  padding-top: 15vh;
+  position: relative;
   z-index: 3;
 }
 
 .team {
-  position: relative;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
 
   p {
-    line-height: 1.5rem;
     font-size: 1rem;
+    line-height: 1.5rem;
   }
+
   &__top-fold {
+    background: url('/assets/Iceberg-fold_reverse.svg') no-repeat top center;
+    background-size: cover;
+    height: 125vh;
+    margin-top: auto;
+    pointer-events: none;
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 125vh;
     z-index: 2;
-    margin-top: auto;
-    background: url(/assets/Iceberg-fold_reverse.svg) no-repeat top center;
-    background-size: cover;
-    pointer-events: none;
   }
 }
 
 .team__clouds {
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  position: absolute;
   bottom: -1px;
+  height: auto;
   left: 0;
+  min-height: 100%;
+  overflow: hidden;
+  position: absolute;
   right: 0;
   top: 150px;
+  width: 100%;
   z-index: 3;
-  overflow: hidden;
 
   @media (max-width: 772px) {
     display: none;
@@ -66,27 +71,27 @@
 }
 
 .team__section {
+  color: #1396d4;
   margin: 5rem auto 3rem;
+  max-width: 600px;
   padding: 0 1rem;
   text-align: center;
-  color: #1396d4;
-  max-width: 600px;
 
   .team__heading {
-    margin-bottom: 2.25rem;
     font-size: 2.5em;
+    margin-bottom: 2.25rem;
     position: relative;
+  }
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: calc(50% - 126px / 2);
-      bottom: calc(-2.25rem / 2 - 6px);
-      height: 12px;
-      width: 126px;
-      background: url(/assets/title-line-team.svg) no-repeat top center;
-      background-size: 90%;
-    }
+  .team__heading::after {
+    background: url('/assets/title-line-team.svg') no-repeat top center;
+    background-size: 90%;
+    bottom: calc(-2.25rem / 2 - 6px);
+    content: '';
+    height: 12px;
+    left: calc(50% - 126px / 2);
+    position: absolute;
+    width: 126px;
   }
 
   .team__description {
@@ -103,24 +108,24 @@
 }
 
 .team-member {
+  color: #fff;
   display: flex;
   flex-direction: row;
-  color: #fff;
-  max-width: 900px;
   margin: 3rem 4rem;
+  max-width: 900px;
 
   &:nth-of-type(2n) {
     flex-direction: row-reverse;
+  }
 
-    .team-member__description {
-      margin-right: 50px;
-      margin-left: 0;
-    }
+  &:nth-of-type(2n) .team-member__description {
+    margin-left: 0;
+    margin-right: 50px;
+  }
 
-    .team-member__portrait {
-      margin-left: 50px;
-      margin-right: 0;
-    }
+  &:nth-of-type(2n) .team-member__portrait {
+    margin-left: 50px;
+    margin-right: 0;
   }
 
   @media (min-width: 832px) and (max-width: 1028px) {
@@ -153,8 +158,8 @@
 
   @media (max-width: 772px) {
     flex-direction: column;
-    max-width: 400px;
     margin: 2rem 1rem;
+    max-width: 400px;
 
     &:nth-of-type(2n) {
       flex-direction: column;
@@ -177,35 +182,35 @@
 }
 
 .team-member__portrait {
-  position: relative;
   display: flex;
   flex-shrink: 1;
-  width: 50%;
   margin-right: 50px;
+  position: relative;
+  width: 50%;
 
   &-primary {
+    height: 100%;
     position: relative;
     width: 100%;
-    height: 100%;
   }
 
   &-secondary {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
     animation: 8s ease-in-out 0s infinite portraitMove;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
-    &.no-hover {
-      animation: none;
-    }
+  &-secondary.no-hover {
+    animation: none;
   }
 
   &-primary svg,
   &-secondary svg {
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
 
   .team-member:nth-of-type(2n) & .team-member__portrait-secondary {
@@ -217,14 +222,14 @@
   }
 
   img {
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
 }
 
 .team-member__description {
-  width: 50%;
   margin-left: 50px;
+  width: 50%;
 
   @media (max-width: 772px) {
     margin-top: 10px;
@@ -240,62 +245,60 @@
     font-weight: 400;
     line-height: 1.2;
     margin: 0;
+  }
 
-    &:after {
-      content: '';
-      display: inline-block;
-      width: 22px;
-      height: 22px;
-      margin-left: 9px;
-      margin-bottom: 5px;
-      opacity: 0;
-      transition: opacity 0.32s ease;
-      background: url(/assets/logos/ln.svg);
-      vertical-align: middle;
+  h2::after {
+    background: url('/assets/logos/ln.svg');
+    content: '';
+    display: inline-block;
+    height: 22px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+    opacity: 0;
+    transition: opacity 0.32s ease;
+    vertical-align: middle;
+    width: 22px;
 
-      @media (pointer: coarse) {
-        opacity: 1;
-      }
+    @media (pointer: coarse) {
+      opacity: 1;
     }
   }
 }
 
 @media (pointer: fine) {
-  .team-member__name:hover h2:after {
+  .team-member__name:hover h2::after {
     opacity: 1;
   }
 }
 
 .team-member__title {
-  padding-top: 0.25rem;
   display: block;
   font-style: $font-family-light;
   font-weight: lighter;
   opacity: 0.8;
+  padding-top: 0.25rem;
 }
 
 .team-member__skills {
+  color: $color-primary;
+  font-size: 1rem;
+  font-style: italic;
   list-style-type: none;
   margin: 1em 0 0;
   padding: 0;
-  font-size: 1rem;
-  font-style: italic;
-  color: $color-primary;
 
   li {
     display: inline-block;
+  }
 
-    &:before {
-      padding-left: 3px;
-      content: '\00a0\2022\00a0\00a0';
-    }
+  li::before {
+    content: '\00a0\2022\00a0\00a0';
+    padding-left: 3px;
+  }
 
-    &:first-child {
-      &:before {
-        padding-left: 0;
-        content: '';
-      }
-    }
+  li:first-child::before {
+    content: '';
+    padding-left: 0;
   }
 }
 
@@ -303,12 +306,15 @@
   0% {
     transform: translate(0, 0);
   }
+
   25% {
     transform: translate(0, 8px);
   }
+
   75% {
     transform: translate(0, -8px);
   }
+
   100% {
     transform: translate(0, 0);
   }
@@ -317,11 +323,11 @@
 /* Stars */
 
 .canvas {
-  position: absolute;
-  top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
   height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }

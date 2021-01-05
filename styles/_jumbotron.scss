@@ -1,12 +1,12 @@
 .jumbotron {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  min-height: 50vw;
   position: relative;
   width: 100vw;
-  height: 100vh;
-  min-height: 50vw;
-  color: #fff;
 
   h1 {
     font-size: 3em;
@@ -21,26 +21,26 @@
   }
 
   p {
-    margin: 5vw auto 0;
     font-size: 2.5em;
+    margin: 5vw auto 0;
     @media (orientation: portrait) and (max-width: 767px) {
       font-size: 1em;
       max-width: 320px;
-      padding-right: 1em;
       padding-left: 1em;
+      padding-right: 1em;
     }
   }
 
   p strong {
     font-weight: 600;
   }
+
+  &__content {
+    padding: 0 1rem;
+    text-align: center;
+  }
 }
 
 .invisible {
   opacity: 0.1;
-}
-
-.jumbotron__content {
-  text-align: center;
-  padding: 0 1rem;
 }

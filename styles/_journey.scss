@@ -1,18 +1,18 @@
 .journey-wrapper {
   background-color: #1396d4;
-  position: relative;
   //height: 1000px;
   overflow: hidden;
+  position: relative;
 }
 
 .journey {
-  padding: 2rem 0;
-  position: relative;
-  background: #1396d4 url(/assets/Timeline_line.svg) no-repeat center;
-  background-size: contain;
+  background: #1396d4 url('/assets/Timeline_line.svg') no-repeat center;
   background-position-y: 100px;
+  background-size: contain;
   margin: 0 auto;
   max-width: 1250px;
+  padding: 2rem 0;
+  position: relative;
 
   @media (max-width: 770px) {
     background: #1396d4;
@@ -20,24 +20,25 @@
   }
 
   a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
   }
 
   &__header {
-    color: #ffffff;
+    color: #fff;
+  }
 
-    h1 {
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin: 0 0 1rem 0;
-      @media (max-width: 770px) {
-        text-align: left;
-        padding: 0 41px;
-      }
+  &__header h1 {
+    font-weight: 700;
+    margin: 0 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    @media (max-width: 770px) {
+      padding: 0 41px;
+      text-align: left;
     }
   }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -45,67 +46,68 @@
     padding: 0 41px;
 
     @media (max-width: 770px) {
-      padding-right: 20px;
       bottom: 15px;
+      padding-right: 20px;
     }
   }
 }
 
 .mask {
-  width: 100%;
-  height: 100%;
-  top: 156px;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  position: absolute;
   background: #1396d4;
   background: linear-gradient(to bottom, rgba(32, 150, 212, 0), #1396d4 5%);
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 156px;
   transition: top 500ms linear;
+  width: 100%;
 }
+
 .event-wrapper {
-  position: relative;
   display: flex;
-  width: 40%;
   flex: 1;
+  position: relative;
+  width: 40%;
 
   &--left {
+    justify-content: flex-end;
     left: 0;
     right: 60%;
-    justify-content: flex-end;
     @media (min-width: 771px) {
       text-align: right;
     }
   }
 
   &--right {
+    justify-content: flex-start;
     left: 60%;
     right: 0;
-    justify-content: flex-start;
   }
 
   @media (max-width: 770px) {
     &--left,
     &--right {
+      justify-content: flex-start;
       left: 0;
+      margin: 0 auto;
       right: 0;
       width: 100%;
-      justify-content: flex-start;
-      margin: 0 auto;
     }
   }
 }
 
 .event {
-  position: relative;
-  width: auto;
+  color: #fff;
   max-width: 350px;
-  color: #ffffff;
+  position: relative;
   transition: opacity 800ms, visibility 800ms;
+  width: auto;
 
   @media (max-width: 770px) {
-    max-width: 100%;
     margin: 0.75rem 0;
+    max-width: 100%;
   }
 }
 
@@ -113,31 +115,31 @@
   font-size: 24px;
   position: relative;
 
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    height: 12px;
-    width: 100px;
-    background: url(/assets/title-line.svg) no-repeat top center;
+  &::after {
+    background: url('/assets/title-line.svg') no-repeat top center;
     background-size: 90%;
+    bottom: -12px;
+    content: '';
+    height: 12px;
+    position: absolute;
+    width: 100px;
+  }
 
-    .event-wrapper--left & {
-      right: -25px;
-      transform: scaleX(-1);
-      filter: flipH();
+  .event-wrapper--left &::after {
+    filter: flipH();
+    right: -25px;
+    transform: scaleX(-1);
 
-      @media (max-width: 770px) {
-        right: unset;
-        left: -25px;
-        transform: none;
-        filter: none;
-      }
-    }
-
-    .event-wrapper--right & {
+    @media (max-width: 770px) {
+      filter: none;
       left: -25px;
+      right: unset;
+      transform: none;
     }
+  }
+
+  .event-wrapper--right &::after {
+    left: -25px;
   }
 
   @media (max-width: 770px) {
@@ -146,9 +148,9 @@
 }
 
 .event__title {
-  margin-top: 0.5em;
   font-size: 22px;
   font-weight: 500;
+  margin-top: 0.5em;
 
   @media (max-width: 770px) {
     font-size: 18px;

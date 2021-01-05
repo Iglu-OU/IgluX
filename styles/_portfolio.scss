@@ -15,7 +15,9 @@ $screen-xl-min: 1200px;
   }
 }
 
+/* stylelint-disable -- Using canvas, probably needs id */
 #portfolio-stars {
+  /* stylelint-enable */
   display: none;
   height: 33.75rem;
 
@@ -24,15 +26,17 @@ $screen-xl-min: 1200px;
   }
 }
 
+/* stylelint-disable -- Generated SVG classname, can't control this */
 .PortfolioBG_svg__portfolio-background {
-  display: none;
-  width: 1920px;
-  height: auto;
-  top: 15vh;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
+  /* stylelint-enable */
   bottom: -1px;
+  display: none;
+  height: auto;
+  left: 50%;
+  position: absolute;
+  top: 15vh;
+  transform: translateX(-50%);
+  width: 1920px;
   z-index: 1;
 
   @include md {
@@ -41,12 +45,12 @@ $screen-xl-min: 1200px;
 }
 
 .portfolio {
+  background-color: #032230;
   display: flex;
   flex-direction: column;
-  position: relative;
-  background-color: #032230;
-  padding-top: 15vh;
   overflow: hidden;
+  padding-top: 15vh;
+  position: relative;
 
   @include md {
     height: 2392px;
@@ -54,13 +58,13 @@ $screen-xl-min: 1200px;
 }
 
 .portfolio-header {
-  position: relative;
-  display: block;
-  color: white;
-  text-align: center;
-  margin-bottom: auto;
   background-color: #043f5a;
+  color: #fff;
+  display: block;
+  margin-bottom: auto;
   padding: 0 1rem;
+  position: relative;
+  text-align: center;
 
   @include md {
     background: none;
@@ -83,45 +87,46 @@ $screen-xl-min: 1200px;
 .portfolio-project-wrapper {
   display: flex;
   flex-direction: column;
-  z-index: 2;
   margin: 0;
   padding: 0;
+  z-index: 2;
 }
 
 .portfolio-project {
-  display: flex;
-  color: #fff;
   align-items: center;
-  padding: 4rem 1rem;
   background: linear-gradient(180deg, #043f5a -4.28%, #032230 125.15%);
+  color: #fff;
+  display: flex;
+  padding: 4rem 1rem;
 
   @include md {
-    &:first-of-type {
-      height: 29.875rem;
-    }
-
-    padding: 0 1rem;
+    align-self: center;
     background: none;
 
     height: 36.875rem;
+    margin-left: 5rem;
     max-width: 43.75rem;
 
+    padding: 0 1rem;
+
     text-align: right;
-    align-self: center;
-    margin-left: 5rem;
+
+    &:first-of-type {
+      height: 29.875rem;
+    }
   }
 
   @include lg {
-    padding: 0;
     margin-left: 15rem;
+    padding: 0;
   }
 
   &:nth-of-type(2n) {
     @include md {
-      text-align: left;
+      flex-direction: row-reverse;
       margin-left: 0;
       margin-right: 5rem;
-      flex-direction: row-reverse;
+      text-align: left;
     }
     @include lg {
       margin-right: 15rem;
@@ -146,21 +151,21 @@ $screen-xl-min: 1200px;
   }
 
   &__tags-item {
-    display: inline-block;
     color: #1396d4;
+    display: inline-block;
     font-size: 1.125rem;
     font-style: italic;
   }
 
-  &__tags-item:not(:first-child):before {
-    padding-left: 0.25rem;
-    content: '\00a0\2022\00a0\00a0';
+  &__tags-item:not(:first-child)::before {
     color: #1396d4;
+    content: '\00a0\2022\00a0\00a0';
+    padding-left: 0.25rem;
   }
 
   &__external {
-    font-size: 1.125rem;
     color: #1396d4;
+    font-size: 1.125rem;
   }
 
   &__external-project,
