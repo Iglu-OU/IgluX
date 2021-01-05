@@ -5,7 +5,7 @@
   "description": "Iglu Digital Agency is the part of Iglu that handles design and UX.",
   "background_color": "#1396d4",
   "theme_color": "#1396d4",
-  "start_url": "https://da.iglu.ee/",
+  "start_url": "/",
   "icons": [
     {
       "src": "/assets/logos/iglu.png",
