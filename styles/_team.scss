@@ -1,17 +1,15 @@
 @use 'variables';
 
-/* stylelint-disable */
+/* stylelint-disable-next-line selector-max-id */
 #team {
-  /* stylelint-enable */
   background: #032230;
   overflow: hidden;
   padding: 2rem 0;
   position: relative;
   width: 100%;
 
-  /* stylelint-disable */
+  /* stylelint-disable-next-line selector-max-id */
   &::before {
-    /* stylelint-enable */
     background-color: #1396d4;
     content: '';
     height: 17vh;
@@ -90,8 +88,8 @@
   }
 
   .team__description {
-    margin-top: 0.5rem;
     font-size: 1.25em;
+    margin-top: 0.5rem;
   }
 
   @media (max-width: 772px) {

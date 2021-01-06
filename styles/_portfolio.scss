@@ -15,9 +15,8 @@ $screen-xl-min: 1200px;
   }
 }
 
-/* stylelint-disable -- Using canvas, probably needs id */
+/* stylelint-disable-next-line selector-max-id */
 #portfolio-stars {
-  /* stylelint-enable */
   display: none;
   height: 33.75rem;
 
@@ -26,17 +25,16 @@ $screen-xl-min: 1200px;
   }
 }
 
-/* stylelint-disable -- Generated SVG classname, can't control this */
+/* stylelint-disable-next-line selector-class-pattern */
 .PortfolioBG_svg__portfolio-background {
-  /* stylelint-enable */
   bottom: -1px;
   display: none;
   height: auto;
   left: 50%;
+  min-width: 1920px;
   position: absolute;
   top: 15vh;
   transform: translateX(-50%);
-  min-width: 1920px;
   width: 100%;
   z-index: 1;
 
