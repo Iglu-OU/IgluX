@@ -242,7 +242,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, desc, members }) => {
                 <h2>{i.name}</h2>
               </a>
               <p className="team-member__title mt-0">
-                <span>{title}</span>
+                <span>{i.title}</span>
               </p>
               <p>
                 {i.description} {i.descriptionExtended}
