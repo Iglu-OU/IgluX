@@ -143,7 +143,7 @@ const NewIndex: React.FC = () => {
         <WorkFlow />
         <Journey />
         <Team />
-        {/* <Portfolio /> */}
+        {/*<Portfolio />*/}
       </main>
       <Footer />
     </>

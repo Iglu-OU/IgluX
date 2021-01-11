@@ -53,7 +53,7 @@ export const Portfolio: React.FC = () => (
     <ul className="portfolio-project-wrapper">
       {ProjectList.map(({ name, description, tags, project, award, image }, index) => (
         <li key={`project-${name}-${index}`} className="portfolio-project" data-aos="fade-up">
-          <div>
+          <div className="portfolio-project__text">
             <h2 className="portfolio-project__title">{name}</h2>
             <div className="portfolio-project__squiggle">
               <Separator />
@@ -80,7 +80,7 @@ export const Portfolio: React.FC = () => (
               ) : null}
             </p>
           </div>
-          <div className="portfolio-project__logo">{image}</div>
+          <div className={`portfolio-project__logo ${index === 1 ? 'portfolio-project__logo--xs' : ''}`}>{image}</div>
         </li>
       ))}
     </ul>

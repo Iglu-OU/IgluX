@@ -104,7 +104,7 @@ $screen-xl-min: 1200px;
 
     height: 36.875rem;
     margin-left: 5rem;
-    max-width: 43.75rem;
+    max-width: 52rem;
 
     padding: 0 1rem;
 
@@ -116,7 +116,7 @@ $screen-xl-min: 1200px;
   }
 
   @include lg {
-    margin-left: 15rem;
+    margin-left: 25rem;
     padding: 0;
   }
 
@@ -128,12 +128,12 @@ $screen-xl-min: 1200px;
       text-align: left;
     }
     @include lg {
-      margin-right: 15rem;
+      margin-right: 25rem;
     }
   }
 
   &__title {
-    font-size: 2.25rem;
+    font-size: 2rem;
     margin: 0;
   }
 
@@ -142,17 +142,18 @@ $screen-xl-min: 1200px;
   }
 
   &__description {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   &__tags {
+    margin: 1rem 0;
     padding: 0;
   }
 
   &__tags-item {
     color: #1396d4;
     display: inline-block;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-style: italic;
   }
 
@@ -164,7 +165,7 @@ $screen-xl-min: 1200px;
 
   &__external {
     color: #1396d4;
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   &__external-project,
@@ -172,17 +173,31 @@ $screen-xl-min: 1200px;
     text-decoration: none;
   }
 
+  &__text {
+    width: 100%;
+    max-width: 60rem;
+  }
+
   &__logo {
     display: none;
-    margin-left: 2rem;
+    margin-left: 3rem;
+    max-width: 300px;
+    width: 100%;
 
     @include md {
       display: block;
     }
   }
 
+  &__logo--xs {
+    @include md {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
   &:nth-of-type(2n) &__logo {
     margin-left: 0;
-    margin-right: 2rem;
+    margin-right: 3rem;
   }
 }
