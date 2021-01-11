@@ -1,25 +1,21 @@
-@import 'oc';
-@import 'variables';
+@charset "utf-8";
 
-@import 'general';
-@import 'type';
-@import 'images';
-@import 'buttons';
-@import 'forms';
+@use 'oc';
+@use 'variables';
 
-@import 'grid';
-@import 'layout';
-@import 'navigation';
-@import 'stars';
-@import 'jumbotron';
-@import 'work-flow';
-@import 'section';
-@import 'portfolio';
+@use 'general';
+@use 'type';
+@use 'images';
 
-@import 'app';
-@import 'team';
-@import 'journey';
-@import 'footer';
+@use 'navigation';
+@use 'stars';
+@use 'jumbotron';
+@use 'work-flow';
+@use 'portfolio';
 
-@import 'transform';
-@import 'font';
+@use 'team';
+@use 'journey';
+@use 'footer';
+
+@use 'transform';
+@use 'font';

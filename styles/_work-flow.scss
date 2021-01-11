@@ -1,112 +1,112 @@
 .work-flow {
+  background-size: cover;
+  color: #fff;
   display: flex;
+  height: 100vh;
+  min-height: 800px;
   position: relative;
   width: 100vw;
-  height: 100vh;
-  color: #ffffff;
-  min-height: 800px;
-  background-size: cover;
 
   @media (max-width: 768px) {
     height: 768px;
   }
 
   &__iceberg {
-    width: 100%;
+    bottom: 2%;
     height: auto;
+    left: 0;
     min-height: 100%;
     position: absolute;
-    bottom: 2%;
-    left: 0;
     right: 0;
+    width: 100%;
     z-index: 2;
   }
 
   &__waves-bg {
-    width: 100%;
+    bottom: -3px;
     height: auto;
+    left: 0;
     min-height: 100%;
     position: absolute;
-    bottom: -3px;
-    left: 0;
     right: 0;
+    width: 100%;
     z-index: 2;
   }
 
   &__waves {
-    width: 100%;
+    bottom: -1px;
     height: auto;
+    left: 0;
     min-height: 100%;
     position: absolute;
-    bottom: -1px;
-    left: 0;
     right: 0;
+    width: 100%;
     z-index: 3;
   }
 
   &__waves-top {
-    width: 100%;
+    bottom: 6px;
     height: auto;
+    left: 0;
     min-height: 100%;
     position: absolute;
-    bottom: 6px;
-    left: 0;
     right: 0;
+    width: 100%;
     z-index: 3;
   }
 
   &__waves-bottom {
-    width: 100%;
+    bottom: 6px;
     height: auto;
+    left: 0;
     min-height: 100%;
     position: absolute;
-    bottom: 6px;
-    left: 0;
     right: 0;
+    width: 100%;
     z-index: 4;
   }
 
   &__content {
+    color: #4fbbe7;
+    left: 35%;
     position: absolute;
     top: 23%;
-    left: 35%;
-    color: #4fbbe7;
-    z-index: 5;
     transform: translate(-50%, -50%);
-
-    h1 {
-      text-transform: uppercase;
-      font-size: 2.5em;
-      font-weight: 700;
-      @media (max-width: 1023px) {
-        font-size: 30px;
-      }
-    }
-
-    dl {
-      margin: 2.5vw 0 0;
-      @media (max-width: 1023px) {
-        margin-top: 50px;
-      }
-    }
-
-    dt {
-      margin: 2rem 0 0;
-      font-size: 1.25em;
-      font-weight: 400;
-      line-height: 1.2;
-      text-transform: uppercase;
-    }
-
-    dd {
-      margin: 0;
-      font-size: 1em;
-    }
+    z-index: 5;
 
     @media (max-width: 500px) {
       left: 0;
-      transform: translate(0, -50%);
       padding: 0 1rem;
+      transform: translate(0, -50%);
     }
+  }
+
+  &__content h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    @media (max-width: 1023px) {
+      font-size: 30px;
+    }
+  }
+
+  &__content dl {
+    margin: 2.5vw 0 0;
+    @media (max-width: 1023px) {
+      margin-top: 50px;
+    }
+  }
+
+  &__content dt {
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 2rem 0 0;
+    text-transform: uppercase;
+  }
+
+  &__content dd {
+    font-size: 1em;
+    margin: 0;
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ITeamMember } from '../../pages/index';
 import { CloudsSVG } from '../_images/Clouds';
+import Separator from '../_images/Separator.svg';
 import AlinaPrimary from '../_images/team/primary/alina.svg';
 import AntonPrimary from '../_images/team/primary/anton.svg';
 import EglePrimary from '../_images/team/primary/egle.svg';
@@ -26,9 +26,20 @@ import KristoSecondary from '../_images/team/secondary/kristo.svg';
 import LauraSecondary from '../_images/team/secondary/laura.svg';
 import TerasmaaSecondary from '../_images/team/secondary/terasmaa.svg';
 import { Stars } from '../stars/Stars';
-import { TeamMember } from './components/TeamMember';
 
-export const teamMemberList: ITeamMember[] = [
+export interface ITeamMember {
+  name: string;
+  title: string;
+  description: string;
+  descriptionExtended: string;
+  imageUrl: string;
+  PrimaryImage: JSX.Element;
+  SecondaryImage?: JSX.Element;
+  skillSet: string[];
+  noHover?: boolean;
+}
+
+const Analysts: ITeamMember[] = [
   {
     name: 'Laura Asu',
     title: 'Team lead, UX & UI analyst',
@@ -38,8 +49,6 @@ export const teamMemberList: ITeamMember[] = [
     PrimaryImage: <LauraPrimary />,
     SecondaryImage: <LauraSecondary />,
     skillSet: ['UI analysis', 'Business analysis', 'User research', 'Usability testing'],
-    position: 'analyst',
-    noHover: false,
   },
   {
     name: 'Kristo Danilson',
@@ -50,8 +59,6 @@ export const teamMemberList: ITeamMember[] = [
     PrimaryImage: <KristoPrimary />,
     SecondaryImage: <KristoSecondary />,
     skillSet: ['Business analysis', 'User research', 'Usability testing'],
-    position: 'analyst',
-    noHover: false,
   },
   {
     name: 'Joonas Kessel',
@@ -62,55 +69,53 @@ export const teamMemberList: ITeamMember[] = [
     PrimaryImage: <JoonasPrimary />,
     SecondaryImage: <JoonasSecondary />,
     skillSet: ['Prototyping', 'User research', 'Usability testing'],
-    position: 'analyst',
-    noHover: false,
   },
+];
+
+const Designers: ITeamMember[] = [
   {
     name: 'Alina Trussova',
-    title: 'Art Director, UX & UI Designer',
+    title: 'Art director, UX & UI designer',
     description: 'Sparks the minds of designers while balancing creativity with rationality.',
     descriptionExtended: 'When everything is elegant and perfect on earth… the moon will be conquered.',
     imageUrl: 'Art Director, UX & UI Designer',
     PrimaryImage: <AlinaPrimary />,
     SecondaryImage: <AlinaSecondary />,
     skillSet: ['Branding', 'Graphic design', 'UI design', 'User research', 'Usability testing'],
-    position: 'designer',
     noHover: true,
   },
   {
     name: 'Egle Kiik',
-    title: 'UX & UI Designer',
+    title: 'UX & UI designer',
     description: 'Bridges the gap between business and end user.',
     descriptionExtended: "Making digital rainbows with her unicorn skill set to make you feel like you're flying.",
     imageUrl: 'https://www.linkedin.com/in/egle-kiik-a3341451/',
     PrimaryImage: <EglePrimary />,
     SecondaryImage: <EgleSecondary />,
     skillSet: ['Printed media', 'Microcopy', 'UX analysis', 'UX/UI design', 'UX research', 'Usability testing'],
-    position: 'designer',
-    noHover: false,
   },
   {
     name: 'Kerli Aava',
-    title: 'UX & UI Intern',
+    title: 'Junior UX & UI designer',
     description: 'A connoisseur of life, who seeks out new experiences and places on a frequent basis.',
     descriptionExtended: "Possessing a wide range of skills, there's not much that escapes her eye.",
     imageUrl: 'https://www.linkedin.com/in/kerli-aava/',
     PrimaryImage: <InternPrimary />,
     skillSet: ['In progress...'],
-    position: 'designer',
     noHover: true,
   },
+];
+
+const Developers: ITeamMember[] = [
   {
     name: 'Harles-Herman Pilter',
-    title: 'Senior front-end developer',
+    title: 'Lead front-end developer',
     description: 'Skilled in creating micro-interactions, also, has a strong sense for business.',
     descriptionExtended: 'He built a code delivery system that consists entirely of drones. Mr. Bezos is so jealous.',
     imageUrl: 'https://www.linkedin.com/in/harles-herman-pilter-6a3636114/',
     PrimaryImage: <HarlesPrimary />,
     SecondaryImage: <HarlesSecondary />,
     skillSet: ['Vue', 'Aurelia', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
-    position: 'fe',
-    noHover: false,
   },
   {
     name: 'Anton Aavik',
@@ -121,8 +126,6 @@ export const teamMemberList: ITeamMember[] = [
     PrimaryImage: <AntonPrimary />,
     SecondaryImage: <AntonSecondary />,
     skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
-    position: 'fe',
-    noHover: false,
   },
   {
     name: 'Tõnis Terasmaa',
@@ -133,8 +136,6 @@ export const teamMemberList: ITeamMember[] = [
     PrimaryImage: <TerasmaaPrimary />,
     SecondaryImage: <TerasmaaSecondary />,
     skillSet: ['Vue', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
-    position: 'fe',
-    noHover: false,
   },
   {
     name: 'Ivar Kallejärv',
@@ -145,8 +146,6 @@ export const teamMemberList: ITeamMember[] = [
     PrimaryImage: <IvarPrimary />,
     SecondaryImage: <IvarSecondary />,
     skillSet: ['Aurelia', 'Ionic', 'C3', 'D3', 'Chart.js', 'React', 'Angular', 'TypeScript', 'App development', 'BEM'],
-    position: 'fe',
-    noHover: false,
   },
   {
     name: 'Kaspar Suvi',
@@ -157,8 +156,6 @@ export const teamMemberList: ITeamMember[] = [
     PrimaryImage: <SuviPrimary />,
     SecondaryImage: <SuviSecondary />,
     skillSet: ['React', 'Angular', 'TypeScript', 'BEM'],
-    position: 'fe',
-    noHover: false,
   },
   {
     name: 'Kaspar Naaber',
@@ -169,42 +166,32 @@ export const teamMemberList: ITeamMember[] = [
     PrimaryImage: <NaaberPrimary />,
     SecondaryImage: <NaaberSecondary />,
     skillSet: ['React', 'TypeScript', 'Flow', 'GraphQL', 'BEM'],
-    position: 'fe',
-    noHover: false,
   },
 ];
 
-const designer = teamMemberList.filter(({ position }) => position === 'designer');
-const analyst = teamMemberList.filter(({ position }) => position === 'analyst');
-const fe = teamMemberList.filter(({ position }) => position === 'fe');
-
 export const Team: React.FC = () => (
-  <section className="section" id="team">
+  <section id="team">
     <Stars />
     <CloudsSVG />
     <div className="team__top-fold" />
-    <TeamWrapper />
+    <div className="team-wrapper">
+      <TeamSection
+        title="UX & UI Analysts"
+        desc="The invisible force behind a system, helping users reach point C without realizing they've already passed point B."
+        members={Analysts}
+      />
+      <TeamSection
+        title="UX & UI Designers"
+        desc="Graceful and stylish, designing elegant solutions that feel easy and effortless."
+        members={Designers}
+      />
+      <TeamSection
+        title="Front-End Developers"
+        desc="The reasoning engine behind the team, that simplifies complexity and solves problems."
+        members={Developers}
+      />
+    </div>
   </section>
-);
-
-const TeamWrapper = () => (
-  <div className="team-wrapper">
-    <TeamSection
-      title="UX & UI Analysts"
-      desc="The invisible force behind a system, helping users reach point C without realizing they've already passed point B."
-      members={analyst}
-    />
-    <TeamSection
-      title="UX & UI Designers"
-      desc="Graceful and stylish, designing elegant solutions that feel easy and effortless."
-      members={designer}
-    />
-    <TeamSection
-      title="Front-End Developers"
-      desc="The reasoning engine behind the team, that simplifies complexity and solves problems."
-      members={fe}
-    />
-  </div>
 );
 
 interface TeamSectionProps {
@@ -213,16 +200,62 @@ interface TeamSectionProps {
   members: ITeamMember[];
 }
 
-const TeamSection: React.FC<TeamSectionProps> = ({ title, desc, members }) => (
-  <>
-    <div className="team__section" data-aos="zoom-in">
-      <h2 className="team__heading">{title}</h2>
-      <p className="team__description">{desc}</p>
-    </div>
-    <ul className="mt-0 list-unstyled team">
-      {members.map((i, index) => (
-        <TeamMember data={i} key={index} />
-      ))}
-    </ul>
-  </>
-);
+const TeamSection: React.FC<TeamSectionProps> = ({ title, desc, members }) => {
+  const [windowWidth, setWindowWidth] = React.useState(0);
+  React.useEffect(() => {
+    setWindowWidth(isNaN(window?.innerWidth) ? window?.outerWidth : window?.innerWidth);
+  });
+
+  return (
+    <>
+      <div className="team__section" data-aos="zoom-in">
+        <h2 className="team__heading">{title}</h2>
+        <p className="team__heading-separator" aria-hidden="true">
+          <Separator />
+        </p>
+        <p className="team__description">{desc}</p>
+      </div>
+      <ul className="mt-0 list-unstyled team">
+        {members.map((i, index) => (
+          <li
+            key={index}
+            className="team-member"
+            data-aos="fade-up"
+            data-aos-offset={windowWidth > 600 ? '150' : '350'}
+          >
+            <div className="team-member__portrait mt-0">
+              <div className="team-member__portrait-primary">{i.PrimaryImage}</div>
+              {i.SecondaryImage && (
+                <div className={`team-member__portrait-secondary ${i.noHover ? 'no-hover' : ''}`}>
+                  {i.SecondaryImage}
+                </div>
+              )}
+            </div>
+            <div className="team-member__description">
+              <a
+                className="team-member__name mt-0 h1"
+                href={i.imageUrl}
+                title={`LinkedIn - ${i.name}`}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <h2>{i.name}</h2>
+              </a>
+              <p className="team-member__title mt-0">
+                <span>{i.title}</span>
+              </p>
+              <p>
+                {i.description} {i.descriptionExtended}
+              </p>
+              <ul className="team-member__skills">
+                {i.skillSet.map((skill, skillIndex) => (
+                  <li key={`skillet-${skillIndex}`}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};

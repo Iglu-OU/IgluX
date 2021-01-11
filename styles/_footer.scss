@@ -1,9 +1,9 @@
 .footer {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   background: #011e2b;
   color: #fff;
+  display: flex;
+  flex-direction: column;
   padding: 0 1rem;
 
   @media (max-width: 767px) {
@@ -30,11 +30,11 @@
 }
 
 .footer__link {
-  display: flex;
   align-items: center;
-  padding: 0.75em 1rem;
-  opacity: 0.8;
   color: #fff;
+  display: flex;
+  opacity: 0.8;
+  padding: 0.75em 1rem;
   text-decoration: none;
   transition: opacity 0.2s ease-in-out;
 
@@ -47,22 +47,22 @@
   }
 
   &--small {
-    padding: 0.5em 1rem;
     font-size: 0.875em;
     opacity: 0.6;
+    padding: 0.5em 1rem;
   }
 
   svg {
+    height: 1rem;
     margin-right: 0.25rem;
     width: 1rem;
-    height: 1rem;
 
     @media (max-width: 767px) {
       margin-right: 0;
     }
   }
 
-  & span {
+  span {
     @media (max-width: 767px) {
       display: none;
     }

@@ -1,46 +1,55 @@
+@use 'variables';
+
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
+  background: variables.$color-primary;
   overflow-x: hidden;
-  background: $color-primary;
 }
+
 html {
+  font-size: variables.$font-size;
   scroll-behavior: smooth;
-  font-size: $font-size;
 }
+
 body {
+  background: variables.$color-primary;
+  color: variables.$color-dark;
   margin: 0;
-  background: $color-primary;
-  color: $color-dark;
 }
+
 .muted,
 .muted a {
-  color: $color--muted;
+  color: variables.$color--muted;
 }
+
 .mt-0 {
   margin-top: 0;
 }
+
 a {
-  color: $color-primary;
+  color: variables.$color-primary;
 }
+
 .ico {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
   fill: #fff;
+  height: 1.5em;
   vertical-align: top;
+  width: 1.5em;
 
   &--sm {
-    width: 1em;
     height: 1em;
     margin: 0.25em;
+    width: 1em;
   }
 
   &--logo {
-    width: 3em;
     height: 2.25em;
     vertical-align: top;
+    width: 3em;
   }
 }

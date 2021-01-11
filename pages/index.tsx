@@ -4,23 +4,9 @@ import React from 'react';
 import { Footer } from '../components/footer/Footer';
 import { Journey } from '../components/journey/Journey';
 import { Navigation } from '../components/navigation/Navigation';
-import { Portfolio } from '../components/portfolio/Portfolio';
 import { MovingStars } from '../components/stars/MovingStars';
 import { Team } from '../components/team/Team';
 import { WorkFlow } from '../components/workflow/WorkFlow';
-
-export interface ITeamMember {
-  name: string;
-  title: string;
-  description: string;
-  descriptionExtended: string;
-  imageUrl: string;
-  PrimaryImage: JSX.Element;
-  SecondaryImage?: JSX.Element;
-  skillSet: string[];
-  position: 'designer' | 'analyst' | 'fe';
-  noHover: boolean;
-}
 
 const NewIndex: React.FC = () => {
   const [headingShouldBreak, setHeadingShouldBreak] = React.useState(false);
@@ -157,7 +143,7 @@ const NewIndex: React.FC = () => {
         <WorkFlow />
         <Journey />
         <Team />
-        <Portfolio />
+        {/*<Portfolio />*/}
       </main>
       <Footer />
     </>

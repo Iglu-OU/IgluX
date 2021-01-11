@@ -7,4 +7,7 @@ Running locally:
 Checking for TypeScript and/or Prettier errors
 * npm run lint
 
+Checking for Sass errors
+* npm run lint:style
+
 When code is pushed or merged to the master branch, it's automatically deployed to Netlify via Git Hooks
