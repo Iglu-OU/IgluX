@@ -1,9 +1,10 @@
 import React from 'react';
 
+import BackgroundBottom from '../_images/Background-Bottom.svg';
+import BackgroundTop from '../_images/Background-Top.svg';
 import DietlessSVG from '../_images/Dietless.svg';
 import EShowcaseSVG from '../_images/E-Showcase-Briefing.svg';
 import ERBISVG from '../_images/ERBI.svg';
-import PortfolioBG from '../_images/PortfolioBG.svg';
 import Separator from '../_images/Separator.svg';
 import { Stars } from '../stars/Stars';
 
@@ -44,7 +45,8 @@ export const ProjectList: IProject[] = [
 
 export const Portfolio: React.FC = () => (
   <section className="portfolio">
-    <PortfolioBG />
+    <BackgroundBottom />
+    <BackgroundTop />
     <Stars id="portfolio-stars" maxStars={25} />
     <div className="portfolio-header" data-aos="zoom-in">
       <h1 className="portfolio-header__title">Portfolio</h1>
