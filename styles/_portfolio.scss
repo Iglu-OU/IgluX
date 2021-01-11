@@ -26,7 +26,8 @@ $screen-xl-min: 1200px;
 }
 
 /* stylelint-disable-next-line selector-class-pattern */
-.PortfolioBG_svg__portfolio-background {
+.Background-Top_svg__portfolio-background-top,
+.Background-Bottom_svg__portfolio-background-bottom {
   bottom: -1px;
   display: none;
   height: auto;
