@@ -70,7 +70,7 @@ export const Portfolio: React.FC = () => (
             </ul>
             <p className="portfolio-project__external">
               {project ? (
-                <a className="portfolio-project__external-project" href={project} target="_blank">
+                <a className="portfolio-project__external-project" href={project} target="_blank" rel="noreferrer">
                   Visit website
                 </a>
               ) : null}{' '}
