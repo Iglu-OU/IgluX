@@ -5,7 +5,9 @@ import BackgroundTop from '../_images/Background-Top.svg';
 import DietlessSVG from '../_images/Dietless.svg';
 import EShowcaseSVG from '../_images/E-Showcase-Briefing.svg';
 import ERBISVG from '../_images/ERBI.svg';
+import Fitek from '../_images/Fitek.svg';
 import Separator from '../_images/Separator.svg';
+import Taltech from '../_images/Taltech.svg';
 import { Stars } from '../stars/Stars';
 
 interface IProject {
@@ -23,7 +25,7 @@ export const ProjectList: IProject[] = [
     description: 'A tailor-made meal plan app as a  guide  towards good health and right fat percentage for Estonians',
     image: <DietlessSVG />,
     award: { text: 'Kuldmuna 2018', link: 'https://defol.io/kuldmuna/2018-erik-orgus-tailor-made-meal-plan-app' },
-    // project: 'https://www.erikorgu.ee',
+    project: 'https://www.erikorgu.ee',
     tags: ['Development', 'Angular', 'Cordova', 'User testing'],
   },
   {
@@ -31,7 +33,6 @@ export const ProjectList: IProject[] = [
     description:
       'Responsible and caring companies creating a wholesome and healthy living environment. Nationally acclaimed assessment platform made with Estonian  enterprises.',
     image: <ERBISVG />,
-    // project: 'https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire',
     tags: ['User research', 'Prototype', 'User testing', 'Development', 'Design', 'Aurelia'],
   },
   {
@@ -39,6 +40,20 @@ export const ProjectList: IProject[] = [
     description:
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
     image: <EShowcaseSVG />,
+    tags: ['Prototyping', 'UI analysis', 'Business analysis', 'User research'],
+  },
+  {
+    name: 'Taltech',
+    description:
+      'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
+    image: <Taltech />,
+    tags: ['Prototyping', 'UI analysis', 'Business analysis', 'User research'],
+  },
+  {
+    name: 'Fitek',
+    description:
+      'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
+    image: <Fitek />,
     tags: ['Prototyping', 'UI analysis', 'Business analysis', 'User research'],
   },
 ];
