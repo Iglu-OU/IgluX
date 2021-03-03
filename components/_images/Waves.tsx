@@ -3,7 +3,6 @@ import React from 'react';
 export const Waves: React.FC = () => (
   <svg
     className="work-flow__waves"
-    id="front_layer"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1936 1034"
     preserveAspectRatio="xMidYMax slice"

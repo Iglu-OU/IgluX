@@ -4,7 +4,6 @@ export const CloudsSVG: React.FC = () => {
   return (
     <svg
       className="team__clouds"
-      id="svg180"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1936 9665.72"
       preserveAspectRatio="xMidYMax slice"

@@ -78,7 +78,7 @@ const Designers: ITeamMember[] = [
     title: 'Art director, UX & UI designer',
     description: 'Sparks the minds of designers while balancing creativity with rationality.',
     descriptionExtended: 'When everything is elegant and perfect on earth… the moon will be conquered.',
-    imageUrl: 'Art Director, UX & UI Designer',
+    imageUrl: 'https://www.linkedin.com/in/alinatrussova',
     PrimaryImage: <AlinaPrimary />,
     SecondaryImage: <AlinaSecondary />,
     skillSet: ['Branding', 'Graphic design', 'UI design', 'User research', 'Usability testing'],
