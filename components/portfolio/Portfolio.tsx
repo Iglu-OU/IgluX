@@ -22,7 +22,7 @@ interface IProject {
 export const ProjectList: IProject[] = [
   {
     name: 'Dietless',
-    description: 'A tailor-made meal plan app as a  guide  towards good health and right fat percentage for Estonians',
+    description: 'A tailor-made meal plan app as a guide towards good health and right fat percentage for Estonians',
     image: <DietlessSVG />,
     award: { text: 'Kuldmuna 2018', link: 'https://defol.io/kuldmuna/2018-erik-orgus-tailor-made-meal-plan-app' },
     project: 'https://www.erikorgu.ee',
@@ -33,13 +33,15 @@ export const ProjectList: IProject[] = [
     description:
       'Responsible and caring companies creating a wholesome and healthy living environment. Nationally acclaimed assessment platform made with Estonian  enterprises.',
     image: <ERBISVG />,
-    tags: ['User research', 'Prototype', 'User testing', 'Development', 'Design', 'Aurelia'],
+    // project: https://questionnaire.csr.ee/#/login?afterLoginHash=%23%2FbasicQuestionnaire
+    tags: ['Design', 'Prototype', 'User research', 'User testing', 'Development', 'Aurelia'],
   },
   {
     name: 'E-Showcase Briefing',
     description:
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
     image: <EShowcaseSVG />,
+    // project: https://digitalexpo.e-estonia.com/
     tags: ['Prototyping', 'UI analysis', 'Business analysis', 'User research'],
   },
   {
@@ -47,14 +49,16 @@ export const ProjectList: IProject[] = [
     description:
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
     image: <Taltech />,
-    tags: ['Prototyping', 'UI analysis', 'Business analysis', 'User research'],
+    // project: https://www.taltech.ee/en
+    tags: ['Development', 'React'],
   },
   {
     name: 'Fitek',
     description:
       'Inspiring global policy makers, political leaders, corporate executives, investors and international media with the success story of e-Estonia and build links to leading IT service providers',
     image: <Fitek />,
-    tags: ['Prototyping', 'UI analysis', 'Business analysis', 'User research'],
+    // project: https://www.unifiedpost.com/
+    tags: ['Development', 'AngularJS', 'React'],
   },
 ];
 
