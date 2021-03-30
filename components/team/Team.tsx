@@ -12,6 +12,7 @@ import NaaberPrimary from '../_images/team/primary/kasparn.svg';
 import SuviPrimary from '../_images/team/primary/kaspars.svg';
 import KristoPrimary from '../_images/team/primary/kristo.svg';
 import LauraPrimary from '../_images/team/primary/laura.svg';
+import LaurasPrimary from '../_images/team/primary/lauras.svg';
 import InternPrimary from '../_images/team/primary/praktikant.svg';
 import TerasmaaPrimary from '../_images/team/primary/terasmaa.svg';
 import AlinaSecondary from '../_images/team/secondary/alina.svg';
@@ -24,6 +25,7 @@ import NaaberSecondary from '../_images/team/secondary/kasparn.svg';
 import SuviSecondary from '../_images/team/secondary/kaspars.svg';
 import KristoSecondary from '../_images/team/secondary/kristo.svg';
 import LauraSecondary from '../_images/team/secondary/laura.svg';
+import LaurasSecondary from '../_images/team/secondary/lauras.svg';
 import TerasmaaSecondary from '../_images/team/secondary/terasmaa.svg';
 import { Stars } from '../stars/Stars';
 
@@ -95,21 +97,21 @@ const Designers: ITeamMember[] = [
     skillSet: ['Printed media', 'Microcopy', 'UX analysis', 'UX/UI design', 'UX research', 'Usability testing'],
   },
   {
-    name: 'Kerli Aava',
-    title: 'Junior UX & UI designer',
-    description: 'A connoisseur of life, who seeks out new experiences and places on a frequent basis.',
-    descriptionExtended: "Possessing a wide range of skills, there's not much that escapes her eye.",
-    imageUrl: 'https://www.linkedin.com/in/kerli-aava/',
-    PrimaryImage: <InternPrimary />,
-    skillSet: ['In progress...'],
-    noHover: true,
+    name: 'Laura Streimann',
+    title: 'UI & UX designer',
+    description: 'A citizen of the world who has sojourned in many places in search of good design and new knowledge.',
+    descriptionExtended: " She's met many opponents, but none can match her excellent sense of humour.",
+    imageUrl: 'https://www.linkedin.com/in/laura-streimann-405414b1',
+    PrimaryImage: <LaurasPrimary />,
+    SecondaryImage: <LaurasSecondary />,
+    skillSet: ['Prototyping', 'UI design', 'UI analysis', 'UX analysis', 'User research', 'Usability testing'],
   },
 ];
 
 const Developers: ITeamMember[] = [
   {
     name: 'Harles-Herman Pilter',
-    title: 'Lead front-end developer',
+    title: 'Front-end lead & developer',
     description: 'Skilled in creating micro-interactions, also, has a strong sense for business.',
     descriptionExtended: 'He built a code delivery system that consists entirely of drones. Mr. Bezos is so jealous.',
     imageUrl: 'https://www.linkedin.com/in/harles-herman-pilter-6a3636114/',
